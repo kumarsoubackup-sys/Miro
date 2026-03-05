@@ -86,6 +86,17 @@ class LLMClient:
             max_tokens=max_tokens,
             response_format={"type": "json_object"}
         )
-        
-        return json.loads(response)
+        # 清理markdown代码块标记
+        cleaned_response = response.strip()
+        if cleaned_response.startswith("```json"):
+            cleaned_response = cleaned_response[7:]  # 移除 ```json
+        elif cleaned_response.startswith("```"):
+            cleaned_response = cleaned_response[3:]  # 移除 ```
+        if cleaned_response.endswith("```"):
+            cleaned_response = cleaned_response[:-3]  # 移除结尾的 ```
+        cleaned_response = cleaned_response.strip()
 
+        try:
+            return json.loads(cleaned_response)
+        except json.JSONDecodeError:
+            raise ValueError(f"LLM返回的JSON格式无效: {cleaned_response}")
