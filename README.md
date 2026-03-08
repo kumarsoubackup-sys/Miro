@@ -176,6 +176,41 @@ docker compose up -d
 
 > 在 `docker-compose.yml` 中已通过注释提供加速镜像地址，可按需替换
 
+## 🧪 单元测试
+
+项目包含完整的单元测试套件，确保代码质量和功能稳定性。
+
+### 测试覆盖
+
+- **后端测试** (pytest): 96 个测试
+  - 模型层测试 (Project, Task)
+  - 工具函数测试 (文件解析、重试机制)
+  - 服务层测试 (文本处理)
+  - API 测试 (图谱接口)
+  - 配置测试
+
+- **前端测试** (Vitest): 21 个测试
+  - API 工具测试 (请求重试、错误处理)
+  - Store 测试 (状态管理)
+
+### 运行测试
+
+```bash
+# 运行所有测试
+npm run test
+
+# 仅运行后端测试
+npm run test:backend
+
+# 仅运行前端测试
+npm run test:frontend
+```
+
+### 测试配置
+
+- **后端**: 使用 pytest，配置位于 `backend/pytest.ini`
+- **前端**: 使用 Vitest，配置位于 `frontend/vitest.config.js`
+
 ## 📬 更多交流
 
 <div align="center">

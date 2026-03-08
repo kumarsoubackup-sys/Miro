@@ -176,6 +176,41 @@ Reads `.env` from root directory by default, maps ports `3000 (frontend) / 5001 
 
 > Mirror address for faster pulling is provided as comments in `docker-compose.yml`, replace if needed.
 
+## 🧪 Unit Testing
+
+The project includes a comprehensive unit testing suite to ensure code quality and functional stability.
+
+### Test Coverage
+
+- **Backend Tests** (pytest): 96 tests
+  - Model layer tests (Project, Task)
+  - Utility function tests (file parsing, retry mechanism)
+  - Service layer tests (text processing)
+  - API tests (graph endpoints)
+  - Configuration tests
+
+- **Frontend Tests** (Vitest): 21 tests
+  - API utility tests (request retry, error handling)
+  - Store tests (state management)
+
+### Running Tests
+
+```bash
+# Run all tests
+npm run test
+
+# Run backend tests only
+npm run test:backend
+
+# Run frontend tests only
+npm run test:frontend
+```
+
+### Test Configuration
+
+- **Backend**: Uses pytest, configuration at `backend/pytest.ini`
+- **Frontend**: Uses Vitest, configuration at `frontend/vitest.config.js`
+
 ## 📬 Join the Conversation
 
 <div align="center">
