@@ -15,10 +15,10 @@ from dataclasses import dataclass, field
 
 from zep_cloud.client import Zep
 
-from ..config import Config
-from ..utils.logger import get_logger
-from ..utils.llm_client import LLMClient
-from ..utils.zep_paging import fetch_all_nodes, fetch_all_edges
+from ....config import Config
+from ....utils.logger import get_logger
+from ....utils.llm_client import LLMClient
+from ....utils.zep_paging import fetch_all_nodes, fetch_all_edges
 
 logger = get_logger('mirofish.zep_tools')
 
@@ -1304,7 +1304,7 @@ class ZepToolsService:
         Returns:
             InterviewResult: 采访结果
         """
-        from .simulation_runner import SimulationRunner
+        from ...simulation.runner import SimulationRunner
         
         logger.info(f"InterviewAgents 深度采访（真实API）: {interview_requirement[:50]}...")
         
