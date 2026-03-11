@@ -264,9 +264,22 @@ class OntologyGenerator:
             result["edge_types"] = []
         if "analysis_summary" not in result:
             result["analysis_summary"] = ""
+            
+        def to_pascal_case(s: str) -> str:
+            import re
+            words = re.split(r'[^a-zA-Z0-9]+', str(s))
+            return ''.join(word.capitalize() for word in words if word)
+            
+        def to_screaming_snake_case(s: str) -> str:
+            import re
+            s = re.sub(r'([a-z])([A-Z])', r'\1_\2', str(s))
+            words = re.split(r'[^a-zA-Z0-9]+', s)
+            return '_'.join(word.upper() for word in words if word)
         
         # 验证实体类型
         for entity in result["entity_types"]:
+            if "name" in entity:
+                entity["name"] = to_pascal_case(entity["name"])
             if "attributes" not in entity:
                 entity["attributes"] = []
             if "examples" not in entity:
@@ -277,8 +290,15 @@ class OntologyGenerator:
         
         # 验证关系类型
         for edge in result["edge_types"]:
+            if "name" in edge:
+                edge["name"] = to_screaming_snake_case(edge["name"])
             if "source_targets" not in edge:
                 edge["source_targets"] = []
+            for st in edge["source_targets"]:
+                if "source" in st:
+                    st["source"] = to_pascal_case(st["source"])
+                if "target" in st:
+                    st["target"] = to_pascal_case(st["target"])
             if "attributes" not in edge:
                 edge["attributes"] = []
             if len(edge.get("description", "")) > 100:
