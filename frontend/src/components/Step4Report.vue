@@ -127,14 +127,24 @@
             </div>
           </div>
 
-          <!-- Next Step Button - 在完成后显示 -->
-          <button v-if="isComplete" class="next-step-btn" @click="goToInteraction">
-            <span>进入深度互动</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </button>
+          <!-- Next Step Buttons - 在完成后显示 -->
+          <div class="next-step-buttons">
+            <button v-if="isComplete" class="next-step-btn" @click="handleRegenerate">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 4v6h-6"></path>
+                <path d="M1 20v-6h6"></path>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+              </svg>
+              <span>重新分析</span>
+            </button>
+            <button v-if="isComplete" class="next-step-btn" @click="goToInteraction">
+              <span>进入深度互动</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
 
           <div class="workflow-divider"></div>
         </div>
@@ -392,7 +402,7 @@
 <script setup>
 import { ref, computed, watch, onMounted, onUnmounted, nextTick, h, reactive } from 'vue'
 import { useRouter } from 'vue-router'
-import { getAgentLog, getConsoleLog } from '../api/report'
+import { getAgentLog, getConsoleLog, generateReport, getReport } from '../api/report'
 
 const router = useRouter()
 
@@ -408,6 +418,42 @@ const emit = defineEmits(['add-log', 'update-status'])
 const goToInteraction = () => {
   if (props.reportId) {
     router.push({ name: 'Interaction', params: { reportId: props.reportId } })
+  }
+}
+
+// 重新分析（生成报告）
+const handleRegenerate = async () => {
+  let simId = props.simulationId
+
+  // 如果没有 simulationId，直接从当前报告获取
+  if (!simId && props.reportId) {
+    try {
+      const res = await getReport(props.reportId)
+      if (res.success && res.data) {
+        simId = res.data.simulation_id
+      }
+    } catch (err) {
+      console.error('Failed to get simulation ID:', err)
+    }
+  }
+
+  if (!simId) {
+    console.error('No simulation ID available')
+    return
+  }
+
+  try {
+    const res = await generateReport({
+      simulation_id: simId,
+      force_regenerate: true
+    })
+
+    if (res.success && res.data && res.data.report_id) {
+      // 跳转到新生成的报告页面
+      router.push({ name: 'Report', params: { reportId: res.data.report_id } })
+    }
+  } catch (err) {
+    console.error('Regenerate report failed:', err)
   }
 }
 
@@ -3397,13 +3443,19 @@ watch(() => props.reportId, (newId) => {
   font-size: 14px;
 }
 
+.next-step-buttons {
+  display: flex;
+  gap: 12px;
+  margin: 4px 20px 0 20px;
+  width: calc(100% - 40px);
+}
+
 .next-step-btn {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: calc(100% - 40px);
-  margin: 4px 20px 0 20px;
   padding: 14px 20px;
   font-size: 14px;
   font-weight: 600;
