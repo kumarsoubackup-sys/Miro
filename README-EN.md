@@ -127,6 +127,28 @@ LLM_MODEL_NAME=qwen-plus
 ZEP_API_KEY=your_zep_api_key
 ```
 
+<details>
+<summary><b>Using MiniMax Models</b></summary>
+
+[MiniMax](https://platform.minimax.io/) provides high-performance, cost-effective LLM models with OpenAI-compatible API:
+
+```env
+LLM_API_KEY=your_minimax_api_key
+LLM_BASE_URL=https://api.minimax.io/v1
+LLM_MODEL_NAME=MiniMax-M2.5
+```
+
+| Model | Description |
+|-------|-------------|
+| `MiniMax-M2.5` | Flagship model, 204K context window |
+| `MiniMax-M2.5-highspeed` | Same performance, faster and more agile |
+
+For users in China: `LLM_BASE_URL=https://api.minimaxi.com/v1`
+
+API Documentation: [OpenAI Compatible API](https://platform.minimax.io/docs/api-reference/text-openai-api)
+
+</details>
+
 #### 2. Install Dependencies
 
 ```bash

@@ -127,6 +127,28 @@ LLM_MODEL_NAME=qwen-plus
 ZEP_API_KEY=your_zep_api_key
 ```
 
+<details>
+<summary><b>使用 MiniMax 模型</b></summary>
+
+[MiniMax](https://platform.minimax.io/) 提供高性能、高性价比的 LLM 模型，支持 OpenAI 兼容 API：
+
+```env
+LLM_API_KEY=your_minimax_api_key
+LLM_BASE_URL=https://api.minimax.io/v1
+LLM_MODEL_NAME=MiniMax-M2.5
+```
+
+| 模型 | 说明 |
+|------|------|
+| `MiniMax-M2.5` | 旗舰模型，204K 上下文窗口 |
+| `MiniMax-M2.5-highspeed` | 同等性能，更快更敏捷 |
+
+国内用户可使用：`LLM_BASE_URL=https://api.minimaxi.com/v1`
+
+API 文档：[OpenAI 兼容接口](https://platform.minimax.io/docs/api-reference/text-openai-api)
+
+</details>
+
 #### 2. 安装依赖
 
 ```bash
