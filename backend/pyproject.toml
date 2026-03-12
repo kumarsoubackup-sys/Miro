@@ -1,35 +1,36 @@
 [project]
 name = "mirofish-backend"
 version = "0.1.0"
-description = "MiroFish - 简洁通用的群体智能引擎，预测万物"
-requires-python = ">=3.11"
+description = "MiroFish - Concise general-purpose collective intelligence engine"
+# PyTorch 2.2.x (used on macOS Intel) has no 3.13 wheels; keep backend on 3.11–3.12.
+requires-python = ">=3.11,<3.13"
 license = { text = "AGPL-3.0" }
 authors = [
     { name = "MiroFish Team" }
 ]
 
 dependencies = [
-    # 核心框架
+    # Core
     "flask>=3.0.0",
     "flask-cors>=6.0.0",
     
-    # LLM 相关
+    # LLM
     "openai>=1.0.0",
     
     # Zep Cloud
     "zep-cloud==3.13.0",
     
-    # OASIS 社交媒体模拟
+    # OASIS social simulation
     "camel-oasis==0.2.5",
     "camel-ai==0.2.78",
     
-    # 文件处理
+    # File handling
     "PyMuPDF>=1.24.0",
-    # 编码检测（支持非UTF-8编码的文本文件）
+    # Encoding detection (non-UTF-8 text files)
     "charset-normalizer>=3.0.0",
     "chardet>=5.0.0",
     
-    # 工具库
+    # Utilities
     "python-dotenv>=1.0.0",
     "pydantic>=2.0.0",
 ]
@@ -49,6 +50,13 @@ build-backend = "hatchling.build"
 dev = [
     "pytest>=8.0.0",
     "pytest-asyncio>=0.23.0",
+]
+
+# PyTorch 2.9+ has no macOS Intel (x86_64) wheels; use 2.2.x on that platform only.
+[tool.uv]
+required-environments = ["sys_platform == 'darwin' and platform_machine == 'x86_64'"]
+override-dependencies = [
+    "torch>=2.2.0,<2.3.0 ; sys_platform == 'darwin' and platform_machine == 'x86_64'",
 ]
 
 [tool.hatch.build.targets.wheel]
