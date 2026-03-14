@@ -1783,7 +1783,7 @@ class ZepToolsService:
         
         agent_roles = [a.get("profession", "未知") for a in selected_agents]
         
-        system_prompt = """你是一个专业的记者/采访者。根据采访需求，生成1-3个深度采访问题。
+        system_prompt = """你是一个专业的记者/采访者。根据采访需求，生成3-5个深度采访问题。
 
 问题要求：
 1. 开放性问题，鼓励详细回答
@@ -1792,7 +1792,7 @@ class ZepToolsService:
 4. 语言自然，像真实采访一样
 5. 每个问题控制在50字以内，简洁明了
 6. 直接提问，不要包含背景说明或前缀
-7. 问题数量根据采访需求的复杂度决定，简单主题1个，复杂主题最多3个
+7. 问题数量根据采访需求的复杂度决定，简单主题1-5个，复杂主题最多3个
 
 返回JSON格式：{"questions": ["问题1", "问题2", ...]}"""
 
@@ -1802,7 +1802,7 @@ class ZepToolsService:
 
 采访对象角色：{', '.join(agent_roles)}
 
-请生成1-3个采访问题。"""
+请生成3-5个采访问题。"""
 
         try:
             response = self.llm.chat_json(
