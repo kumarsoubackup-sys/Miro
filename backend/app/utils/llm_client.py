@@ -55,23 +55,14 @@ class LLMClient:
         kwargs = {
             "model": self.model,
             "messages": messages,
-            "max_completion_tokens": max_tokens,
+            "temperature": temperature,
+            "max_tokens": max_tokens,
         }
 
         if response_format:
             kwargs["response_format"] = response_format
 
-        # Try with temperature first, retry without if model doesn't support it
-        try:
-            kwargs["temperature"] = temperature
-            response = self.client.chat.completions.create(**kwargs)
-        except Exception as e:
-            if "temperature" in str(e):
-                del kwargs["temperature"]
-                response = self.client.chat.completions.create(**kwargs)
-            else:
-                raise
-
+        response = self.client.chat.completions.create(**kwargs)
         content = response.choices[0].message.content
         # Some models (e.g. MiniMax M2.5) include <think>...</think> content that should be stripped
         content = re.sub(r'<think>[\s\S]*?</think>', '', content).strip()
