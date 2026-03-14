@@ -15,7 +15,7 @@
             :class="{ active: viewMode === mode }"
             @click="viewMode = mode"
           >
-            {{ { graph: 'Graph', split: 'Split', workbench: 'Workbench' }[mode] }}
+            {{ { graph: t('view.graph'), split: t('view.split'), workbench: t('view.workbench') }[mode] }}
           </button>
         </div>
       </div>
@@ -48,7 +48,7 @@
 
       <!-- Right Panel: Step Components -->
       <div class="panel-wrapper right" :style="rightPanelStyle">
-        <!-- Step 1: Graph build -->
+        <!-- Step 1: 图谱构建 -->
         <Step1GraphBuild 
           v-if="currentStep === 1"
           :currentPhase="currentPhase"
@@ -59,7 +59,7 @@
           :systemLogs="systemLogs"
           @next-step="handleNextStep"
         />
-        <!-- Step 2: Environment setup -->
+        <!-- Step 2: 环境搭建 -->
         <Step2EnvSetup
           v-else-if="currentStep === 2"
           :projectData="projectData"
@@ -82,6 +82,7 @@ import Step1GraphBuild from '../components/Step1GraphBuild.vue'
 import Step2EnvSetup from '../components/Step2EnvSetup.vue'
 import { generateOntology, getProject, buildGraph, getTaskStatus, getGraphData } from '../api/graph'
 import { getPendingUpload, clearPendingUpload } from '../store/pendingUpload'
+import { t } from '../i18n/index.js'
 
 const route = useRoute()
 const router = useRouter()
@@ -90,8 +91,8 @@ const router = useRouter()
 const viewMode = ref('split') // graph | split | workbench
 
 // Step State
-const currentStep = ref(1) // 1: Graph build, 2: Environment setup, 3: Run simulation, 4: Generate report, 5: Deep interaction
-const stepNames = ['Graph Build', 'Environment Setup', 'Run Simulation', 'Generate Report', 'Deep Interaction']
+const currentStep = ref(1) // 1: 图谱构建, 2: 环境搭建, 3: 开始模拟, 4: 报告生成, 5: 深度互动
+const stepNames = computed(() => [t('step.graphBuild'), t('step.envSetup'), t('step.startSim'), t('step.reportGen'), t('step.deepInteraction')])
 
 // Data State
 const currentProjectId = ref(route.params.projectId)
@@ -159,11 +160,11 @@ const toggleMaximize = (target) => {
 const handleNextStep = (params = {}) => {
   if (currentStep.value < 5) {
     currentStep.value++
-    addLog(`Entered Step ${currentStep.value}: ${stepNames[currentStep.value - 1]}`)
+    addLog(`进入 Step ${currentStep.value}: ${stepNames.value[currentStep.value - 1]}`)
     
-    // Record the custom round setting when moving from Step 2 to Step 3.
+    // 如果是从 Step 2 进入 Step 3，记录模拟轮数配置
     if (currentStep.value === 3 && params.maxRounds) {
-      addLog(`Custom simulation rounds: ${params.maxRounds}`)
+      addLog(`自定义模拟轮数: ${params.maxRounds} 轮`)
     }
   }
 }
@@ -171,7 +172,7 @@ const handleNextStep = (params = {}) => {
 const handleGoBack = () => {
   if (currentStep.value > 1) {
     currentStep.value--
-    addLog(`Returned to Step ${currentStep.value}: ${stepNames[currentStep.value - 1]}`)
+    addLog(`返回 Step ${currentStep.value}: ${stepNames.value[currentStep.value - 1]}`)
   }
 }
 

@@ -1,134 +1,147 @@
 <template>
   <div class="home-container">
-    <!-- Top navigation -->
+    <!-- 顶部导航栏 -->
     <nav class="navbar">
       <div class="nav-brand">MIROFISH</div>
       <div class="nav-links">
+        <div class="lang-toggle">
+          <button
+            class="lang-btn"
+            :class="{ active: getLocale() === 'en' }"
+            @click="setLocale('en')"
+          >{{ t('lang.en') }}</button>
+          <span class="lang-divider">|</span>
+          <button
+            class="lang-btn"
+            :class="{ active: getLocale() === 'ms' }"
+            @click="setLocale('ms')"
+          >{{ t('lang.ms') }}</button>
+        </div>
         <a href="https://github.com/666ghj/MiroFish" target="_blank" class="github-link">
-          Visit our GitHub page <span class="arrow">↗</span>
+          {{ t('home.githubLink') }} <span class="arrow">↗</span>
         </a>
       </div>
     </nav>
 
     <div class="main-content">
-      <!-- Upper half: hero section -->
+      <!-- 上半部分：Hero 区域 -->
       <section class="hero-section">
         <div class="hero-left">
           <div class="tag-row">
-            <span class="orange-tag">A Simple and Universal Swarm Intelligence Engine</span>
-            <span class="version-text">/ v0.1 Preview</span>
+            <span class="orange-tag">{{ t('home.tagline') }}</span>
+            <span class="version-text">{{ t('home.version') }}</span>
           </div>
-          
+
           <h1 class="main-title">
-            Upload any report<br>
-            <span class="gradient-text">simulate the future instantly</span>
+            {{ t('home.titleLine1') }}<br>
+            <span class="gradient-text">{{ t('home.titleLine2') }}</span>
           </h1>
-          
+
           <div class="hero-desc">
             <p>
-              Even a single paragraph is enough for <span class="highlight-bold">MiroFish</span> to extract real-world seeds and automatically generate a parallel world populated by up to <span class="highlight-orange">millions of agents</span>. From a god's-eye view, you can inject variables and search for <span class="highlight-code">local optima</span> inside complex collective behavior.
+              {{ t('home.descPart1') }}<span class="highlight-bold">{{ t('home.descBold') }}</span>{{ t('home.descPart2') }}<span class="highlight-orange">{{ t('home.descAgents') }}</span>{{ t('home.descPart3') }}<span class="highlight-code">{{ t('home.descOptimal') }}</span>{{ t('home.descPart4') }}
             </p>
             <p class="slogan-text">
-              Rehearse the future through agent societies, then make decisions after a hundred simulations<span class="blinking-cursor">_</span>
+              {{ t('home.slogan') }}<span class="blinking-cursor">_</span>
             </p>
           </div>
-           
+
           <div class="decoration-square"></div>
         </div>
-        
+
         <div class="hero-right">
-          <!-- Logo area -->
+          <!-- Logo 区域 -->
           <div class="logo-container">
             <img src="../assets/logo/MiroFish_logo_left.jpeg" alt="MiroFish Logo" class="hero-logo" />
           </div>
-          
+
           <button class="scroll-down-btn" @click="scrollToBottom">
             ↓
           </button>
         </div>
       </section>
 
-      <!-- Lower half: two-column layout -->
+      <!-- 下半部分：双栏布局 -->
       <section class="dashboard-section">
-        <!-- Left column: status and workflow -->
+        <!-- 左栏：状态与步骤 -->
         <div class="left-panel">
           <div class="panel-header">
-            <span class="status-dot">■</span> System Status
+            <span class="status-dot">■</span> {{ t('home.systemStatus') }}
           </div>
-          
-          <h2 class="section-title">Ready</h2>
+
+          <h2 class="section-title">{{ t('home.ready') }}</h2>
           <p class="section-desc">
-            The prediction engine is standing by. Upload unstructured materials to initialize a simulation run.
+            {{ t('home.statusDesc') }}
           </p>
-          
-          <!-- Metrics -->
+
+          <!-- 数据指标卡片 -->
           <div class="metrics-row">
             <div class="metric-card">
-              <div class="metric-value">Low Cost</div>
-              <div class="metric-label">Typical runs average about $5 each</div>
+              <div class="metric-value">{{ t('home.lowCost') }}</div>
+              <div class="metric-label">{{ t('home.lowCostDesc') }}</div>
             </div>
             <div class="metric-card">
-              <div class="metric-value">High Scale</div>
-              <div class="metric-label">Supports simulations with up to millions of agents</div>
+              <div class="metric-value">{{ t('home.highAvail') }}</div>
+              <div class="metric-label">{{ t('home.highAvailDesc') }}</div>
             </div>
           </div>
 
-          <!-- Workflow overview -->
+          <!-- 项目模拟步骤介绍 -->
           <div class="steps-container">
             <div class="steps-header">
-               <span class="diamond-icon">◇</span> Workflow Sequence
+               <span class="diamond-icon">◇</span> {{ t('home.workflowSequence') }}
             </div>
             <div class="workflow-list">
               <div class="workflow-item">
                 <span class="step-num">01</span>
                 <div class="step-info">
-                  <div class="step-title">Graph Build</div>
-                  <div class="step-desc">Seed extraction, individual and collective memory injection, and GraphRAG construction</div>
+                  <div class="step-title">{{ t('home.step1Title') }}</div>
+                  <div class="step-desc">{{ t('home.step1Desc') }}</div>
                 </div>
               </div>
               <div class="workflow-item">
                 <span class="step-num">02</span>
                 <div class="step-info">
-                  <div class="step-title">Environment Setup</div>
-                  <div class="step-desc">Entity extraction, persona generation, and simulation parameter injection by environment agents</div>
+                  <div class="step-title">{{ t('home.step2Title') }}</div>
+                  <div class="step-desc">{{ t('home.step2Desc') }}</div>
                 </div>
               </div>
               <div class="workflow-item">
                 <span class="step-num">03</span>
                 <div class="step-info">
-                  <div class="step-title">Run Simulation</div>
-                  <div class="step-desc">Parallel platform simulation, automatic prompt parsing, and dynamic temporal memory updates</div>
+                  <div class="step-title">{{ t('home.step3Title') }}</div>
+                  <div class="step-desc">{{ t('home.step3Desc') }}</div>
                 </div>
               </div>
               <div class="workflow-item">
                 <span class="step-num">04</span>
                 <div class="step-info">
-                  <div class="step-title">Generate Report</div>
-                  <div class="step-desc">ReportAgent uses a rich toolset to explore the post-simulation environment in depth</div>
+                  <div class="step-title">{{ t('home.step4Title') }}</div>
+                  <div class="step-desc">{{ t('home.step4Desc') }}</div>
                 </div>
               </div>
               <div class="workflow-item">
                 <span class="step-num">05</span>
                 <div class="step-info">
-                  <div class="step-title">Deep Interaction</div>
-                  <div class="step-desc">Talk to any simulated individual and continue the analysis with ReportAgent</div>
+                  <div class="step-title">{{ t('home.step5Title') }}</div>
+                  <div class="step-desc">{{ t('home.step5Desc') }}</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right column: interactive console -->
+        <!-- 右栏：交互控制台 -->
         <div class="right-panel">
           <div class="console-box">
-            <!-- Upload area -->
+            <!-- 上传区域 -->
             <div class="console-section">
               <div class="console-header">
-                <span class="console-label">01 / Seed Material</span>
-                <span class="console-meta">Supported formats: PDF, MD, TXT</span>
+                <span class="console-label">{{ t('home.realSeed') }}</span>
+                <span class="console-meta">{{ t('home.supportedFormats') }}</span>
               </div>
-              
-              <div 
+
+              <div
                 class="upload-zone"
                 :class="{ 'drag-over': isDragOver, 'has-files': files.length > 0 }"
                 @dragover.prevent="handleDragOver"
@@ -145,13 +158,13 @@
                   style="display: none"
                   :disabled="loading"
                 />
-                
+
                 <div v-if="files.length === 0" class="upload-placeholder">
                   <div class="upload-icon">↑</div>
-                  <div class="upload-title">Drag files here to upload</div>
-                  <div class="upload-hint">or click to browse your filesystem</div>
+                  <div class="upload-title">{{ t('home.dragUpload') }}</div>
+                  <div class="upload-hint">{{ t('home.clickBrowse') }}</div>
                 </div>
-                
+
                 <div v-else class="file-list">
                   <div v-for="(file, index) in files" :key="index" class="file-item">
                     <span class="file-icon">📄</span>
@@ -162,37 +175,37 @@
               </div>
             </div>
 
-            <!-- Divider -->
+            <!-- 分割线 -->
             <div class="console-divider">
-              <span>Input Parameters</span>
+              <span>{{ t('home.inputParams') }}</span>
             </div>
 
-            <!-- Input area -->
+            <!-- 输入区域 -->
             <div class="console-section">
               <div class="console-header">
-                <span class="console-label">>_ 02 / Simulation Prompt</span>
+                <span class="console-label">{{ t('home.simPrompt') }}</span>
               </div>
               <div class="input-wrapper">
                 <textarea
                   v-model="formData.simulationRequirement"
                   class="code-input"
-                  placeholder="// Describe the simulation or prediction request in natural language (example: if Wuhan University revoked a disciplinary action, how would public opinion evolve?)"
+                  :placeholder="t('home.simPlaceholder')"
                   rows="6"
                   :disabled="loading"
                 ></textarea>
-                <div class="model-badge">Engine: MiroFish-V1.0</div>
+                <div class="model-badge">{{ t('home.engineBadge') }}</div>
               </div>
             </div>
 
-            <!-- Launch button -->
+            <!-- 启动按钮 -->
             <div class="console-section btn-section">
-              <button 
+              <button
                 class="start-engine-btn"
                 @click="startSimulation"
                 :disabled="!canSubmit || loading"
               >
-                <span v-if="!loading">Launch Engine</span>
-                <span v-else>Initializing...</span>
+                <span v-if="!loading">{{ t('home.launchEngine') }}</span>
+                <span v-else>{{ t('home.initializing') }}</span>
                 <span class="btn-arrow">→</span>
               </button>
             </div>
@@ -200,7 +213,7 @@
         </div>
       </section>
 
-      <!-- Project history -->
+      <!-- 历史项目数据库 -->
       <HistoryDatabase />
     </div>
   </div>
@@ -210,44 +223,45 @@
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import HistoryDatabase from '../components/HistoryDatabase.vue'
+import { t, setLocale, getLocale } from '../i18n/index.js'
 
 const router = useRouter()
 
-// Form state
+// 表单数据
 const formData = ref({
   simulationRequirement: ''
 })
 
-// File list
+// 文件列表
 const files = ref([])
 
-// State
+// 状态
 const loading = ref(false)
 const error = ref('')
 const isDragOver = ref(false)
 
-// File input ref
+// 文件输入引用
 const fileInput = ref(null)
 
-// Whether the form can be submitted
+// 计算属性:是否可以提交
 const canSubmit = computed(() => {
   return formData.value.simulationRequirement.trim() !== '' && files.value.length > 0
 })
 
-// Open the file picker
+// 触发文件选择
 const triggerFileInput = () => {
   if (!loading.value) {
     fileInput.value?.click()
   }
 }
 
-// Handle file selection
+// 处理文件选择
 const handleFileSelect = (event) => {
   const selectedFiles = Array.from(event.target.files)
   addFiles(selectedFiles)
 }
 
-// Drag and drop handlers
+// 处理拖拽相关
 const handleDragOver = (e) => {
   if (!loading.value) {
     isDragOver.value = true
@@ -261,12 +275,12 @@ const handleDragLeave = (e) => {
 const handleDrop = (e) => {
   isDragOver.value = false
   if (loading.value) return
-  
+
   const droppedFiles = Array.from(e.dataTransfer.files)
   addFiles(droppedFiles)
 }
 
-// Add files
+// 添加文件
 const addFiles = (newFiles) => {
   const validFiles = newFiles.filter(file => {
     const ext = file.name.split('.').pop().toLowerCase()
@@ -275,12 +289,12 @@ const addFiles = (newFiles) => {
   files.value.push(...validFiles)
 }
 
-// Remove files
+// 移除文件
 const removeFile = (index) => {
   files.value.splice(index, 1)
 }
 
-// Scroll to bottom
+// 滚动到底部
 const scrollToBottom = () => {
   window.scrollTo({
     top: document.body.scrollHeight,
@@ -288,15 +302,15 @@ const scrollToBottom = () => {
   })
 }
 
-// Start the simulation immediately and navigate; the API call happens in the Process view
+// 开始模拟 - 立即跳转，API调用在Process页面进行
 const startSimulation = () => {
   if (!canSubmit.value || loading.value) return
-  
-  // Store pending upload data
+
+  // 存储待上传的数据
   import('../store/pendingUpload.js').then(({ setPendingUpload }) => {
     setPendingUpload(files.value, formData.value.simulationRequirement)
-    
-    // Navigate to the Process view immediately (using a special marker for a new project)
+
+    // 立即跳转到Process页面（使用特殊标识表示新建项目）
     router.push({
       name: 'Process',
       params: { projectId: 'new' }
@@ -306,7 +320,7 @@ const startSimulation = () => {
 </script>
 
 <style scoped>
-/* Global variables and reset */
+/* 全局变量与重置 */
 :root {
   --black: #000000;
   --white: #FFFFFF;
@@ -314,10 +328,6 @@ const startSimulation = () => {
   --gray-light: #F5F5F5;
   --gray-text: #666666;
   --border: #E5E5E5;
-  /* 
-    Use Space Grotesk for headings and JetBrains Mono for code/label text
-    Make sure these Google Fonts are loaded in index.html 
-  */
   --font-mono: 'JetBrains Mono', monospace;
   --font-sans: 'Space Grotesk', 'Noto Sans SC', system-ui, sans-serif;
   --font-cn: 'Noto Sans SC', system-ui, sans-serif;
@@ -330,7 +340,7 @@ const startSimulation = () => {
   color: var(--black);
 }
 
-/* Top navigation */
+/* 顶部导航 */
 .navbar {
   height: 60px;
   background: var(--black);
@@ -351,6 +361,41 @@ const startSimulation = () => {
 .nav-links {
   display: flex;
   align-items: center;
+  gap: 20px;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: all 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.lang-btn:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.lang-btn.active {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+
+.lang-divider {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem;
 }
 
 .github-link {
@@ -373,14 +418,14 @@ const startSimulation = () => {
   font-family: sans-serif;
 }
 
-/* Main content area */
+/* 主要内容区 */
 .main-content {
   max-width: 1400px;
   margin: 0 auto;
   padding: 60px 40px;
 }
 
-/* Hero section */
+/* Hero 区域 */
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -511,7 +556,7 @@ const startSimulation = () => {
 }
 
 .hero-logo {
-  max-width: 500px; /* Adjust logo size */
+  max-width: 500px;
   width: 100%;
 }
 
@@ -533,7 +578,7 @@ const startSimulation = () => {
   border-color: var(--orange);
 }
 
-/* Dashboard two-column layout */
+/* Dashboard 双栏布局 */
 .dashboard-section {
   display: flex;
   gap: 60px;
@@ -548,7 +593,7 @@ const startSimulation = () => {
   flex-direction: column;
 }
 
-/* Left panel */
+/* 左侧面板 */
 .left-panel {
   flex: 0.8;
 }
@@ -604,7 +649,7 @@ const startSimulation = () => {
   color: #999;
 }
 
-/* Simulation workflow overview */
+/* 项目模拟步骤介绍 */
 .steps-container {
   border: 1px solid var(--border);
   padding: 30px;
@@ -660,14 +705,14 @@ const startSimulation = () => {
   color: var(--gray-text);
 }
 
-/* Right-side control console */
+/* 右侧交互控制台 */
 .right-panel {
   flex: 1.2;
 }
 
 .console-box {
-  border: 1px solid #CCC; /* Outer solid border */
-  padding: 8px; /* Padding creates a double-border feel */
+  border: 1px solid #CCC;
+  padding: 8px;
 }
 
 .console-section {
@@ -835,7 +880,7 @@ const startSimulation = () => {
   overflow: hidden;
 }
 
-/* Clickable state (not disabled) */
+/* 可点击状态（非禁用） */
 .start-engine-btn:not(:disabled) {
   background: var(--black);
   border: 1px solid var(--black);
@@ -860,28 +905,28 @@ const startSimulation = () => {
   border: 1px solid #E5E5E5;
 }
 
-/* Guidance animation: subtle border pulse */
+/* 引导动画：微妙的边框脉冲 */
 @keyframes pulse-border {
   0% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2); }
   70% { box-shadow: 0 0 0 6px rgba(0, 0, 0, 0); }
   100% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
 }
 
-/* Responsive layout */
+/* 响应式适配 */
 @media (max-width: 1024px) {
   .dashboard-section {
     flex-direction: column;
   }
-  
+
   .hero-section {
     flex-direction: column;
   }
-  
+
   .hero-left {
     padding-right: 0;
     margin-bottom: 40px;
   }
-  
+
   .hero-logo {
     max-width: 200px;
     margin-bottom: 20px;

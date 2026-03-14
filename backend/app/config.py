@@ -35,6 +35,9 @@ class Config:
     
     # Zep settings.
     ZEP_API_KEY = os.environ.get('ZEP_API_KEY')
+
+    # Language configuration ('en' for English, 'ms' for Bahasa Melayu).
+    OUTPUT_LANGUAGE = os.environ.get('OUTPUT_LANGUAGE', 'en')
     
     # File upload settings.
     MAX_CONTENT_LENGTH = 50 * 1024 * 1024  # 50MB
@@ -72,4 +75,6 @@ class Config:
             errors.append("LLM_API_KEY is not configured")
         if not cls.ZEP_API_KEY:
             errors.append("ZEP_API_KEY is not configured")
+        if cls.OUTPUT_LANGUAGE not in ('en', 'ms'):
+            errors.append("OUTPUT_LANGUAGE must be 'en' or 'ms'")
         return errors

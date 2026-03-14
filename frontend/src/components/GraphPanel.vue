@@ -1,25 +1,25 @@
 <template>
   <div class="graph-panel">
     <div class="panel-header">
-      <span class="panel-title">Graph Relationship Visualization</span>
-      <!-- Top-right toolbar -->
+      <span class="panel-title">{{ t('graph.title') }}</span>
+      <!-- 顶部工具栏 (Internal Top Right) -->
       <div class="header-tools">
-        <button class="tool-btn" @click="$emit('refresh')" :disabled="loading" title="Refresh graph">
+        <button class="tool-btn" @click="$emit('refresh')" :disabled="loading" :title="t('graph.refresh')">
           <span class="icon-refresh" :class="{ 'spinning': loading }">↻</span>
-          <span class="btn-text">Refresh</span>
+          <span class="btn-text">{{ t('graph.refresh') }}</span>
         </button>
-        <button class="tool-btn" @click="$emit('toggle-maximize')" title="Maximize or restore">
+        <button class="tool-btn" @click="$emit('toggle-maximize')" :title="t('graph.maximize')">
           <span class="icon-maximize">⛶</span>
         </button>
       </div>
     </div>
     
     <div class="graph-container" ref="graphContainer">
-      <!-- Graph visualization -->
+      <!-- 图谱可视化 -->
       <div v-if="graphData" class="graph-view">
         <svg ref="graphSvg" class="graph-svg"></svg>
         
-        <!-- Build and simulation hint -->
+        <!-- 构建中/模拟中提示 -->
         <div v-if="currentPhase === 1 || isSimulating" class="graph-building-hint">
           <div class="memory-icon-wrapper">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="memory-icon">
@@ -27,10 +27,10 @@
               <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-4.04z" />
             </svg>
           </div>
-          {{ isSimulating ? 'GraphRAG long- and short-term memory is updating in real time' : 'Updating in real time...' }}
+          {{ isSimulating ? t('graph.memoryUpdating') : t('graph.liveUpdating') }}
         </div>
         
-        <!-- Post-simulation hint -->
+        <!-- 模拟结束后的提示 -->
         <div v-if="showSimulationFinishedHint" class="graph-building-hint finished-hint">
           <div class="hint-icon-wrapper">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hint-icon">
@@ -39,8 +39,8 @@
               <line x1="12" y1="8" x2="12.01" y2="8"></line>
             </svg>
           </div>
-          <span class="hint-text">A small amount of processing is still finishing. Refresh the graph manually in a moment.</span>
-          <button class="hint-close-btn" @click="dismissFinishedHint" title="Dismiss hint">
+          <span class="hint-text">{{ t('graph.postSimHint') }}</span>
+          <button class="hint-close-btn" @click="dismissFinishedHint" title="关闭提示">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -48,17 +48,17 @@
           </button>
         </div>
         
-        <!-- Node/edge detail panel -->
+        <!-- 节点/边详情面板 -->
         <div v-if="selectedItem" class="detail-panel">
           <div class="detail-panel-header">
-            <span class="detail-title">{{ selectedItem.type === 'node' ? 'Node Details' : 'Relationship' }}</span>
+            <span class="detail-title">{{ selectedItem.type === 'node' ? t('graph.nodeDetails') : t('graph.relationship') }}</span>
             <span v-if="selectedItem.type === 'node'" class="detail-type-badge" :style="{ background: selectedItem.color, color: '#fff' }">
               {{ selectedItem.entityType }}
             </span>
             <button class="detail-close" @click="closeDetailPanel">×</button>
           </div>
           
-          <!-- Node details -->
+          <!-- 节点详情 -->
           <div v-if="selectedItem.type === 'node'" class="detail-content">
             <div class="detail-row">
               <span class="detail-label">Name:</span>
@@ -101,9 +101,9 @@
             </div>
           </div>
           
-          <!-- Edge details -->
+          <!-- 边详情 -->
           <div v-else class="detail-content">
-            <!-- Self-loop group details -->
+            <!-- 自环组详情 -->
             <template v-if="selectedItem.data.isSelfLoopGroup">
               <div class="edge-relation-header self-loop-header">
                 {{ selectedItem.data.source_name }} - Self Relations
@@ -154,7 +154,7 @@
               </div>
             </template>
             
-            <!-- Standard edge details -->
+            <!-- 普通边详情 -->
             <template v-else>
               <div class="edge-relation-header">
                 {{ selectedItem.data.source_name }} → {{ selectedItem.data.name || 'RELATED_TO' }} → {{ selectedItem.data.target_name }}
@@ -200,22 +200,22 @@
         </div>
       </div>
       
-      <!-- Loading state -->
+      <!-- 加载状态 -->
       <div v-else-if="loading" class="graph-state">
         <div class="loading-spinner"></div>
-        <p>Loading graph data...</p>
+        <p>{{ t('graph.loadingData') }}</p>
       </div>
       
-      <!-- Waiting / empty state -->
+      <!-- 等待/空状态 -->
       <div v-else class="graph-state">
         <div class="empty-icon">❖</div>
-        <p class="empty-text">Waiting for ontology generation...</p>
+        <p class="empty-text">{{ t('graph.waitingOntology') }}</p>
       </div>
     </div>
 
-    <!-- Bottom-left legend -->
+    <!-- 底部图例 (Bottom Left) -->
     <div v-if="graphData && entityTypes.length" class="graph-legend">
-      <span class="legend-title">Entity Types</span>
+      <span class="legend-title">{{ t('graph.entityTypes') }}</span>
       <div class="legend-items">
         <div class="legend-item" v-for="type in entityTypes" :key="type.name">
           <span class="legend-dot" :style="{ background: type.color }"></span>
@@ -224,13 +224,13 @@
       </div>
     </div>
     
-    <!-- Edge label toggle -->
+    <!-- 显示边标签开关 -->
     <div v-if="graphData" class="edge-labels-toggle">
       <label class="toggle-switch">
         <input type="checkbox" v-model="showEdgeLabels" />
         <span class="slider"></span>
       </label>
-      <span class="toggle-label">Show Edge Labels</span>
+      <span class="toggle-label">{{ t('graph.showEdgeLabels') }}</span>
     </div>
   </div>
 </template>
@@ -238,6 +238,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted, watch, nextTick, computed } from 'vue'
 import * as d3 from 'd3'
+import { t } from '../i18n/index.js'
 
 const props = defineProps({
   graphData: Object,
@@ -251,26 +252,26 @@ const emit = defineEmits(['refresh', 'toggle-maximize'])
 const graphContainer = ref(null)
 const graphSvg = ref(null)
 const selectedItem = ref(null)
-const showEdgeLabels = ref(true) // Show edge labels by default.
-const expandedSelfLoops = ref(new Set()) // Expanded self-loop entries.
-const showSimulationFinishedHint = ref(false) // Post-simulation hint visibility.
-const wasSimulating = ref(false) // Track whether the panel was previously simulating.
+const showEdgeLabels = ref(true) // 默认显示边标签
+const expandedSelfLoops = ref(new Set()) // 展开的自环项
+const showSimulationFinishedHint = ref(false) // 模拟结束后的提示
+const wasSimulating = ref(false) // 追踪之前是否在模拟中
 
-// Dismiss the post-simulation hint.
+// 关闭模拟结束提示
 const dismissFinishedHint = () => {
   showSimulationFinishedHint.value = false
 }
 
-// Watch isSimulating to detect when the run ends.
+// 监听 isSimulating 变化，检测模拟结束
 watch(() => props.isSimulating, (newValue, oldValue) => {
   if (wasSimulating.value && !newValue) {
-    // Show the completion hint when the graph switches out of simulation mode.
+    // 从模拟中变为非模拟状态，显示结束提示
     showSimulationFinishedHint.value = true
   }
   wasSimulating.value = newValue
 }, { immediate: true })
 
-// Toggle expanded state for self-loop groups.
+// 切换自环项展开/折叠状态
 const toggleSelfLoop = (id) => {
   const newSet = new Set(expandedSelfLoops.value)
   if (newSet.has(id)) {
@@ -281,7 +282,7 @@ const toggleSelfLoop = (id) => {
   expandedSelfLoops.value = newSet
 }
 
-// Compute entity types for the legend
+// 计算实体类型用于图例
 const entityTypes = computed(() => {
   if (!props.graphData?.nodes) return []
   const typeMap = {}
@@ -298,7 +299,7 @@ const entityTypes = computed(() => {
   return Object.values(typeMap)
 })
 
-// Format timestamps for display
+// 格式化时间
 const formatDateTime = (dateStr) => {
   if (!dateStr) return ''
   try {
@@ -328,7 +329,7 @@ let linkLabelBgRef = null
 const renderGraph = () => {
   if (!graphSvg.value || !props.graphData) return
   
-  // Stop any previous force simulation
+  // 停止之前的仿真
   if (currentSimulation) {
     currentSimulation.stop()
   }
@@ -362,7 +363,7 @@ const renderGraph = () => {
   
   const nodeIds = new Set(nodes.map(n => n.id))
   
-  // Process edge data and count multi-edges between node pairs
+  // 处理边数据，计算同一对节点间的边数量和索引
   const edgePairCount = {}
   const selfLoopEdges = {} // 按节点分组的自环边
   const tempEdges = edgesData

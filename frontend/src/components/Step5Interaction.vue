@@ -58,7 +58,7 @@
                       <path d="M12 2a10 10 0 0 1 10 10" stroke-width="4" stroke="#4B5563" stroke-linecap="round"></path>
                     </svg>
                   </div>
-                  <span class="loading-text">Generating {{ section.title }}...</span>
+                  <span class="loading-text">{{ t('step4.generatingSection') }} {{ section.title }}...</span>
                 </div>
               </div>
             </div>
@@ -85,8 +85,8 @@
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
           </svg>
           <div class="action-bar-text">
-            <span class="action-bar-title">Interactive Tools</span>
-            <span class="action-bar-subtitle mono">{{ profiles.length }} agents available</span>
+            <span class="action-bar-title">{{ t('step5.interactiveTools') }}</span>
+            <span class="action-bar-subtitle mono">{{ profiles.length }} {{ t('step5.agentsAvailable') }}</span>
           </div>
         </div>
           <div class="action-bar-tabs">
@@ -98,7 +98,7 @@
               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
               </svg>
-              <span>Chat with Report Agent</span>
+              <span>{{ t('step5.chatReportAgent') }}</span>
             </button>
             <div class="agent-dropdown" v-if="profiles.length > 0">
               <button 
@@ -110,13 +110,13 @@
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
-                <span>{{ selectedAgent ? selectedAgent.username : 'Chat with any individual in the world' }}</span>
+                <span>{{ selectedAgent ? selectedAgent.username : t('step5.chatAnyAgent') }}</span>
                 <svg class="dropdown-arrow" :class="{ open: showAgentDropdown }" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
                   <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
               </button>
               <div v-if="showAgentDropdown" class="dropdown-menu">
-                <div class="dropdown-header">Choose a conversation target</div>
+                <div class="dropdown-header">{{ t('step5.selectAgent') }}</div>
                 <div 
                   v-for="(agent, idx) in profiles" 
                   :key="idx"
@@ -126,7 +126,7 @@
                   <div class="agent-avatar">{{ (agent.username || 'A')[0] }}</div>
                   <div class="agent-info">
                     <span class="agent-name">{{ agent.username }}</span>
-                    <span class="agent-role">{{ agent.profession || 'Unknown profession' }}</span>
+                    <span class="agent-role">{{ agent.profession || t('step2.unknownProfession') }}</span>
                   </div>
                 </div>
               </div>
@@ -141,7 +141,7 @@
                 <path d="M9 11l3 3L22 4"></path>
                 <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
               </svg>
-              <span>Send a survey into the world</span>
+              <span>{{ t('step5.sendSurvey') }}</span>
             </button>
           </div>
         </div>
@@ -154,8 +154,8 @@
             <div class="tools-card-header">
               <div class="tools-card-avatar">R</div>
               <div class="tools-card-info">
-                <div class="tools-card-name">Report Agent - Chat</div>
-                <div class="tools-card-subtitle">A fast conversational version of the report-generation agent with access to 4 specialized tools and MiroFish's full memory</div>
+                <div class="tools-card-name">{{ t('step5.reportAgentChat') }}</div>
+                <div class="tools-card-subtitle">{{ t('step5.reportAgentDesc') }}</div>
               </div>
               <button class="tools-card-toggle" @click="showToolsDetail = !showToolsDetail">
                 <svg :class="{ 'is-expanded': showToolsDetail }" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
@@ -172,8 +172,8 @@
                     </svg>
                   </div>
                   <div class="tool-content">
-                    <div class="tool-name">InsightForge</div>
-                    <div class="tool-desc">Aligns real-world seed data with the simulation state and combines global and local memory for deep causal analysis across time and context</div>
+                    <div class="tool-name">{{ t('step5.toolInsight') }}</div>
+                    <div class="tool-desc">{{ t('step5.toolInsightDesc') }}</div>
                   </div>
                 </div>
                 <div class="tool-item tool-blue">
@@ -184,8 +184,8 @@
                     </svg>
                   </div>
                   <div class="tool-content">
-                    <div class="tool-name">PanoramaSearch</div>
-                    <div class="tool-desc">Uses graph traversal to reconstruct propagation paths and capture the topology of end-to-end information flow</div>
+                    <div class="tool-name">{{ t('step5.toolPanorama') }}</div>
+                    <div class="tool-desc">{{ t('step5.toolPanoramaDesc') }}</div>
                   </div>
                 </div>
                 <div class="tool-item tool-orange">
@@ -195,8 +195,8 @@
                     </svg>
                   </div>
                   <div class="tool-content">
-                    <div class="tool-name">QuickSearch</div>
-                    <div class="tool-desc">A GraphRAG-powered instant query interface optimized for fast extraction of node attributes and discrete facts</div>
+                    <div class="tool-name">{{ t('step5.toolQuickSearch') }}</div>
+                    <div class="tool-desc">{{ t('step5.toolQuickSearchDesc') }}</div>
                   </div>
                 </div>
                 <div class="tool-item tool-green">
@@ -208,8 +208,8 @@
                     </svg>
                   </div>
                   <div class="tool-content">
-                    <div class="tool-name">InterviewSubAgent</div>
-                    <div class="tool-desc">Runs autonomous interviews in parallel with simulated individuals to collect unstructured opinions and psychological state signals</div>
+                    <div class="tool-name">{{ t('step5.toolInterview') }}</div>
+                    <div class="tool-desc">{{ t('step5.toolInterviewDesc') }}</div>
                   </div>
                 </div>
               </div>
@@ -224,7 +224,7 @@
                 <div class="profile-card-name">{{ selectedAgent.username }}</div>
                 <div class="profile-card-meta">
                   <span v-if="selectedAgent.name" class="profile-card-handle">@{{ selectedAgent.name }}</span>
-                  <span class="profile-card-profession">{{ selectedAgent.profession || 'Unknown profession' }}</span>
+                  <span class="profile-card-profession">{{ selectedAgent.profession || t('step2.unknownProfession') }}</span>
                 </div>
               </div>
               <button class="profile-card-toggle" @click="showFullProfile = !showFullProfile">
@@ -235,7 +235,7 @@
             </div>
             <div v-if="showFullProfile && selectedAgent.bio" class="profile-card-body">
               <div class="profile-card-bio">
-                <div class="profile-card-label">Bio</div>
+                <div class="profile-card-label">{{ t('step5.bio') }}</div>
                 <p>{{ selectedAgent.bio }}</p>
               </div>
             </div>
@@ -250,7 +250,7 @@
                 </svg>
               </div>
               <p class="empty-text">
-                {{ chatTarget === 'report_agent' ? 'Chat with the Report Agent to explore the report in more depth' : 'Chat with simulated individuals to understand their views' }}
+                {{ chatTarget === 'report_agent' ? t('step5.chatReportAgentEmpty') : t('step5.chatAgentEmpty') }}
               </p>
             </div>
             <div 
@@ -292,7 +292,7 @@
             <textarea 
               v-model="chatInput"
               class="chat-input"
-              placeholder="Type your question..."
+              :placeholder="t('step5.inputPlaceholder')"
               @keydown.enter.exact.prevent="sendMessage"
               :disabled="isSending || (!selectedAgent && chatTarget === 'agent')"
               rows="1"
@@ -317,8 +317,8 @@
           <div class="survey-setup">
             <div class="setup-section">
               <div class="section-header">
-                <span class="section-title">Select survey targets</span>
-                <span class="selection-count">Selected {{ selectedAgents.size }} / {{ profiles.length }}</span>
+                <span class="section-title">选择调查对象</span>
+                <span class="selection-count">已选 {{ selectedAgents.size }} / {{ profiles.length }}</span>
               </div>
               <div class="agents-grid">
                 <label 
@@ -335,7 +335,7 @@
                   <div class="checkbox-avatar">{{ (agent.username || 'A')[0] }}</div>
                   <div class="checkbox-info">
                     <span class="checkbox-name">{{ agent.username }}</span>
-                    <span class="checkbox-role">{{ agent.profession || 'Unknown profession' }}</span>
+                    <span class="checkbox-role">{{ agent.profession || '未知职业' }}</span>
                   </div>
                   <div class="checkbox-indicator">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3">
@@ -345,20 +345,20 @@
                 </label>
               </div>
               <div class="selection-actions">
-                <button class="action-link" @click="selectAllAgents">Select all</button>
+                <button class="action-link" @click="selectAllAgents">全选</button>
                 <span class="action-divider">|</span>
-                <button class="action-link" @click="clearAgentSelection">Clear</button>
+                <button class="action-link" @click="clearAgentSelection">清空</button>
               </div>
             </div>
 
             <div class="setup-section">
               <div class="section-header">
-                <span class="section-title">Survey question</span>
+                <span class="section-title">问卷问题</span>
               </div>
               <textarea 
                 v-model="surveyQuestion"
                 class="survey-input"
-                placeholder="Type the question you want to ask all selected targets..."
+                placeholder="输入您想问所有被选中对象的问题..."
                 rows="3"
               ></textarea>
             </div>
@@ -369,15 +369,15 @@
               @click="submitSurvey"
             >
               <span v-if="isSurveying" class="loading-spinner"></span>
-              <span v-else>Send survey</span>
+              <span v-else>发送问卷</span>
             </button>
           </div>
 
           <!-- Survey Results -->
           <div v-if="surveyResults.length > 0" class="survey-results">
             <div class="results-header">
-              <span class="results-title">Survey results</span>
-              <span class="results-count">{{ surveyResults.length }} responses</span>
+              <span class="results-title">调查结果</span>
+              <span class="results-count">{{ surveyResults.length }} 条回复</span>
             </div>
             <div class="results-list">
               <div 
@@ -389,7 +389,7 @@
                   <div class="result-avatar">{{ (result.agent_name || 'A')[0] }}</div>
                   <div class="result-info">
                     <span class="result-name">{{ result.agent_name }}</span>
-                    <span class="result-role">{{ result.profession || 'Unknown profession' }}</span>
+                    <span class="result-role">{{ result.profession || '未知职业' }}</span>
                   </div>
                 </div>
                 <div class="result-question">
@@ -414,6 +414,7 @@
 import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import { chatWithReport, getReport, getAgentLog } from '../api/report'
 import { interviewAgents, getSimulationProfilesRealtime } from '../api/simulation'
+import { t } from '../i18n/index.js'
 
 const props = defineProps({
   reportId: String,
@@ -431,11 +432,10 @@ const selectedAgentIndex = ref(null)
 const showFullProfile = ref(true)
 const showToolsDetail = ref(true)
 
-// Chat state
+// Chat State
 const chatInput = ref('')
 const chatHistory = ref([])
-// Cache all conversation histories: { 'report_agent': [], 'agent_0': [], 'agent_1': [], ... }
-const chatHistoryCache = ref({})
+const chatHistoryCache = ref({}) // 缓存所有对话记录: { 'report_agent': [], 'agent_0': [], 'agent_1': [], ... }
 const isSending = ref(false)
 const chatMessages = ref(null)
 const chatInputRef = ref(null)
@@ -485,7 +485,7 @@ const selectChatTarget = (target) => {
   }
 }
 
-// Save the current conversation into the cache
+// 保存当前对话记录到缓存
 const saveChatHistory = () => {
   if (chatHistory.value.length === 0) return
   
@@ -497,7 +497,7 @@ const saveChatHistory = () => {
 }
 
 const selectReportAgentChat = () => {
-  // Save the current conversation before switching
+  // 保存当前对话记录
   saveChatHistory()
   
   activeTab.value = 'chat'
@@ -506,7 +506,7 @@ const selectReportAgentChat = () => {
   selectedAgentIndex.value = null
   showAgentDropdown.value = false
   
-  // Restore the Report Agent conversation history
+  // 恢复 Report Agent 的对话记录
   chatHistory.value = chatHistoryCache.value['report_agent'] || []
 }
 
@@ -526,7 +526,7 @@ const toggleAgentDropdown = () => {
 }
 
 const selectAgent = (agent, idx) => {
-  // Save the current conversation before switching
+  // 保存当前对话记录
   saveChatHistory()
   
   selectedAgent.value = agent
@@ -534,9 +534,9 @@ const selectAgent = (agent, idx) => {
   chatTarget.value = 'agent'
   showAgentDropdown.value = false
   
-  // Restore this agent's conversation history
+  // 恢复该 Agent 的对话记录
   chatHistory.value = chatHistoryCache.value[`agent_${idx}`] || []
-  addLog(`Selected conversation target: ${agent.username}`)
+  addLog(`选择对话对象: ${agent.username}`)
 }
 
 const formatTime = (timestamp) => {
@@ -663,10 +663,10 @@ const sendMessage = async () => {
       await sendToAgent(message)
     }
   } catch (err) {
-    addLog(`Send failed: ${err.message}`)
+    addLog(`发送失败: ${err.message}`)
     chatHistory.value.push({
       role: 'assistant',
-      content: `Sorry, an error occurred: ${err.message}`,
+      content: `抱歉，发生了错误: ${err.message}`,
       timestamp: new Date().toISOString()
     })
   } finally {
@@ -678,7 +678,7 @@ const sendMessage = async () => {
 }
 
 const sendToReportAgent = async (message) => {
-  addLog(`Sending to Report Agent: ${message.substring(0, 50)}...`)
+  addLog(`向 Report Agent 发送: ${message.substring(0, 50)}...`)
   
   // Build chat history for API
   const historyForApi = chatHistory.value
@@ -698,21 +698,21 @@ const sendToReportAgent = async (message) => {
   if (res.success && res.data) {
     chatHistory.value.push({
       role: 'assistant',
-      content: res.data.response || res.data.answer || 'No response',
+      content: res.data.response || res.data.answer || '无响应',
       timestamp: new Date().toISOString()
     })
-    addLog('Report Agent responded')
+    addLog('Report Agent 已回复')
   } else {
-    throw new Error(res.error || 'Request failed')
+    throw new Error(res.error || '请求失败')
   }
 }
 
 const sendToAgent = async (message) => {
   if (!selectedAgent.value || selectedAgentIndex.value === null) {
-    throw new Error('Please select a simulated individual first')
+    throw new Error('请先选择一个模拟个体')
   }
   
-  addLog(`Sending to ${selectedAgent.value.username}: ${message.substring(0, 50)}...`)
+  addLog(`向 ${selectedAgent.value.username} 发送: ${message.substring(0, 50)}...`)
   
   // Build prompt with chat history
   let prompt = message
@@ -720,9 +720,9 @@ const sendToAgent = async (message) => {
     const historyContext = chatHistory.value
       .filter(msg => msg.content !== message)
       .slice(-6)
-      .map(msg => `${msg.role === 'user' ? 'Questioner' : 'You'}: ${msg.content}`)
+      .map(msg => `${msg.role === 'user' ? '提问者' : '你'}：${msg.content}`)
       .join('\n')
-    prompt = `Here is our previous conversation:\n${historyContext}\n\nNow my new question is: ${message}`
+    prompt = `以下是我们之前的对话：\n${historyContext}\n\n现在我的新问题是：${message}`
   }
   
   const res = await interviewAgents({
@@ -734,13 +734,17 @@ const sendToAgent = async (message) => {
   })
   
   if (res.success && res.data) {
+    // 正确的数据路径: res.data.result.results 是一个对象字典
+    // 格式: {"twitter_0": {...}, "reddit_0": {...}} 或单平台 {"reddit_0": {...}}
     const resultData = res.data.result || res.data
     const resultsDict = resultData.results || resultData
     
+    // 将对象字典转换为数组，优先获取 reddit 平台的回复
     let responseContent = null
     const agentId = selectedAgentIndex.value
     
     if (typeof resultsDict === 'object' && !Array.isArray(resultsDict)) {
+      // 优先使用 reddit 平台回复，其次 twitter
       const redditKey = `reddit_${agentId}`
       const twitterKey = `twitter_${agentId}`
       const agentResult = resultsDict[redditKey] || resultsDict[twitterKey] || Object.values(resultsDict)[0]
@@ -758,12 +762,12 @@ const sendToAgent = async (message) => {
         content: responseContent,
         timestamp: new Date().toISOString()
       })
-      addLog(`${selectedAgent.value.username} responded`)
+      addLog(`${selectedAgent.value.username} 已回复`)
     } else {
-      throw new Error('No response data')
+      throw new Error('无响应数据')
     }
   } else {
-    throw new Error(res.error || 'Request failed')
+    throw new Error(res.error || '请求失败')
   }
 }
 
@@ -800,7 +804,7 @@ const submitSurvey = async () => {
   if (selectedAgents.value.size === 0 || !surveyQuestion.value.trim()) return
   
   isSurveying.value = true
-  addLog(`Sending survey to ${selectedAgents.value.size} targets...`)
+  addLog(`发送问卷给 ${selectedAgents.value.size} 个对象...`)
   
   try {
     const interviews = Array.from(selectedAgents.value).map(idx => ({
@@ -814,29 +818,33 @@ const submitSurvey = async () => {
     })
     
     if (res.success && res.data) {
+      // 正确的数据路径: res.data.result.results 是一个对象字典
+      // 格式: {"twitter_0": {...}, "reddit_0": {...}, "twitter_1": {...}, ...}
       const resultData = res.data.result || res.data
       const resultsDict = resultData.results || resultData
       
+      // 将对象字典转换为数组格式
       const surveyResultsList = []
       
       for (const interview of interviews) {
         const agentIdx = interview.agent_id
         const agent = profiles.value[agentIdx]
         
-        // Prefer reddit platform responses, then twitter
-        let responseContent = 'No response'
+        // 优先使用 reddit 平台回复，其次 twitter
+        let responseContent = '无响应'
         
         if (typeof resultsDict === 'object' && !Array.isArray(resultsDict)) {
           const redditKey = `reddit_${agentIdx}`
           const twitterKey = `twitter_${agentIdx}`
           const agentResult = resultsDict[redditKey] || resultsDict[twitterKey]
           if (agentResult) {
-            responseContent = agentResult.response || agentResult.answer || 'No response'
+            responseContent = agentResult.response || agentResult.answer || '无响应'
           }
         } else if (Array.isArray(resultsDict)) {
+          // 兼容数组格式
           const matchedResult = resultsDict.find(r => r.agent_id === agentIdx)
           if (matchedResult) {
-            responseContent = matchedResult.response || matchedResult.answer || 'No response'
+            responseContent = matchedResult.response || matchedResult.answer || '无响应'
           }
         }
         
@@ -850,12 +858,12 @@ const submitSurvey = async () => {
       }
       
       surveyResults.value = surveyResultsList
-      addLog(`Received ${surveyResults.value.length} responses`)
+      addLog(`收到 ${surveyResults.value.length} 条回复`)
     } else {
-      throw new Error(res.error || 'Request failed')
+      throw new Error(res.error || '请求失败')
     }
   } catch (err) {
-    addLog(`Survey send failed: ${err.message}`)
+    addLog(`问卷发送失败: ${err.message}`)
   } finally {
     isSurveying.value = false
   }
@@ -866,7 +874,7 @@ const loadReportData = async () => {
   if (!props.reportId) return
   
   try {
-    addLog(`Loading report data: ${props.reportId}`)
+    addLog(`加载报告数据: ${props.reportId}`)
     
     // Get report info
     const reportRes = await getReport(props.reportId)
@@ -875,7 +883,7 @@ const loadReportData = async () => {
       await loadAgentLogs()
     }
   } catch (err) {
-    addLog(`Failed to load report: ${err.message}`)
+    addLog(`加载报告失败: ${err.message}`)
   }
 }
 
@@ -897,10 +905,10 @@ const loadAgentLogs = async () => {
         }
       })
       
-      addLog('Report data loaded')
+      addLog('报告数据加载完成')
     }
   } catch (err) {
-    addLog(`Failed to load report logs: ${err.message}`)
+    addLog(`加载报告日志失败: ${err.message}`)
   }
 }
 
@@ -911,10 +919,10 @@ const loadProfiles = async () => {
     const res = await getSimulationProfilesRealtime(props.simulationId, 'reddit')
     if (res.success && res.data) {
       profiles.value = res.data.profiles || []
-      addLog(`Loaded ${profiles.value.length} simulated individuals`)
+      addLog(`加载了 ${profiles.value.length} 个模拟个体`)
     }
   } catch (err) {
-    addLog(`Failed to load simulated individuals: ${err.message}`)
+    addLog(`加载模拟个体失败: ${err.message}`)
   }
 }
 
@@ -928,7 +936,7 @@ const handleClickOutside = (e) => {
 
 // Lifecycle
 onMounted(() => {
-  addLog('Step 5 deep interaction initialized')
+  addLog('Step5 深度互动初始化')
   loadReportData()
   loadProfiles()
   document.addEventListener('click', handleClickOutside)

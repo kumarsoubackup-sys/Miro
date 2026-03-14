@@ -462,8 +462,8 @@ class ParallelIPCHandler:
                             action_type=ActionType.INTERVIEW,
                             action_args={"prompt": prompt}
                         )
-                        except Exception as e:
-                            print(f"  Warning: failed to get Twitter agent {agent_id}: {e}")
+                    except Exception as e:
+                        print(f"  Warning: failed to get Twitter agent {agent_id}: {e}")
                 
                 if twitter_actions:
                     await self.twitter_env.step(twitter_actions)
@@ -489,8 +489,8 @@ class ParallelIPCHandler:
                             action_type=ActionType.INTERVIEW,
                             action_args={"prompt": prompt}
                         )
-                        except Exception as e:
-                            print(f"  Warning: failed to get Reddit agent {agent_id}: {e}")
+                    except Exception as e:
+                        print(f"  Warning: failed to get Reddit agent {agent_id}: {e}")
                 
                 if reddit_actions:
                     await self.reddit_env.step(reddit_actions)

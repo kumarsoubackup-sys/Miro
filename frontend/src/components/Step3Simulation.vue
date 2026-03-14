@@ -1,9 +1,9 @@
 <template>
   <div class="simulation-panel">
-    <!-- Top control bar -->
+    <!-- Top Control Bar -->
     <div class="control-bar">
       <div class="status-group">
-        <!-- Twitter platform progress -->
+        <!-- Twitter 平台进度 -->
         <div class="platform-status twitter" :class="{ active: runStatus.twitter_running, completed: runStatus.twitter_completed }">
           <div class="platform-header">
             <svg class="platform-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
@@ -30,7 +30,7 @@
               <span class="stat-value mono">{{ runStatus.twitter_actions_count || 0 }}</span>
             </span>
           </div>
-          <!-- Available actions tooltip -->
+          <!-- 可用动作提示 -->
           <div class="actions-tooltip">
             <div class="tooltip-title">Available Actions</div>
             <div class="tooltip-actions">
@@ -44,7 +44,7 @@
           </div>
         </div>
         
-        <!-- Reddit platform progress -->
+        <!-- Reddit 平台进度 -->
         <div class="platform-status reddit" :class="{ active: runStatus.reddit_running, completed: runStatus.reddit_completed }">
           <div class="platform-header">
             <svg class="platform-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
@@ -71,7 +71,7 @@
               <span class="stat-value mono">{{ runStatus.reddit_actions_count || 0 }}</span>
             </span>
           </div>
-          <!-- Available actions tooltip -->
+          <!-- 可用动作提示 -->
           <div class="actions-tooltip">
             <div class="tooltip-title">Available Actions</div>
             <div class="tooltip-actions">
@@ -97,7 +97,7 @@
           @click="handleNextStep"
         >
           <span v-if="isGeneratingReport" class="loading-spinner-small"></span>
-          {{ isGeneratingReport ? 'Starting...' : 'Generate result report' }} 
+          {{ isGeneratingReport ? t('step3.launching') : t('step3.generateReport') }} 
           <span v-if="!isGeneratingReport" class="arrow-icon">→</span>
         </button>
       </div>
@@ -288,6 +288,7 @@
 <script setup>
 import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
+import { t } from '../i18n/index.js'
 import { 
   startSimulation, 
   stopSimulation,
@@ -298,10 +299,10 @@ import { generateReport } from '../api/report'
 
 const props = defineProps({
   simulationId: String,
-  maxRounds: Number, // Max rounds passed from Step 2
+  maxRounds: Number, // 从Step2传入的最大轮数
   minutesPerRound: {
     type: Number,
-    default: 30 // Default: 30 minutes per round
+    default: 30 // 默认每轮30分钟
   },
   projectData: Object,
   graphData: Object,
@@ -314,22 +315,22 @@ const router = useRouter()
 
 // State
 const isGeneratingReport = ref(false)
-const phase = ref(0) // 0: not started, 1: running, 2: completed
+const phase = ref(0) // 0: 未开始, 1: 运行中, 2: 已完成
 const isStarting = ref(false)
 const isStopping = ref(false)
 const startError = ref(null)
 const runStatus = ref({})
-const allActions = ref([]) // All actions (incrementally accumulated)
-const actionIds = ref(new Set()) // For deduplicating actions
+const allActions = ref([]) // 所有动作（增量累积）
+const actionIds = ref(new Set()) // 用于去重的动作ID集合
 const scrollContainer = ref(null)
 
 // Computed
-// Show actions in chronological order (latest at the bottom)
+// 按时间顺序显示动作（最新的在最后面，即底部）
 const chronologicalActions = computed(() => {
   return allActions.value
 })
 
-// Per-platform action counts
+// 各平台动作计数
 const twitterActionsCount = computed(() => {
   return allActions.value.filter(a => a.platform === 'twitter').length
 })
@@ -338,7 +339,7 @@ const redditActionsCount = computed(() => {
   return allActions.value.filter(a => a.platform === 'reddit').length
 })
 
-// Format simulated elapsed time (based on rounds and minutes per round)
+// 格式化模拟流逝时间（根据轮次和每轮分钟数计算）
 const formatElapsedTime = (currentRound) => {
   if (!currentRound || currentRound <= 0) return '0h 0m'
   const totalMinutes = currentRound * props.minutesPerRound
@@ -347,12 +348,12 @@ const formatElapsedTime = (currentRound) => {
   return `${hours}h ${minutes}m`
 }
 
-// Simulated elapsed time on Twitter-like platform
+// Twitter平台的模拟流逝时间
 const twitterElapsedTime = computed(() => {
   return formatElapsedTime(runStatus.value.twitter_current_round || 0)
 })
 
-// Simulated elapsed time on Reddit-like platform
+// Reddit平台的模拟流逝时间
 const redditElapsedTime = computed(() => {
   return formatElapsedTime(runStatus.value.reddit_current_round || 0)
 })
@@ -362,7 +363,7 @@ const addLog = (msg) => {
   emit('add-log', msg)
 }
 
-// Reset all state (for restarting simulation)
+// 重置所有状态（用于重新启动模拟）
 const resetAllState = () => {
   phase.value = 0
   runStatus.value = {}
@@ -373,17 +374,17 @@ const resetAllState = () => {
   startError.value = null
   isStarting.value = false
   isStopping.value = false
-  stopPolling()  // Stop any previous polling
+  stopPolling()  // 停止之前可能存在的轮询
 }
 
-// Start simulation
+// 启动模拟
 const doStartSimulation = async () => {
   if (!props.simulationId) {
-    addLog('Error: missing simulationId')
+    addLog('错误：缺少 simulationId')
     return
   }
   
-  // Reset all state first to avoid interference from previous runs
+  // 先重置所有状态，确保不会受到上一次模拟的影响
   resetAllState()
   
   isStarting.value = true
@@ -395,24 +396,24 @@ const doStartSimulation = async () => {
     const params = {
       simulation_id: props.simulationId,
       platform: 'parallel',
-      force: true,  // Force restart
-      enable_graph_memory_update: true  // Enable dynamic graph memory updates
+      force: true,  // 强制重新开始
+      enable_graph_memory_update: true  // 开启动态图谱更新
     }
     
     if (props.maxRounds) {
       params.max_rounds = props.maxRounds
-      addLog(`Set max simulation rounds: ${props.maxRounds}`)
+      addLog(`设置最大模拟轮数: ${props.maxRounds}`)
     }
     
-    addLog('Graph memory update mode enabled')
+    addLog('已开启动态图谱更新模式')
     
     const res = await startSimulation(params)
     
     if (res.success && res.data) {
       if (res.data.force_restarted) {
-        addLog('✓ Cleaned old logs and restarted simulation')
+        addLog('✓ 已清理旧的模拟日志，重新开始模拟')
       }
-      addLog('✓ Simulation engine started')
+      addLog('✓ 模拟引擎启动成功')
       addLog(`  ├─ PID: ${res.data.process_pid || '-'}`)
       
       phase.value = 1
@@ -422,44 +423,44 @@ const doStartSimulation = async () => {
       startDetailPolling()
     } else {
       startError.value = res.error || '启动失败'
-      addLog(`✗ Failed to start: ${res.error || 'Unknown error'}`)
+      addLog(`✗ 启动失败: ${res.error || '未知错误'}`)
       emit('update-status', 'error')
     }
   } catch (err) {
     startError.value = err.message
-    addLog(`✗ Start exception: ${err.message}`)
+    addLog(`✗ 启动异常: ${err.message}`)
     emit('update-status', 'error')
   } finally {
     isStarting.value = false
   }
 }
 
-// Stop simulation
+// 停止模拟
 const handleStopSimulation = async () => {
   if (!props.simulationId) return
   
   isStopping.value = true
-  addLog('Stopping simulation...')
+  addLog('正在停止模拟...')
   
   try {
     const res = await stopSimulation({ simulation_id: props.simulationId })
     
     if (res.success) {
-      addLog('✓ Simulation stopped')
+      addLog('✓ 模拟已停止')
       phase.value = 2
       stopPolling()
       emit('update-status', 'completed')
     } else {
-      addLog(`Failed to stop simulation: ${res.error || 'Unknown error'}`)
+      addLog(`停止失败: ${res.error || '未知错误'}`)
     }
   } catch (err) {
-    addLog(`Stop exception: ${err.message}`)
+    addLog(`停止异常: ${err.message}`)
   } finally {
     isStopping.value = false
   }
 }
 
-// Polling
+// 轮询状态
 let statusTimer = null
 let detailTimer = null
 
@@ -482,7 +483,7 @@ const stopPolling = () => {
   }
 }
 
-// Track last round per platform to log changes
+// 追踪各平台的上一次轮次，用于检测变化并输出日志
 const prevTwitterRound = ref(0)
 const prevRedditRound = ref(0)
 
@@ -497,7 +498,7 @@ const fetchRunStatus = async () => {
       
       runStatus.value = data
       
-      // Detect per-platform round changes and log them
+      // 分别检测各平台的轮次变化并输出日志
       if (data.twitter_current_round > prevTwitterRound.value) {
         addLog(`[Plaza] R${data.twitter_current_round}/${data.total_rounds} | T:${data.twitter_simulated_hours || 0}h | A:${data.twitter_actions_count}`)
         prevTwitterRound.value = data.twitter_current_round
@@ -508,10 +509,11 @@ const fetchRunStatus = async () => {
         prevRedditRound.value = data.reddit_current_round
       }
       
-      // Check if the simulation has completed (via runner_status or per-platform completion)
+      // 检测模拟是否已完成（通过 runner_status 或平台完成状态判断）
       const isCompleted = data.runner_status === 'completed' || data.runner_status === 'stopped'
       
-      // Extra check: if runner_status is not yet updated but platforms report completion
+      // 额外检查：如果后端还没来得及更新 runner_status，但平台已经报告完成
+      // 通过检测 twitter_completed 和 reddit_completed 状态判断
       const platformsCompleted = checkPlatformsCompleted(data)
       
       if (isCompleted || platformsCompleted) {
@@ -529,24 +531,24 @@ const fetchRunStatus = async () => {
   }
 }
 
-// Check whether all enabled platforms have completed
+// 检查所有启用的平台是否已完成
 const checkPlatformsCompleted = (data) => {
-  // If no platform data, treat as not completed
+  // 如果没有任何平台数据，返回 false
   if (!data) return false
   
-  // Per-platform completion flags
+  // 检查各平台的完成状态
   const twitterCompleted = data.twitter_completed === true
   const redditCompleted = data.reddit_completed === true
   
-  // If at least one platform is complete, ensure all enabled platforms are complete
-  // Use actions_count / running flags to detect enabled platforms
+  // 如果至少有一个平台完成了，检查是否所有启用的平台都完成了
+  // 通过 actions_count 判断平台是否被启用（如果 count > 0 或 running 曾为 true）
   const twitterEnabled = (data.twitter_actions_count > 0) || data.twitter_running || twitterCompleted
   const redditEnabled = (data.reddit_actions_count > 0) || data.reddit_running || redditCompleted
   
-  // If no platform is enabled, treat as not completed
+  // 如果没有任何平台被启用，返回 false
   if (!twitterEnabled && !redditEnabled) return false
   
-  // All enabled platforms must be completed
+  // 检查所有启用的平台是否都已完成
   if (twitterEnabled && !twitterCompleted) return false
   if (redditEnabled && !redditCompleted) return false
   
@@ -560,13 +562,13 @@ const fetchRunStatusDetail = async () => {
     const res = await getRunStatusDetail(props.simulationId)
     
     if (res.success && res.data) {
-      // Use all_actions for the full action list
+      // 使用 all_actions 获取完整的动作列表
       const serverActions = res.data.all_actions || []
       
-      // Incrementally append new actions (deduplicated)
+      // 增量添加新动作（去重）
       let newActionsAdded = 0
       serverActions.forEach(action => {
-        // Generate a unique ID
+        // 生成唯一ID
         const actionId = action.id || `${action.timestamp}-${action.platform}-${action.agent_id}-${action.action_type}`
         
         if (!actionIds.value.has(actionId)) {
@@ -639,17 +641,17 @@ const formatActionTime = (timestamp) => {
 
 const handleNextStep = async () => {
   if (!props.simulationId) {
-    addLog('Error: missing simulationId')
+    addLog('错误：缺少 simulationId')
     return
   }
   
   if (isGeneratingReport.value) {
-    addLog('Report generation has already been requested, please wait...')
+    addLog('报告生成请求已发送，请稍候...')
     return
   }
   
   isGeneratingReport.value = true
-  addLog('Starting report generation...')
+  addLog('正在启动报告生成...')
   
   try {
     const res = await generateReport({
@@ -659,16 +661,16 @@ const handleNextStep = async () => {
     
     if (res.success && res.data) {
       const reportId = res.data.report_id
-      addLog(`✓ Report generation task started: ${reportId}`)
+      addLog(`✓ 报告生成任务已启动: ${reportId}`)
       
-      // Navigate to the report page
+      // 跳转到报告页面
       router.push({ name: 'Report', params: { reportId } })
     } else {
-      addLog(`✗ Failed to start report generation: ${res.error || 'Unknown error'}`)
+      addLog(`✗ 启动报告生成失败: ${res.error || '未知错误'}`)
       isGeneratingReport.value = false
     }
   } catch (err) {
-    addLog(`✗ Report generation exception: ${err.message}`)
+    addLog(`✗ 启动报告生成异常: ${err.message}`)
     isGeneratingReport.value = false
   }
 }
@@ -684,7 +686,7 @@ watch(() => props.systemLogs?.length, () => {
 })
 
 onMounted(() => {
-  addLog('Step 3 simulation run initialized')
+  addLog('Step3 模拟运行初始化')
   if (props.simulationId) {
     doStartSimulation()
   }

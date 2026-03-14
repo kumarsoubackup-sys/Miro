@@ -16,6 +16,7 @@ from dataclasses import dataclass, field
 from zep_cloud.client import Zep
 
 from ..config import Config
+from ..i18n import get_string
 from ..utils.logger import get_logger
 from ..utils.llm_client import LLMClient
 from ..utils.zep_paging import fetch_all_nodes, fetch_all_edges
@@ -43,13 +44,13 @@ class SearchResult:
     
     def to_text(self) -> str:
         """转换为文本格式，供LLM理解"""
-        text_parts = [f"搜索查询: {self.query}", f"找到 {self.total_count} 条相关信息"]
-        
+        text_parts = [get_string('search_query_label', query=self.query), get_string('found_count', total_count=self.total_count)]
+
         if self.facts:
-            text_parts.append("\n### 相关事实:")
+            text_parts.append(get_string('related_facts_header'))
             for i, fact in enumerate(self.facts, 1):
                 text_parts.append(f"{i}. {fact}")
-        
+
         return "\n".join(text_parts)
 
 
@@ -73,8 +74,8 @@ class NodeInfo:
     
     def to_text(self) -> str:
         """转换为文本格式"""
-        entity_type = next((l for l in self.labels if l not in ["Entity", "Node"]), "未知类型")
-        return f"实体: {self.name} (类型: {entity_type})\n摘要: {self.summary}"
+        entity_type = next((l for l in self.labels if l not in ["Entity", "Node"]), get_string('unknown_type'))
+        return get_string('entity_label', name=self.name, entity_type=entity_type, summary=self.summary)
 
 
 @dataclass
@@ -112,15 +113,15 @@ class EdgeInfo:
         """转换为文本格式"""
         source = self.source_node_name or self.source_node_uuid[:8]
         target = self.target_node_name or self.target_node_uuid[:8]
-        base_text = f"关系: {source} --[{self.name}]--> {target}\n事实: {self.fact}"
-        
+        base_text = get_string('relationship_label', source=source, name=self.name, target=target, fact=self.fact)
+
         if include_temporal:
-            valid_at = self.valid_at or "未知"
-            invalid_at = self.invalid_at or "至今"
-            base_text += f"\n时效: {valid_at} - {invalid_at}"
+            valid_at = self.valid_at or get_string('unknown_time')
+            invalid_at = self.invalid_at or get_string('until_now')
+            base_text += get_string('time_validity', valid_at=valid_at, invalid_at=invalid_at)
             if self.expired_at:
-                base_text += f" (已过期: {self.expired_at})"
-        
+                base_text += get_string('expired_label', expired_at=self.expired_at)
+
         return base_text
     
     @property
@@ -170,43 +171,45 @@ class InsightForgeResult:
     def to_text(self) -> str:
         """转换为详细的文本格式，供LLM理解"""
         text_parts = [
-            f"## 未来预测深度分析",
-            f"分析问题: {self.query}",
-            f"预测场景: {self.simulation_requirement}",
-            f"\n### 预测数据统计",
-            f"- 相关预测事实: {self.total_facts}条",
-            f"- 涉及实体: {self.total_entities}个",
-            f"- 关系链: {self.total_relationships}条"
+            get_string('insight_forge_title'),
+            get_string('analysis_question', query=self.query),
+            get_string('prediction_scenario', simulation_requirement=self.simulation_requirement),
+            get_string('prediction_stats_header'),
+            get_string('related_prediction_facts', count=self.total_facts),
+            get_string('involved_entities', count=self.total_entities),
+            get_string('relationship_chains', count=self.total_relationships)
         ]
-        
+
         # 子问题
         if self.sub_queries:
-            text_parts.append(f"\n### 分析的子问题")
+            text_parts.append(get_string('sub_questions_header'))
             for i, sq in enumerate(self.sub_queries, 1):
                 text_parts.append(f"{i}. {sq}")
-        
+
         # 语义搜索结果
         if self.semantic_facts:
-            text_parts.append(f"\n### 【关键事实】(请在报告中引用这些原文)")
+            text_parts.append(get_string('key_facts_header'))
             for i, fact in enumerate(self.semantic_facts, 1):
                 text_parts.append(f"{i}. \"{fact}\"")
-        
+
         # 实体洞察
         if self.entity_insights:
-            text_parts.append(f"\n### 【核心实体】")
+            text_parts.append(get_string('core_entities_header'))
             for entity in self.entity_insights:
-                text_parts.append(f"- **{entity.get('name', '未知')}** ({entity.get('type', '实体')})")
+                entity_name = entity.get('name', get_string('unknown_time'))
+                entity_type = entity.get('type', get_string('entity_type_label'))
+                text_parts.append(f"- **{entity_name}** ({entity_type})")
                 if entity.get('summary'):
-                    text_parts.append(f"  摘要: \"{entity.get('summary')}\"")
+                    text_parts.append(get_string('summary_label', summary=entity.get('summary')))
                 if entity.get('related_facts'):
-                    text_parts.append(f"  相关事实: {len(entity.get('related_facts', []))}条")
-        
+                    text_parts.append(get_string('related_facts_count', count=len(entity.get('related_facts', []))))
+
         # 关系链
         if self.relationship_chains:
-            text_parts.append(f"\n### 【关系链】")
+            text_parts.append(get_string('relationship_chains_header'))
             for chain in self.relationship_chains:
                 text_parts.append(f"- {chain}")
-        
+
         return "\n".join(text_parts)
 
 
@@ -249,34 +252,34 @@ class PanoramaResult:
     def to_text(self) -> str:
         """转换为文本格式（完整版本，不截断）"""
         text_parts = [
-            f"## 广度搜索结果（未来全景视图）",
-            f"查询: {self.query}",
-            f"\n### 统计信息",
-            f"- 总节点数: {self.total_nodes}",
-            f"- 总边数: {self.total_edges}",
-            f"- 当前有效事实: {self.active_count}条",
-            f"- 历史/过期事实: {self.historical_count}条"
+            get_string('panorama_title'),
+            get_string('panorama_query', query=self.query),
+            get_string('statistics_header'),
+            get_string('total_nodes', count=self.total_nodes),
+            get_string('total_edges', count=self.total_edges),
+            get_string('active_facts_count', count=self.active_count),
+            get_string('historical_facts_count', count=self.historical_count)
         ]
-        
+
         # 当前有效的事实（完整输出，不截断）
         if self.active_facts:
-            text_parts.append(f"\n### 【当前有效事实】(模拟结果原文)")
+            text_parts.append(get_string('active_facts_header'))
             for i, fact in enumerate(self.active_facts, 1):
                 text_parts.append(f"{i}. \"{fact}\"")
-        
+
         # 历史/过期事实（完整输出，不截断）
         if self.historical_facts:
-            text_parts.append(f"\n### 【历史/过期事实】(演变过程记录)")
+            text_parts.append(get_string('historical_facts_header'))
             for i, fact in enumerate(self.historical_facts, 1):
                 text_parts.append(f"{i}. \"{fact}\"")
-        
+
         # 关键实体（完整输出，不截断）
         if self.all_nodes:
-            text_parts.append(f"\n### 【涉及实体】")
+            text_parts.append(get_string('involved_entities_header'))
             for node in self.all_nodes:
-                entity_type = next((l for l in node.labels if l not in ["Entity", "Node"]), "实体")
+                entity_type = next((l for l in node.labels if l not in ["Entity", "Node"]), get_string('entity_type_label'))
                 text_parts.append(f"- **{node.name}** ({entity_type})")
-        
+
         return "\n".join(text_parts)
 
 
@@ -303,11 +306,11 @@ class AgentInterview:
     def to_text(self) -> str:
         text = f"**{self.agent_name}** ({self.agent_role})\n"
         # 显示完整的agent_bio，不截断
-        text += f"_简介: {self.agent_bio}_\n\n"
+        text += get_string('bio_label', bio=self.agent_bio) + "\n\n"
         text += f"**Q:** {self.question}\n\n"
         text += f"**A:** {self.response}\n"
         if self.key_quotes:
-            text += "\n**关键引言:**\n"
+            text += get_string('key_quotes_header') + "\n"
             for quote in self.key_quotes:
                 # 清理各种引号
                 clean_quote = quote.replace('\u201c', '').replace('\u201d', '').replace('"', '')
@@ -374,25 +377,25 @@ class InterviewResult:
     def to_text(self) -> str:
         """转换为详细的文本格式，供LLM理解和报告引用"""
         text_parts = [
-            "## 深度采访报告",
-            f"**采访主题:** {self.interview_topic}",
-            f"**采访人数:** {self.interviewed_count} / {self.total_agents} 位模拟Agent",
-            "\n### 采访对象选择理由",
-            self.selection_reasoning or "（自动选择）",
+            get_string('interview_report_title'),
+            get_string('interview_topic', topic=self.interview_topic),
+            get_string('interview_count', interviewed_count=self.interviewed_count, total_agents=self.total_agents),
+            get_string('selection_reasoning_header'),
+            self.selection_reasoning or get_string('auto_selected'),
             "\n---",
-            "\n### 采访实录",
+            get_string('interview_transcript_header'),
         ]
 
         if self.interviews:
             for i, interview in enumerate(self.interviews, 1):
-                text_parts.append(f"\n#### 采访 #{i}: {interview.agent_name}")
+                text_parts.append(get_string('interview_number', num=i, agent_name=interview.agent_name))
                 text_parts.append(interview.to_text())
                 text_parts.append("\n---")
         else:
-            text_parts.append("（无采访记录）\n\n---")
+            text_parts.append(get_string('no_interviews') + "\n\n---")
 
-        text_parts.append("\n### 采访摘要与核心观点")
-        text_parts.append(self.summary or "（无摘要）")
+        text_parts.append(get_string('interview_summary_header'))
+        text_parts.append(self.summary or get_string('no_summary'))
 
         return "\n".join(text_parts)
 
@@ -1046,7 +1049,7 @@ class ZepToolsService:
                 node = self.get_node_detail(uuid)
                 if node:
                     node_map[uuid] = node
-                    entity_type = next((l for l in node.labels if l not in ["Entity", "Node"]), "实体")
+                    entity_type = next((l for l in node.labels if l not in ["Entity", "Node"]), get_string('entity_type_label'))
                     
                     # 获取该实体相关的所有事实（不截断）
                     related_facts = [
@@ -1200,8 +1203,8 @@ class ZepToolsService:
             
             if is_historical:
                 # 历史/过期事实，添加时间标记
-                valid_at = edge.valid_at or "未知"
-                invalid_at = edge.invalid_at or edge.expired_at or "未知"
+                valid_at = edge.valid_at or get_string('unknown_time')
+                invalid_at = edge.invalid_at or edge.expired_at or get_string('unknown_time')
                 fact_with_time = f"[{valid_at} - {invalid_at}] {edge.fact}"
                 historical_facts.append(fact_with_time)
             else:
@@ -1387,9 +1390,9 @@ class ZepToolsService:
             
             # 检查API调用是否成功
             if not api_result.get("success", False):
-                error_msg = api_result.get("error", "未知错误")
-                logger.warning(f"采访API返回失败: {error_msg}")
-                result.summary = f"采访API调用失败：{error_msg}。请检查OASIS模拟环境状态。"
+                error_msg = api_result.get("error", get_string('unknown_error'))
+                logger.warning(f"Interview API returned failure: {error_msg}")
+                result.summary = get_string('interview_api_failed', error_msg=error_msg)
                 return result
             
             # Step 5: 解析API返回结果，构建AgentInterview对象
@@ -1400,7 +1403,7 @@ class ZepToolsService:
             for i, agent_idx in enumerate(selected_indices):
                 agent = selected_agents[i]
                 agent_name = agent.get("realname", agent.get("username", f"Agent_{agent_idx}"))
-                agent_role = agent.get("profession", "未知")
+                agent_role = agent.get("profession", get_string('unknown_profession'))
                 agent_bio = agent.get("bio", "")
                 
                 # 获取该Agent在两个平台的采访结果
@@ -1539,7 +1542,7 @@ class ZepToolsService:
                             "username": row.get("username", ""),
                             "bio": row.get("description", ""),
                             "persona": row.get("user_char", ""),
-                            "profession": "未知"
+                            "profession": get_string('unknown_profession')
                         })
                 logger.info(f"从 twitter_profiles.csv 加载了 {len(profiles)} 个人设")
                 return profiles
@@ -1571,7 +1574,7 @@ class ZepToolsService:
             summary = {
                 "index": i,
                 "name": profile.get("realname", profile.get("username", f"Agent_{i}")),
-                "profession": profile.get("profession", "未知"),
+                "profession": profile.get("profession", get_string('unknown_profession')),
                 "bio": profile.get("bio", "")[:200],
                 "interested_topics": profile.get("interested_topics", [])
             }
@@ -1639,7 +1642,7 @@ class ZepToolsService:
     ) -> List[str]:
         """使用LLM生成采访问题"""
         
-        agent_roles = [a.get("profession", "未知") for a in selected_agents]
+        agent_roles = [a.get("profession", get_string('unknown_profession')) for a in selected_agents]
         
         system_prompt = """你是一个专业的记者/采访者。根据采访需求，生成3-5个深度采访问题。
 
