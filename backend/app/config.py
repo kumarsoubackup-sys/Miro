@@ -38,7 +38,8 @@ class Config:
     EMBEDDING_BASE_URL = os.environ.get('EMBEDDING_BASE_URL')  # 可选，默认使用 LLM_BASE_URL
     EMBEDDING_MODEL = os.environ.get('EMBEDDING_MODEL', 'text-embedding-3-small')
     EMBEDDING_DIM = int(os.environ.get('EMBEDDING_DIM', '1536'))
-    
+    EMBEDDING_BATCH_SIZE = int(os.environ.get('EMBEDDING_BATCH_SIZE', '5'))  # 批处理大小，默认5
+
     # 知识图谱模式配置
     # cloud: 使用 Zep Cloud (默认)
     # local: 使用 Graphiti + Neo4j (本地部署)
