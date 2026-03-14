@@ -16,9 +16,10 @@ COPY frontend/package.json frontend/package-lock.json ./frontend/
 COPY backend/pyproject.toml backend/uv.lock ./backend/
 
 # Install dependencies (Node + Python)
+# Use CPU-only PyTorch to avoid downloading ~3GB of CUDA libraries
 RUN npm ci \
   && npm ci --prefix frontend \
-  && cd backend && uv sync --frozen
+  && cd backend && UV_EXTRA_INDEX_URL=https://download.pytorch.org/whl/cpu uv sync --frozen
 
 # Copy project sources
 COPY . .
