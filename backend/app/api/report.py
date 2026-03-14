@@ -17,7 +17,7 @@ from ..models.project import ProjectManager
 from ..models.task import TaskManager, TaskStatus
 from ..utils.logger import get_logger
 
-logger = get_logger('mirofish.api.report')
+logger = get_logger('arus.api.report')
 
 
 # ============== Report generation endpoints ==============
@@ -937,7 +937,7 @@ def search_graph_tool():
 
     Request body (JSON):
         {
-            "graph_id": "mirofish_xxxx",
+            "graph_id": "arus_xxxx",
             "query": "search query string",
             "limit": 10
         }
@@ -985,7 +985,7 @@ def get_graph_statistics_tool():
     
     请求（JSON）：
         {
-            "graph_id": "mirofish_xxxx"
+            "graph_id": "arus_xxxx"
         }
     """
     try:

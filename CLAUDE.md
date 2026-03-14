@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-MiroFish is a multi-agent AI prediction engine. It takes text documents (PDF, Markdown, TXT), builds knowledge graphs via Zep Cloud, generates thousands of autonomous agents with distinct personalities, runs social media simulations (Twitter/Reddit via OASIS framework), and produces prediction reports through an Agent-based system. Users can then chat with simulated agents and refine reports interactively.
+ARUS is a multi-agent AI prediction engine. It takes text documents (PDF, Markdown, TXT), builds knowledge graphs via Zep Cloud, generates thousands of autonomous agents with distinct personalities, runs social media simulations (Twitter/Reddit via OASIS framework), and produces prediction reports through an Agent-based system. Users can then chat with simulated agents and refine reports interactively.
 
 ## Commands
 
@@ -36,7 +36,7 @@ No linter or formatter is configured.
 **Monorepo** with two independent apps connected via REST API:
 
 ```
-MiroFish/
+ARUS/
 ├── frontend/    # Vue 3 + Vite SPA (port 3000, proxies /api to backend)
 ├── backend/     # Flask API (port 5001, Python 3.11+)
 └── package.json # Root orchestration via concurrently

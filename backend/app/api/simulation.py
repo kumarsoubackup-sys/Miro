@@ -18,7 +18,7 @@ from ..services.simulation_runner import SimulationRunner, RunnerStatus
 from ..utils.logger import get_logger
 from ..models.project import ProjectManager
 
-logger = get_logger('mirofish.api.simulation')
+logger = get_logger('arus.api.simulation')
 
 
 # Prefix added to interview prompts to discourage tool usage and request a
@@ -177,7 +177,7 @@ def create_simulation():
     Request (JSON):
         {
             "project_id": "proj_xxxx",      // required
-            "graph_id": "mirofish_xxxx",    // optional, falls back to project.graph_id
+            "graph_id": "arus_xxxx",    // optional, falls back to project.graph_id
             "enable_twitter": true,          // optional, default true
             "enable_reddit": true            // optional, default true
         }
@@ -188,7 +188,7 @@ def create_simulation():
             "data": {
                 "simulation_id": "sim_xxxx",
                 "project_id": "proj_xxxx",
-                "graph_id": "mirofish_xxxx",
+                "graph_id": "arus_xxxx",
                 "status": "created",
                 "enable_twitter": true,
                 "enable_reddit": true,
@@ -1382,7 +1382,7 @@ def generate_profiles():
     
     Request (JSON):
         {
-            "graph_id": "mirofish_xxxx",     // required
+            "graph_id": "arus_xxxx",     // required
             "entity_types": ["Student"],      // optional
             "use_llm": true,                  // optional
             "platform": "reddit"              // optional

@@ -29,7 +29,7 @@ def _ensure_utf8_stdout():
 LOG_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'logs')
 
 
-def setup_logger(name: str = 'mirofish', level: int = logging.DEBUG) -> logging.Logger:
+def setup_logger(name: str = 'arus', level: int = logging.DEBUG) -> logging.Logger:
     """
     Configure a logger.
     
@@ -90,7 +90,7 @@ def setup_logger(name: str = 'mirofish', level: int = logging.DEBUG) -> logging.
     return logger
 
 
-def get_logger(name: str = 'mirofish') -> logging.Logger:
+def get_logger(name: str = 'arus') -> logging.Logger:
     """
     Get a logger, creating it if needed.
     

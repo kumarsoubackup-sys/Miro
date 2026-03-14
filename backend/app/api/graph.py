@@ -21,7 +21,7 @@ from ..models.task import TaskManager, TaskStatus
 from ..models.project import ProjectManager, ProjectStatus
 
 # Logger instance.
-logger = get_logger('mirofish.api')
+logger = get_logger('arus.api')
 
 
 def allowed_file(filename: str) -> bool:
@@ -338,7 +338,7 @@ def build_graph():
             project.error = None
         
         # Resolve configuration.
-        graph_name = data.get('graph_name', project.name or 'MiroFish Graph')
+        graph_name = data.get('graph_name', project.name or 'ARUS Graph')
         chunk_size = data.get('chunk_size', project.chunk_size or Config.DEFAULT_CHUNK_SIZE)
         chunk_overlap = data.get('chunk_overlap', project.chunk_overlap or Config.DEFAULT_CHUNK_OVERLAP)
         
@@ -374,7 +374,7 @@ def build_graph():
         
         # Launch the background task.
         def build_task():
-            build_logger = get_logger('mirofish.build')
+            build_logger = get_logger('arus.build')
             try:
                 build_logger.info(f"[{task_id}] Starting graph build...")
                 task_manager.update_task(

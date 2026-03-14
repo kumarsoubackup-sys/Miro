@@ -2,7 +2,7 @@ import { reactive } from 'vue';
 import en from './en.js';
 import ms from './ms.js';
 
-const savedLocale = localStorage.getItem('mirofish_lang') || 'en';
+const savedLocale = localStorage.getItem('arus_lang') || 'en';
 
 const state = reactive({
   locale: savedLocale,
@@ -23,7 +23,7 @@ export function t(key) {
 
 export function setLocale(lang) {
   state.locale = lang;
-  localStorage.setItem('mirofish_lang', lang);
+  localStorage.setItem('arus_lang', lang);
   // Sync with backend
   fetch('/api/config/language', {
     method: 'POST',

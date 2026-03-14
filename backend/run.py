@@ -1,5 +1,5 @@
 """
-MiroFish backend entry point.
+ARUS backend entry point.
 """
 
 import os

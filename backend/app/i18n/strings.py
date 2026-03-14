@@ -1,5 +1,5 @@
 """
-Internationalised user-facing strings for MiroFish backend services.
+Internationalised user-facing strings for ARUS backend services.
 
 Supports: English (en), Chinese (zh), Malay (ms).
 The active language is read from Config.OUTPUT_LANGUAGE at call time.

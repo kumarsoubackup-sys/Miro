@@ -1,11 +1,11 @@
 [project]
-name = "mirofish-backend"
+name = "arus-backend"
 version = "0.1.0"
-description = "MiroFish - A simple and universal swarm intelligence engine for prediction"
+description = "ARUS - A simple and universal swarm intelligence engine for prediction"
 requires-python = ">=3.11"
 license = { text = "AGPL-3.0" }
 authors = [
-    { name = "MiroFish Team" }
+    { name = "ARUS Team" }
 ]
 
 dependencies = [

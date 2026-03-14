@@ -18,7 +18,7 @@ from ..config import Config
 from ..i18n import get_string
 from ..utils.logger import get_logger
 
-logger = get_logger('mirofish.zep_graph_memory_updater')
+logger = get_logger('arus.zep_graph_memory_updater')
 
 
 @dataclass

@@ -2,7 +2,7 @@
   <div class="home-container">
     <!-- 顶部导航栏 -->
     <nav class="navbar">
-      <div class="nav-brand">MIROFISH</div>
+      <div class="nav-brand">ARUS</div>
       <div class="nav-links">
         <div class="lang-toggle">
           <button
@@ -52,7 +52,7 @@
         <div class="hero-right">
           <!-- Logo 区域 -->
           <div class="logo-container">
-            <img src="../assets/logo/MiroFish_logo_left.jpeg" alt="MiroFish Logo" class="hero-logo" />
+            <img src="../assets/logo/MiroFish_logo_left.jpeg" alt="ARUS Logo" class="hero-logo" />
           </div>
 
           <button class="scroll-down-btn" @click="scrollToBottom">

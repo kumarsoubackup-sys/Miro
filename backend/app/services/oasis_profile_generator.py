@@ -23,7 +23,7 @@ from ..i18n import get_prompt
 from ..utils.logger import get_logger
 from .zep_entity_reader import EntityNode, ZepEntityReader
 
-logger = get_logger('mirofish.oasis_profile')
+logger = get_logger('arus.oasis_profile')
 
 
 @dataclass

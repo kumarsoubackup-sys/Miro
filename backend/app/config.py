@@ -8,7 +8,7 @@ import os
 from dotenv import load_dotenv
 
 # Load the project-root `.env` file.
-# Path: MiroFish/.env (relative to backend/app/config.py)
+# Path: .env at project root (relative to backend/app/config.py)
 project_root_env = os.path.join(os.path.dirname(__file__), '../../.env')
 
 if os.path.exists(project_root_env):
@@ -22,7 +22,7 @@ class Config:
     """Flask configuration."""
     
     # Flask settings.
-    SECRET_KEY = os.environ.get('SECRET_KEY', 'mirofish-secret-key')
+    SECRET_KEY = os.environ.get('SECRET_KEY', 'arus-secret-key')
     DEBUG = os.environ.get('FLASK_DEBUG', 'True').lower() == 'true'
     
     # Keep JSON output readable instead of forcing ASCII escapes.
