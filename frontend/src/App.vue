@@ -1,9 +1,16 @@
 <template>
+  <div class="lang-fab" @click="toggleLang">
+    {{ getLocale() === 'en' ? 'EN' : 'MS' }}
+  </div>
   <router-view />
 </template>
 
 <script setup>
-// Vue Router manages page navigation.
+import { setLocale, getLocale } from './i18n/index.js';
+
+const toggleLang = () => {
+  setLocale(getLocale() === 'en' ? 'ms' : 'en');
+};
 </script>
 
 <style>
@@ -43,5 +50,34 @@
 /* Global button styling */
 button {
   font-family: inherit;
+}
+
+/* Floating language toggle */
+.lang-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s, transform 0.2s;
+  user-select: none;
+}
+
+.lang-fab:hover {
+  background: #FF4500;
+  transform: scale(1.1);
 }
 </style>
