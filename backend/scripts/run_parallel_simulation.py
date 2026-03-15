@@ -76,6 +76,8 @@ import warnings
 from datetime import datetime
 from typing import Dict, Any, List, Optional, Tuple
 
+from app.config import Config
+
 
 # 全局变量：用于信号处理
 _shutdown_event = None
@@ -1016,8 +1018,10 @@ def create_model(config: Dict[str, Any], use_boost: bool = False):
         config_label = "[通用LLM]"
     
     # 如果 .env 中没有模型名，则使用 config 作为备用
+    if not llm_base_url:
+        llm_base_url = config.get("llm_base_url", Config.LLM_BASE_URL)
     if not llm_model:
-        llm_model = config.get("llm_model", "gpt-4o-mini")
+        llm_model = config.get("llm_model", Config.LLM_MODEL_NAME)
     
     # 设置 camel-ai 所需的环境变量
     if llm_api_key:
