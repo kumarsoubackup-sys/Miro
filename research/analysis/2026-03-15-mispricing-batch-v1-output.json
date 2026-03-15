@@ -1,0 +1,645 @@
+[
+  {
+    "name": "MU LEAPS on packaging duration",
+    "thesis": "The market still underestimates how long advanced packaging remains a binding constraint for AI memory demand.",
+    "underlying": "MU",
+    "mispricing_type": "variance_underpricing",
+    "posture": "bullish_long_vol",
+    "preferred_expression": "leaps_call",
+    "time_horizon": "12-24m",
+    "mispricing_signals": {
+      "hiddenness": 4.0,
+      "recognition_gap": 4.0,
+      "catalyst_clarity": 3.0,
+      "propagation_asymmetry": 4.0,
+      "duration_mismatch": 5.0,
+      "evidence_quality": 4.0,
+      "crowding_inverse": 3.0,
+      "valuation_nonlinearity": 4.0
+    },
+    "options_expression_signals": {
+      "convexity_need": 4.0,
+      "tenor_alignment": 5.0,
+      "vol_expansion_potential": 4.0,
+      "downside_definedness": 4.0,
+      "liquidity_path": 4.0,
+      "implementation_simplicity": 4.0,
+      "catalyst_timing_specificity": 3.0
+    },
+    "linked_companies": [
+      "MU",
+      "TSM",
+      "SK Hynix"
+    ],
+    "catalysts": [
+      "packaging capacity remaining tight through the next product cycle",
+      "continued AI capex guidance",
+      "HBM supply agreements extending further out"
+    ],
+    "invalidations": [
+      "packaging expansion clears faster than expected",
+      "AI demand slows materially",
+      "HBM pricing weakens without offsetting unit growth"
+    ],
+    "structural_reference": {
+      "case_study": "HBM / advanced packaging",
+      "top_severity_layer": "2.5D / CoWoS-class advanced packaging capacity",
+      "top_value_capture_layer": "HBM memory stack supply"
+    },
+    "notes": [],
+    "candidate_name": "MU LEAPS on packaging duration",
+    "mispricing": {
+      "candidate_name": "MU LEAPS on packaging duration",
+      "score_type": "mispricing",
+      "score_0_to_100": 78.0,
+      "band": "high",
+      "weighted_signals": {
+        "hiddenness": 0.72,
+        "recognition_gap": 0.72,
+        "catalyst_clarity": 0.48,
+        "propagation_asymmetry": 0.56,
+        "duration_mismatch": 0.6,
+        "evidence_quality": 0.4,
+        "crowding_inverse": 0.18,
+        "valuation_nonlinearity": 0.24
+      },
+      "strongest_drivers": [
+        [
+          "hiddenness",
+          0.72
+        ],
+        [
+          "recognition_gap",
+          0.72
+        ],
+        [
+          "duration_mismatch",
+          0.6
+        ]
+      ],
+      "weakest_drivers": [
+        [
+          "crowding_inverse",
+          0.18
+        ],
+        [
+          "valuation_nonlinearity",
+          0.24
+        ]
+      ],
+      "explanation": "MU LEAPS on packaging duration scores 78.0/100 (high) on mispricing plausibility. The strongest weighted drivers are hiddenness, recognition gap, duration mismatch. The least supportive signals are crowding inverse, valuation nonlinearity. This screen is a structural ranking aid, not live options pricing."
+    },
+    "options_fit": {
+      "candidate_name": "MU LEAPS on packaging duration",
+      "score_type": "options_fit",
+      "score_0_to_100": 81.6,
+      "band": "critical",
+      "weighted_signals": {
+        "convexity_need": 0.72,
+        "tenor_alignment": 0.9,
+        "vol_expansion_potential": 0.72,
+        "downside_definedness": 0.56,
+        "liquidity_path": 0.48,
+        "implementation_simplicity": 0.4,
+        "catalyst_timing_specificity": 0.3
+      },
+      "strongest_drivers": [
+        [
+          "tenor_alignment",
+          0.9
+        ],
+        [
+          "convexity_need",
+          0.72
+        ],
+        [
+          "vol_expansion_potential",
+          0.72
+        ]
+      ],
+      "weakest_drivers": [
+        [
+          "catalyst_timing_specificity",
+          0.3
+        ],
+        [
+          "implementation_simplicity",
+          0.4
+        ]
+      ],
+      "explanation": "MU LEAPS on packaging duration scores 81.6/100 (critical) on options-expression fit. The strongest weighted drivers are tenor alignment, convexity need, vol expansion potential. The least supportive signals are catalyst timing specificity, implementation simplicity. This screen helps decide whether options are a sensible expression path."
+    }
+  },
+  {
+    "name": "MP Materials long-vol on magnet sovereignty",
+    "thesis": "The market may still underprice how fast heavy rare-earth and magnet concentration can turn into strategic scarcity and policy-driven repricing.",
+    "underlying": "MP",
+    "mispricing_type": "hidden_bottleneck",
+    "posture": "bullish_long_vol",
+    "preferred_expression": "leaps_call",
+    "time_horizon": "12-36m",
+    "mispricing_signals": {
+      "hiddenness": 4.0,
+      "recognition_gap": 4.0,
+      "catalyst_clarity": 4.0,
+      "propagation_asymmetry": 5.0,
+      "duration_mismatch": 4.0,
+      "evidence_quality": 4.0,
+      "crowding_inverse": 4.0,
+      "valuation_nonlinearity": 4.0
+    },
+    "options_expression_signals": {
+      "convexity_need": 4.0,
+      "tenor_alignment": 4.0,
+      "vol_expansion_potential": 4.0,
+      "downside_definedness": 4.0,
+      "liquidity_path": 3.0,
+      "implementation_simplicity": 4.0,
+      "catalyst_timing_specificity": 4.0
+    },
+    "linked_companies": [
+      "MP"
+    ],
+    "catalysts": [
+      "export-control escalation",
+      "domestic magnet ramp milestones",
+      "DoD partnership milestones"
+    ],
+    "invalidations": [
+      "Chinese export pressure eases materially",
+      "domestic ramp slips without policy support"
+    ],
+    "structural_reference": {
+      "case_study": "Rare earth magnets / refining",
+      "top_severity_layer": "Sintered NdFeB permanent magnet manufacturing"
+    },
+    "notes": [],
+    "candidate_name": "MP Materials long-vol on magnet sovereignty",
+    "mispricing": {
+      "candidate_name": "MP Materials long-vol on magnet sovereignty",
+      "score_type": "mispricing",
+      "score_0_to_100": 82.8,
+      "band": "critical",
+      "weighted_signals": {
+        "hiddenness": 0.72,
+        "recognition_gap": 0.72,
+        "catalyst_clarity": 0.64,
+        "propagation_asymmetry": 0.7,
+        "duration_mismatch": 0.48,
+        "evidence_quality": 0.4,
+        "crowding_inverse": 0.24,
+        "valuation_nonlinearity": 0.24
+      },
+      "strongest_drivers": [
+        [
+          "hiddenness",
+          0.72
+        ],
+        [
+          "recognition_gap",
+          0.72
+        ],
+        [
+          "propagation_asymmetry",
+          0.7
+        ]
+      ],
+      "weakest_drivers": [
+        [
+          "valuation_nonlinearity",
+          0.24
+        ],
+        [
+          "crowding_inverse",
+          0.24
+        ]
+      ],
+      "explanation": "MP Materials long-vol on magnet sovereignty scores 82.8/100 (critical) on mispricing plausibility. The strongest weighted drivers are hiddenness, recognition gap, propagation asymmetry. The least supportive signals are valuation nonlinearity, crowding inverse. This screen is a structural ranking aid, not live options pricing."
+    },
+    "options_fit": {
+      "candidate_name": "MP Materials long-vol on magnet sovereignty",
+      "score_type": "options_fit",
+      "score_0_to_100": 77.6,
+      "band": "high",
+      "weighted_signals": {
+        "convexity_need": 0.72,
+        "tenor_alignment": 0.72,
+        "vol_expansion_potential": 0.72,
+        "downside_definedness": 0.56,
+        "liquidity_path": 0.36,
+        "implementation_simplicity": 0.4,
+        "catalyst_timing_specificity": 0.4
+      },
+      "strongest_drivers": [
+        [
+          "convexity_need",
+          0.72
+        ],
+        [
+          "tenor_alignment",
+          0.72
+        ],
+        [
+          "vol_expansion_potential",
+          0.72
+        ]
+      ],
+      "weakest_drivers": [
+        [
+          "liquidity_path",
+          0.36
+        ],
+        [
+          "catalyst_timing_specificity",
+          0.4
+        ]
+      ],
+      "explanation": "MP Materials long-vol on magnet sovereignty scores 77.6/100 (high) on options-expression fit. The strongest weighted drivers are convexity need, tenor alignment, vol expansion potential. The least supportive signals are liquidity path, catalyst timing specificity. This screen helps decide whether options are a sensible expression path."
+    }
+  },
+  {
+    "name": "VRT calls on cooling deployment bottlenecks",
+    "thesis": "The market recognizes AI cooling demand, but may still underprice facility-side deployment bottlenecks and the duration of thermal retrofits.",
+    "underlying": "VRT",
+    "mispricing_type": "second_order_beneficiary",
+    "posture": "bullish",
+    "preferred_expression": "call_spread",
+    "time_horizon": "6-18m",
+    "mispricing_signals": {
+      "hiddenness": 3.0,
+      "recognition_gap": 3.0,
+      "catalyst_clarity": 4.0,
+      "propagation_asymmetry": 4.0,
+      "duration_mismatch": 3.0,
+      "evidence_quality": 4.0,
+      "crowding_inverse": 2.0,
+      "valuation_nonlinearity": 3.0
+    },
+    "options_expression_signals": {
+      "convexity_need": 3.0,
+      "tenor_alignment": 4.0,
+      "vol_expansion_potential": 3.0,
+      "downside_definedness": 4.0,
+      "liquidity_path": 4.0,
+      "implementation_simplicity": 4.0,
+      "catalyst_timing_specificity": 4.0
+    },
+    "linked_companies": [
+      "VRT",
+      "SMCI"
+    ],
+    "catalysts": [
+      "higher-density rack launches",
+      "liquid cooling rollouts lagging expectations"
+    ],
+    "invalidations": [
+      "deployment normalizes quickly",
+      "competitive supply expands faster than demand"
+    ],
+    "structural_reference": {
+      "case_study": "AI cooling / thermal management",
+      "top_severity_layer": "Coolant distribution and facility-side thermal chain"
+    },
+    "notes": [],
+    "candidate_name": "VRT calls on cooling deployment bottlenecks",
+    "mispricing": {
+      "candidate_name": "VRT calls on cooling deployment bottlenecks",
+      "score_type": "mispricing",
+      "score_0_to_100": 66.8,
+      "band": "high",
+      "weighted_signals": {
+        "hiddenness": 0.54,
+        "recognition_gap": 0.54,
+        "catalyst_clarity": 0.64,
+        "propagation_asymmetry": 0.56,
+        "duration_mismatch": 0.36,
+        "evidence_quality": 0.4,
+        "crowding_inverse": 0.12,
+        "valuation_nonlinearity": 0.18
+      },
+      "strongest_drivers": [
+        [
+          "catalyst_clarity",
+          0.64
+        ],
+        [
+          "propagation_asymmetry",
+          0.56
+        ],
+        [
+          "hiddenness",
+          0.54
+        ]
+      ],
+      "weakest_drivers": [
+        [
+          "crowding_inverse",
+          0.12
+        ],
+        [
+          "valuation_nonlinearity",
+          0.18
+        ]
+      ],
+      "explanation": "VRT calls on cooling deployment bottlenecks scores 66.8/100 (high) on mispricing plausibility. The strongest weighted drivers are catalyst clarity, propagation asymmetry, hiddenness. The least supportive signals are crowding inverse, valuation nonlinearity. This screen is a structural ranking aid, not live options pricing."
+    },
+    "options_fit": {
+      "candidate_name": "VRT calls on cooling deployment bottlenecks",
+      "score_type": "options_fit",
+      "score_0_to_100": 72.8,
+      "band": "high",
+      "weighted_signals": {
+        "convexity_need": 0.54,
+        "tenor_alignment": 0.72,
+        "vol_expansion_potential": 0.54,
+        "downside_definedness": 0.56,
+        "liquidity_path": 0.48,
+        "implementation_simplicity": 0.4,
+        "catalyst_timing_specificity": 0.4
+      },
+      "strongest_drivers": [
+        [
+          "tenor_alignment",
+          0.72
+        ],
+        [
+          "downside_definedness",
+          0.56
+        ],
+        [
+          "convexity_need",
+          0.54
+        ]
+      ],
+      "weakest_drivers": [
+        [
+          "catalyst_timing_specificity",
+          0.4
+        ],
+        [
+          "implementation_simplicity",
+          0.4
+        ]
+      ],
+      "explanation": "VRT calls on cooling deployment bottlenecks scores 72.8/100 (high) on options-expression fit. The strongest weighted drivers are tenor alignment, downside definedness, convexity need. The least supportive signals are catalyst timing specificity, implementation simplicity. This screen helps decide whether options are a sensible expression path."
+    }
+  },
+  {
+    "name": "HUBB calls on transformer lead-time persistence",
+    "thesis": "The market may recognize transformer tightness but still underprice how long qualification and lead-time constraints can persist under data-center load growth.",
+    "underlying": "HUBB",
+    "mispricing_type": "duration_underpricing",
+    "posture": "bullish",
+    "preferred_expression": "call_spread",
+    "time_horizon": "9-18m",
+    "mispricing_signals": {
+      "hiddenness": 3.0,
+      "recognition_gap": 3.0,
+      "catalyst_clarity": 3.0,
+      "propagation_asymmetry": 4.0,
+      "duration_mismatch": 4.0,
+      "evidence_quality": 4.0,
+      "crowding_inverse": 3.0,
+      "valuation_nonlinearity": 3.0
+    },
+    "options_expression_signals": {
+      "convexity_need": 3.0,
+      "tenor_alignment": 4.0,
+      "vol_expansion_potential": 3.0,
+      "downside_definedness": 4.0,
+      "liquidity_path": 3.0,
+      "implementation_simplicity": 4.0,
+      "catalyst_timing_specificity": 3.0
+    },
+    "linked_companies": [
+      "HUBB"
+    ],
+    "catalysts": [
+      "grid capex revisions",
+      "utility procurement commentary",
+      "data-center power demand updates"
+    ],
+    "invalidations": [
+      "lead times compress faster than expected",
+      "utility spending slows"
+    ],
+    "structural_reference": {
+      "case_study": "Transformers / grid equipment",
+      "top_severity_layer": "Utility-scale power transformers"
+    },
+    "notes": [],
+    "candidate_name": "HUBB calls on transformer lead-time persistence",
+    "mispricing": {
+      "candidate_name": "HUBB calls on transformer lead-time persistence",
+      "score_type": "mispricing",
+      "score_0_to_100": 67.2,
+      "band": "high",
+      "weighted_signals": {
+        "hiddenness": 0.54,
+        "recognition_gap": 0.54,
+        "catalyst_clarity": 0.48,
+        "propagation_asymmetry": 0.56,
+        "duration_mismatch": 0.48,
+        "evidence_quality": 0.4,
+        "crowding_inverse": 0.18,
+        "valuation_nonlinearity": 0.18
+      },
+      "strongest_drivers": [
+        [
+          "propagation_asymmetry",
+          0.56
+        ],
+        [
+          "hiddenness",
+          0.54
+        ],
+        [
+          "recognition_gap",
+          0.54
+        ]
+      ],
+      "weakest_drivers": [
+        [
+          "valuation_nonlinearity",
+          0.18
+        ],
+        [
+          "crowding_inverse",
+          0.18
+        ]
+      ],
+      "explanation": "HUBB calls on transformer lead-time persistence scores 67.2/100 (high) on mispricing plausibility. The strongest weighted drivers are propagation asymmetry, hiddenness, recognition gap. The least supportive signals are valuation nonlinearity, crowding inverse. This screen is a structural ranking aid, not live options pricing."
+    },
+    "options_fit": {
+      "candidate_name": "HUBB calls on transformer lead-time persistence",
+      "score_type": "options_fit",
+      "score_0_to_100": 68.4,
+      "band": "high",
+      "weighted_signals": {
+        "convexity_need": 0.54,
+        "tenor_alignment": 0.72,
+        "vol_expansion_potential": 0.54,
+        "downside_definedness": 0.56,
+        "liquidity_path": 0.36,
+        "implementation_simplicity": 0.4,
+        "catalyst_timing_specificity": 0.3
+      },
+      "strongest_drivers": [
+        [
+          "tenor_alignment",
+          0.72
+        ],
+        [
+          "downside_definedness",
+          0.56
+        ],
+        [
+          "convexity_need",
+          0.54
+        ]
+      ],
+      "weakest_drivers": [
+        [
+          "catalyst_timing_specificity",
+          0.3
+        ],
+        [
+          "liquidity_path",
+          0.36
+        ]
+      ],
+      "explanation": "HUBB calls on transformer lead-time persistence scores 68.4/100 (high) on options-expression fit. The strongest weighted drivers are tenor alignment, downside definedness, convexity need. The least supportive signals are catalyst timing specificity, liquidity path. This screen helps decide whether options are a sensible expression path."
+    }
+  },
+  {
+    "name": "LITE calls on InP / CPO dependency",
+    "thesis": "The market may still underappreciate how InP-linked optical scaling and CPO adoption can reshape the value capture of photonics suppliers, but the listed options may already reflect substantial volatility.",
+    "underlying": "LITE",
+    "mispricing_type": "hidden_bottleneck",
+    "posture": "bullish",
+    "preferred_expression": "equity_or_call_spread",
+    "time_horizon": "9-24m",
+    "mispricing_signals": {
+      "hiddenness": 4.0,
+      "recognition_gap": 4.0,
+      "catalyst_clarity": 4.0,
+      "propagation_asymmetry": 4.0,
+      "duration_mismatch": 3.0,
+      "evidence_quality": 4.0,
+      "crowding_inverse": 2.0,
+      "valuation_nonlinearity": 4.0
+    },
+    "options_expression_signals": {
+      "convexity_need": 3.0,
+      "tenor_alignment": 3.0,
+      "vol_expansion_potential": 2.0,
+      "downside_definedness": 3.0,
+      "liquidity_path": 3.0,
+      "implementation_simplicity": 3.0,
+      "catalyst_timing_specificity": 4.0
+    },
+    "linked_companies": [
+      "LITE",
+      "COHR",
+      "AVGO"
+    ],
+    "catalysts": [
+      "optics / CPO adoption updates",
+      "supplier qualification wins",
+      "evidence of tighter external-light-source demand"
+    ],
+    "invalidations": [
+      "photonic adoption lags expectations",
+      "supply expansion outpaces demand",
+      "options already fully price the uncertainty"
+    ],
+    "structural_reference": {
+      "case_study": "InP photonics",
+      "top_severity_layer": "InP substrates",
+      "top_value_capture_layer": "InP laser and external light source capacity"
+    },
+    "notes": [],
+    "candidate_name": "LITE calls on InP / CPO dependency",
+    "mispricing": {
+      "candidate_name": "LITE calls on InP / CPO dependency",
+      "score_type": "mispricing",
+      "score_0_to_100": 75.2,
+      "band": "high",
+      "weighted_signals": {
+        "hiddenness": 0.72,
+        "recognition_gap": 0.72,
+        "catalyst_clarity": 0.64,
+        "propagation_asymmetry": 0.56,
+        "duration_mismatch": 0.36,
+        "evidence_quality": 0.4,
+        "crowding_inverse": 0.12,
+        "valuation_nonlinearity": 0.24
+      },
+      "strongest_drivers": [
+        [
+          "hiddenness",
+          0.72
+        ],
+        [
+          "recognition_gap",
+          0.72
+        ],
+        [
+          "catalyst_clarity",
+          0.64
+        ]
+      ],
+      "weakest_drivers": [
+        [
+          "crowding_inverse",
+          0.12
+        ],
+        [
+          "valuation_nonlinearity",
+          0.24
+        ]
+      ],
+      "explanation": "LITE calls on InP / CPO dependency scores 75.2/100 (high) on mispricing plausibility. The strongest weighted drivers are hiddenness, recognition gap, catalyst clarity. The least supportive signals are crowding inverse, valuation nonlinearity. This screen is a structural ranking aid, not live options pricing."
+    },
+    "options_fit": {
+      "candidate_name": "LITE calls on InP / CPO dependency",
+      "score_type": "options_fit",
+      "score_0_to_100": 58.4,
+      "band": "moderate",
+      "weighted_signals": {
+        "convexity_need": 0.54,
+        "tenor_alignment": 0.54,
+        "vol_expansion_potential": 0.36,
+        "downside_definedness": 0.42,
+        "liquidity_path": 0.36,
+        "implementation_simplicity": 0.3,
+        "catalyst_timing_specificity": 0.4
+      },
+      "strongest_drivers": [
+        [
+          "convexity_need",
+          0.54
+        ],
+        [
+          "tenor_alignment",
+          0.54
+        ],
+        [
+          "downside_definedness",
+          0.42
+        ]
+      ],
+      "weakest_drivers": [
+        [
+          "implementation_simplicity",
+          0.3
+        ],
+        [
+          "liquidity_path",
+          0.36
+        ]
+      ],
+      "explanation": "LITE calls on InP / CPO dependency scores 58.4/100 (moderate) on options-expression fit. The strongest weighted drivers are convexity need, tenor alignment, downside definedness. The least supportive signals are implementation simplicity, liquidity path. This screen helps decide whether options are a sensible expression path."
+    }
+  }
+]

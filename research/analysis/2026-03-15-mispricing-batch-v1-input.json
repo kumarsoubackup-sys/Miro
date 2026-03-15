@@ -1,0 +1,217 @@
+{
+  "rows": [
+    {
+      "name": "MU LEAPS on packaging duration",
+      "thesis": "The market still underestimates how long advanced packaging remains a binding constraint for AI memory demand.",
+      "underlying": "MU",
+      "mispricing_type": "variance_underpricing",
+      "posture": "bullish_long_vol",
+      "preferred_expression": "leaps_call",
+      "time_horizon": "12-24m",
+      "linked_companies": ["MU", "TSM", "SK Hynix"],
+      "catalysts": [
+        "packaging capacity remaining tight through the next product cycle",
+        "continued AI capex guidance",
+        "HBM supply agreements extending further out"
+      ],
+      "invalidations": [
+        "packaging expansion clears faster than expected",
+        "AI demand slows materially",
+        "HBM pricing weakens without offsetting unit growth"
+      ],
+      "structural_reference": {
+        "case_study": "HBM / advanced packaging",
+        "top_severity_layer": "2.5D / CoWoS-class advanced packaging capacity",
+        "top_value_capture_layer": "HBM memory stack supply"
+      },
+      "mispricing_signals": {
+        "hiddenness": 4,
+        "recognition_gap": 4,
+        "catalyst_clarity": 3,
+        "propagation_asymmetry": 4,
+        "duration_mismatch": 5,
+        "evidence_quality": 4,
+        "crowding_inverse": 3,
+        "valuation_nonlinearity": 4
+      },
+      "options_expression_signals": {
+        "convexity_need": 4,
+        "tenor_alignment": 5,
+        "vol_expansion_potential": 4,
+        "downside_definedness": 4,
+        "liquidity_path": 4,
+        "implementation_simplicity": 4,
+        "catalyst_timing_specificity": 3
+      }
+    },
+    {
+      "name": "MP Materials long-vol on magnet sovereignty",
+      "thesis": "The market may still underprice how fast heavy rare-earth and magnet concentration can turn into strategic scarcity and policy-driven repricing.",
+      "underlying": "MP",
+      "mispricing_type": "hidden_bottleneck",
+      "posture": "bullish_long_vol",
+      "preferred_expression": "leaps_call",
+      "time_horizon": "12-36m",
+      "linked_companies": ["MP"],
+      "catalysts": [
+        "export-control escalation",
+        "domestic magnet ramp milestones",
+        "DoD partnership milestones"
+      ],
+      "invalidations": [
+        "Chinese export pressure eases materially",
+        "domestic ramp slips without policy support"
+      ],
+      "structural_reference": {
+        "case_study": "Rare earth magnets / refining",
+        "top_severity_layer": "Sintered NdFeB permanent magnet manufacturing"
+      },
+      "mispricing_signals": {
+        "hiddenness": 4,
+        "recognition_gap": 4,
+        "catalyst_clarity": 4,
+        "propagation_asymmetry": 5,
+        "duration_mismatch": 4,
+        "evidence_quality": 4,
+        "crowding_inverse": 4,
+        "valuation_nonlinearity": 4
+      },
+      "options_expression_signals": {
+        "convexity_need": 4,
+        "tenor_alignment": 4,
+        "vol_expansion_potential": 4,
+        "downside_definedness": 4,
+        "liquidity_path": 3,
+        "implementation_simplicity": 4,
+        "catalyst_timing_specificity": 4
+      }
+    },
+    {
+      "name": "VRT calls on cooling deployment bottlenecks",
+      "thesis": "The market recognizes AI cooling demand, but may still underprice facility-side deployment bottlenecks and the duration of thermal retrofits.",
+      "underlying": "VRT",
+      "mispricing_type": "second_order_beneficiary",
+      "posture": "bullish",
+      "preferred_expression": "call_spread",
+      "time_horizon": "6-18m",
+      "linked_companies": ["VRT", "SMCI"],
+      "catalysts": [
+        "higher-density rack launches",
+        "liquid cooling rollouts lagging expectations"
+      ],
+      "invalidations": [
+        "deployment normalizes quickly",
+        "competitive supply expands faster than demand"
+      ],
+      "structural_reference": {
+        "case_study": "AI cooling / thermal management",
+        "top_severity_layer": "Coolant distribution and facility-side thermal chain"
+      },
+      "mispricing_signals": {
+        "hiddenness": 3,
+        "recognition_gap": 3,
+        "catalyst_clarity": 4,
+        "propagation_asymmetry": 4,
+        "duration_mismatch": 3,
+        "evidence_quality": 4,
+        "crowding_inverse": 2,
+        "valuation_nonlinearity": 3
+      },
+      "options_expression_signals": {
+        "convexity_need": 3,
+        "tenor_alignment": 4,
+        "vol_expansion_potential": 3,
+        "downside_definedness": 4,
+        "liquidity_path": 4,
+        "implementation_simplicity": 4,
+        "catalyst_timing_specificity": 4
+      }
+    },
+    {
+      "name": "HUBB calls on transformer lead-time persistence",
+      "thesis": "The market may recognize transformer tightness but still underprice how long qualification and lead-time constraints can persist under data-center load growth.",
+      "underlying": "HUBB",
+      "mispricing_type": "duration_underpricing",
+      "posture": "bullish",
+      "preferred_expression": "call_spread",
+      "time_horizon": "9-18m",
+      "linked_companies": ["HUBB"],
+      "catalysts": [
+        "grid capex revisions",
+        "utility procurement commentary",
+        "data-center power demand updates"
+      ],
+      "invalidations": [
+        "lead times compress faster than expected",
+        "utility spending slows"
+      ],
+      "structural_reference": {
+        "case_study": "Transformers / grid equipment",
+        "top_severity_layer": "Utility-scale power transformers"
+      },
+      "mispricing_signals": {
+        "hiddenness": 3,
+        "recognition_gap": 3,
+        "catalyst_clarity": 3,
+        "propagation_asymmetry": 4,
+        "duration_mismatch": 4,
+        "evidence_quality": 4,
+        "crowding_inverse": 3,
+        "valuation_nonlinearity": 3
+      },
+      "options_expression_signals": {
+        "convexity_need": 3,
+        "tenor_alignment": 4,
+        "vol_expansion_potential": 3,
+        "downside_definedness": 4,
+        "liquidity_path": 3,
+        "implementation_simplicity": 4,
+        "catalyst_timing_specificity": 3
+      }
+    },
+    {
+      "name": "LITE calls on InP / CPO dependency",
+      "thesis": "The market may still underappreciate how InP-linked optical scaling and CPO adoption can reshape the value capture of photonics suppliers, but the listed options may already reflect substantial volatility.",
+      "underlying": "LITE",
+      "mispricing_type": "hidden_bottleneck",
+      "posture": "bullish",
+      "preferred_expression": "equity_or_call_spread",
+      "time_horizon": "9-24m",
+      "linked_companies": ["LITE", "COHR", "AVGO"],
+      "catalysts": [
+        "optics / CPO adoption updates",
+        "supplier qualification wins",
+        "evidence of tighter external-light-source demand"
+      ],
+      "invalidations": [
+        "photonic adoption lags expectations",
+        "supply expansion outpaces demand",
+        "options already fully price the uncertainty"
+      ],
+      "structural_reference": {
+        "case_study": "InP photonics",
+        "top_severity_layer": "InP substrates",
+        "top_value_capture_layer": "InP laser and external light source capacity"
+      },
+      "mispricing_signals": {
+        "hiddenness": 4,
+        "recognition_gap": 4,
+        "catalyst_clarity": 4,
+        "propagation_asymmetry": 4,
+        "duration_mismatch": 3,
+        "evidence_quality": 4,
+        "crowding_inverse": 2,
+        "valuation_nonlinearity": 4
+      },
+      "options_expression_signals": {
+        "convexity_need": 3,
+        "tenor_alignment": 3,
+        "vol_expansion_potential": 2,
+        "downside_definedness": 3,
+        "liquidity_path": 3,
+        "implementation_simplicity": 3,
+        "catalyst_timing_specificity": 4
+      }
+    }
+  ]
+}
