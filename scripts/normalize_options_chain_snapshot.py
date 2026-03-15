@@ -189,6 +189,11 @@ def _group_by_expiry(rows: Iterable[Dict[str, Any]]) -> List[Dict[str, Any]]:
     expiries: Dict[str, Dict[str, Any]] = {}
     for row in rows:
         expiry = row.get("expiry")
+        if not expiry and row.get("option_symbol"):
+            derived = _parse_occ_symbol(str(row["option_symbol"]))
+            for key, value in derived.items():
+                row.setdefault(key, value)
+            expiry = row.get("expiry")
         if not expiry:
             raise ValueError("each row must include 'expiry'")
 
