@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List
@@ -33,6 +34,70 @@ NUMERIC_FIELDS = {
     "days_to_expiry",
 }
 
+HEADER_ALIASES = {
+    "option_symbol": ["option_symbol", "option symbol", "contract", "contract name", "symbol"],
+    "underlying": ["underlying", "ticker", "root"],
+    "underlying_price": ["underlying_price", "underlying price", "price", "stock price"],
+    "currency": ["currency"],
+    "expiry": ["expiry", "expiration", "expiration date", "exp date"],
+    "days_to_expiry": ["days_to_expiry", "dte", "days"],
+    "right": ["right", "type", "option type", "call/put", "cp"],
+    "strike": ["strike", "strike price"],
+    "bid": ["bid"],
+    "ask": ["ask"],
+    "last": ["last", "last price"],
+    "mark": ["mark", "mid", "midpoint"],
+    "volume": ["volume", "vol"],
+    "open_interest": ["open interest", "open_interest", "oi"],
+    "implied_volatility": ["implied volatility", "implied_volatility", "iv", "imp vol"],
+    "delta": ["delta"],
+    "gamma": ["gamma"],
+    "theta": ["theta"],
+    "vega": ["vega"],
+    "in_the_money": ["in the money", "in_the_money", "itm"],
+}
+
+OCC_SYMBOL_PATTERN = re.compile(
+    r"^(?P<root>[A-Z]{1,6})(?P<date>\d{6})(?P<right>[CP])(?P<strike>\d{8})$"
+)
+
+
+def _normalize_header(value: str) -> str:
+    return (
+        value.strip()
+        .lower()
+        .replace("_", " ")
+        .replace("-", " ")
+        .replace("/", " ")
+    )
+
+
+def _canonical_key(header: str) -> str:
+    normalized = _normalize_header(header)
+    for canonical, aliases in HEADER_ALIASES.items():
+        if normalized == _normalize_header(canonical):
+            return canonical
+        for alias in aliases:
+            if normalized == _normalize_header(alias):
+                return canonical
+    return header
+
+
+def _parse_occ_symbol(symbol: str) -> Dict[str, Any]:
+    match = OCC_SYMBOL_PATTERN.match(symbol.strip().upper())
+    if not match:
+        return {}
+    raw_strike = match.group("strike")
+    strike = int(raw_strike) / 1000.0
+    raw_date = match.group("date")
+    expiry = f"20{raw_date[0:2]}-{raw_date[2:4]}-{raw_date[4:6]}"
+    return {
+        "underlying": match.group("root"),
+        "expiry": expiry,
+        "right": "call" if match.group("right") == "C" else "put",
+        "strike": strike,
+    }
+
 
 def _coerce_number(value: Any) -> Any:
     if value in ("", None):
@@ -40,6 +105,12 @@ def _coerce_number(value: Any) -> Any:
     if isinstance(value, (int, float)):
         return value
     text = str(value).strip().replace(",", "")
+    if text.endswith("%"):
+        text = text[:-1]
+        try:
+            return float(text) / 100.0
+        except ValueError:
+            return value
     if text in {"--", "N/A", "na", "None"}:
         return None
     try:
@@ -64,12 +135,17 @@ def _coerce_bool(value: Any) -> bool | None:
 
 
 def _normalize_contract(row: Dict[str, Any]) -> Dict[str, Any]:
+    occ_derived = {}
+    option_symbol = row.get("option_symbol")
+    if option_symbol:
+        occ_derived = _parse_occ_symbol(str(option_symbol))
+
     contract = {
         "option_symbol": row.get("option_symbol"),
-        "underlying": row.get("underlying"),
-        "expiry": row.get("expiry"),
-        "right": row.get("right"),
-        "strike": _coerce_number(row.get("strike")),
+        "underlying": row.get("underlying") or occ_derived.get("underlying"),
+        "expiry": row.get("expiry") or occ_derived.get("expiry"),
+        "right": row.get("right") or occ_derived.get("right"),
+        "strike": _coerce_number(row.get("strike")) or occ_derived.get("strike"),
         "bid": _coerce_number(row.get("bid")),
         "ask": _coerce_number(row.get("ask")),
         "last": _coerce_number(row.get("last")),
@@ -90,7 +166,14 @@ def _normalize_contract(row: Dict[str, Any]) -> Dict[str, Any]:
 def _load_csv(path: Path) -> List[Dict[str, Any]]:
     with path.open("r", encoding="utf-8", newline="") as handle:
         reader = csv.DictReader(handle)
-        return [dict(row) for row in reader]
+        rows = []
+        for row in reader:
+            normalized = {}
+            for key, value in row.items():
+                canonical = _canonical_key(key or "")
+                normalized[canonical] = value
+            rows.append(normalized)
+        return rows
 
 
 def _load_json_rows(path: Path) -> List[Dict[str, Any]]:
@@ -155,6 +238,11 @@ def main() -> int:
         default="schwab-playwright-manual",
         help="Provider label for capture metadata",
     )
+    parser.add_argument("--underlying", help="Fallback underlying ticker")
+    parser.add_argument("--underlying-price", type=float, help="Fallback underlying price")
+    parser.add_argument("--expiry", help="Fallback expiry for rows missing an expiry column")
+    parser.add_argument("--days-to-expiry", type=int, help="Fallback DTE for rows missing days-to-expiry")
+    parser.add_argument("--right", choices=["call", "put"], help="Fallback option right for rows missing a right column")
     parser.add_argument("--source-page", help="Optional source page URL")
     parser.add_argument(
         "--note",
@@ -175,6 +263,18 @@ def main() -> int:
 
     if not rows:
         raise SystemExit("input file contains no rows")
+
+    fallback_values = {
+        "underlying": args.underlying,
+        "underlying_price": args.underlying_price,
+        "expiry": args.expiry,
+        "days_to_expiry": args.days_to_expiry,
+        "right": args.right,
+    }
+    for row in rows:
+        for key, value in fallback_values.items():
+            if value is not None and not row.get(key):
+                row[key] = value
 
     output = {
         "capture_meta": _infer_capture_meta(
