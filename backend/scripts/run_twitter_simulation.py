@@ -38,6 +38,7 @@ sys.path.insert(0, _backend_dir)
 
 # 加载项目根目录的 .env 文件（包含 LLM_API_KEY 等配置）
 from dotenv import load_dotenv
+from app.config import Config
 _env_file = os.path.join(_project_root, '.env')
 if os.path.exists(_env_file):
     load_dotenv(_env_file)
@@ -439,8 +440,10 @@ class TwitterSimulationRunner:
         llm_model = os.environ.get("LLM_MODEL_NAME", "")
         
         # 如果 .env 中没有，则使用 config 作为备用
+        if not llm_base_url:
+            llm_base_url = self.config.get("llm_base_url", Config.LLM_BASE_URL)
         if not llm_model:
-            llm_model = self.config.get("llm_model", "gpt-4o-mini")
+            llm_model = self.config.get("llm_model", Config.LLM_MODEL_NAME)
         
         # 设置 camel-ai 所需的环境变量
         if llm_api_key:
