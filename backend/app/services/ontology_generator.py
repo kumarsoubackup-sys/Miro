@@ -161,9 +161,10 @@ class OntologyGenerator:
     分析文本内容，生成实体和关系类型定义
     """
     
-    def __init__(self, llm_client: Optional[LLMClient] = None):
+    def __init__(self, llm_client: Optional[LLMClient] = None, language: str = "zh"):
         self.llm_client = llm_client or LLMClient()
-    
+        self.language = language
+
     def generate(
         self,
         document_texts: List[str],
@@ -172,24 +173,28 @@ class OntologyGenerator:
     ) -> Dict[str, Any]:
         """
         生成本体定义
-        
+
         Args:
             document_texts: 文档文本列表
             simulation_requirement: 模拟需求描述
             additional_context: 额外上下文
-            
+
         Returns:
             本体定义（entity_types, edge_types等）
         """
         # 构建用户消息
         user_message = self._build_user_message(
-            document_texts, 
+            document_texts,
             simulation_requirement,
             additional_context
         )
-        
+
+        system_prompt = ONTOLOGY_SYSTEM_PROMPT
+        if self.language == 'en':
+            system_prompt += "\n\nIMPORTANT: Write all descriptions, examples, and analysis_summary in English."
+
         messages = [
-            {"role": "system", "content": ONTOLOGY_SYSTEM_PROMPT},
+            {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_message}
         ]
         
