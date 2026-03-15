@@ -195,6 +195,15 @@
                 <span v-else>初始化中...</span>
                 <span class="btn-arrow">→</span>
               </button>
+
+              <button
+                class="research-mode-btn"
+                @click="goToResearchMode"
+                :disabled="loading"
+              >
+                <span>进入研究模式</span>
+                <span class="btn-arrow">↗</span>
+              </button>
             </div>
           </div>
         </div>
@@ -302,6 +311,11 @@ const startSimulation = () => {
       params: { projectId: 'new' }
     })
   })
+}
+
+const goToResearchMode = () => {
+  if (loading.value) return
+  router.push({ name: 'Research' })
 }
 </script>
 
@@ -676,6 +690,9 @@ const startSimulation = () => {
 
 .console-section.btn-section {
   padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .console-header {
@@ -858,6 +875,34 @@ const startSimulation = () => {
   cursor: not-allowed;
   transform: none;
   border: 1px solid #E5E5E5;
+}
+
+.research-mode-btn {
+  width: 100%;
+  background: #FAFAFA;
+  color: var(--black);
+  border: 1px solid var(--border);
+  padding: 16px 20px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.5px;
+}
+
+.research-mode-btn:hover:not(:disabled) {
+  border-color: var(--orange);
+  color: var(--orange);
+  background: #FFF8F4;
+}
+
+.research-mode-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 /* 引导动画：微妙的边框脉冲 */
