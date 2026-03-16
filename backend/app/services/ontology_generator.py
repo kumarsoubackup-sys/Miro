@@ -178,18 +178,19 @@ class OntologyGenerator:
             document_texts: 文档文本列表
             simulation_requirement: 模拟需求描述
             additional_context: 额外上下文
-            language: 输出语言 ('zh' 或 'en')，用于 analysis_summary 等字段
-            
+            language: 输出语言 ('zh', 'en', 'ko')，用于 analysis_summary 等字段
+
         Returns:
             本体定义（entity_types, edge_types等）
         """
         self._language = language
         # 语言指令：让 LLM 的 analysis_summary 等自然语言输出与用户语言一致
-        lang_instruction = (
-            "\n\n**语言要求**：analysis_summary 必须使用中文撰写。"
-            if language == 'zh' else
-            "\n\n**Language requirement**: You MUST write analysis_summary in English."
-        )
+        lang_instructions = {
+            'zh': "\n\n**语言要求**：analysis_summary 必须使用中文撰写。",
+            'en': "\n\n**Language requirement**: You MUST write analysis_summary in English.",
+            'ko': "\n\n**언어 요구사항**: analysis_summary는 반드시 한국어로 작성해야 합니다.",
+        }
+        lang_instruction = lang_instructions.get(language, lang_instructions['zh'])
         system_prompt = ONTOLOGY_SYSTEM_PROMPT + lang_instruction
         
         # 构建用户消息

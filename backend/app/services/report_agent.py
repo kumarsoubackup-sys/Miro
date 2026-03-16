@@ -590,6 +590,13 @@ PLAN_SYSTEM_PROMPT = """\
 # 语言指令（根据 report_language 动态追加到各 prompt）
 LANGUAGE_INSTRUCTION_ZH = "\n\n【语言要求】报告标题、摘要、章节标题和内容描述必须全部使用中文撰写。"
 LANGUAGE_INSTRUCTION_EN = "\n\n【Language requirement】You MUST write the report title, summary, section titles and all content in English only. Think and respond in English."
+LANGUAGE_INSTRUCTION_KO = "\n\n【언어 요구사항】보고서 제목, 요약, 섹션 제목 및 모든 내용을 반드시 한국어로만 작성해야 합니다. 한국어로 사고하고 응답하세요."
+
+LANGUAGE_INSTRUCTIONS = {
+    'zh': LANGUAGE_INSTRUCTION_ZH,
+    'en': LANGUAGE_INSTRUCTION_EN,
+    'ko': LANGUAGE_INSTRUCTION_KO,
+}
 
 PLAN_USER_PROMPT_TEMPLATE = """\
 【预测场景设定】
@@ -908,7 +915,7 @@ class ReportAgent:
         self.graph_id = graph_id
         self.simulation_id = simulation_id
         self.simulation_requirement = simulation_requirement
-        self.report_language = report_language if report_language in ('zh', 'en') else 'zh'
+        self.report_language = report_language if report_language in ('zh', 'en', 'ko') else 'zh'
         
         self.llm = llm_client or LLMClient()
         self.zep_tools = zep_tools or ZepToolsService()
@@ -1170,7 +1177,7 @@ class ReportAgent:
         if progress_callback:
             progress_callback("planning", 30, "正在生成报告大纲...")
         
-        lang_inst = LANGUAGE_INSTRUCTION_ZH if self.report_language == 'zh' else LANGUAGE_INSTRUCTION_EN
+        lang_inst = LANGUAGE_INSTRUCTIONS.get(self.report_language, LANGUAGE_INSTRUCTION_ZH)
         system_prompt = PLAN_SYSTEM_PROMPT + lang_inst
         user_prompt = PLAN_USER_PROMPT_TEMPLATE.format(
             simulation_requirement=self.simulation_requirement,
@@ -1260,11 +1267,12 @@ class ReportAgent:
         if self.report_logger:
             self.report_logger.log_section_start(section.title, section_index)
         
-        lang_rule = (
-            "报告必须全部使用中文撰写。当你引用工具返回的英文或中英混杂内容时，必须将其翻译为流畅的中文后再写入报告。"
-            if self.report_language == 'zh' else
-            "The report MUST be written entirely in English. When you quote content from tools that is in Chinese or mixed language, translate it into fluent English before including it in the report."
-        )
+        lang_rules = {
+            'zh': "报告必须全部使用中文撰写。当你引用工具返回的英文或中英混杂内容时，必须将其翻译为流畅的中文后再写入报告。",
+            'en': "The report MUST be written entirely in English. When you quote content from tools that is in Chinese or mixed language, translate it into fluent English before including it in the report.",
+            'ko': "보고서는 반드시 한국어로만 작성해야 합니다. 도구에서 반환된 영문 또는 중영 혼합 콘텐츠를 인용할 때는 유창한 한국어로 번역한 후 보고서에 포함하세요.",
+        }
+        lang_rule = lang_rules.get(self.report_language, lang_rules['zh'])
         system_prompt = SECTION_SYSTEM_PROMPT_TEMPLATE.format(
             report_title=outline.title,
             report_summary=outline.summary,
@@ -1815,7 +1823,12 @@ class ReportAgent:
         except Exception as e:
             logger.warning(f"获取报告内容失败: {e}")
         
-        chat_lang = "回复必须使用中文。" if self.report_language == 'zh' else "You MUST respond in English only."
+        chat_langs = {
+            'zh': "回复必须使用中文。",
+            'en': "You MUST respond in English only.",
+            'ko': "반드시 한국어로만 응답하세요.",
+        }
+        chat_lang = chat_langs.get(self.report_language, chat_langs['zh'])
         system_prompt = CHAT_SYSTEM_PROMPT_TEMPLATE.format(
             simulation_requirement=self.simulation_requirement,
             report_content=report_content if report_content else "（暂无报告）",
