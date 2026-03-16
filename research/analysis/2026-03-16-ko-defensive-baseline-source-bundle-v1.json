@@ -1,0 +1,329 @@
+{
+  "name": "ko_defensive_baseline_source_bundle_v1",
+  "theme": "defensive_consumer_staples_cash_flow",
+  "notes": [
+    "This is an adversarial false-positive test for the promotion system.",
+    "The source mix is intentionally strong and official, but the thesis itself is low-volatility and low-asymmetry.",
+    "If this promotes too easily, the graduation rules are too permissive."
+  ],
+  "sources": [
+    {
+      "source_id": "src_ko_10k_2025",
+      "source_class": "company_filing",
+      "title": "The Coca-Cola Company 2024 Form 10-K",
+      "canonical_url": "https://investors.coca-colacompany.com/filings-reports/annual-filings-10-k/content/0000021344-25-000011/a20241231exhibit231.htm",
+      "publisher": "The Coca-Cola Company",
+      "published_at": "2025-02-20T00:00:00Z",
+      "retrieved_at": "2026-03-16T00:00:00Z",
+      "language": "en",
+      "jurisdiction": "global",
+      "ticker_refs": [
+        "KO"
+      ],
+      "theme_refs": [
+        "defensive_consumer_staples_cash_flow",
+        "global_beverage_distribution"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.92,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Official annual filing used to anchor Coca-Cola's global operating footprint and business durability."
+      ]
+    },
+    {
+      "source_id": "src_ko_proxy_2025",
+      "source_class": "company_filing",
+      "title": "The Coca-Cola Company 2025 Proxy Statement",
+      "canonical_url": "https://investors.coca-colacompany.com/filings-reports/all-sec-filings/content/0001558370-25-003056/ko-20250430xdef14a.htm",
+      "publisher": "The Coca-Cola Company",
+      "published_at": "2025-03-17T00:00:00Z",
+      "retrieved_at": "2026-03-16T00:00:00Z",
+      "language": "en",
+      "jurisdiction": "global",
+      "ticker_refs": [
+        "KO"
+      ],
+      "theme_refs": [
+        "defensive_consumer_staples_cash_flow",
+        "global_beverage_distribution"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.9,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Official proxy material highlighting the procurement group, scale, and long-duration operating system."
+      ]
+    },
+    {
+      "source_id": "src_ko_q4_2025_results",
+      "source_class": "company_release",
+      "title": "Coca-Cola Reports Fourth Quarter and Full Year 2025 Results",
+      "canonical_url": "https://investors.coca-colacompany.com/news-events/press-releases/detail/1151/coca-cola-reports-fourth-quarter-and-full-year-2025-results",
+      "publisher": "The Coca-Cola Company",
+      "published_at": "2026-02-10T00:00:00Z",
+      "retrieved_at": "2026-03-16T00:00:00Z",
+      "language": "en",
+      "jurisdiction": "global",
+      "ticker_refs": [
+        "KO"
+      ],
+      "theme_refs": [
+        "defensive_consumer_staples_cash_flow",
+        "dividend_durability"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.89,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Official results release showing revenue growth, cash flow, and multi-decade dividend continuity."
+      ]
+    }
+  ],
+  "fragments": [
+    {
+      "fragment_id": "frag_ko_global_distribution_system",
+      "source_id": "src_ko_10k_2025",
+      "fragment_type": "filing_excerpt",
+      "section_label": "Global system footprint",
+      "excerpt": "Coca-Cola's annual filing reflects a global operating and bottling footprint across major geographies, supporting the idea that KO is a diversified beverage distribution and concentrate system rather than a narrow single-node supplier.",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Defensive Consumer Staples Cash Flow"
+        ],
+        "systems": [
+          "Global Beverage Distribution Network"
+        ],
+        "process_layers": [
+          "Concentrate Supply and Brand System"
+        ],
+        "geographies": [
+          "United States",
+          "China",
+          "Japan",
+          "South Africa"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Defensive Consumer Staples Cash Flow",
+          "confidence": "high"
+        },
+        {
+          "entity_type": "System",
+          "canonical_name": "Global Beverage Distribution Network",
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Concentrate Supply and Brand System",
+          "confidence": "high"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "United States",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Japan",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "South Africa",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "concentrate_system_part_of_global_distribution",
+          "relationship_type": "PART_OF",
+          "source_type": "ProcessLayer",
+          "source_name": "Concentrate Supply and Brand System",
+          "target_type": "System",
+          "target_name": "Global Beverage Distribution Network",
+          "relationship_strength": "high",
+          "causal_role": "core_operating_layer",
+          "confidence": "high"
+        },
+        {
+          "key": "concentrate_system_supplied_by_ko",
+          "relationship_type": "SUPPLIED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Concentrate Supply and Brand System",
+          "target_type": "PublicCompany",
+          "target_name": "KO",
+          "relationship_strength": "high",
+          "causal_role": "issuer_operating_exposure",
+          "confidence": "high"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_ko_is_diversified_distribution_system",
+          "claim_type": "supplier_or_customer_relationship",
+          "claim_text": "KO is a broad global beverage system with diversified operating exposure rather than a narrow chokepoint supplier.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "high",
+          "entity_names": [
+            "KO",
+            "Global Beverage Distribution Network",
+            "Concentrate Supply and Brand System"
+          ],
+          "relationship_keys": [
+            "concentrate_system_part_of_global_distribution",
+            "concentrate_system_supplied_by_ko"
+          ]
+        }
+      ]
+    },
+    {
+      "fragment_id": "frag_ko_procurement_and_scale",
+      "source_id": "src_ko_proxy_2025",
+      "fragment_type": "proxy_excerpt",
+      "section_label": "Operating system scale",
+      "excerpt": "Coca-Cola's proxy describes a cross-enterprise procurement group and system-wide scale priorities focused on security of supply, quality, cost, service, sustainability, and innovation, which supports resilience rather than hidden bottleneck asymmetry.",
+      "contains_claim_candidate": true,
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Coca-Cola System Procurement Continuity",
+          "attributes": {
+            "event_type": "operating_system_scale"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ExpressionCandidate",
+          "canonical_name": "Shares: KO",
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "theme_affected_by_procurement_continuity",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "Theme",
+          "source_name": "Defensive Consumer Staples Cash Flow",
+          "target_type": "Event",
+          "target_name": "Coca-Cola System Procurement Continuity",
+          "relationship_strength": "medium",
+          "causal_role": "resilience_support",
+          "confidence": "medium"
+        },
+        {
+          "key": "shares_ko_for_theme",
+          "relationship_type": "CANDIDATE_EXPRESSION_FOR",
+          "source_type": "ExpressionCandidate",
+          "source_name": "Shares: KO",
+          "target_type": "Theme",
+          "target_name": "Defensive Consumer Staples Cash Flow",
+          "relationship_strength": "high",
+          "causal_role": "obvious_equity_expression",
+          "confidence": "high"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_ko_scale_supports_resilience",
+          "claim_type": "value_capture_assertion",
+          "claim_text": "KO's operating scale and procurement continuity support resilience and durability, but do not by themselves imply hidden structural asymmetry.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "high",
+          "entity_names": [
+            "KO",
+            "Defensive Consumer Staples Cash Flow",
+            "Coca-Cola System Procurement Continuity",
+            "Shares: KO"
+          ],
+          "relationship_keys": [
+            "theme_affected_by_procurement_continuity",
+            "shares_ko_for_theme"
+          ]
+        }
+      ]
+    },
+    {
+      "fragment_id": "frag_ko_cash_flow_and_dividend_durability",
+      "source_id": "src_ko_q4_2025_results",
+      "fragment_type": "earnings_excerpt",
+      "section_label": "Cash flow durability",
+      "excerpt": "Coca-Cola reported modest revenue growth, substantial operating cash flow, and continuation of its long dividend-growth record, reinforcing that KO is a defensive quality equity rather than a latent high-variance rerating setup.",
+      "contains_claim_candidate": true,
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "2025 Cash Flow and Dividend Continuity",
+          "attributes": {
+            "event_type": "earnings_validation"
+          },
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "shares_ko_reprices_via_cashflow_continuity",
+          "relationship_type": "REPRICES_VIA",
+          "source_type": "ExpressionCandidate",
+          "source_name": "Shares: KO",
+          "target_type": "Event",
+          "target_name": "2025 Cash Flow and Dividend Continuity",
+          "relationship_strength": "medium",
+          "causal_role": "defensive_validation",
+          "confidence": "high"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_ko_is_defensive_not_asymmetric",
+          "claim_type": "expression_fit_assertion",
+          "claim_text": "KO looks like a steady defensive equity with durable cash flow, not a high-conviction structural information arbitrage candidate.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "high",
+          "entity_names": [
+            "KO",
+            "Shares: KO",
+            "2025 Cash Flow and Dividend Continuity"
+          ],
+          "relationship_keys": [
+            "shares_ko_reprices_via_cashflow_continuity"
+          ]
+        }
+      ],
+      "inference_candidates": [
+        {
+          "inference_key": "inf_ko_incremental_defensive_market_miss",
+          "inference_type": "market_miss",
+          "statement": "The market may modestly underappreciate KO's downside resilience in macro stress, but the thesis appears incremental and low-variance rather than a structural mispricing.",
+          "claim_keys": [
+            "claim_ko_scale_supports_resilience",
+            "claim_ko_is_defensive_not_asymmetric"
+          ],
+          "relationship_keys": [
+            "shares_ko_for_theme",
+            "shares_ko_reprices_via_cashflow_continuity"
+          ],
+          "confidence": "low",
+          "falsifiers": [
+            "defensive cash-flow resilience is already fully reflected in valuation",
+            "there is no differentiated structural insight beyond well-known quality attributes"
+          ]
+        }
+      ]
+    }
+  ]
+}

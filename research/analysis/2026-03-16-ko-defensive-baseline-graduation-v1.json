@@ -1,0 +1,74 @@
+{
+  "graduation_status": "exploratory_only",
+  "weighted_score_0_to_100": 64.95,
+  "gates": {
+    "source_gate": true,
+    "structure_gate": false,
+    "market_miss_gate": false,
+    "expression_gate": true,
+    "high_conviction_source_gate": true
+  },
+  "dimensions": {
+    "source_mix": {
+      "score_0_to_100": 89.0,
+      "detail": {
+        "total_sources": 3,
+        "evidence_count": 3,
+        "high_quality_count": 3,
+        "independent_count": 2,
+        "source_classes": [
+          "company_filing",
+          "company_release"
+        ]
+      }
+    },
+    "structure_quality": {
+      "score_0_to_100": 51.4,
+      "detail": {
+        "entity_count": 11,
+        "relationship_count": 5,
+        "claim_count": 3,
+        "evidence_link_count": 9,
+        "inference_count": 1,
+        "entity_types": [
+          "Event",
+          "ExpressionCandidate",
+          "Geography",
+          "ProcessLayer",
+          "PublicCompany",
+          "System",
+          "Theme"
+        ],
+        "relationship_types": [
+          "AFFECTED_BY_EVENT",
+          "CANDIDATE_EXPRESSION_FOR",
+          "PART_OF",
+          "REPRICES_VIA",
+          "SUPPLIED_BY"
+        ]
+      }
+    },
+    "market_miss_quality": {
+      "score_0_to_100": 34.67,
+      "detail": {
+        "statement": "The market may modestly underappreciate KO's downside resilience in macro stress, but the thesis appears incremental and low-variance rather than a structural mispricing.",
+        "confidence": "low",
+        "derived_claim_count": 2,
+        "derived_relationship_count": 2
+      }
+    },
+    "expression_readiness": {
+      "score_0_to_100": 100.0,
+      "detail": {
+        "expression_count": 1,
+        "expression_names": [
+          "Shares: KO"
+        ],
+        "expression_relationships_present": [
+          "CANDIDATE_EXPRESSION_FOR",
+          "REPRICES_VIA"
+        ]
+      }
+    }
+  }
+}

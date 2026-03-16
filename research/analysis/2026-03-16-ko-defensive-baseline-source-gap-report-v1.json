@@ -1,0 +1,93 @@
+{
+  "report_version": "v1",
+  "generated_at": "2026-03-16T16:08:29.597957+00:00",
+  "project_name": "ko_defensive_baseline_source_bundle_v1",
+  "graduation_status": "exploratory_only",
+  "next_promotion_target": "watchlist_candidate",
+  "blocking_gates": [
+    "structure_gate",
+    "market_miss_gate"
+  ],
+  "gap_flags": {
+    "needs_evidence_upgrade": false,
+    "needs_high_quality_sources": false,
+    "needs_industry_validation": true,
+    "needs_policy_context": false,
+    "needs_company_disclosures": false,
+    "needs_expression_validation": true,
+    "needs_cross_border_coverage": true
+  },
+  "required_source_classes": [
+    "industry_body_and_standards",
+    "technical_conference_material",
+    "market_data_snapshot",
+    "shipping_trade_flow_data"
+  ],
+  "target_companies": [
+    "Shares: KO",
+    "KO"
+  ],
+  "targeted_next_steps": [
+    {
+      "source_class": "industry_body_and_standards",
+      "recommended_source": "Advanced Photonics Coalition",
+      "recommendation": "monitor_weekly",
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "target_companies": [
+        "Shares: KO",
+        "KO"
+      ],
+      "why_it_matters": "validates whether the bottleneck exists at the ecosystem level rather than only in company narratives"
+    },
+    {
+      "source_class": "technical_conference_material",
+      "recommended_source": "DesignCon",
+      "recommendation": "monitor_weekly",
+      "expected_artifact_types": [
+        "conference_slide",
+        "talk_abstract",
+        "ecosystem_demo"
+      ],
+      "target_companies": [
+        "Shares: KO",
+        "KO"
+      ],
+      "why_it_matters": "tests whether the architecture and component assumptions are actually showing up in real technical ecosystems"
+    },
+    {
+      "source_class": "market_data_snapshot",
+      "recommended_source": "LEAPS watchlist refresh workflow",
+      "recommendation": "monitor_weekly",
+      "expected_artifact_types": [
+        "price_snapshot",
+        "options_chain",
+        "liquidity_check"
+      ],
+      "target_companies": [
+        "Shares: KO",
+        "KO"
+      ],
+      "why_it_matters": "checks whether the proposed stock or LEAPS expression is actually tradable and justified"
+    },
+    {
+      "source_class": "shipping_trade_flow_data",
+      "recommended_source": "IHS Global Trade Atlas",
+      "recommendation": "monitor_weekly",
+      "expected_artifact_types": [
+        "trade_table",
+        "flow_snapshot",
+        "customs_dataset"
+      ],
+      "target_companies": [
+        "Shares: KO",
+        "KO"
+      ],
+      "why_it_matters": "validates cross-border concentration and physical flow assumptions"
+    }
+  ]
+}

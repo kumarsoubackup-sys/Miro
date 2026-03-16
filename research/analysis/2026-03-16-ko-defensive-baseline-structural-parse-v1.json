@@ -1,0 +1,391 @@
+{
+  "parser_version": "deterministic_v1",
+  "generated_at": "2026-03-16T16:08:13.725235+00:00",
+  "source_ids": [
+    "src_ko_10k_2025",
+    "src_ko_proxy_2025",
+    "src_ko_q4_2025_results"
+  ],
+  "entities": [
+    {
+      "entity_id": "ent_event_2025_cash_flow_and_dividend_continuity",
+      "entity_type": "Event",
+      "canonical_name": "2025 Cash Flow and Dividend Continuity",
+      "aliases": [],
+      "description": "",
+      "attributes": {
+        "event_type": "earnings_validation"
+      },
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_event_coca_cola_system_procurement_continuity",
+      "entity_type": "Event",
+      "canonical_name": "Coca-Cola System Procurement Continuity",
+      "aliases": [],
+      "description": "",
+      "attributes": {
+        "event_type": "operating_system_scale"
+      },
+      "confidence": "medium"
+    },
+    {
+      "entity_id": "ent_expressioncandidate_shares_ko",
+      "entity_type": "ExpressionCandidate",
+      "canonical_name": "Shares: KO",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_geography_china",
+      "entity_type": "Geography",
+      "canonical_name": "China",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "medium"
+    },
+    {
+      "entity_id": "ent_geography_japan",
+      "entity_type": "Geography",
+      "canonical_name": "Japan",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "medium"
+    },
+    {
+      "entity_id": "ent_geography_south_africa",
+      "entity_type": "Geography",
+      "canonical_name": "South Africa",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "medium"
+    },
+    {
+      "entity_id": "ent_geography_united_states",
+      "entity_type": "Geography",
+      "canonical_name": "United States",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "medium"
+    },
+    {
+      "entity_id": "ent_processlayer_concentrate_supply_and_brand_system",
+      "entity_type": "ProcessLayer",
+      "canonical_name": "Concentrate Supply and Brand System",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_publiccompany_ko",
+      "entity_type": "PublicCompany",
+      "canonical_name": "KO",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "medium"
+    },
+    {
+      "entity_id": "ent_system_global_beverage_distribution_network",
+      "entity_type": "System",
+      "canonical_name": "Global Beverage Distribution Network",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_theme_defensive_consumer_staples_cash_flow",
+      "entity_type": "Theme",
+      "canonical_name": "Defensive Consumer Staples Cash Flow",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "high"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_id": "rel_affected_by_event_ent_theme_defensive_consumer_staples_cash_flow_ent_event_coca_cola_system_procurement_continuity",
+      "relationship_type": "AFFECTED_BY_EVENT",
+      "source_entity_id": "ent_theme_defensive_consumer_staples_cash_flow",
+      "target_entity_id": "ent_event_coca_cola_system_procurement_continuity",
+      "direction": "source_to_target",
+      "relationship_strength": "medium",
+      "causal_role": "resilience_support",
+      "confidence": "medium",
+      "evidence_refs": [
+        "ev_frag_ko_procurement_and_scale_relationship_rel_affected_by_event_ent_theme_defensive_consumer_staples_cash_flow_ent_event_coca_cola_system_procurement_continuity"
+      ],
+      "notes": [],
+      "relationship_key": "theme_affected_by_procurement_continuity"
+    },
+    {
+      "relationship_id": "rel_candidate_expression_for_ent_expressioncandidate_shares_ko_ent_theme_defensive_consumer_staples_cash_flow",
+      "relationship_type": "CANDIDATE_EXPRESSION_FOR",
+      "source_entity_id": "ent_expressioncandidate_shares_ko",
+      "target_entity_id": "ent_theme_defensive_consumer_staples_cash_flow",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "obvious_equity_expression",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_ko_procurement_and_scale_relationship_rel_candidate_expression_for_ent_expressioncandidate_shares_ko_ent_theme_defensive_consumer_staples_cash_flow"
+      ],
+      "notes": [],
+      "relationship_key": "shares_ko_for_theme"
+    },
+    {
+      "relationship_id": "rel_part_of_ent_processlayer_concentrate_supply_and_brand_system_ent_system_global_beverage_distribution_network",
+      "relationship_type": "PART_OF",
+      "source_entity_id": "ent_processlayer_concentrate_supply_and_brand_system",
+      "target_entity_id": "ent_system_global_beverage_distribution_network",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "core_operating_layer",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_ko_global_distribution_system_relationship_rel_part_of_ent_processlayer_concentrate_supply_and_brand_system_ent_system_global_beverage_distribution_network"
+      ],
+      "notes": [],
+      "relationship_key": "concentrate_system_part_of_global_distribution"
+    },
+    {
+      "relationship_id": "rel_reprices_via_ent_expressioncandidate_shares_ko_ent_event_2025_cash_flow_and_dividend_continuity",
+      "relationship_type": "REPRICES_VIA",
+      "source_entity_id": "ent_expressioncandidate_shares_ko",
+      "target_entity_id": "ent_event_2025_cash_flow_and_dividend_continuity",
+      "direction": "source_to_target",
+      "relationship_strength": "medium",
+      "causal_role": "defensive_validation",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_ko_cash_flow_and_dividend_durability_relationship_rel_reprices_via_ent_expressioncandidate_shares_ko_ent_event_2025_cash_flow_and_dividend_continuity"
+      ],
+      "notes": [],
+      "relationship_key": "shares_ko_reprices_via_cashflow_continuity"
+    },
+    {
+      "relationship_id": "rel_supplied_by_ent_processlayer_concentrate_supply_and_brand_system_ent_publiccompany_ko",
+      "relationship_type": "SUPPLIED_BY",
+      "source_entity_id": "ent_processlayer_concentrate_supply_and_brand_system",
+      "target_entity_id": "ent_publiccompany_ko",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "issuer_operating_exposure",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_ko_global_distribution_system_relationship_rel_supplied_by_ent_processlayer_concentrate_supply_and_brand_system_ent_publiccompany_ko"
+      ],
+      "notes": [],
+      "relationship_key": "concentrate_system_supplied_by_ko"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim_claim_ko_is_diversified_distribution_system",
+      "claim_type": "supplier_or_customer_relationship",
+      "claim_text": "KO is a broad global beverage system with diversified operating exposure rather than a narrow chokepoint supplier.",
+      "claim_status": "supported",
+      "claim_kind": "inferential",
+      "confidence": "high",
+      "entity_refs": [
+        "ent_processlayer_concentrate_supply_and_brand_system",
+        "ent_publiccompany_ko",
+        "ent_system_global_beverage_distribution_network"
+      ],
+      "relationship_refs": [
+        "rel_part_of_ent_processlayer_concentrate_supply_and_brand_system_ent_system_global_beverage_distribution_network",
+        "rel_supplied_by_ent_processlayer_concentrate_supply_and_brand_system_ent_publiccompany_ko"
+      ],
+      "source_ids": [
+        "src_ko_10k_2025"
+      ],
+      "fragment_ids": [
+        "frag_ko_global_distribution_system"
+      ],
+      "notes": [],
+      "claim_key": "claim_ko_is_diversified_distribution_system",
+      "evidence_refs": [
+        "ev_frag_ko_global_distribution_system_claim_claim_claim_ko_is_diversified_distribution_system"
+      ]
+    },
+    {
+      "claim_id": "claim_claim_ko_scale_supports_resilience",
+      "claim_type": "value_capture_assertion",
+      "claim_text": "KO's operating scale and procurement continuity support resilience and durability, but do not by themselves imply hidden structural asymmetry.",
+      "claim_status": "supported",
+      "claim_kind": "inferential",
+      "confidence": "high",
+      "entity_refs": [
+        "ent_event_coca_cola_system_procurement_continuity",
+        "ent_expressioncandidate_shares_ko",
+        "ent_publiccompany_ko",
+        "ent_theme_defensive_consumer_staples_cash_flow"
+      ],
+      "relationship_refs": [
+        "rel_affected_by_event_ent_theme_defensive_consumer_staples_cash_flow_ent_event_coca_cola_system_procurement_continuity",
+        "rel_candidate_expression_for_ent_expressioncandidate_shares_ko_ent_theme_defensive_consumer_staples_cash_flow"
+      ],
+      "source_ids": [
+        "src_ko_proxy_2025"
+      ],
+      "fragment_ids": [
+        "frag_ko_procurement_and_scale"
+      ],
+      "notes": [],
+      "claim_key": "claim_ko_scale_supports_resilience",
+      "evidence_refs": [
+        "ev_frag_ko_procurement_and_scale_claim_claim_claim_ko_scale_supports_resilience"
+      ]
+    },
+    {
+      "claim_id": "claim_claim_ko_is_defensive_not_asymmetric",
+      "claim_type": "expression_fit_assertion",
+      "claim_text": "KO looks like a steady defensive equity with durable cash flow, not a high-conviction structural information arbitrage candidate.",
+      "claim_status": "supported",
+      "claim_kind": "inferential",
+      "confidence": "high",
+      "entity_refs": [
+        "ent_event_2025_cash_flow_and_dividend_continuity",
+        "ent_expressioncandidate_shares_ko",
+        "ent_publiccompany_ko"
+      ],
+      "relationship_refs": [
+        "rel_reprices_via_ent_expressioncandidate_shares_ko_ent_event_2025_cash_flow_and_dividend_continuity"
+      ],
+      "source_ids": [
+        "src_ko_q4_2025_results"
+      ],
+      "fragment_ids": [
+        "frag_ko_cash_flow_and_dividend_durability"
+      ],
+      "notes": [],
+      "claim_key": "claim_ko_is_defensive_not_asymmetric",
+      "evidence_refs": [
+        "ev_frag_ko_cash_flow_and_dividend_durability_claim_claim_claim_ko_is_defensive_not_asymmetric"
+      ]
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_link_id": "ev_frag_ko_cash_flow_and_dividend_durability_claim_claim_claim_ko_is_defensive_not_asymmetric",
+      "source_id": "src_ko_q4_2025_results",
+      "fragment_id": "frag_ko_cash_flow_and_dividend_durability",
+      "supports_object_type": "claim",
+      "supports_object_id": "claim_claim_ko_is_defensive_not_asymmetric",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_ko_global_distribution_system_claim_claim_claim_ko_is_diversified_distribution_system",
+      "source_id": "src_ko_10k_2025",
+      "fragment_id": "frag_ko_global_distribution_system",
+      "supports_object_type": "claim",
+      "supports_object_id": "claim_claim_ko_is_diversified_distribution_system",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_ko_procurement_and_scale_claim_claim_claim_ko_scale_supports_resilience",
+      "source_id": "src_ko_proxy_2025",
+      "fragment_id": "frag_ko_procurement_and_scale",
+      "supports_object_type": "claim",
+      "supports_object_id": "claim_claim_ko_scale_supports_resilience",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_ko_cash_flow_and_dividend_durability_inference_inf_inf_ko_incremental_defensive_market_miss",
+      "source_id": "src_ko_q4_2025_results",
+      "fragment_id": "frag_ko_cash_flow_and_dividend_durability",
+      "supports_object_type": "inference",
+      "supports_object_id": "inf_inf_ko_incremental_defensive_market_miss",
+      "support_mode": "supporting",
+      "strength": "contextual"
+    },
+    {
+      "evidence_link_id": "ev_frag_ko_procurement_and_scale_relationship_rel_affected_by_event_ent_theme_defensive_consumer_staples_cash_flow_ent_event_coca_cola_system_procurement_continuity",
+      "source_id": "src_ko_proxy_2025",
+      "fragment_id": "frag_ko_procurement_and_scale",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_affected_by_event_ent_theme_defensive_consumer_staples_cash_flow_ent_event_coca_cola_system_procurement_continuity",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_ko_procurement_and_scale_relationship_rel_candidate_expression_for_ent_expressioncandidate_shares_ko_ent_theme_defensive_consumer_staples_cash_flow",
+      "source_id": "src_ko_proxy_2025",
+      "fragment_id": "frag_ko_procurement_and_scale",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_candidate_expression_for_ent_expressioncandidate_shares_ko_ent_theme_defensive_consumer_staples_cash_flow",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_ko_global_distribution_system_relationship_rel_part_of_ent_processlayer_concentrate_supply_and_brand_system_ent_system_global_beverage_distribution_network",
+      "source_id": "src_ko_10k_2025",
+      "fragment_id": "frag_ko_global_distribution_system",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_part_of_ent_processlayer_concentrate_supply_and_brand_system_ent_system_global_beverage_distribution_network",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_ko_cash_flow_and_dividend_durability_relationship_rel_reprices_via_ent_expressioncandidate_shares_ko_ent_event_2025_cash_flow_and_dividend_continuity",
+      "source_id": "src_ko_q4_2025_results",
+      "fragment_id": "frag_ko_cash_flow_and_dividend_durability",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_reprices_via_ent_expressioncandidate_shares_ko_ent_event_2025_cash_flow_and_dividend_continuity",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_ko_global_distribution_system_relationship_rel_supplied_by_ent_processlayer_concentrate_supply_and_brand_system_ent_publiccompany_ko",
+      "source_id": "src_ko_10k_2025",
+      "fragment_id": "frag_ko_global_distribution_system",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_supplied_by_ent_processlayer_concentrate_supply_and_brand_system_ent_publiccompany_ko",
+      "support_mode": "supporting",
+      "strength": "direct"
+    }
+  ],
+  "inferences": [
+    {
+      "inference_id": "inf_inf_ko_incremental_defensive_market_miss",
+      "inference_type": "market_miss",
+      "statement": "The market may modestly underappreciate KO's downside resilience in macro stress, but the thesis appears incremental and low-variance rather than a structural mispricing.",
+      "derived_from_claim_ids": [
+        "claim_claim_ko_is_defensive_not_asymmetric",
+        "claim_claim_ko_scale_supports_resilience"
+      ],
+      "derived_from_relationship_ids": [
+        "rel_candidate_expression_for_ent_expressioncandidate_shares_ko_ent_theme_defensive_consumer_staples_cash_flow",
+        "rel_reprices_via_ent_expressioncandidate_shares_ko_ent_event_2025_cash_flow_and_dividend_continuity"
+      ],
+      "confidence": "low",
+      "falsifiers": [
+        "defensive cash-flow resilience is already fully reflected in valuation",
+        "there is no differentiated structural insight beyond well-known quality attributes"
+      ],
+      "notes": [],
+      "evidence_refs": [
+        "ev_frag_ko_cash_flow_and_dividend_durability_inference_inf_inf_ko_incremental_defensive_market_miss"
+      ]
+    }
+  ],
+  "summary": {
+    "entity_count": 11,
+    "relationship_count": 5,
+    "claim_count": 3,
+    "evidence_link_count": 9,
+    "inference_count": 1
+  }
+}
