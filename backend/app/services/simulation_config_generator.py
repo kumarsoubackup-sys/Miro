@@ -20,6 +20,7 @@ from openai import OpenAI
 
 from ..config import Config
 from ..utils.logger import get_logger
+from ..utils.error_messages import get_error_message
 from .zep_entity_reader import EntityNode
 
 logger = get_logger('mirofish.simulation_config')
@@ -277,10 +278,10 @@ class SimulationConfigGenerator:
         Returns:
             SimulationParameters: 完整的模拟参数
         """
-        logger.info(f"开始智能生成模拟配置: simulation_id={simulation_id}, 实体数={len(entities)}")
-
         # 保存 locale 供内部方法使用
         self._locale = locale
+
+        logger.info(get_error_message('log_config_start', self._locale).format(simulation_id=simulation_id, count=len(entities)))
 
         # 计算总步骤数
         num_batches = math.ceil(len(entities) / self.AGENTS_PER_BATCH)
@@ -339,7 +340,7 @@ class SimulationConfigGenerator:
         reasoning_parts.append(f"Agent配置: 成功生成 {len(all_agent_configs)} 个")
         
         # ========== 为初始帖子分配发布者 Agent ==========
-        logger.info("为初始帖子分配合适的发布者 Agent...")
+        logger.info(get_error_message('log_config_assign_posts', self._locale))
         event_config = self._assign_initial_post_agents(event_config, all_agent_configs)
         assigned_count = len([p for p in event_config.initial_posts if p.get("poster_agent_id") is not None])
         reasoning_parts.append(f"初始帖子分配: {assigned_count} 个帖子已分配发布者")
@@ -385,7 +386,7 @@ class SimulationConfigGenerator:
             generation_reasoning=" | ".join(reasoning_parts)
         )
         
-        logger.info(f"模拟配置生成完成: {len(params.agent_configs)} 个Agent配置")
+        logger.info(get_error_message('log_config_done', self._locale).format(count=len(params.agent_configs)))
         
         return params
     
@@ -817,7 +818,7 @@ class SimulationConfigGenerator:
                 "poster_agent_id": matched_agent_id
             })
             
-            logger.info(f"初始帖子分配: poster_type='{poster_type}' -> agent_id={matched_agent_id}")
+            logger.info(get_error_message('log_config_post_assign', self._locale).format(poster_type=poster_type, agent_id=matched_agent_id))
         
         event_config.initial_posts = updated_posts
         return event_config

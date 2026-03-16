@@ -68,7 +68,7 @@ def get_graph_entities(graph_id: str):
         entity_types = [t.strip() for t in entity_types_str.split(',') if t.strip()] if entity_types_str else None
         enrich = request.args.get('enrich', 'true').lower() == 'true'
         
-        logger.info(f"获取图谱实体: graph_id={graph_id}, entity_types={entity_types}, enrich={enrich}")
+        logger.info(get_error_message('log_sim_get_entities', get_request_locale()).format(graph_id=graph_id, entity_types=entity_types, enrich=enrich))
         
         reader = ZepEntityReader()
         result = reader.filter_defined_entities(
@@ -330,12 +330,12 @@ def _check_simulation_prepared(simulation_id: str) -> tuple:
                     state_data["updated_at"] = datetime.now().isoformat()
                     with open(state_file, 'w', encoding='utf-8') as f:
                         json.dump(state_data, f, ensure_ascii=False, indent=2)
-                    logger.info(f"自动更新模拟状态: {simulation_id} preparing -> ready")
+                    logger.info(get_error_message('log_sim_auto_update', get_request_locale()).format(simulation_id=simulation_id))
                     status = "ready"
                 except Exception as e:
                     logger.warning(f"自动更新状态失败: {e}")
             
-            logger.info(f"模拟 {simulation_id} 检测结果: 已准备完成 (status={status}, config_generated={config_generated})")
+            logger.info(get_error_message('log_sim_check_result', get_request_locale()).format(simulation_id=simulation_id, status=status, config_generated=config_generated))
             return True, {
                 "status": status,
                 "entities_count": state_data.get("entities_count", 0),
@@ -425,7 +425,7 @@ def prepare_simulation():
 
         # 检查是否强制重新生成
         force_regenerate = data.get('force_regenerate', False)
-        logger.info(f"开始处理 /prepare 请求: simulation_id={simulation_id}, force_regenerate={force_regenerate}")
+        logger.info(get_error_message('log_sim_prepare_start', locale).format(simulation_id=simulation_id, force_regenerate=force_regenerate))
         
         # 检查是否已经准备完成（避免重复生成）
         if not force_regenerate:
@@ -433,7 +433,7 @@ def prepare_simulation():
             is_prepared, prepare_info = _check_simulation_prepared(simulation_id)
             logger.debug(f"检查结果: is_prepared={is_prepared}, prepare_info={prepare_info}")
             if is_prepared:
-                logger.info(f"模拟 {simulation_id} 已准备完成，跳过重复生成")
+                logger.info(get_error_message('log_sim_already_prepared', locale).format(simulation_id=simulation_id))
                 return jsonify({
                     "success": True,
                     "data": {
@@ -445,7 +445,7 @@ def prepare_simulation():
                     }
                 })
             else:
-                logger.info(f"模拟 {simulation_id} 未准备完成，将启动准备任务")
+                logger.info(get_error_message('log_sim_not_prepared', locale).format(simulation_id=simulation_id))
         
         # 从项目获取必要信息
         project = ProjectManager.get_project(state.project_id)
@@ -475,7 +475,7 @@ def prepare_simulation():
         # ========== 同步获取实体数量（在后台任务启动前） ==========
         # 这样前端在调用prepare后立即就能获取到预期Agent总数
         try:
-            logger.info(f"同步获取实体数量: graph_id={state.graph_id}")
+            logger.info(get_error_message('log_sim_sync_entities', locale).format(graph_id=state.graph_id))
             reader = ZepEntityReader()
             # 快速读取实体（不需要边信息，只统计数量）
             filtered_preview = reader.filter_defined_entities(
@@ -486,7 +486,7 @@ def prepare_simulation():
             # 保存实体数量到状态（供前端立即获取）
             state.entities_count = filtered_preview.filtered_count
             state.entity_types = list(filtered_preview.entity_types)
-            logger.info(f"预期实体数量: {filtered_preview.filtered_count}, 类型: {filtered_preview.entity_types}")
+            logger.info(get_error_message('log_sim_entity_preview', locale).format(count=filtered_preview.filtered_count, types=filtered_preview.entity_types))
         except Exception as e:
             logger.warning(f"同步获取实体数量失败（将在后台任务中重试）: {e}")
             # 失败不影响后续流程，后台任务会重新获取
@@ -1552,7 +1552,7 @@ def start_simulation():
                         # 进程确实在运行
                         if force:
                             # 强制模式：停止运行中的模拟
-                            logger.info(f"强制模式：停止运行中的模拟 {simulation_id}")
+                            logger.info(get_error_message('log_sim_force_stop', get_request_locale()).format(simulation_id=simulation_id))
                             try:
                                 SimulationRunner.stop_simulation(simulation_id)
                             except Exception as e:
@@ -1565,14 +1565,14 @@ def start_simulation():
 
                 # 如果是强制模式，清理运行日志
                 if force:
-                    logger.info(f"强制模式：清理模拟日志 {simulation_id}")
+                    logger.info(get_error_message('log_sim_force_cleanup', get_request_locale()).format(simulation_id=simulation_id))
                     cleanup_result = SimulationRunner.cleanup_simulation_logs(simulation_id)
                     if not cleanup_result.get("success"):
                         logger.warning(f"清理日志时出现警告: {cleanup_result.get('errors')}")
                     force_restarted = True
 
                 # 进程不存在或已结束，重置状态为 ready
-                logger.info(f"模拟 {simulation_id} 准备工作已完成，重置状态为 ready（原状态: {state.status.value}）")
+                logger.info(get_error_message('log_sim_reset_ready', get_request_locale()).format(simulation_id=simulation_id, status=state.status.value))
                 state.status = SimulationStatus.READY
                 manager._save_simulation_state(state)
             else:
@@ -1599,7 +1599,7 @@ def start_simulation():
                     "error": get_error_message('sim_graph_memory_needs_graph', get_request_locale())
                 }), 400
             
-            logger.info(f"启用图谱记忆更新: simulation_id={simulation_id}, graph_id={graph_id}")
+            logger.info(get_error_message('log_sim_graph_memory', get_request_locale()).format(simulation_id=simulation_id, graph_id=graph_id))
         
         # 启动模拟
         run_state = SimulationRunner.start_simulation(

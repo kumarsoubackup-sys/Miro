@@ -435,7 +435,7 @@ class ZepToolsService:
         self.client = Zep(api_key=self.api_key)
         # LLM客户端用于InsightForge生成子问题
         self._llm_client = llm_client
-        logger.info("ZepToolsService 初始化完成")
+        logger.info(get_error_message('log_zep_service_init', _ZEP_LOG_LOCALE))
     
     @property
     def llm(self) -> LLMClient:
@@ -729,7 +729,7 @@ class ZepToolsService:
         Returns:
             节点信息或None
         """
-        logger.info(f"获取节点详情: {node_uuid[:8]}...")
+        logger.info(get_error_message('log_zep_node_detail', _ZEP_LOG_LOCALE).format(uuid=node_uuid[:8]))
         
         try:
             node = self._call_with_retry(
@@ -764,7 +764,7 @@ class ZepToolsService:
         Returns:
             边列表
         """
-        logger.info(f"获取节点 {node_uuid[:8]}... 的相关边")
+        logger.info(get_error_message('log_zep_node_edges', _ZEP_LOG_LOCALE).format(uuid=node_uuid[:8]))
         
         try:
             # 获取图谱所有边，然后过滤
@@ -776,7 +776,7 @@ class ZepToolsService:
                 if edge.source_node_uuid == node_uuid or edge.target_node_uuid == node_uuid:
                     result.append(edge)
             
-            logger.info(f"找到 {len(result)} 条与节点相关的边")
+            logger.info(get_error_message('log_zep_node_edges_count', _ZEP_LOG_LOCALE).format(count=len(result)))
             return result
             
         except Exception as e:
@@ -1312,7 +1312,7 @@ class ZepToolsService:
         """
         from .simulation_runner import SimulationRunner
         
-        logger.info(f"InterviewAgents 深度采访（真实API）: {interview_requirement[:50]}...")
+        logger.info(get_error_message('log_zep_interview_start', _ZEP_LOG_LOCALE).format(preview=interview_requirement[:50]))
         
         result = InterviewResult(
             interview_topic=interview_requirement,
@@ -1328,7 +1328,7 @@ class ZepToolsService:
             return result
         
         result.total_agents = len(profiles)
-        logger.info(f"加载到 {len(profiles)} 个Agent人设")
+        logger.info(get_error_message('log_zep_profiles_loaded', _ZEP_LOG_LOCALE).format(count=len(profiles)))
         
         # Step 2: 使用LLM选择要采访的Agent（返回agent_id列表）
         selected_agents, selected_indices, selection_reasoning = self._select_agents_for_interview(
@@ -1340,7 +1340,7 @@ class ZepToolsService:
         
         result.selected_agents = selected_agents
         result.selection_reasoning = selection_reasoning
-        logger.info(f"选择了 {len(selected_agents)} 个Agent进行采访: {selected_indices}")
+        logger.info(get_error_message('log_zep_agents_selected', _ZEP_LOG_LOCALE).format(count=len(selected_agents), indices=selected_indices))
         
         # Step 3: 生成采访问题（如果没有提供）
         if not result.interview_questions:
@@ -1349,7 +1349,7 @@ class ZepToolsService:
                 simulation_requirement=simulation_requirement,
                 selected_agents=selected_agents
             )
-            logger.info(f"生成了 {len(result.interview_questions)} 个采访问题")
+            logger.info(get_error_message('log_zep_questions_gen', _ZEP_LOG_LOCALE).format(count=len(result.interview_questions)))
         
         # 将问题合并为一个采访prompt
         combined_prompt = "\n".join([f"{i+1}. {q}" for i, q in enumerate(result.interview_questions)])
@@ -1379,7 +1379,7 @@ class ZepToolsService:
                     # 不指定platform，API会在twitter和reddit两个平台都采访
                 })
             
-            logger.info(f"调用批量采访API（双平台）: {len(interviews_request)} 个Agent")
+            logger.info(get_error_message('log_zep_batch_interview', _ZEP_LOG_LOCALE).format(count=len(interviews_request)))
             
             # 调用 SimulationRunner 的批量采访方法（不传platform，双平台采访）
             api_result = SimulationRunner.interview_agents_batch(
@@ -1389,7 +1389,7 @@ class ZepToolsService:
                 timeout=180.0   # 双平台需要更长超时
             )
             
-            logger.info(f"采访API返回: {api_result.get('interviews_count', 0)} 个结果, success={api_result.get('success')}")
+            logger.info(get_error_message('log_zep_interview_result', _ZEP_LOG_LOCALE).format(count=api_result.get('interviews_count', 0), success=api_result.get('success')))
             
             # 检查API调用是否成功
             if not api_result.get("success", False):
@@ -1484,7 +1484,7 @@ class ZepToolsService:
                 interview_requirement=interview_requirement
             )
         
-        logger.info(f"InterviewAgents完成: 采访了 {result.interviewed_count} 个Agent（双平台）")
+        logger.info(get_error_message('log_zep_interview_done', _ZEP_LOG_LOCALE).format(count=result.interviewed_count))
         return result
     
     @staticmethod
@@ -1527,7 +1527,7 @@ class ZepToolsService:
             try:
                 with open(reddit_profile_path, 'r', encoding='utf-8') as f:
                     profiles = json.load(f)
-                logger.info(f"从 reddit_profiles.json 加载了 {len(profiles)} 个人设")
+                logger.info(get_error_message('log_zep_reddit_loaded', _ZEP_LOG_LOCALE).format(count=len(profiles)))
                 return profiles
             except Exception as e:
                 logger.warning(f"读取 reddit_profiles.json 失败: {e}")
@@ -1547,7 +1547,7 @@ class ZepToolsService:
                             "persona": row.get("user_char", ""),
                             "profession": "未知"
                         })
-                logger.info(f"从 twitter_profiles.csv 加载了 {len(profiles)} 个人设")
+                logger.info(get_error_message('log_zep_twitter_loaded', _ZEP_LOG_LOCALE).format(count=len(profiles)))
                 return profiles
             except Exception as e:
                 logger.warning(f"读取 twitter_profiles.csv 失败: {e}")
