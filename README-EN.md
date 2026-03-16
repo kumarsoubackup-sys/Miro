@@ -116,15 +116,14 @@ cp .env.example .env
 
 ```env
 # LLM API Configuration (supports any LLM API with OpenAI SDK format)
-# Recommended: Alibaba Qwen-plus model via Bailian Platform: https://bailian.console.aliyun.com/
-# High consumption, try simulations with fewer than 40 rounds first
-LLM_API_KEY=your_api_key
-LLM_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
-LLM_MODEL_NAME=qwen-plus
+# Defaults to OpenRouter API: https://openrouter.ai/api/v1
+LLM_API_KEY=your_openrouter_api_key
+LLM_BASE_URL=https://openrouter.ai/api/v1
+LLM_MODEL_NAME=openai/gpt-4o-mini
 
-# Zep Cloud Configuration
-# Free monthly quota is sufficient for simple usage: https://app.getzep.com/
-ZEP_API_KEY=your_zep_api_key
+# LightRAG Configuration
+# Local path for knowledge graph data
+LIGHTRAG_WORKSPACE_DIR=./lightrag_workspace
 ```
 
 #### 2. Install Dependencies

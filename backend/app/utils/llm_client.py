@@ -21,7 +21,7 @@ class LLMClient:
         model: Optional[str] = None
     ):
         self.api_key = api_key or Config.LLM_API_KEY
-        self.base_url = base_url or Config.LLM_BASE_URL
+        self.base_url = base_url or Config.LLM_BASE_URL or "https://openrouter.ai/api/v1"
         self.model = model or Config.LLM_MODEL_NAME
         
         if not self.api_key:
@@ -58,6 +58,13 @@ class LLMClient:
             "max_tokens": max_tokens,
         }
         
+        # OpenRouter Extra Params (if base_url is OpenRouter)
+        if "openrouter" in self.base_url.lower():
+            kwargs["extra_headers"] = {
+                "HTTP-Referer": "https://github.com/mirofish/mirofish",
+                "X-Title": "MiroFish"
+            }
+
         if response_format:
             kwargs["response_format"] = response_format
         

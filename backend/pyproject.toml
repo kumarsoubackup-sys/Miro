@@ -16,8 +16,9 @@ dependencies = [
     # LLM 相关
     "openai>=1.0.0",
     
-    # Zep Cloud
-    "zep-cloud==3.13.0",
+    # LightRAG
+    "lightrag-hku>=1.4.10",
+    "sentence-transformers>=3.0.0",
     
     # OASIS 社交媒体模拟
     "camel-oasis==0.2.5",

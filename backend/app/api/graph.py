@@ -284,8 +284,8 @@ def build_graph():
         
         # 检查配置
         errors = []
-        if not Config.ZEP_API_KEY:
-            errors.append("ZEP_API_KEY未配置")
+        if not Config.LIGHTRAG_WORKSPACE_DIR:
+            errors.append("LIGHTRAG_WORKSPACE_DIR未配置")
         if errors:
             logger.error(f"配置错误: {errors}")
             return jsonify({
@@ -382,7 +382,7 @@ def build_graph():
                 )
                 
                 # 创建图谱构建服务
-                builder = GraphBuilderService(api_key=Config.ZEP_API_KEY)
+                builder = GraphBuilderService(workspace_dir=Config.LIGHTRAG_WORKSPACE_DIR)
                 
                 # 分块
                 task_manager.update_task(
@@ -567,13 +567,13 @@ def get_graph_data(graph_id: str):
     获取图谱数据（节点和边）
     """
     try:
-        if not Config.ZEP_API_KEY:
+        if not Config.LIGHTRAG_WORKSPACE_DIR:
             return jsonify({
                 "success": False,
-                "error": "ZEP_API_KEY未配置"
+                "error": "LIGHTRAG_WORKSPACE_DIR未配置"
             }), 500
         
-        builder = GraphBuilderService(api_key=Config.ZEP_API_KEY)
+        builder = GraphBuilderService(workspace_dir=Config.LIGHTRAG_WORKSPACE_DIR)
         graph_data = builder.get_graph_data(graph_id)
         
         return jsonify({
@@ -595,13 +595,13 @@ def delete_graph(graph_id: str):
     删除Zep图谱
     """
     try:
-        if not Config.ZEP_API_KEY:
+        if not Config.LIGHTRAG_WORKSPACE_DIR:
             return jsonify({
                 "success": False,
-                "error": "ZEP_API_KEY未配置"
+                "error": "LIGHTRAG_WORKSPACE_DIR未配置"
             }), 500
         
-        builder = GraphBuilderService(api_key=Config.ZEP_API_KEY)
+        builder = GraphBuilderService(workspace_dir=Config.LIGHTRAG_WORKSPACE_DIR)
         builder.delete_graph(graph_id)
         
         return jsonify({

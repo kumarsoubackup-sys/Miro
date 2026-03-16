@@ -16,11 +16,10 @@ from dataclasses import dataclass, field
 from datetime import datetime
 
 from openai import OpenAI
-from zep_cloud.client import Zep
 
 from ..config import Config
 from ..utils.logger import get_logger
-from .zep_entity_reader import EntityNode, ZepEntityReader
+from .graph_entity_reader import EntityNode, GraphEntityReader
 
 logger = get_logger('mirofish.oasis_profile')
 
@@ -182,7 +181,7 @@ class OasisProfileGenerator:
         api_key: Optional[str] = None,
         base_url: Optional[str] = None,
         model_name: Optional[str] = None,
-        zep_api_key: Optional[str] = None,
+        workspace_dir: Optional[str] = None,
         graph_id: Optional[str] = None
     ):
         self.api_key = api_key or Config.LLM_API_KEY
@@ -197,16 +196,9 @@ class OasisProfileGenerator:
             base_url=self.base_url
         )
         
-        # Zep客户端用于检索丰富上下文
-        self.zep_api_key = zep_api_key or Config.ZEP_API_KEY
-        self.zep_client = None
+        # LightRAG客户端用于检索丰富上下文
+        self.workspace_dir = workspace_dir or Config.LIGHTRAG_WORKSPACE_DIR
         self.graph_id = graph_id
-        
-        if self.zep_api_key:
-            try:
-                self.zep_client = Zep(api_key=self.zep_api_key)
-            except Exception as e:
-                logger.warning(f"Zep客户端初始化失败: {e}")
     
     def generate_profile_from_entity(
         self, 
@@ -282,24 +274,13 @@ class OasisProfileGenerator:
         suffix = random.randint(100, 999)
         return f"{username}_{suffix}"
     
-    def _search_zep_for_entity(self, entity: EntityNode) -> Dict[str, Any]:
+    def _search_lightrag_for_entity(self, entity: EntityNode) -> Dict[str, Any]:
         """
-        使用Zep图谱混合搜索功能获取实体相关的丰富信息
-        
-        Zep没有内置混合搜索接口，需要分别搜索edges和nodes然后合并结果。
-        使用并行请求同时搜索，提高效率。
-        
-        Args:
-            entity: 实体节点对象
-            
-        Returns:
-            包含facts, node_summaries, context的字典
+        使用LightRAG获取实体相关的丰富信息
         """
-        import concurrent.futures
-        
-        if not self.zep_client:
+        if not self.workspace_dir or not self.graph_id:
             return {"facts": [], "node_summaries": [], "context": ""}
-        
+
         entity_name = entity.name
         
         results = {
@@ -308,106 +289,22 @@ class OasisProfileGenerator:
             "context": ""
         }
         
-        # 必须有graph_id才能进行搜索
-        if not self.graph_id:
-            logger.debug(f"跳过Zep检索：未设置graph_id")
-            return results
-        
-        comprehensive_query = f"关于{entity_name}的所有信息、活动、事件、关系和背景"
-        
-        def search_edges():
-            """搜索边（事实/关系）- 带重试机制"""
-            max_retries = 3
-            last_exception = None
-            delay = 2.0
-            
-            for attempt in range(max_retries):
-                try:
-                    return self.zep_client.graph.search(
-                        query=comprehensive_query,
-                        graph_id=self.graph_id,
-                        limit=30,
-                        scope="edges",
-                        reranker="rrf"
-                    )
-                except Exception as e:
-                    last_exception = e
-                    if attempt < max_retries - 1:
-                        logger.debug(f"Zep边搜索第 {attempt + 1} 次失败: {str(e)[:80]}, 重试中...")
-                        time.sleep(delay)
-                        delay *= 2
-                    else:
-                        logger.debug(f"Zep边搜索在 {max_retries} 次尝试后仍失败: {e}")
-            return None
-        
-        def search_nodes():
-            """搜索节点（实体摘要）- 带重试机制"""
-            max_retries = 3
-            last_exception = None
-            delay = 2.0
-            
-            for attempt in range(max_retries):
-                try:
-                    return self.zep_client.graph.search(
-                        query=comprehensive_query,
-                        graph_id=self.graph_id,
-                        limit=20,
-                        scope="nodes",
-                        reranker="rrf"
-                    )
-                except Exception as e:
-                    last_exception = e
-                    if attempt < max_retries - 1:
-                        logger.debug(f"Zep节点搜索第 {attempt + 1} 次失败: {str(e)[:80]}, 重试中...")
-                        time.sleep(delay)
-                        delay *= 2
-                    else:
-                        logger.debug(f"Zep节点搜索在 {max_retries} 次尝试后仍失败: {e}")
-            return None
-        
         try:
-            # 并行执行edges和nodes搜索
-            with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
-                edge_future = executor.submit(search_edges)
-                node_future = executor.submit(search_nodes)
-                
-                # 获取结果
-                edge_result = edge_future.result(timeout=30)
-                node_result = node_future.result(timeout=30)
+            from .graph_tools import GraphToolsService
+            tools = GraphToolsService(workspace_dir=self.workspace_dir)
+            search_res = tools.search_graph(
+                graph_id=self.graph_id,
+                query=f"关于{entity_name}的所有信息、活动、事件、关系和背景",
+                limit=10
+            )
             
-            # 处理边搜索结果
-            all_facts = set()
-            if edge_result and hasattr(edge_result, 'edges') and edge_result.edges:
-                for edge in edge_result.edges:
-                    if hasattr(edge, 'fact') and edge.fact:
-                        all_facts.add(edge.fact)
-            results["facts"] = list(all_facts)
-            
-            # 处理节点搜索结果
-            all_summaries = set()
-            if node_result and hasattr(node_result, 'nodes') and node_result.nodes:
-                for node in node_result.nodes:
-                    if hasattr(node, 'summary') and node.summary:
-                        all_summaries.add(node.summary)
-                    if hasattr(node, 'name') and node.name and node.name != entity_name:
-                        all_summaries.add(f"相关实体: {node.name}")
-            results["node_summaries"] = list(all_summaries)
-            
-            # 构建综合上下文
-            context_parts = []
-            if results["facts"]:
-                context_parts.append("事实信息:\n" + "\n".join(f"- {f}" for f in results["facts"][:20]))
-            if results["node_summaries"]:
-                context_parts.append("相关实体:\n" + "\n".join(f"- {s}" for s in results["node_summaries"][:10]))
-            results["context"] = "\n\n".join(context_parts)
-            
-            logger.info(f"Zep混合检索完成: {entity_name}, 获取 {len(results['facts'])} 条事实, {len(results['node_summaries'])} 个相关节点")
-            
-        except concurrent.futures.TimeoutError:
-            logger.warning(f"Zep检索超时 ({entity_name})")
+            if search_res and search_res.facts:
+                results["facts"] = search_res.facts
+                results["context"] = "事实信息:\n" + "\n".join(f"- {f}" for f in search_res.facts[:5])
+
         except Exception as e:
-            logger.warning(f"Zep检索失败 ({entity_name}): {e}")
-        
+            logger.warning(f"LightRAG检索失败 ({entity_name}): {e}")
+
         return results
     
     def _build_entity_context(self, entity: EntityNode) -> str:
@@ -471,17 +368,14 @@ class OasisProfileGenerator:
             if related_info:
                 context_parts.append("### 关联实体信息\n" + "\n".join(related_info))
         
-        # 4. 使用Zep混合检索获取更丰富的信息
-        zep_results = self._search_zep_for_entity(entity)
+        # 4. 使用LightRAG检索获取更丰富的信息
+        rag_results = self._search_lightrag_for_entity(entity)
         
-        if zep_results.get("facts"):
+        if rag_results.get("facts"):
             # 去重：排除已存在的事实
-            new_facts = [f for f in zep_results["facts"] if f not in existing_facts]
+            new_facts = [f for f in rag_results["facts"] if f not in existing_facts]
             if new_facts:
-                context_parts.append("### Zep检索到的事实信息\n" + "\n".join(f"- {f}" for f in new_facts[:15]))
-        
-        if zep_results.get("node_summaries"):
-            context_parts.append("### Zep检索到的相关节点\n" + "\n".join(f"- {s}" for s in zep_results["node_summaries"][:10]))
+                context_parts.append("### 图谱检索到的事实信息\n" + "\n".join(f"- {f}" for f in new_facts[:15]))
         
         return "\n\n".join(context_parts)
     
@@ -844,7 +738,7 @@ class OasisProfileGenerator:
             }
     
     def set_graph_id(self, graph_id: str):
-        """设置图谱ID用于Zep检索"""
+        """设置图谱ID用于图谱检索"""
         self.graph_id = graph_id
     
     def generate_profiles_from_entities(
@@ -864,7 +758,7 @@ class OasisProfileGenerator:
             entities: 实体列表
             use_llm: 是否使用LLM生成详细人设
             progress_callback: 进度回调函数 (current, total, message)
-            graph_id: 图谱ID，用于Zep检索获取更丰富上下文
+            graph_id: 图谱ID，用于图谱检索获取更丰富上下文
             parallel_count: 并行生成数量，默认5
             realtime_output_path: 实时写入的文件路径（如果提供，每生成一个就写入一次）
             output_platform: 输出平台格式 ("reddit" 或 "twitter")
@@ -875,7 +769,7 @@ class OasisProfileGenerator:
         import concurrent.futures
         from threading import Lock
         
-        # 设置graph_id用于Zep检索
+        # 设置graph_id用于图谱检索
         if graph_id:
             self.graph_id = graph_id
         
@@ -1162,6 +1056,7 @@ class OasisProfileGenerator:
             item = {
                 "user_id": profile.user_id if profile.user_id is not None else idx,  # 关键：必须包含 user_id
                 "username": profile.user_name,
+                "realname": profile.name,
                 "name": profile.name,
                 "bio": profile.bio[:150] if profile.bio else f"{profile.name}",
                 "persona": profile.persona or f"{profile.name} is a participant in social discussions.",

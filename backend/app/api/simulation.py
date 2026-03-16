@@ -9,7 +9,7 @@ from flask import request, jsonify, send_file
 
 from . import simulation_bp
 from ..config import Config
-from ..services.zep_entity_reader import ZepEntityReader
+from ..services.graph_entity_reader import GraphEntityReader
 from ..services.oasis_profile_generator import OasisProfileGenerator
 from ..services.simulation_manager import SimulationManager, SimulationStatus
 from ..services.simulation_runner import SimulationRunner, RunnerStatus
@@ -56,10 +56,10 @@ def get_graph_entities(graph_id: str):
         enrich: 是否获取相关边信息（默认true）
     """
     try:
-        if not Config.ZEP_API_KEY:
+        if not Config.LIGHTRAG_WORKSPACE_DIR:
             return jsonify({
                 "success": False,
-                "error": "ZEP_API_KEY未配置"
+                "error": "LIGHTRAG_WORKSPACE_DIR未配置"
             }), 500
         
         entity_types_str = request.args.get('entity_types', '')
@@ -68,16 +68,21 @@ def get_graph_entities(graph_id: str):
         
         logger.info(f"获取图谱实体: graph_id={graph_id}, entity_types={entity_types}, enrich={enrich}")
         
-        reader = ZepEntityReader()
-        result = reader.filter_defined_entities(
+        reader = GraphEntityReader()
+        result = reader.read_and_filter_entities(
             graph_id=graph_id,
-            defined_entity_types=entity_types,
-            enrich_with_edges=enrich
+            entity_types=entity_types,
+            include_related_info=enrich
         )
         
         return jsonify({
             "success": True,
-            "data": result.to_dict()
+            "data": {
+                "filtered_count": result.total_count,
+                "total_count": result.total_count,
+                "entity_types": result.entity_types,
+                "entities": [e.to_dict() for e in result.entities]
+            }
         })
         
     except Exception as e:
@@ -93,20 +98,31 @@ def get_graph_entities(graph_id: str):
 def get_entity_detail(graph_id: str, entity_uuid: str):
     """获取单个实体的详细信息"""
     try:
-        if not Config.ZEP_API_KEY:
+        if not Config.LIGHTRAG_WORKSPACE_DIR:
             return jsonify({
                 "success": False,
-                "error": "ZEP_API_KEY未配置"
+                "error": "LIGHTRAG_WORKSPACE_DIR未配置"
             }), 500
         
-        reader = ZepEntityReader()
-        entity = reader.get_entity_with_context(graph_id, entity_uuid)
+        reader = GraphEntityReader()
+
+        all_nodes = reader.get_all_nodes(graph_id)
+        entity_data = next((n for n in all_nodes if n.get("uuid") == entity_uuid), None)
         
-        if not entity:
+        if not entity_data:
             return jsonify({
                 "success": False,
                 "error": f"实体不存在: {entity_uuid}"
             }), 404
+
+        from ..services.graph_entity_reader import EntityNode
+        entity = EntityNode(
+            uuid=entity_data.get("uuid", ""),
+            name=entity_data.get("name", ""),
+            labels=entity_data.get("labels", []),
+            summary=entity_data.get("summary", ""),
+            attributes=entity_data.get("attributes", {})
+        )
         
         return jsonify({
             "success": True,
@@ -126,20 +142,22 @@ def get_entity_detail(graph_id: str, entity_uuid: str):
 def get_entities_by_type(graph_id: str, entity_type: str):
     """获取指定类型的所有实体"""
     try:
-        if not Config.ZEP_API_KEY:
+        if not Config.LIGHTRAG_WORKSPACE_DIR:
             return jsonify({
                 "success": False,
-                "error": "ZEP_API_KEY未配置"
+                "error": "LIGHTRAG_WORKSPACE_DIR未配置"
             }), 500
         
         enrich = request.args.get('enrich', 'true').lower() == 'true'
         
-        reader = ZepEntityReader()
-        entities = reader.get_entities_by_type(
+        reader = GraphEntityReader()
+        result = reader.read_and_filter_entities(
             graph_id=graph_id,
-            entity_type=entity_type,
-            enrich_with_edges=enrich
+            entity_types=[entity_type],
+            min_degree=0,
+            include_related_info=enrich
         )
+        entities = result.entities
         
         return jsonify({
             "success": True,
@@ -471,17 +489,18 @@ def prepare_simulation():
         # 这样前端在调用prepare后立即就能获取到预期Agent总数
         try:
             logger.info(f"同步获取实体数量: graph_id={state.graph_id}")
-            reader = ZepEntityReader()
+            reader = GraphEntityReader()
             # 快速读取实体（不需要边信息，只统计数量）
-            filtered_preview = reader.filter_defined_entities(
+            filtered_preview = reader.read_and_filter_entities(
                 graph_id=state.graph_id,
-                defined_entity_types=entity_types_list,
-                enrich_with_edges=False  # 不获取边信息，加快速度
+                entity_types=entity_types_list,
+                min_degree=1,
+                include_related_info=False
             )
             # 保存实体数量到状态（供前端立即获取）
-            state.entities_count = filtered_preview.filtered_count
-            state.entity_types = list(filtered_preview.entity_types)
-            logger.info(f"预期实体数量: {filtered_preview.filtered_count}, 类型: {filtered_preview.entity_types}")
+            state.entities_count = filtered_preview.total_count
+            state.entity_types = list(filtered_preview.entity_types.keys())
+            logger.info(f"预期实体数量: {filtered_preview.total_count}, 类型: {list(filtered_preview.entity_types.keys())}")
         except Exception as e:
             logger.warning(f"同步获取实体数量失败（将在后台任务中重试）: {e}")
             # 失败不影响后续流程，后台任务会重新获取
@@ -1396,14 +1415,15 @@ def generate_profiles():
         use_llm = data.get('use_llm', True)
         platform = data.get('platform', 'reddit')
         
-        reader = ZepEntityReader()
-        filtered = reader.filter_defined_entities(
+        reader = GraphEntityReader()
+        filtered = reader.read_and_filter_entities(
             graph_id=graph_id,
-            defined_entity_types=entity_types,
-            enrich_with_edges=True
+            entity_types=entity_types,
+            min_degree=1,
+            include_related_info=True
         )
         
-        if filtered.filtered_count == 0:
+        if filtered.total_count == 0:
             return jsonify({
                 "success": False,
                 "error": "没有找到符合条件的实体"
