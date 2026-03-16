@@ -1,0 +1,144 @@
+{
+  "decomposer_version": "v1",
+  "generated_at": "2026-03-16T17:23:43.043303+00:00",
+  "source_bundle_name": "robotics_actuation_source_bundle_v2",
+  "graduation_status": "pick_candidate",
+  "theme": "Robotics Supply Chain",
+  "row_count": 3,
+  "rows": [
+    {
+      "underlying": "MP",
+      "theme": "Robotics Supply Chain",
+      "company_role": "anchor",
+      "linked_process_layers": [
+        "Sintered NdFeB Magnet Manufacturing",
+        "Neodymium Processing"
+      ],
+      "linked_components": [],
+      "linked_materials": [
+        "Neodymium"
+      ],
+      "supporting_claim_ids": [
+        "claim_claim_motor_to_processing_chain_v2",
+        "claim_claim_mp_is_direct_magnet_exposure_v2",
+        "claim_claim_processing_and_magnets_are_concentrated_v2",
+        "claim_claim_processing_layer_better_than_robot_oem_narrative_v2",
+        "claim_claim_uuuu_is_us_ndpr_processing_exposure_v2"
+      ],
+      "supporting_relationship_ids": [
+        "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_neodymium_processing",
+        "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+        "rel_candidate_expression_for_ent_expressioncandidate_shares_mp_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+        "rel_candidate_expression_for_ent_expressioncandidate_shares_uuuu_ent_processlayer_neodymium_processing",
+        "rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+        "rel_constrained_by_ent_processlayer_sintered_ndfeb_magnet_manufacturing_ent_geography_china",
+        "rel_expands_capacity_for_ent_facility_white_mesa_mill_ent_processlayer_neodymium_processing",
+        "rel_processed_by_ent_materialinput_neodymium_ent_processlayer_neodymium_processing",
+        "rel_reprices_via_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_theme_robotics_supply_chain",
+        "rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_mp",
+        "rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_uuuu",
+        "rel_supplied_by_ent_processlayer_sintered_ndfeb_magnet_manufacturing_ent_publiccompany_mp"
+      ],
+      "direct_expression_ids": [
+        "ent_expressioncandidate_shares_mp"
+      ],
+      "basket_expression_ids": [
+        "ent_expressioncandidate_equity_basket_mp_neo_uuuu"
+      ],
+      "graph_centrality_score_0_to_100": 87.5,
+      "market_miss_alignment_score_0_to_100": 96.88,
+      "value_capture_alignment_score_0_to_100": 96.88,
+      "expression_readiness_score_0_to_100": 93.75,
+      "decomposition_confidence": 94.53,
+      "candidate_summary": "MP is treated as a anchor expression for robotics supply chain through Sintered NdFeB Magnet Manufacturing, Neodymium Processing.",
+      "company_attributes": {}
+    },
+    {
+      "underlying": "UUUU",
+      "theme": "Robotics Supply Chain",
+      "company_role": "satellite",
+      "linked_process_layers": [
+        "Neodymium Processing"
+      ],
+      "linked_components": [],
+      "linked_materials": [
+        "Neodymium"
+      ],
+      "supporting_claim_ids": [
+        "claim_claim_motor_to_processing_chain_v2",
+        "claim_claim_mp_is_direct_magnet_exposure_v2",
+        "claim_claim_processing_and_magnets_are_concentrated_v2",
+        "claim_claim_processing_layer_better_than_robot_oem_narrative_v2",
+        "claim_claim_uuuu_is_us_ndpr_processing_exposure_v2"
+      ],
+      "supporting_relationship_ids": [
+        "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_neodymium_processing",
+        "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+        "rel_candidate_expression_for_ent_expressioncandidate_shares_uuuu_ent_processlayer_neodymium_processing",
+        "rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+        "rel_expands_capacity_for_ent_facility_white_mesa_mill_ent_processlayer_neodymium_processing",
+        "rel_processed_by_ent_materialinput_neodymium_ent_processlayer_neodymium_processing",
+        "rel_reprices_via_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_theme_robotics_supply_chain",
+        "rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_mp",
+        "rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_uuuu"
+      ],
+      "direct_expression_ids": [
+        "ent_expressioncandidate_shares_uuuu"
+      ],
+      "basket_expression_ids": [
+        "ent_expressioncandidate_equity_basket_mp_neo_uuuu"
+      ],
+      "graph_centrality_score_0_to_100": 75.0,
+      "market_miss_alignment_score_0_to_100": 93.75,
+      "value_capture_alignment_score_0_to_100": 81.25,
+      "expression_readiness_score_0_to_100": 81.25,
+      "decomposition_confidence": 84.38,
+      "candidate_summary": "UUUU is treated as a satellite expression for robotics supply chain through Neodymium Processing.",
+      "company_attributes": {}
+    },
+    {
+      "underlying": "NEO",
+      "theme": "Robotics Supply Chain",
+      "company_role": "satellite",
+      "linked_process_layers": [
+        "NdFeB Magnetic Powders and Alloys"
+      ],
+      "linked_components": [],
+      "linked_materials": [],
+      "supporting_claim_ids": [
+        "claim_claim_neo_is_listed_robotics_magnet_materials_exposure_v2",
+        "claim_claim_processing_layer_better_than_robot_oem_narrative_v2"
+      ],
+      "supporting_relationship_ids": [
+        "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_neodymium_processing",
+        "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+        "rel_candidate_expression_for_ent_expressioncandidate_shares_neo_ent_processlayer_ndfeb_magnetic_powders_and_alloys",
+        "rel_reprices_via_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_theme_robotics_supply_chain",
+        "rel_supplied_by_ent_processlayer_ndfeb_magnetic_powders_and_alloys_ent_publiccompany_neo"
+      ],
+      "direct_expression_ids": [
+        "ent_expressioncandidate_shares_neo"
+      ],
+      "basket_expression_ids": [
+        "ent_expressioncandidate_equity_basket_mp_neo_uuuu"
+      ],
+      "graph_centrality_score_0_to_100": 50.0,
+      "market_miss_alignment_score_0_to_100": 81.25,
+      "value_capture_alignment_score_0_to_100": 58.33,
+      "expression_readiness_score_0_to_100": 81.25,
+      "decomposition_confidence": 72.4,
+      "candidate_summary": "NEO is treated as a satellite expression for robotics supply chain through NdFeB Magnetic Powders and Alloys.",
+      "company_attributes": {}
+    }
+  ],
+  "market_miss_statement": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+  "summary": {
+    "public_company_count": 3,
+    "resolved_company_count": 3,
+    "top_underlyings": [
+      "MP",
+      "UUUU",
+      "NEO"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "rows": [
+    {
+      "name": "robotics_actuation_v2",
+      "source_bundle": "research/analysis/2026-03-16-robotics-actuation-source-bundle-v2.json",
+      "structural_parse": "research/analysis/2026-03-16-robotics-actuation-structural-parse-v2.json",
+      "graduation": "research/analysis/2026-03-16-robotics-actuation-graduation-v2.json",
+      "theme_equity_decomposition": "research/analysis/2026-03-16-robotics-actuation-theme-equity-decomposition-v1.json"
+    },
+    {
+      "name": "mp_magnet_sovereignty",
+      "source_bundle": "research/analysis/2026-03-16-mp-magnet-sovereignty-source-bundle-v1.json",
+      "structural_parse": "research/analysis/2026-03-16-mp-magnet-sovereignty-structural-parse-v1.json",
+      "graduation": "research/analysis/2026-03-16-mp-magnet-sovereignty-graduation-v1.json"
+    },
+    {
+      "name": "sive_photonics_v2",
+      "source_bundle": "research/analysis/2026-03-16-sive-photonics-source-bundle-v2.json",
+      "structural_parse": "research/analysis/2026-03-16-sive-photonics-structural-parse-v2.json",
+      "graduation": "research/analysis/2026-03-16-sive-photonics-graduation-v2.json"
+    }
+  ]
+}

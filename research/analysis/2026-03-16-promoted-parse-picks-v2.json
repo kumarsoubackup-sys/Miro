@@ -1,0 +1,1491 @@
+{
+  "method": "market scan -> mispricing score -> stock-vs-LEAPS choice -> ranked picks",
+  "rows": [
+    {
+      "name": "MP promoted structural pick on Rare Earth Magnet Sovereignty",
+      "underlying": "MP",
+      "market_theme": "Rare Earth Magnet Sovereignty",
+      "promotion_status": "pick_candidate",
+      "promotion_score_0_to_100": 96.1,
+      "thesis": "The market may still frame MP too narrowly as a mining story even though the company is becoming a policy-backed mine-to-magnet platform tied to the most constrained layers.",
+      "bottleneck_layer": "Sintered NdFeB Magnet Manufacturing",
+      "value_capture_layer": "Sintered NdFeB Magnet Manufacturing",
+      "why_missed": [
+        "market framing appears stale relative to the structural role",
+        "the market may still anchor on an outdated business description"
+      ],
+      "catalysts": [
+        "MP DoD Mine-to-Magnet Partnership"
+      ],
+      "invalidations": [
+        "MP fails to scale beyond a partial magnet-manufacturing foothold",
+        "non-China capacity expands broadly enough to collapse scarcity value",
+        "policy support does not translate into durable economics"
+      ],
+      "parse_evidence_summary": {
+        "total_sources": 5,
+        "evidence_sources": 5,
+        "high_quality_sources": 5,
+        "independent_sources": 3,
+        "company_driven_sources": 2,
+        "source_class_diversity": 4,
+        "source_classes": [
+          "company_release",
+          "government",
+          "industry_body",
+          "policy_tracker"
+        ],
+        "supporting_source_classes": [
+          "company_release",
+          "government",
+          "industry_body",
+          "policy_tracker"
+        ],
+        "entity_count": 20,
+        "relationship_count": 15,
+        "claim_count": 7,
+        "evidence_link_count": 23,
+        "inference_count": 1,
+        "evidence_links_per_claim": 3.29,
+        "process_layer_count": 2,
+        "event_count": 3,
+        "expression_count": 1,
+        "public_company_count": 1,
+        "related_company_count": 0,
+        "related_companies": [],
+        "supplied_by_count": 1,
+        "depends_on_count": 1,
+        "constrained_by_count": 2,
+        "reprices_via_count": 1,
+        "affected_by_event_count": 4,
+        "part_of_count": 0,
+        "market_miss_confidence": "high",
+        "market_miss_confidence_score_0_to_100": 100.0,
+        "market_miss_derived_claim_count": 6,
+        "market_miss_derived_relationship_count": 8,
+        "catalyst_count": 1,
+        "invalidation_count": 3,
+        "statement": "The market may still frame MP too narrowly as a mining story even though the company is becoming a policy-backed mine-to-magnet platform tied to the most constrained layers.",
+        "upstream_marker_score_0_to_100": 0.0,
+        "stale_frame_marker_score_0_to_100": 60.0,
+        "messy_small_marker_score_0_to_100": 0.0
+      },
+      "market_data_checks": {
+        "snapshot_count": 2,
+        "latest_snapshot_path": "research/options-data/2026-03-15/MP-chain-yahoo.json",
+        "has_long_dated_options": true,
+        "quoted_contract_count": 97,
+        "liquid_contract_count": 26,
+        "best_open_interest": 10067,
+        "best_relative_spread": 0.0408,
+        "best_implied_volatility": 0.8408,
+        "watchlist_entry_present": true,
+        "watchlist_option_symbol": "MP270115C00070000",
+        "watchlist_mid": 10.825,
+        "watchlist_open_interest": 7947,
+        "watchlist_relative_spread": 0.0508,
+        "watchlist_implied_volatility": 0.7214,
+        "resale_scenario_count": 6,
+        "positive_resale_scenario_count": 4,
+        "positive_resale_scenario_ratio": 0.67,
+        "flat_iv_up_positive": true,
+        "best_bullish_return_pct": 52.44,
+        "mean_bullish_return_pct": 46.71,
+        "rescreen_candidate_count": 8,
+        "positive_rescreen_count": 8,
+        "best_bullish_excess_vs_stock_mean": 820.96,
+        "best_same_capital_contract": {
+          "option_symbol": "MP270115C00030000",
+          "strike": 30.0,
+          "open_interest": 8168,
+          "relative_spread": 0.0762,
+          "bullish_excess_vs_stock_mean": 820.96
+        },
+        "long_dated_liquidity_quality_score_0_to_100": 91.22
+      },
+      "theme_equity_decomposition": null,
+      "asymmetry_signals": {
+        "ecosystem_centrality": 2.9,
+        "downstream_valuation_gap": 1.8,
+        "microcap_rerating_potential": 1.4
+      },
+      "mispricing": {
+        "candidate_name": "MP promoted structural pick on Rare Earth Magnet Sovereignty",
+        "score_type": "mispricing",
+        "score_0_to_100": 61.16,
+        "band": "moderate",
+        "weighted_signals": {
+          "hiddenness": 0.504,
+          "recognition_gap": 0.608,
+          "catalyst_clarity": 0.3,
+          "propagation_asymmetry": 0.448,
+          "duration_mismatch": 0.49,
+          "evidence_quality": 0.312,
+          "crowding_inverse": 0.162,
+          "valuation_nonlinearity": 0.234
+        },
+        "strongest_drivers": [
+          [
+            "recognition_gap",
+            0.608
+          ],
+          [
+            "hiddenness",
+            0.504
+          ],
+          [
+            "duration_mismatch",
+            0.49
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "crowding_inverse",
+            0.162
+          ],
+          [
+            "valuation_nonlinearity",
+            0.234
+          ]
+        ],
+        "explanation": "MP promoted structural pick on Rare Earth Magnet Sovereignty scores 61.2/100 (moderate) on mispricing plausibility. The strongest weighted drivers are recognition gap, hiddenness, duration mismatch. The least supportive signals are crowding inverse, valuation nonlinearity. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "MP promoted structural pick on Rare Earth Magnet Sovereignty",
+        "score_type": "options_fit",
+        "score_0_to_100": 73.4,
+        "band": "high",
+        "weighted_signals": {
+          "convexity_need": 0.396,
+          "tenor_alignment": 0.72,
+          "vol_expansion_potential": 0.702,
+          "downside_definedness": 0.63,
+          "liquidity_path": 0.552,
+          "implementation_simplicity": 0.44,
+          "catalyst_timing_specificity": 0.23
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.72
+          ],
+          [
+            "vol_expansion_potential",
+            0.702
+          ],
+          [
+            "downside_definedness",
+            0.63
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "catalyst_timing_specificity",
+            0.23
+          ],
+          [
+            "convexity_need",
+            0.396
+          ]
+        ],
+        "explanation": "MP promoted structural pick on Rare Earth Magnet Sovereignty scores 73.4/100 (high) on options-expression fit. The strongest weighted drivers are tenor alignment, vol expansion potential, downside definedness. The least supportive signals are catalyst timing specificity, convexity need. This screen helps decide whether options are a sensible expression path."
+      },
+      "leaps_bias": {
+        "score_0_to_100": 86.0,
+        "weighted_signals": {
+          "iv_cheapness": 1.08,
+          "surface_staleness": 0.648,
+          "pre_expiration_repricing_potential": 0.912,
+          "stock_vs_call_convexity_advantage": 1.2,
+          "long_dated_liquidity_quality": 0.46
+        },
+        "strongest_drivers": [
+          [
+            "stock_vs_call_convexity_advantage",
+            1.2
+          ],
+          [
+            "iv_cheapness",
+            1.08
+          ],
+          [
+            "pre_expiration_repricing_potential",
+            0.912
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "surface_staleness",
+            0.648
+          ],
+          [
+            "long_dated_liquidity_quality",
+            0.46
+          ]
+        ]
+      },
+      "stock_fit": {
+        "score_0_to_100": 65.16,
+        "weighted_signals": {
+          "market_accessibility": 0.43,
+          "implementation_simplicity": 0.54,
+          "balance_sheet_resilience": 0.448,
+          "dilution_risk_inverse": 0.48,
+          "thesis_linearity": 0.342,
+          "duration_tolerance": 0.682,
+          "listing_quality": 0.336
+        },
+        "strongest_drivers": [
+          [
+            "duration_tolerance",
+            0.682
+          ],
+          [
+            "implementation_simplicity",
+            0.54
+          ],
+          [
+            "dilution_risk_inverse",
+            0.48
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "thesis_linearity",
+            0.342
+          ],
+          [
+            "listing_quality",
+            0.336
+          ]
+        ]
+      },
+      "final_expression": "leaps_call",
+      "asymmetry_bonus": 5.14,
+      "pick_score": 61.72,
+      "promotion_bonus": 12.61,
+      "ranking_score": 74.33,
+      "ranking_metadata": {
+        "expression_viability_rank": 2,
+        "promotion_rank": 2.0
+      }
+    },
+    {
+      "name": "MP anchor promoted structural pick on Robotics Supply Chain",
+      "underlying": "MP",
+      "market_theme": "Robotics Supply Chain",
+      "promotion_status": "pick_candidate",
+      "promotion_score_0_to_100": 94.86,
+      "thesis": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+      "bottleneck_layer": "Sintered NdFeB Magnet Manufacturing",
+      "value_capture_layer": "Sintered NdFeB Magnet Manufacturing",
+      "why_missed": [
+        "market framing appears stale relative to the structural role"
+      ],
+      "catalysts": [],
+      "invalidations": [
+        "robotic actuation shifts away from permanent magnet motor architectures",
+        "China concentration in processing and finished magnets falls faster than expected",
+        "MP, NEO, and UUUU fail to capture economics from the relevant processing or magnet layers"
+      ],
+      "parse_evidence_summary": {
+        "total_sources": 7,
+        "evidence_sources": 6,
+        "high_quality_sources": 6,
+        "independent_sources": 4,
+        "company_driven_sources": 3,
+        "source_class_diversity": 5,
+        "source_classes": [
+          "company_release",
+          "government",
+          "industry_body",
+          "technical_paper",
+          "user_note"
+        ],
+        "supporting_source_classes": [
+          "company_release",
+          "government",
+          "industry_body",
+          "technical_paper",
+          "user_note"
+        ],
+        "entity_count": 22,
+        "relationship_count": 20,
+        "claim_count": 7,
+        "evidence_link_count": 28,
+        "inference_count": 1,
+        "evidence_links_per_claim": 4.0,
+        "process_layer_count": 3,
+        "event_count": 0,
+        "expression_count": 4,
+        "public_company_count": 3,
+        "related_company_count": 2,
+        "related_companies": [
+          "NEO",
+          "UUUU"
+        ],
+        "supplied_by_count": 4,
+        "depends_on_count": 2,
+        "constrained_by_count": 2,
+        "reprices_via_count": 1,
+        "affected_by_event_count": 0,
+        "part_of_count": 3,
+        "market_miss_confidence": "high",
+        "market_miss_confidence_score_0_to_100": 100.0,
+        "market_miss_derived_claim_count": 7,
+        "market_miss_derived_relationship_count": 13,
+        "catalyst_count": 0,
+        "invalidation_count": 3,
+        "statement": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+        "upstream_marker_score_0_to_100": 0.0,
+        "stale_frame_marker_score_0_to_100": 0.0,
+        "messy_small_marker_score_0_to_100": 0.0,
+        "decomposition_company_role": "anchor",
+        "decomposition_linked_process_count": 2,
+        "decomposition_linked_component_count": 0,
+        "decomposition_linked_material_count": 1,
+        "decomposition_supporting_claim_count": 5,
+        "decomposition_supporting_relationship_count": 12,
+        "decomposition_market_miss_alignment_score_0_to_100": 96.88,
+        "decomposition_value_capture_alignment_score_0_to_100": 96.88,
+        "decomposition_expression_readiness_score_0_to_100": 93.75,
+        "decomposition_confidence": 94.53
+      },
+      "market_data_checks": {
+        "snapshot_count": 2,
+        "latest_snapshot_path": "research/options-data/2026-03-15/MP-chain-yahoo.json",
+        "has_long_dated_options": true,
+        "quoted_contract_count": 97,
+        "liquid_contract_count": 26,
+        "best_open_interest": 10067,
+        "best_relative_spread": 0.0408,
+        "best_implied_volatility": 0.8408,
+        "watchlist_entry_present": true,
+        "watchlist_option_symbol": "MP270115C00070000",
+        "watchlist_mid": 10.825,
+        "watchlist_open_interest": 7947,
+        "watchlist_relative_spread": 0.0508,
+        "watchlist_implied_volatility": 0.7214,
+        "resale_scenario_count": 6,
+        "positive_resale_scenario_count": 4,
+        "positive_resale_scenario_ratio": 0.67,
+        "flat_iv_up_positive": true,
+        "best_bullish_return_pct": 52.44,
+        "mean_bullish_return_pct": 46.71,
+        "rescreen_candidate_count": 8,
+        "positive_rescreen_count": 8,
+        "best_bullish_excess_vs_stock_mean": 820.96,
+        "best_same_capital_contract": {
+          "option_symbol": "MP270115C00030000",
+          "strike": 30.0,
+          "open_interest": 8168,
+          "relative_spread": 0.0762,
+          "bullish_excess_vs_stock_mean": 820.96
+        },
+        "long_dated_liquidity_quality_score_0_to_100": 91.22
+      },
+      "theme_equity_decomposition": {
+        "underlying": "MP",
+        "theme": "Robotics Supply Chain",
+        "company_role": "anchor",
+        "linked_process_layers": [
+          "Sintered NdFeB Magnet Manufacturing",
+          "Neodymium Processing"
+        ],
+        "linked_components": [],
+        "linked_materials": [
+          "Neodymium"
+        ],
+        "supporting_claim_ids": [
+          "claim_claim_motor_to_processing_chain_v2",
+          "claim_claim_mp_is_direct_magnet_exposure_v2",
+          "claim_claim_processing_and_magnets_are_concentrated_v2",
+          "claim_claim_processing_layer_better_than_robot_oem_narrative_v2",
+          "claim_claim_uuuu_is_us_ndpr_processing_exposure_v2"
+        ],
+        "supporting_relationship_ids": [
+          "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_neodymium_processing",
+          "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+          "rel_candidate_expression_for_ent_expressioncandidate_shares_mp_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+          "rel_candidate_expression_for_ent_expressioncandidate_shares_uuuu_ent_processlayer_neodymium_processing",
+          "rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+          "rel_constrained_by_ent_processlayer_sintered_ndfeb_magnet_manufacturing_ent_geography_china",
+          "rel_expands_capacity_for_ent_facility_white_mesa_mill_ent_processlayer_neodymium_processing",
+          "rel_processed_by_ent_materialinput_neodymium_ent_processlayer_neodymium_processing",
+          "rel_reprices_via_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_theme_robotics_supply_chain",
+          "rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_mp",
+          "rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_uuuu",
+          "rel_supplied_by_ent_processlayer_sintered_ndfeb_magnet_manufacturing_ent_publiccompany_mp"
+        ],
+        "direct_expression_ids": [
+          "ent_expressioncandidate_shares_mp"
+        ],
+        "basket_expression_ids": [
+          "ent_expressioncandidate_equity_basket_mp_neo_uuuu"
+        ],
+        "graph_centrality_score_0_to_100": 87.5,
+        "market_miss_alignment_score_0_to_100": 96.88,
+        "value_capture_alignment_score_0_to_100": 96.88,
+        "expression_readiness_score_0_to_100": 93.75,
+        "decomposition_confidence": 94.53,
+        "candidate_summary": "MP is treated as a anchor expression for robotics supply chain through Sintered NdFeB Magnet Manufacturing, Neodymium Processing.",
+        "company_attributes": {}
+      },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 4.5,
+        "downstream_valuation_gap": 2.8,
+        "microcap_rerating_potential": 1.5
+      },
+      "mispricing": {
+        "candidate_name": "MP anchor promoted structural pick on Robotics Supply Chain",
+        "score_type": "mispricing",
+        "score_0_to_100": 69.92,
+        "band": "high",
+        "weighted_signals": {
+          "hiddenness": 0.576,
+          "recognition_gap": 0.64,
+          "catalyst_clarity": 0.3,
+          "propagation_asymmetry": 0.644,
+          "duration_mismatch": 0.5,
+          "evidence_quality": 0.368,
+          "crowding_inverse": 0.198,
+          "valuation_nonlinearity": 0.27
+        },
+        "strongest_drivers": [
+          [
+            "propagation_asymmetry",
+            0.644
+          ],
+          [
+            "recognition_gap",
+            0.64
+          ],
+          [
+            "hiddenness",
+            0.576
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "crowding_inverse",
+            0.198
+          ],
+          [
+            "valuation_nonlinearity",
+            0.27
+          ]
+        ],
+        "explanation": "MP anchor promoted structural pick on Robotics Supply Chain scores 69.9/100 (high) on mispricing plausibility. The strongest weighted drivers are propagation asymmetry, recognition gap, hiddenness. The least supportive signals are crowding inverse, valuation nonlinearity. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "MP anchor promoted structural pick on Robotics Supply Chain",
+        "score_type": "options_fit",
+        "score_0_to_100": 75.56,
+        "band": "high",
+        "weighted_signals": {
+          "convexity_need": 0.486,
+          "tenor_alignment": 0.72,
+          "vol_expansion_potential": 0.72,
+          "downside_definedness": 0.63,
+          "liquidity_path": 0.552,
+          "implementation_simplicity": 0.44,
+          "catalyst_timing_specificity": 0.23
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.72
+          ],
+          [
+            "vol_expansion_potential",
+            0.72
+          ],
+          [
+            "downside_definedness",
+            0.63
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "catalyst_timing_specificity",
+            0.23
+          ],
+          [
+            "implementation_simplicity",
+            0.44
+          ]
+        ],
+        "explanation": "MP anchor promoted structural pick on Robotics Supply Chain scores 75.6/100 (high) on options-expression fit. The strongest weighted drivers are tenor alignment, vol expansion potential, downside definedness. The least supportive signals are catalyst timing specificity, implementation simplicity. This screen helps decide whether options are a sensible expression path."
+      },
+      "leaps_bias": {
+        "score_0_to_100": 86.72,
+        "weighted_signals": {
+          "iv_cheapness": 1.08,
+          "surface_staleness": 0.684,
+          "pre_expiration_repricing_potential": 0.912,
+          "stock_vs_call_convexity_advantage": 1.2,
+          "long_dated_liquidity_quality": 0.46
+        },
+        "strongest_drivers": [
+          [
+            "stock_vs_call_convexity_advantage",
+            1.2
+          ],
+          [
+            "iv_cheapness",
+            1.08
+          ],
+          [
+            "pre_expiration_repricing_potential",
+            0.912
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "surface_staleness",
+            0.684
+          ],
+          [
+            "long_dated_liquidity_quality",
+            0.46
+          ]
+        ]
+      },
+      "stock_fit": {
+        "score_0_to_100": 86.48,
+        "weighted_signals": {
+          "market_accessibility": 0.41,
+          "implementation_simplicity": 0.516,
+          "balance_sheet_resilience": 0.602,
+          "dilution_risk_inverse": 0.48,
+          "thesis_linearity": 0.864,
+          "duration_tolerance": 0.924,
+          "listing_quality": 0.528
+        },
+        "strongest_drivers": [
+          [
+            "duration_tolerance",
+            0.924
+          ],
+          [
+            "thesis_linearity",
+            0.864
+          ],
+          [
+            "balance_sheet_resilience",
+            0.602
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "dilution_risk_inverse",
+            0.48
+          ],
+          [
+            "market_accessibility",
+            0.41
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "asymmetry_bonus": 6.7,
+      "pick_score": 68.94,
+      "promotion_bonus": 12.49,
+      "ranking_score": 81.43,
+      "ranking_metadata": {
+        "expression_viability_rank": 1,
+        "promotion_rank": 2.0
+      }
+    },
+    {
+      "name": "UUUU satellite promoted structural pick on Robotics Supply Chain",
+      "underlying": "UUUU",
+      "market_theme": "Robotics Supply Chain",
+      "promotion_status": "pick_candidate",
+      "promotion_score_0_to_100": 94.86,
+      "thesis": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+      "bottleneck_layer": "Neodymium Processing",
+      "value_capture_layer": "Neodymium Processing",
+      "why_missed": [
+        "market framing appears stale relative to the structural role"
+      ],
+      "catalysts": [],
+      "invalidations": [
+        "robotic actuation shifts away from permanent magnet motor architectures",
+        "China concentration in processing and finished magnets falls faster than expected",
+        "MP, NEO, and UUUU fail to capture economics from the relevant processing or magnet layers"
+      ],
+      "parse_evidence_summary": {
+        "total_sources": 7,
+        "evidence_sources": 6,
+        "high_quality_sources": 6,
+        "independent_sources": 4,
+        "company_driven_sources": 3,
+        "source_class_diversity": 5,
+        "source_classes": [
+          "company_release",
+          "government",
+          "industry_body",
+          "technical_paper",
+          "user_note"
+        ],
+        "supporting_source_classes": [
+          "company_release",
+          "government",
+          "industry_body",
+          "technical_paper",
+          "user_note"
+        ],
+        "entity_count": 22,
+        "relationship_count": 20,
+        "claim_count": 7,
+        "evidence_link_count": 28,
+        "inference_count": 1,
+        "evidence_links_per_claim": 4.0,
+        "process_layer_count": 3,
+        "event_count": 0,
+        "expression_count": 4,
+        "public_company_count": 3,
+        "related_company_count": 2,
+        "related_companies": [
+          "MP",
+          "NEO"
+        ],
+        "supplied_by_count": 4,
+        "depends_on_count": 2,
+        "constrained_by_count": 2,
+        "reprices_via_count": 1,
+        "affected_by_event_count": 0,
+        "part_of_count": 3,
+        "market_miss_confidence": "high",
+        "market_miss_confidence_score_0_to_100": 100.0,
+        "market_miss_derived_claim_count": 7,
+        "market_miss_derived_relationship_count": 13,
+        "catalyst_count": 0,
+        "invalidation_count": 3,
+        "statement": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+        "upstream_marker_score_0_to_100": 0.0,
+        "stale_frame_marker_score_0_to_100": 0.0,
+        "messy_small_marker_score_0_to_100": 0.0,
+        "decomposition_company_role": "satellite",
+        "decomposition_linked_process_count": 1,
+        "decomposition_linked_component_count": 0,
+        "decomposition_linked_material_count": 1,
+        "decomposition_supporting_claim_count": 5,
+        "decomposition_supporting_relationship_count": 9,
+        "decomposition_market_miss_alignment_score_0_to_100": 93.75,
+        "decomposition_value_capture_alignment_score_0_to_100": 81.25,
+        "decomposition_expression_readiness_score_0_to_100": 81.25,
+        "decomposition_confidence": 84.38
+      },
+      "market_data_checks": {
+        "snapshot_count": 0,
+        "latest_snapshot_path": null,
+        "has_long_dated_options": false,
+        "quoted_contract_count": 0,
+        "liquid_contract_count": 0,
+        "best_open_interest": 0,
+        "best_relative_spread": null,
+        "best_implied_volatility": null,
+        "watchlist_entry_present": false,
+        "watchlist_option_symbol": null,
+        "watchlist_mid": null,
+        "watchlist_open_interest": null,
+        "watchlist_relative_spread": null,
+        "watchlist_implied_volatility": null,
+        "resale_scenario_count": 0,
+        "positive_resale_scenario_count": 0,
+        "positive_resale_scenario_ratio": 0.0,
+        "flat_iv_up_positive": false,
+        "best_bullish_return_pct": null,
+        "mean_bullish_return_pct": null,
+        "rescreen_candidate_count": 0,
+        "positive_rescreen_count": 0,
+        "best_bullish_excess_vs_stock_mean": null,
+        "best_same_capital_contract": null,
+        "long_dated_liquidity_quality_score_0_to_100": 0.0
+      },
+      "theme_equity_decomposition": {
+        "underlying": "UUUU",
+        "theme": "Robotics Supply Chain",
+        "company_role": "satellite",
+        "linked_process_layers": [
+          "Neodymium Processing"
+        ],
+        "linked_components": [],
+        "linked_materials": [
+          "Neodymium"
+        ],
+        "supporting_claim_ids": [
+          "claim_claim_motor_to_processing_chain_v2",
+          "claim_claim_mp_is_direct_magnet_exposure_v2",
+          "claim_claim_processing_and_magnets_are_concentrated_v2",
+          "claim_claim_processing_layer_better_than_robot_oem_narrative_v2",
+          "claim_claim_uuuu_is_us_ndpr_processing_exposure_v2"
+        ],
+        "supporting_relationship_ids": [
+          "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_neodymium_processing",
+          "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+          "rel_candidate_expression_for_ent_expressioncandidate_shares_uuuu_ent_processlayer_neodymium_processing",
+          "rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+          "rel_expands_capacity_for_ent_facility_white_mesa_mill_ent_processlayer_neodymium_processing",
+          "rel_processed_by_ent_materialinput_neodymium_ent_processlayer_neodymium_processing",
+          "rel_reprices_via_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_theme_robotics_supply_chain",
+          "rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_mp",
+          "rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_uuuu"
+        ],
+        "direct_expression_ids": [
+          "ent_expressioncandidate_shares_uuuu"
+        ],
+        "basket_expression_ids": [
+          "ent_expressioncandidate_equity_basket_mp_neo_uuuu"
+        ],
+        "graph_centrality_score_0_to_100": 75.0,
+        "market_miss_alignment_score_0_to_100": 93.75,
+        "value_capture_alignment_score_0_to_100": 81.25,
+        "expression_readiness_score_0_to_100": 81.25,
+        "decomposition_confidence": 84.38,
+        "candidate_summary": "UUUU is treated as a satellite expression for robotics supply chain through Neodymium Processing.",
+        "company_attributes": {}
+      },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 4.5,
+        "downstream_valuation_gap": 2.8,
+        "microcap_rerating_potential": 1.5
+      },
+      "mispricing": {
+        "candidate_name": "UUUU satellite promoted structural pick on Robotics Supply Chain",
+        "score_type": "mispricing",
+        "score_0_to_100": 69.0,
+        "band": "high",
+        "weighted_signals": {
+          "hiddenness": 0.552,
+          "recognition_gap": 0.64,
+          "catalyst_clarity": 0.3,
+          "propagation_asymmetry": 0.63,
+          "duration_mismatch": 0.5,
+          "evidence_quality": 0.36,
+          "crowding_inverse": 0.198,
+          "valuation_nonlinearity": 0.27
+        },
+        "strongest_drivers": [
+          [
+            "recognition_gap",
+            0.64
+          ],
+          [
+            "propagation_asymmetry",
+            0.63
+          ],
+          [
+            "hiddenness",
+            0.552
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "crowding_inverse",
+            0.198
+          ],
+          [
+            "valuation_nonlinearity",
+            0.27
+          ]
+        ],
+        "explanation": "UUUU satellite promoted structural pick on Robotics Supply Chain scores 69.0/100 (high) on mispricing plausibility. The strongest weighted drivers are recognition gap, propagation asymmetry, hiddenness. The least supportive signals are crowding inverse, valuation nonlinearity. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "UUUU satellite promoted structural pick on Robotics Supply Chain",
+        "score_type": "options_fit",
+        "score_0_to_100": 40.76,
+        "band": "emerging",
+        "weighted_signals": {
+          "convexity_need": 0.486,
+          "tenor_alignment": 0.558,
+          "vol_expansion_potential": 0.486,
+          "downside_definedness": 0.168,
+          "liquidity_path": 0.06,
+          "implementation_simplicity": 0.05,
+          "catalyst_timing_specificity": 0.23
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.558
+          ],
+          [
+            "convexity_need",
+            0.486
+          ],
+          [
+            "vol_expansion_potential",
+            0.486
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "implementation_simplicity",
+            0.05
+          ],
+          [
+            "liquidity_path",
+            0.06
+          ]
+        ],
+        "explanation": "UUUU satellite promoted structural pick on Robotics Supply Chain scores 40.8/100 (emerging) on options-expression fit. The strongest weighted drivers are tenor alignment, convexity need, vol expansion potential. The least supportive signals are implementation simplicity, liquidity path. This screen helps decide whether options are a sensible expression path."
+      },
+      "leaps_bias": {
+        "score_0_to_100": 11.44,
+        "weighted_signals": {
+          "iv_cheapness": 0.12,
+          "surface_staleness": 0.09,
+          "pre_expiration_repricing_potential": 0.192,
+          "stock_vs_call_convexity_advantage": 0.12,
+          "long_dated_liquidity_quality": 0.05
+        },
+        "strongest_drivers": [
+          [
+            "pre_expiration_repricing_potential",
+            0.192
+          ],
+          [
+            "iv_cheapness",
+            0.12
+          ],
+          [
+            "stock_vs_call_convexity_advantage",
+            0.12
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "surface_staleness",
+            0.09
+          ],
+          [
+            "long_dated_liquidity_quality",
+            0.05
+          ]
+        ]
+      },
+      "stock_fit": {
+        "score_0_to_100": 82.84,
+        "weighted_signals": {
+          "market_accessibility": 0.39,
+          "implementation_simplicity": 0.516,
+          "balance_sheet_resilience": 0.588,
+          "dilution_risk_inverse": 0.48,
+          "thesis_linearity": 0.81,
+          "duration_tolerance": 0.902,
+          "listing_quality": 0.456
+        },
+        "strongest_drivers": [
+          [
+            "duration_tolerance",
+            0.902
+          ],
+          [
+            "thesis_linearity",
+            0.81
+          ],
+          [
+            "balance_sheet_resilience",
+            0.588
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "listing_quality",
+            0.456
+          ],
+          [
+            "market_accessibility",
+            0.39
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "asymmetry_bonus": 6.66,
+      "pick_score": 67.46,
+      "promotion_bonus": 12.49,
+      "ranking_score": 79.95,
+      "ranking_metadata": {
+        "expression_viability_rank": 1,
+        "promotion_rank": 2.0
+      }
+    },
+    {
+      "name": "NEO satellite promoted structural pick on Robotics Supply Chain",
+      "underlying": "NEO",
+      "market_theme": "Robotics Supply Chain",
+      "promotion_status": "pick_candidate",
+      "promotion_score_0_to_100": 94.86,
+      "thesis": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+      "bottleneck_layer": "NdFeB Magnetic Powders and Alloys",
+      "value_capture_layer": "NdFeB Magnetic Powders and Alloys",
+      "why_missed": [
+        "market framing appears stale relative to the structural role"
+      ],
+      "catalysts": [],
+      "invalidations": [
+        "robotic actuation shifts away from permanent magnet motor architectures",
+        "China concentration in processing and finished magnets falls faster than expected",
+        "MP, NEO, and UUUU fail to capture economics from the relevant processing or magnet layers"
+      ],
+      "parse_evidence_summary": {
+        "total_sources": 7,
+        "evidence_sources": 6,
+        "high_quality_sources": 6,
+        "independent_sources": 4,
+        "company_driven_sources": 3,
+        "source_class_diversity": 5,
+        "source_classes": [
+          "company_release",
+          "government",
+          "industry_body",
+          "technical_paper",
+          "user_note"
+        ],
+        "supporting_source_classes": [
+          "company_release",
+          "government",
+          "industry_body",
+          "technical_paper",
+          "user_note"
+        ],
+        "entity_count": 22,
+        "relationship_count": 20,
+        "claim_count": 7,
+        "evidence_link_count": 28,
+        "inference_count": 1,
+        "evidence_links_per_claim": 4.0,
+        "process_layer_count": 3,
+        "event_count": 0,
+        "expression_count": 4,
+        "public_company_count": 3,
+        "related_company_count": 2,
+        "related_companies": [
+          "MP",
+          "UUUU"
+        ],
+        "supplied_by_count": 4,
+        "depends_on_count": 2,
+        "constrained_by_count": 2,
+        "reprices_via_count": 1,
+        "affected_by_event_count": 0,
+        "part_of_count": 3,
+        "market_miss_confidence": "high",
+        "market_miss_confidence_score_0_to_100": 100.0,
+        "market_miss_derived_claim_count": 7,
+        "market_miss_derived_relationship_count": 13,
+        "catalyst_count": 0,
+        "invalidation_count": 3,
+        "statement": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+        "upstream_marker_score_0_to_100": 0.0,
+        "stale_frame_marker_score_0_to_100": 0.0,
+        "messy_small_marker_score_0_to_100": 0.0,
+        "decomposition_company_role": "satellite",
+        "decomposition_linked_process_count": 1,
+        "decomposition_linked_component_count": 0,
+        "decomposition_linked_material_count": 0,
+        "decomposition_supporting_claim_count": 2,
+        "decomposition_supporting_relationship_count": 5,
+        "decomposition_market_miss_alignment_score_0_to_100": 81.25,
+        "decomposition_value_capture_alignment_score_0_to_100": 58.33,
+        "decomposition_expression_readiness_score_0_to_100": 81.25,
+        "decomposition_confidence": 72.4
+      },
+      "market_data_checks": {
+        "snapshot_count": 0,
+        "latest_snapshot_path": null,
+        "has_long_dated_options": false,
+        "quoted_contract_count": 0,
+        "liquid_contract_count": 0,
+        "best_open_interest": 0,
+        "best_relative_spread": null,
+        "best_implied_volatility": null,
+        "watchlist_entry_present": false,
+        "watchlist_option_symbol": null,
+        "watchlist_mid": null,
+        "watchlist_open_interest": null,
+        "watchlist_relative_spread": null,
+        "watchlist_implied_volatility": null,
+        "resale_scenario_count": 0,
+        "positive_resale_scenario_count": 0,
+        "positive_resale_scenario_ratio": 0.0,
+        "flat_iv_up_positive": false,
+        "best_bullish_return_pct": null,
+        "mean_bullish_return_pct": null,
+        "rescreen_candidate_count": 0,
+        "positive_rescreen_count": 0,
+        "best_bullish_excess_vs_stock_mean": null,
+        "best_same_capital_contract": null,
+        "long_dated_liquidity_quality_score_0_to_100": 0.0
+      },
+      "theme_equity_decomposition": {
+        "underlying": "NEO",
+        "theme": "Robotics Supply Chain",
+        "company_role": "satellite",
+        "linked_process_layers": [
+          "NdFeB Magnetic Powders and Alloys"
+        ],
+        "linked_components": [],
+        "linked_materials": [],
+        "supporting_claim_ids": [
+          "claim_claim_neo_is_listed_robotics_magnet_materials_exposure_v2",
+          "claim_claim_processing_layer_better_than_robot_oem_narrative_v2"
+        ],
+        "supporting_relationship_ids": [
+          "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_neodymium_processing",
+          "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+          "rel_candidate_expression_for_ent_expressioncandidate_shares_neo_ent_processlayer_ndfeb_magnetic_powders_and_alloys",
+          "rel_reprices_via_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_theme_robotics_supply_chain",
+          "rel_supplied_by_ent_processlayer_ndfeb_magnetic_powders_and_alloys_ent_publiccompany_neo"
+        ],
+        "direct_expression_ids": [
+          "ent_expressioncandidate_shares_neo"
+        ],
+        "basket_expression_ids": [
+          "ent_expressioncandidate_equity_basket_mp_neo_uuuu"
+        ],
+        "graph_centrality_score_0_to_100": 50.0,
+        "market_miss_alignment_score_0_to_100": 81.25,
+        "value_capture_alignment_score_0_to_100": 58.33,
+        "expression_readiness_score_0_to_100": 81.25,
+        "decomposition_confidence": 72.4,
+        "candidate_summary": "NEO is treated as a satellite expression for robotics supply chain through NdFeB Magnetic Powders and Alloys.",
+        "company_attributes": {}
+      },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 4.4,
+        "downstream_valuation_gap": 2.8,
+        "microcap_rerating_potential": 1.5
+      },
+      "mispricing": {
+        "candidate_name": "NEO satellite promoted structural pick on Robotics Supply Chain",
+        "score_type": "mispricing",
+        "score_0_to_100": 67.34,
+        "band": "high",
+        "weighted_signals": {
+          "hiddenness": 0.528,
+          "recognition_gap": 0.64,
+          "catalyst_clarity": 0.3,
+          "propagation_asymmetry": 0.588,
+          "duration_mismatch": 0.5,
+          "evidence_quality": 0.352,
+          "crowding_inverse": 0.198,
+          "valuation_nonlinearity": 0.261
+        },
+        "strongest_drivers": [
+          [
+            "recognition_gap",
+            0.64
+          ],
+          [
+            "propagation_asymmetry",
+            0.588
+          ],
+          [
+            "hiddenness",
+            0.528
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "crowding_inverse",
+            0.198
+          ],
+          [
+            "valuation_nonlinearity",
+            0.261
+          ]
+        ],
+        "explanation": "NEO satellite promoted structural pick on Robotics Supply Chain scores 67.3/100 (high) on mispricing plausibility. The strongest weighted drivers are recognition gap, propagation asymmetry, hiddenness. The least supportive signals are crowding inverse, valuation nonlinearity. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "NEO satellite promoted structural pick on Robotics Supply Chain",
+        "score_type": "options_fit",
+        "score_0_to_100": 40.76,
+        "band": "emerging",
+        "weighted_signals": {
+          "convexity_need": 0.486,
+          "tenor_alignment": 0.558,
+          "vol_expansion_potential": 0.486,
+          "downside_definedness": 0.168,
+          "liquidity_path": 0.06,
+          "implementation_simplicity": 0.05,
+          "catalyst_timing_specificity": 0.23
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.558
+          ],
+          [
+            "convexity_need",
+            0.486
+          ],
+          [
+            "vol_expansion_potential",
+            0.486
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "implementation_simplicity",
+            0.05
+          ],
+          [
+            "liquidity_path",
+            0.06
+          ]
+        ],
+        "explanation": "NEO satellite promoted structural pick on Robotics Supply Chain scores 40.8/100 (emerging) on options-expression fit. The strongest weighted drivers are tenor alignment, convexity need, vol expansion potential. The least supportive signals are implementation simplicity, liquidity path. This screen helps decide whether options are a sensible expression path."
+      },
+      "leaps_bias": {
+        "score_0_to_100": 11.44,
+        "weighted_signals": {
+          "iv_cheapness": 0.12,
+          "surface_staleness": 0.09,
+          "pre_expiration_repricing_potential": 0.192,
+          "stock_vs_call_convexity_advantage": 0.12,
+          "long_dated_liquidity_quality": 0.05
+        },
+        "strongest_drivers": [
+          [
+            "pre_expiration_repricing_potential",
+            0.192
+          ],
+          [
+            "iv_cheapness",
+            0.12
+          ],
+          [
+            "stock_vs_call_convexity_advantage",
+            0.12
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "surface_staleness",
+            0.09
+          ],
+          [
+            "long_dated_liquidity_quality",
+            0.05
+          ]
+        ]
+      },
+      "stock_fit": {
+        "score_0_to_100": 79.96,
+        "weighted_signals": {
+          "market_accessibility": 0.39,
+          "implementation_simplicity": 0.516,
+          "balance_sheet_resilience": 0.56,
+          "dilution_risk_inverse": 0.48,
+          "thesis_linearity": 0.738,
+          "duration_tolerance": 0.858,
+          "listing_quality": 0.456
+        },
+        "strongest_drivers": [
+          [
+            "duration_tolerance",
+            0.858
+          ],
+          [
+            "thesis_linearity",
+            0.738
+          ],
+          [
+            "balance_sheet_resilience",
+            0.56
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "listing_quality",
+            0.456
+          ],
+          [
+            "market_accessibility",
+            0.39
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "asymmetry_bonus": 6.53,
+      "pick_score": 65.68,
+      "promotion_bonus": 12.49,
+      "ranking_score": 78.17,
+      "ranking_metadata": {
+        "expression_viability_rank": 1,
+        "promotion_rank": 2.0
+      }
+    },
+    {
+      "name": "SIVE promoted structural pick on CPO / Silicon Photonics Laser Supply",
+      "underlying": "SIVE",
+      "market_theme": "CPO / Silicon Photonics Laser Supply",
+      "promotion_status": "pick_candidate",
+      "promotion_score_0_to_100": 92.89,
+      "thesis": "Independent partner and ecosystem evidence suggests the market may still treat Sivers as a messy small Nordic photonics company even though it sits upstream of external-light-source architectures that are technically and commercially moving forward.",
+      "bottleneck_layer": "InP DFB Laser Production",
+      "value_capture_layer": "InP DFB Laser Production",
+      "why_missed": [
+        "market framing appears stale relative to the structural role",
+        "upstream supplier role is not obvious from headline narratives"
+      ],
+      "catalysts": [
+        "OFC 2025 Optical Scale-Up Demo",
+        "SIVE Debt Refinancing"
+      ],
+      "invalidations": [
+        "the partner confirmations fail to translate into meaningful shipped volume",
+        "external light source architecture adoption stalls or slips materially",
+        "Sivers remains unable to scale competitively despite the WIN path"
+      ],
+      "parse_evidence_summary": {
+        "total_sources": 5,
+        "evidence_sources": 5,
+        "high_quality_sources": 5,
+        "independent_sources": 3,
+        "company_driven_sources": 2,
+        "source_class_diversity": 3,
+        "source_classes": [
+          "company_release",
+          "supplier_customer_disclosure",
+          "technical_conference_material"
+        ],
+        "supporting_source_classes": [
+          "company_release",
+          "supplier_customer_disclosure",
+          "technical_conference_material"
+        ],
+        "entity_count": 17,
+        "relationship_count": 16,
+        "claim_count": 5,
+        "evidence_link_count": 22,
+        "inference_count": 1,
+        "evidence_links_per_claim": 4.4,
+        "process_layer_count": 2,
+        "event_count": 5,
+        "expression_count": 1,
+        "public_company_count": 3,
+        "related_company_count": 2,
+        "related_companies": [
+          "Ayar Labs",
+          "POET"
+        ],
+        "supplied_by_count": 2,
+        "depends_on_count": 2,
+        "constrained_by_count": 0,
+        "reprices_via_count": 2,
+        "affected_by_event_count": 4,
+        "part_of_count": 2,
+        "market_miss_confidence": "high",
+        "market_miss_confidence_score_0_to_100": 100.0,
+        "market_miss_derived_claim_count": 5,
+        "market_miss_derived_relationship_count": 11,
+        "catalyst_count": 2,
+        "invalidation_count": 3,
+        "statement": "Independent partner and ecosystem evidence suggests the market may still treat Sivers as a messy small Nordic photonics company even though it sits upstream of external-light-source architectures that are technically and commercially moving forward.",
+        "upstream_marker_score_0_to_100": 20.0,
+        "stale_frame_marker_score_0_to_100": 20.0,
+        "messy_small_marker_score_0_to_100": 60.0
+      },
+      "market_data_checks": {
+        "snapshot_count": 0,
+        "latest_snapshot_path": null,
+        "has_long_dated_options": false,
+        "quoted_contract_count": 0,
+        "liquid_contract_count": 0,
+        "best_open_interest": 0,
+        "best_relative_spread": null,
+        "best_implied_volatility": null,
+        "watchlist_entry_present": false,
+        "watchlist_option_symbol": null,
+        "watchlist_mid": null,
+        "watchlist_open_interest": null,
+        "watchlist_relative_spread": null,
+        "watchlist_implied_volatility": null,
+        "resale_scenario_count": 0,
+        "positive_resale_scenario_count": 0,
+        "positive_resale_scenario_ratio": 0.0,
+        "flat_iv_up_positive": false,
+        "best_bullish_return_pct": null,
+        "mean_bullish_return_pct": null,
+        "rescreen_candidate_count": 0,
+        "positive_rescreen_count": 0,
+        "best_bullish_excess_vs_stock_mean": null,
+        "best_same_capital_contract": null,
+        "long_dated_liquidity_quality_score_0_to_100": 0.0
+      },
+      "theme_equity_decomposition": null,
+      "asymmetry_signals": {
+        "ecosystem_centrality": 3.5,
+        "downstream_valuation_gap": 2.9,
+        "microcap_rerating_potential": 2.4
+      },
+      "mispricing": {
+        "candidate_name": "SIVE promoted structural pick on CPO / Silicon Photonics Laser Supply",
+        "score_type": "mispricing",
+        "score_0_to_100": 60.44,
+        "band": "moderate",
+        "weighted_signals": {
+          "hiddenness": 0.504,
+          "recognition_gap": 0.608,
+          "catalyst_clarity": 0.32,
+          "propagation_asymmetry": 0.42,
+          "duration_mismatch": 0.46,
+          "evidence_quality": 0.296,
+          "crowding_inverse": 0.18,
+          "valuation_nonlinearity": 0.234
+        },
+        "strongest_drivers": [
+          [
+            "recognition_gap",
+            0.608
+          ],
+          [
+            "hiddenness",
+            0.504
+          ],
+          [
+            "duration_mismatch",
+            0.46
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "crowding_inverse",
+            0.18
+          ],
+          [
+            "valuation_nonlinearity",
+            0.234
+          ]
+        ],
+        "explanation": "SIVE promoted structural pick on CPO / Silicon Photonics Laser Supply scores 60.4/100 (moderate) on mispricing plausibility. The strongest weighted drivers are recognition gap, hiddenness, duration mismatch. The least supportive signals are crowding inverse, valuation nonlinearity. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "SIVE promoted structural pick on CPO / Silicon Photonics Laser Supply",
+        "score_type": "options_fit",
+        "score_0_to_100": 41.12,
+        "band": "emerging",
+        "weighted_signals": {
+          "convexity_need": 0.45,
+          "tenor_alignment": 0.54,
+          "vol_expansion_potential": 0.468,
+          "downside_definedness": 0.168,
+          "liquidity_path": 0.06,
+          "implementation_simplicity": 0.05,
+          "catalyst_timing_specificity": 0.32
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.54
+          ],
+          [
+            "vol_expansion_potential",
+            0.468
+          ],
+          [
+            "convexity_need",
+            0.45
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "implementation_simplicity",
+            0.05
+          ],
+          [
+            "liquidity_path",
+            0.06
+          ]
+        ],
+        "explanation": "SIVE promoted structural pick on CPO / Silicon Photonics Laser Supply scores 41.1/100 (emerging) on options-expression fit. The strongest weighted drivers are tenor alignment, vol expansion potential, convexity need. The least supportive signals are implementation simplicity, liquidity path. This screen helps decide whether options are a sensible expression path."
+      },
+      "leaps_bias": {
+        "score_0_to_100": 11.44,
+        "weighted_signals": {
+          "iv_cheapness": 0.12,
+          "surface_staleness": 0.09,
+          "pre_expiration_repricing_potential": 0.192,
+          "stock_vs_call_convexity_advantage": 0.12,
+          "long_dated_liquidity_quality": 0.05
+        },
+        "strongest_drivers": [
+          [
+            "pre_expiration_repricing_potential",
+            0.192
+          ],
+          [
+            "iv_cheapness",
+            0.12
+          ],
+          [
+            "stock_vs_call_convexity_advantage",
+            0.12
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "surface_staleness",
+            0.09
+          ],
+          [
+            "long_dated_liquidity_quality",
+            0.05
+          ]
+        ]
+      },
+      "stock_fit": {
+        "score_0_to_100": 66.92,
+        "weighted_signals": {
+          "market_accessibility": 0.4,
+          "implementation_simplicity": 0.54,
+          "balance_sheet_resilience": 0.448,
+          "dilution_risk_inverse": 0.48,
+          "thesis_linearity": 0.486,
+          "duration_tolerance": 0.704,
+          "listing_quality": 0.288
+        },
+        "strongest_drivers": [
+          [
+            "duration_tolerance",
+            0.704
+          ],
+          [
+            "implementation_simplicity",
+            0.54
+          ],
+          [
+            "thesis_linearity",
+            0.486
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "market_accessibility",
+            0.4
+          ],
+          [
+            "listing_quality",
+            0.288
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "asymmetry_bonus": 6.23,
+      "pick_score": 58.27,
+      "promotion_bonus": 12.29,
+      "ranking_score": 70.56,
+      "ranking_metadata": {
+        "expression_viability_rank": 1,
+        "promotion_rank": 2.0
+      }
+    }
+  ]
+}

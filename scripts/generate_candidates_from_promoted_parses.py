@@ -133,6 +133,29 @@ def _extract_underlying(expression: Dict[str, Any] | None, structural_parse: Dic
     return "UNKNOWN"
 
 
+def _expression_for_underlying(
+    structural_parse: Dict[str, Any],
+    underlying: str,
+    preferred_expression_ids: Iterable[str] | None = None,
+) -> Dict[str, Any] | None:
+    expressions = _find_entities(structural_parse, "ExpressionCandidate")
+    if not expressions:
+        return None
+
+    preferred_ids = set(preferred_expression_ids or [])
+    if preferred_ids:
+        for expression in expressions:
+            if expression.get("entity_id") in preferred_ids:
+                return expression
+
+    preferred_name = f"Shares: {underlying}".lower()
+    for expression in expressions:
+        if expression.get("canonical_name", "").strip().lower() == preferred_name:
+            return expression
+
+    return _first_expression(structural_parse)
+
+
 def _choose_theme(structural_parse: Dict[str, Any], expression: Dict[str, Any] | None) -> str:
     entities = _entity_map(structural_parse)
     if expression:
@@ -263,6 +286,7 @@ def _parse_evidence_summary(
     underlying: str,
     catalysts: List[str],
     invalidations: List[str],
+    decomposition_entry: Dict[str, Any] | None = None,
 ) -> Dict[str, Any]:
     sources = list(source_bundle.get("sources", []))
     entities = list(structural_parse.get("entities", []))
@@ -323,7 +347,7 @@ def _parse_evidence_summary(
     confidence_score = {"low": 40.0, "medium": 70.0, "high": 100.0}.get(confidence, 40.0)
     statement = market_miss_detail.get("statement", "")
 
-    return {
+    summary = {
         "total_sources": total_sources,
         "evidence_sources": evidence_sources,
         "high_quality_sources": high_quality_sources,
@@ -370,6 +394,28 @@ def _parse_evidence_summary(
             ["messy", "small", "nordic", "undiscovered", "underfollowed"],
         ),
     }
+    if decomposition_entry:
+        summary.update(
+            {
+                "decomposition_company_role": decomposition_entry.get("company_role"),
+                "decomposition_linked_process_count": len(decomposition_entry.get("linked_process_layers", [])),
+                "decomposition_linked_component_count": len(decomposition_entry.get("linked_components", [])),
+                "decomposition_linked_material_count": len(decomposition_entry.get("linked_materials", [])),
+                "decomposition_supporting_claim_count": len(decomposition_entry.get("supporting_claim_ids", [])),
+                "decomposition_supporting_relationship_count": len(decomposition_entry.get("supporting_relationship_ids", [])),
+                "decomposition_market_miss_alignment_score_0_to_100": float(
+                    decomposition_entry.get("market_miss_alignment_score_0_to_100") or 0.0
+                ),
+                "decomposition_value_capture_alignment_score_0_to_100": float(
+                    decomposition_entry.get("value_capture_alignment_score_0_to_100") or 0.0
+                ),
+                "decomposition_expression_readiness_score_0_to_100": float(
+                    decomposition_entry.get("expression_readiness_score_0_to_100") or 0.0
+                ),
+                "decomposition_confidence": float(decomposition_entry.get("decomposition_confidence") or 0.0),
+            }
+        )
+    return summary
 
 
 def _iter_option_snapshot_paths(symbol: str) -> List[Path]:
@@ -570,12 +616,23 @@ def _build_signal_blocks(
     graduation: Dict[str, Any],
     parse_evidence_summary: Dict[str, Any],
     market_data_checks: Dict[str, Any],
+    decomposition_entry: Dict[str, Any] | None = None,
 ) -> Dict[str, Dict[str, float]]:
     source_mix = graduation["dimensions"]["source_mix"]["score_0_to_100"]
     structure_quality = graduation["dimensions"]["structure_quality"]["score_0_to_100"]
     market_miss_quality = graduation["dimensions"]["market_miss_quality"]["score_0_to_100"]
     expression_readiness = graduation["dimensions"]["expression_readiness"]["score_0_to_100"]
     statement = parse_evidence_summary["statement"]
+    decomposition_market_miss = float(
+        parse_evidence_summary.get("decomposition_market_miss_alignment_score_0_to_100") or 0.0
+    )
+    decomposition_value_capture = float(
+        parse_evidence_summary.get("decomposition_value_capture_alignment_score_0_to_100") or 0.0
+    )
+    decomposition_expression = float(
+        parse_evidence_summary.get("decomposition_expression_readiness_score_0_to_100") or 0.0
+    )
+    decomposition_confidence = float(parse_evidence_summary.get("decomposition_confidence") or 0.0)
 
     independent_ratio_score = _clamp(
         _ratio(parse_evidence_summary["independent_sources"], max(parse_evidence_summary["total_sources"], 1)) * 100.0
@@ -610,36 +667,42 @@ def _build_signal_blocks(
         market_miss_quality,
         parse_evidence_summary["upstream_marker_score_0_to_100"],
         parse_evidence_summary["messy_small_marker_score_0_to_100"],
+        decomposition_market_miss,
     ])
     recognition_gap_0_to_100 = _avg([
         market_miss_quality,
         parse_evidence_summary["market_miss_confidence_score_0_to_100"],
         parse_evidence_summary["stale_frame_marker_score_0_to_100"],
         parse_evidence_summary["upstream_marker_score_0_to_100"],
+        decomposition_market_miss,
     ])
     catalyst_clarity_0_to_100 = _avg([
         expression_readiness,
         event_richness,
         repricing_path,
         _score_from_counts(parse_evidence_summary["catalyst_count"], 4),
+        decomposition_expression,
     ])
     propagation_asymmetry_0_to_100 = _avg([
         structure_quality,
         dependency_density,
         process_depth,
         related_company_score,
+        decomposition_value_capture,
     ])
     duration_mismatch_0_to_100 = _avg([
         recognition_gap_0_to_100,
         structure_quality,
         catalyst_clarity_0_to_100,
         parse_evidence_summary["market_miss_confidence_score_0_to_100"],
+        decomposition_confidence,
     ])
     evidence_quality_0_to_100 = _avg([
         source_mix,
         evidence_density,
         _score_from_counts(parse_evidence_summary["claim_count"], 6),
         _score_from_counts(parse_evidence_summary["high_quality_sources"], max(parse_evidence_summary["total_sources"], 1)),
+        decomposition_confidence,
     ])
     crowding_inverse_0_to_100 = _avg([
         hiddenness_0_to_100,
@@ -652,6 +715,7 @@ def _build_signal_blocks(
         related_company_score,
         parse_evidence_summary["upstream_marker_score_0_to_100"],
         transformation_marker_score,
+        decomposition_market_miss,
     ])
 
     hiddenness_0_to_100 = max(hiddenness_0_to_100, market_miss_quality * 0.45)
@@ -733,6 +797,7 @@ def _build_signal_blocks(
         source_mix,
         80.0 if "refinanc" in statement.lower() else 65.0,
         100.0 - invalidation_penalty,
+        decomposition_confidence,
     ])
     dilution_risk_inverse_0_to_100 = _avg([
         100.0 - _keyword_hits(
@@ -744,15 +809,18 @@ def _build_signal_blocks(
     thesis_linearity_0_to_100 = _avg([
         propagation_asymmetry_0_to_100,
         _score_from_counts(parse_evidence_summary["public_company_count"], 2),
+        decomposition_value_capture,
     ])
     duration_tolerance_0_to_100 = _avg([
         source_mix,
         parse_evidence_summary["market_miss_confidence_score_0_to_100"],
         catalyst_clarity_0_to_100,
+        decomposition_confidence,
     ])
     listing_quality_0_to_100 = _avg([
         90.0 if market_data_checks["snapshot_count"] > 0 else 65.0,
         80.0 if parse_evidence_summary["public_company_count"] > 0 else 0.0,
+        decomposition_expression,
     ])
 
     iv_cheapness_0_to_100 = _avg([
@@ -830,11 +898,13 @@ def _build_signal_blocks(
     }
 
 
-def _candidate_name(underlying: str, theme: str, graduation_status: str) -> str:
+def _candidate_name(underlying: str, theme: str, graduation_status: str, company_role: str | None = None) -> str:
     suffix = {
         "pick_candidate": "promoted structural pick",
         "watchlist_candidate": "structural watchlist",
     }.get(graduation_status, "structural thesis")
+    if company_role:
+        return f"{underlying} {company_role} {suffix} on {theme}"
     return f"{underlying} {suffix} on {theme}"
 
 
@@ -842,12 +912,25 @@ def build_candidate_row(
     source_bundle: Dict[str, Any],
     structural_parse: Dict[str, Any],
     graduation: Dict[str, Any],
+    decomposition_entry: Dict[str, Any] | None = None,
 ) -> Dict[str, Any]:
-    expression = _first_expression(structural_parse)
-    underlying = _extract_underlying(expression, structural_parse)
-    theme = _choose_theme(structural_parse, expression)
-    bottleneck_layer = _choose_bottleneck_layer(structural_parse, underlying)
-    value_capture_layer = _choose_value_capture_layer(structural_parse, underlying)
+    if decomposition_entry:
+        underlying = decomposition_entry["underlying"]
+        expression = _expression_for_underlying(
+            structural_parse,
+            underlying,
+            preferred_expression_ids=decomposition_entry.get("direct_expression_ids", []),
+        )
+        theme = decomposition_entry.get("theme") or _choose_theme(structural_parse, expression)
+        linked_process_layers = list(decomposition_entry.get("linked_process_layers", []))
+        bottleneck_layer = linked_process_layers[0] if linked_process_layers else _choose_bottleneck_layer(structural_parse, underlying)
+        value_capture_layer = linked_process_layers[0] if linked_process_layers else _choose_value_capture_layer(structural_parse, underlying)
+    else:
+        expression = _first_expression(structural_parse)
+        underlying = _extract_underlying(expression, structural_parse)
+        theme = _choose_theme(structural_parse, expression)
+        bottleneck_layer = _choose_bottleneck_layer(structural_parse, underlying)
+        value_capture_layer = _choose_value_capture_layer(structural_parse, underlying)
     thesis = _market_miss_statement(structural_parse)
     catalysts = _choose_catalysts(structural_parse, expression)
     invalidations = _choose_invalidations(graduation, structural_parse)
@@ -862,6 +945,7 @@ def build_candidate_row(
         underlying,
         catalysts,
         invalidations,
+        decomposition_entry=decomposition_entry,
     )
     market_data_checks = _market_data_checks(underlying)
     signal_blocks = _build_signal_blocks(
@@ -870,6 +954,7 @@ def build_candidate_row(
         graduation,
         parse_evidence_summary,
         market_data_checks,
+        decomposition_entry=decomposition_entry,
     )
     time_horizon = "12-24m"
     preferred_expression = expression.get("attributes", {}).get("expression_type") if expression else None
@@ -879,7 +964,12 @@ def build_candidate_row(
         mispricing_type = "hidden_bottleneck"
 
     return {
-        "name": _candidate_name(underlying, theme or bottleneck_layer or "theme", graduation["graduation_status"]),
+        "name": _candidate_name(
+            underlying,
+            theme or bottleneck_layer or "theme",
+            graduation["graduation_status"],
+            company_role=(decomposition_entry or {}).get("company_role"),
+        ),
         "market_theme": theme,
         "thesis": thesis,
         "underlying": underlying,
@@ -893,12 +983,14 @@ def build_candidate_row(
         "invalidations": invalidations,
         "promotion_status": graduation["graduation_status"],
         "promotion_score_0_to_100": graduation["weighted_score_0_to_100"],
+        "theme_equity_decomposition": decomposition_entry,
         "parse_evidence_summary": parse_evidence_summary,
         "market_data_checks": market_data_checks,
         **signal_blocks,
         "notes": [
             "Auto-generated from promoted structural parse.",
             f"Promotion status: {graduation['graduation_status']}.",
+            *(([decomposition_entry["candidate_summary"]] if decomposition_entry and decomposition_entry.get("candidate_summary") else [])),
             (
                 "Local options-chain evidence detected."
                 if market_data_checks["has_long_dated_options"]
@@ -929,6 +1021,16 @@ def main() -> int:
         graduation = _load_json(Path(item["graduation"]))
         if not _status_allowed(graduation["graduation_status"], args.min_status):
             continue
+        decomposition_payload = None
+        if item.get("theme_equity_decomposition"):
+            decomposition_payload = _load_json(Path(item["theme_equity_decomposition"]))
+
+        decomposition_rows = list((decomposition_payload or {}).get("rows", []))
+        if decomposition_rows:
+            for decomposition_entry in decomposition_rows:
+                rows.append(build_candidate_row(source_bundle, structural_parse, graduation, decomposition_entry=decomposition_entry))
+            continue
+
         rows.append(build_candidate_row(source_bundle, structural_parse, graduation))
 
     output = {
