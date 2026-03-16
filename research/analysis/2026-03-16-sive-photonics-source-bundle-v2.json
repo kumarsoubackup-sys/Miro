@@ -1,0 +1,636 @@
+{
+  "name": "sive_photonics_source_bundle_v2",
+  "theme": "cpo_silicon_photonics_laser_supply",
+  "notes": [
+    "This bundle is a calibration pass on the SIVE thesis rather than a default promotion attempt.",
+    "The objective is to test whether adding a small amount of independent ecosystem corroboration upgrades SIVE from watchlist_candidate to pick_candidate.",
+    "The source mix intentionally includes partner disclosures and technical conference relevance, not only Sivers-originated company releases."
+  ],
+  "sources": [
+    {
+      "source_id": "src_poet_sivers_collaboration_2025_09_29",
+      "source_class": "supplier_customer_disclosure",
+      "title": "POET Technologies and Sivers Semiconductors Collaborate on External Light Sources for Co-Packaged Optics and Next-Generation AI Market",
+      "canonical_url": "https://www.poet-technologies.com/news/poet-technologies-and-sivers-semiconductors-collaborate-on-external-light-sources-for-co-packaged-optics-and-next-generation-ai-market",
+      "publisher": "POET Technologies",
+      "published_at": "2025-09-29T00:00:00Z",
+      "retrieved_at": "2026-03-16T00:00:00Z",
+      "language": "en",
+      "jurisdiction": "global",
+      "ticker_refs": [
+        "SIVE",
+        "POET"
+      ],
+      "theme_refs": [
+        "cpo_silicon_photonics_laser_supply",
+        "external_light_sources",
+        "ai_datacenter_optics"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.86,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Independent partner disclosure confirming the Sivers-POET external light source collaboration and customer prototype timeline."
+      ]
+    },
+    {
+      "source_id": "src_ayar_ecosystem_sivers_2026",
+      "source_class": "supplier_customer_disclosure",
+      "title": "Collaborations & Ecosystem",
+      "canonical_url": "https://ayarlabs.com/collaborations-ecosystem/",
+      "publisher": "Ayar Labs",
+      "published_at": "",
+      "retrieved_at": "2026-03-16T00:00:00Z",
+      "language": "en",
+      "jurisdiction": "global",
+      "ticker_refs": [
+        "SIVE"
+      ],
+      "theme_refs": [
+        "cpo_silicon_photonics_laser_supply",
+        "optical_io",
+        "ai_datacenter_optics"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.88,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Independent ecosystem page explicitly naming Sivers as a supply chain partner for Ayar's optical I/O solution."
+      ]
+    },
+    {
+      "source_id": "src_ayar_ofc_ucie_2025_03_31",
+      "source_class": "technical_conference_material",
+      "title": "Ayar Labs Unveils World's First UCIe Optical Chiplet for AI Scale-Up Architectures",
+      "canonical_url": "https://ayarlabs.com/news/ayar-labs-unveils-worlds-first-ucie-optical-chiplet-for-ai-scale-up-architectures/",
+      "publisher": "Ayar Labs",
+      "published_at": "2025-03-31T00:00:00Z",
+      "retrieved_at": "2026-03-16T00:00:00Z",
+      "language": "en",
+      "jurisdiction": "global",
+      "ticker_refs": [],
+      "theme_refs": [
+        "cpo_silicon_photonics_laser_supply",
+        "optical_io",
+        "ai_scale_up_architectures"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.84,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Technical conference-linked source demonstrating that Ayar's SuperNova external light source architecture is already being shown in AI scale-up contexts."
+      ]
+    },
+    {
+      "source_id": "src_sive_win_2025_03_25",
+      "source_class": "company_release",
+      "title": "Sivers collaborates with WIN Semiconductor to scale high-volume DFB laser production",
+      "canonical_url": "https://www.sivers-semiconductors.com/press/sivers-semiconductors-announces-collaboration-with-win-semiconductor-to-scale-high-volume-dfb-laser-production/",
+      "publisher": "Sivers Semiconductors",
+      "published_at": "2025-03-25T00:00:00Z",
+      "retrieved_at": "2026-03-16T00:00:00Z",
+      "language": "en",
+      "jurisdiction": "Taiwan",
+      "ticker_refs": [
+        "SIVE"
+      ],
+      "theme_refs": [
+        "cpo_silicon_photonics_laser_supply",
+        "dfb_laser_capacity",
+        "manufacturing_scale"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.81,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Official manufacturing-scale source for Sivers' DFB laser platform."
+      ]
+    },
+    {
+      "source_id": "src_sive_refi_2026_02_24",
+      "source_class": "company_release",
+      "title": "Sivers refinances group debt facilities with Bootstrap Europe",
+      "canonical_url": "https://www.sivers-semiconductors.com/press/sivers-semiconductors-refinances-group-debt-facilities-with-bootstrap-europe-to-strengthen-capital-structure/",
+      "publisher": "Sivers Semiconductors",
+      "published_at": "2026-02-24T00:00:00Z",
+      "retrieved_at": "2026-03-16T00:00:00Z",
+      "language": "en",
+      "jurisdiction": "global",
+      "ticker_refs": [
+        "SIVE"
+      ],
+      "theme_refs": [
+        "cpo_silicon_photonics_laser_supply",
+        "capital_structure_cleanup"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.8,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Official source for the debt-refinancing cleanup and survivability improvement."
+      ]
+    }
+  ],
+  "fragments": [
+    {
+      "fragment_id": "frag_sive_poet_independent_partner_confirmation_v2",
+      "source_id": "src_poet_sivers_collaboration_2025_09_29",
+      "fragment_type": "partner_release_excerpt",
+      "section_label": "POET external light source collaboration",
+      "excerpt": "POET says it is collaborating with Sivers to develop external light source modules for co-packaged optics and next-generation AI infrastructure, combining Sivers' DFB laser technology with POET's optical interposer platform and targeting prototype delivery in H1 2026 with production readiness by end-2026.",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "CPO / Silicon Photonics Laser Supply"
+        ],
+        "systems": [
+          "AI Datacenter Optical I/O"
+        ],
+        "subsystems": [
+          "External Light Source"
+        ],
+        "components": [
+          "InP DFB Laser Array"
+        ],
+        "process_layers": [
+          "InP DFB Laser Production",
+          "Optical Light Engine Integration"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Theme",
+          "canonical_name": "CPO / Silicon Photonics Laser Supply",
+          "confidence": "high"
+        },
+        {
+          "entity_type": "System",
+          "canonical_name": "AI Datacenter Optical I/O",
+          "confidence": "high"
+        },
+        {
+          "entity_type": "Subsystem",
+          "canonical_name": "External Light Source",
+          "confidence": "high"
+        },
+        {
+          "entity_type": "Component",
+          "canonical_name": "InP DFB Laser Array",
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "InP DFB Laser Production",
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Optical Light Engine Integration",
+          "confidence": "high"
+        },
+        {
+          "entity_type": "Event",
+          "canonical_name": "POET-Sivers ELS Prototype Path",
+          "attributes": {
+            "event_type": "prototype_to_production_timeline"
+          },
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "els_part_of_optical_io_v2",
+          "relationship_type": "PART_OF",
+          "source_type": "Subsystem",
+          "source_name": "External Light Source",
+          "target_type": "System",
+          "target_name": "AI Datacenter Optical I/O",
+          "relationship_strength": "high",
+          "causal_role": "critical_subsystem",
+          "confidence": "high"
+        },
+        {
+          "key": "dfb_part_of_els_v2",
+          "relationship_type": "PART_OF",
+          "source_type": "Component",
+          "source_name": "InP DFB Laser Array",
+          "target_type": "Subsystem",
+          "target_name": "External Light Source",
+          "relationship_strength": "high",
+          "causal_role": "critical_component",
+          "confidence": "high"
+        },
+        {
+          "key": "dfb_depends_on_production_v2",
+          "relationship_type": "DEPENDS_ON",
+          "source_type": "Component",
+          "source_name": "InP DFB Laser Array",
+          "target_type": "ProcessLayer",
+          "target_name": "InP DFB Laser Production",
+          "relationship_strength": "high",
+          "causal_role": "qualified_supply_layer",
+          "confidence": "high"
+        },
+        {
+          "key": "light_engine_depends_on_dfb_production_v2",
+          "relationship_type": "DEPENDS_ON",
+          "source_type": "ProcessLayer",
+          "source_name": "Optical Light Engine Integration",
+          "target_type": "ProcessLayer",
+          "target_name": "InP DFB Laser Production",
+          "relationship_strength": "high",
+          "causal_role": "upstream_dependency",
+          "confidence": "high"
+        },
+        {
+          "key": "dfb_production_supplied_by_sive_v2",
+          "relationship_type": "SUPPLIED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "InP DFB Laser Production",
+          "target_type": "PublicCompany",
+          "target_name": "SIVE",
+          "relationship_strength": "high",
+          "causal_role": "listed_exposure",
+          "confidence": "high"
+        },
+        {
+          "key": "light_engine_integration_supplied_by_poet_v2",
+          "relationship_type": "SUPPLIED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Optical Light Engine Integration",
+          "target_type": "PublicCompany",
+          "target_name": "POET",
+          "relationship_strength": "high",
+          "causal_role": "downstream_partner",
+          "confidence": "high"
+        },
+        {
+          "key": "dfb_production_affected_by_poet_partner_timeline_v2",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "InP DFB Laser Production",
+          "target_type": "Event",
+          "target_name": "POET-Sivers ELS Prototype Path",
+          "relationship_strength": "high",
+          "causal_role": "commercialization_timeline",
+          "confidence": "high"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_sive_upstream_to_poet_v2",
+          "claim_type": "supplier_or_customer_relationship",
+          "claim_text": "Independent partner disclosure confirms that Sivers' InP DFB lasers sit upstream of POET's external light source and light-engine integration path for AI infrastructure.",
+          "claim_status": "supported",
+          "claim_kind": "factual",
+          "confidence": "high",
+          "entity_names": [
+            "SIVE",
+            "POET",
+            "InP DFB Laser Production",
+            "Optical Light Engine Integration",
+            "External Light Source"
+          ],
+          "relationship_keys": [
+            "els_part_of_optical_io_v2",
+            "dfb_part_of_els_v2",
+            "light_engine_depends_on_dfb_production_v2",
+            "dfb_production_supplied_by_sive_v2",
+            "light_engine_integration_supplied_by_poet_v2"
+          ]
+        }
+      ]
+    },
+    {
+      "fragment_id": "frag_sive_ayar_independent_supply_chain_confirmation_v2",
+      "source_id": "src_ayar_ecosystem_sivers_2026",
+      "fragment_type": "ecosystem_page_excerpt",
+      "section_label": "Ayar supply chain confirmation",
+      "excerpt": "Ayar Labs lists Sivers as a supply chain partner and says Sivers develops CW-WDM-MSA-compliant eight-wavelength DFB laser arrays for Ayar's optical I/O solution.",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "subsystems": [
+          "External Light Source"
+        ],
+        "components": [
+          "InP DFB Laser Array"
+        ],
+        "process_layers": [
+          "InP DFB Laser Production"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Ayar Supply Chain Partnership",
+          "attributes": {
+            "event_type": "supply_chain_partner_confirmation"
+          },
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "dfb_production_qualified_by_ayar_v2",
+          "relationship_type": "QUALIFIED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "InP DFB Laser Production",
+          "target_type": "PublicCompany",
+          "target_name": "Ayar Labs",
+          "relationship_strength": "high",
+          "causal_role": "named_supply_chain_partner",
+          "confidence": "high"
+        },
+        {
+          "key": "dfb_production_affected_by_ayar_partner_event_v2",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "InP DFB Laser Production",
+          "target_type": "Event",
+          "target_name": "Ayar Supply Chain Partnership",
+          "relationship_strength": "high",
+          "causal_role": "ecosystem_confirmation",
+          "confidence": "high"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_sive_named_in_ayar_supply_chain_v2",
+          "claim_type": "supplier_or_customer_relationship",
+          "claim_text": "Ayar independently names Sivers as a supply chain partner for its optical I/O solution, strengthening the case that Sivers is a real ecosystem node rather than only self-described.",
+          "claim_status": "supported",
+          "claim_kind": "factual",
+          "confidence": "high",
+          "entity_names": [
+            "SIVE",
+            "Ayar Labs",
+            "InP DFB Laser Production",
+            "Ayar Supply Chain Partnership"
+          ],
+          "relationship_keys": [
+            "dfb_production_qualified_by_ayar_v2",
+            "dfb_production_affected_by_ayar_partner_event_v2"
+          ]
+        }
+      ]
+    },
+    {
+      "fragment_id": "frag_ayar_ofc_external_light_source_relevance_v2",
+      "source_id": "src_ayar_ofc_ucie_2025_03_31",
+      "fragment_type": "conference_excerpt",
+      "section_label": "OFC 2025 technical relevance",
+      "excerpt": "At OFC 2025, Ayar said its UCIe optical chiplet for AI scale-up is powered by the SuperNova multiwavelength light source and highlighted a Jabil external laser source array design for petabit-scale bandwidth.",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "systems": [
+          "AI Scale-Up Architecture"
+        ],
+        "subsystems": [
+          "External Light Source"
+        ],
+        "events": [
+          "OFC 2025 Optical Scale-Up Demo"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "System",
+          "canonical_name": "AI Scale-Up Architecture",
+          "confidence": "high"
+        },
+        {
+          "entity_type": "Event",
+          "canonical_name": "OFC 2025 Optical Scale-Up Demo",
+          "attributes": {
+            "event_type": "technical_demonstration"
+          },
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "els_used_in_ai_scaleup_v2",
+          "relationship_type": "USED_IN",
+          "source_type": "Subsystem",
+          "source_name": "External Light Source",
+          "target_type": "System",
+          "target_name": "AI Scale-Up Architecture",
+          "relationship_strength": "high",
+          "causal_role": "technical_architecture_relevance",
+          "confidence": "high"
+        },
+        {
+          "key": "theme_affected_by_ofc_demo_v2",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "Theme",
+          "source_name": "CPO / Silicon Photonics Laser Supply",
+          "target_type": "Event",
+          "target_name": "OFC 2025 Optical Scale-Up Demo",
+          "relationship_strength": "medium",
+          "causal_role": "technical_validation",
+          "confidence": "high"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_els_architecture_is_live_technical_path_v2",
+          "claim_type": "demand_acceleration",
+          "claim_text": "External light source architecture is no longer only conceptual; it is being demonstrated in AI scale-up contexts with named ecosystem designs and technical bandwidth targets.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "high",
+          "entity_names": [
+            "External Light Source",
+            "AI Scale-Up Architecture",
+            "OFC 2025 Optical Scale-Up Demo"
+          ],
+          "relationship_keys": [
+            "els_used_in_ai_scaleup_v2",
+            "theme_affected_by_ofc_demo_v2"
+          ]
+        }
+      ]
+    },
+    {
+      "fragment_id": "frag_sive_win_manufacturing_scale_v2",
+      "source_id": "src_sive_win_2025_03_25",
+      "fragment_type": "company_release_excerpt",
+      "section_label": "Manufacturing scale path",
+      "excerpt": "Sivers says the WIN Semiconductor collaboration is intended to scale high-volume DFB laser production, giving the thesis a manufacturing path rather than only a design win story.",
+      "contains_claim_candidate": true,
+      "entity_hints": [
+        {
+          "entity_type": "Facility",
+          "canonical_name": "WIN DFB Manufacturing Capacity",
+          "confidence": "high"
+        },
+        {
+          "entity_type": "Event",
+          "canonical_name": "WIN High-Volume Manufacturing Collaboration",
+          "attributes": {
+            "event_type": "capacity_scale"
+          },
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "win_capacity_expands_dfb_production_v2",
+          "relationship_type": "EXPANDS_CAPACITY_FOR",
+          "source_type": "Facility",
+          "source_name": "WIN DFB Manufacturing Capacity",
+          "target_type": "ProcessLayer",
+          "target_name": "InP DFB Laser Production",
+          "relationship_strength": "high",
+          "causal_role": "outsourced_scale_path",
+          "confidence": "high"
+        },
+        {
+          "key": "dfb_production_affected_by_win_collaboration_v2",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "InP DFB Laser Production",
+          "target_type": "Event",
+          "target_name": "WIN High-Volume Manufacturing Collaboration",
+          "relationship_strength": "high",
+          "causal_role": "capacity_scale",
+          "confidence": "high"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_sive_has_capacity_scale_path_v2",
+          "claim_type": "capacity_expansion_or_ramp",
+          "claim_text": "Sivers has a credible outsourced capacity path for high-volume DFB laser production through WIN Semiconductor.",
+          "claim_status": "supported",
+          "claim_kind": "factual",
+          "confidence": "high",
+          "entity_names": [
+            "SIVE",
+            "InP DFB Laser Production",
+            "WIN DFB Manufacturing Capacity",
+            "WIN High-Volume Manufacturing Collaboration"
+          ],
+          "relationship_keys": [
+            "win_capacity_expands_dfb_production_v2",
+            "dfb_production_affected_by_win_collaboration_v2"
+          ]
+        }
+      ]
+    },
+    {
+      "fragment_id": "frag_sive_balance_sheet_cleanup_v2",
+      "source_id": "src_sive_refi_2026_02_24",
+      "fragment_type": "company_release_excerpt",
+      "section_label": "Balance-sheet cleanup",
+      "excerpt": "Sivers refinanced its debt stack, reducing one of the cleanest objections to the thesis and making the equity more capable of participating in a rerating if optical I/O progress continues.",
+      "contains_claim_candidate": true,
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "SIVE Debt Refinancing",
+          "attributes": {
+            "event_type": "capital_structure_cleanup"
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ExpressionCandidate",
+          "canonical_name": "Shares: SIVE",
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "shares_sive_for_theme_v2",
+          "relationship_type": "CANDIDATE_EXPRESSION_FOR",
+          "source_type": "ExpressionCandidate",
+          "source_name": "Shares: SIVE",
+          "target_type": "Theme",
+          "target_name": "CPO / Silicon Photonics Laser Supply",
+          "relationship_strength": "high",
+          "causal_role": "listed_expression",
+          "confidence": "high"
+        },
+        {
+          "key": "shares_sive_reprices_via_refi_v2",
+          "relationship_type": "REPRICES_VIA",
+          "source_type": "ExpressionCandidate",
+          "source_name": "Shares: SIVE",
+          "target_type": "Event",
+          "target_name": "SIVE Debt Refinancing",
+          "relationship_strength": "high",
+          "causal_role": "balance_sheet_cleanup",
+          "confidence": "high"
+        },
+        {
+          "key": "shares_sive_reprices_via_ofc_v2",
+          "relationship_type": "REPRICES_VIA",
+          "source_type": "ExpressionCandidate",
+          "source_name": "Shares: SIVE",
+          "target_type": "Event",
+          "target_name": "OFC 2025 Optical Scale-Up Demo",
+          "relationship_strength": "medium",
+          "causal_role": "technical_validation",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_sive_balance_sheet_cleanup_v2",
+          "claim_type": "valuation_gap_assertion",
+          "claim_text": "The refinancing reduces one of the obvious reasons the market might dismiss Sivers as too financially messy to re-rate.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "high",
+          "entity_names": [
+            "SIVE",
+            "SIVE Debt Refinancing",
+            "Shares: SIVE"
+          ],
+          "relationship_keys": [
+            "shares_sive_reprices_via_refi_v2"
+          ]
+        }
+      ],
+      "inference_candidates": [
+        {
+          "inference_key": "inf_sive_hidden_upstream_rerating_v2",
+          "inference_type": "market_miss",
+          "statement": "Independent partner and ecosystem evidence suggests the market may still treat Sivers as a messy small Nordic photonics company even though it sits upstream of external-light-source architectures that are technically and commercially moving forward.",
+          "claim_keys": [
+            "claim_sive_upstream_to_poet_v2",
+            "claim_sive_named_in_ayar_supply_chain_v2",
+            "claim_els_architecture_is_live_technical_path_v2",
+            "claim_sive_has_capacity_scale_path_v2",
+            "claim_sive_balance_sheet_cleanup_v2"
+          ],
+          "relationship_keys": [
+            "dfb_part_of_els_v2",
+            "dfb_depends_on_production_v2",
+            "light_engine_depends_on_dfb_production_v2",
+            "dfb_production_supplied_by_sive_v2",
+            "light_engine_integration_supplied_by_poet_v2",
+            "dfb_production_qualified_by_ayar_v2",
+            "els_used_in_ai_scaleup_v2",
+            "dfb_production_affected_by_win_collaboration_v2",
+            "shares_sive_for_theme_v2",
+            "shares_sive_reprices_via_refi_v2",
+            "shares_sive_reprices_via_ofc_v2"
+          ],
+          "confidence": "high",
+          "falsifiers": [
+            "the partner confirmations fail to translate into meaningful shipped volume",
+            "external light source architecture adoption stalls or slips materially",
+            "Sivers remains unable to scale competitively despite the WIN path"
+          ]
+        }
+      ]
+    }
+  ]
+}

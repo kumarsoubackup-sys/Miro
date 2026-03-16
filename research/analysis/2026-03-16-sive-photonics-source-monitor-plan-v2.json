@@ -1,0 +1,428 @@
+{
+  "monitor_plan_version": "v1",
+  "generated_at": "2026-03-16T16:00:54.093485+00:00",
+  "project_name": "sive_photonics_source_bundle_v2",
+  "task_count": 20,
+  "summary": {
+    "automation_readiness": {
+      "web_monitor_ready": 18,
+      "automatable_now": 2
+    },
+    "cadence_buckets": {
+      "monthly": 6,
+      "event_driven": 7,
+      "daily": 7
+    },
+    "next_actions": {
+      "add_event_watch": 11,
+      "run_local_capture": 2,
+      "add_periodic_watch": 7
+    }
+  },
+  "tasks": [
+    {
+      "source_target_id": "src_target_advanced_photonics_coalition",
+      "name": "Advanced Photonics Coalition",
+      "source_class": "industry_body_and_standards",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "monthly",
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_designcon",
+      "name": "DesignCon",
+      "source_class": "technical_conference_material",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "event_driven",
+      "expected_artifact_types": [
+        "conference_slide",
+        "talk_abstract",
+        "ecosystem_demo"
+      ],
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_leaps_watchlist_refresh_workflow",
+      "name": "LEAPS watchlist refresh workflow",
+      "source_class": "market_data_snapshot",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "local_workflow",
+      "automation_readiness": "automatable_now",
+      "next_action": "run_local_capture",
+      "cadence_bucket": "daily",
+      "expected_artifact_types": [
+        "price_snapshot",
+        "options_chain",
+        "liquidity_check"
+      ],
+      "reasons": [
+        "priority tier P1",
+        "targets equities, options, ai_infrastructure",
+        "helps validate stock-vs-LEAPS expression quality"
+      ]
+    },
+    {
+      "source_target_id": "src_target_global_electronics_association",
+      "name": "Global Electronics Association",
+      "source_class": "industry_body_and_standards",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "monthly",
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_heterogeneous_integration_roadmap_ieee_eps",
+      "name": "Heterogeneous Integration Roadmap (IEEE EPS)",
+      "source_class": "industry_body_and_standards",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "monthly",
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_dvcon",
+      "name": "DVCon",
+      "source_class": "technical_conference_material",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "event_driven",
+      "expected_artifact_types": [
+        "conference_slide",
+        "talk_abstract",
+        "ecosystem_demo"
+      ],
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_ieee_symposium_on_vlsi_technology_circuits",
+      "name": "IEEE Symposium on VLSI Technology & Circuits",
+      "source_class": "technical_conference_material",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "event_driven",
+      "expected_artifact_types": [
+        "conference_slide",
+        "talk_abstract",
+        "ecosystem_demo"
+      ],
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_public_delayed_options_chain_capture_workflow",
+      "name": "Public delayed options chain capture workflow",
+      "source_class": "market_data_snapshot",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "local_workflow",
+      "automation_readiness": "automatable_now",
+      "next_action": "run_local_capture",
+      "cadence_bucket": "daily",
+      "expected_artifact_types": [
+        "price_snapshot",
+        "options_chain",
+        "liquidity_check"
+      ],
+      "reasons": [
+        "priority tier P1",
+        "targets equities, options, ai_infrastructure",
+        "helps validate stock-vs-LEAPS expression quality"
+      ]
+    },
+    {
+      "source_target_id": "src_target_mckinsey_on_semiconductors",
+      "name": "McKinsey on Semiconductors",
+      "source_class": "trade_press_specialist",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_periodic_watch",
+      "cadence_bucket": "daily",
+      "expected_artifact_types": [
+        "trade_article",
+        "industry_analysis",
+        "specialist_summary"
+      ],
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_photonics21_reports",
+      "name": "Photonics21 Reports",
+      "source_class": "trade_press_specialist",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_periodic_watch",
+      "cadence_bucket": "daily",
+      "expected_artifact_types": [
+        "trade_article",
+        "industry_analysis",
+        "specialist_summary"
+      ],
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_ieee_standards_association",
+      "name": "IEEE Standards Association",
+      "source_class": "industry_body_and_standards",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "monthly",
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_international_energy_agency_iea",
+      "name": "International Energy Agency (IEA)",
+      "source_class": "industry_body_and_standards",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "monthly",
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_international_conference_on_frontiers_of_characterization_and_metrology_for_nanoelectronics_fcmn",
+      "name": "International Conference on Frontiers of Characterization and Metrology for Nanoelectronics (FCMN)",
+      "source_class": "technical_conference_material",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "event_driven",
+      "expected_artifact_types": [
+        "conference_slide",
+        "talk_abstract",
+        "ecosystem_demo"
+      ],
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_international_electron_devices_meeting_iedm",
+      "name": "International Electron Devices Meeting (IEDM)",
+      "source_class": "technical_conference_material",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "event_driven",
+      "expected_artifact_types": [
+        "conference_slide",
+        "talk_abstract",
+        "ecosystem_demo"
+      ],
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_sec_edgar_database_10_k_10_q_8_k_20_f",
+      "name": "SEC EDGAR Database (10-K, 10-Q, 8-K, 20-F)",
+      "source_class": "company_filing",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_periodic_watch",
+      "cadence_bucket": "daily",
+      "expected_artifact_types": [
+        "filing",
+        "annual_report",
+        "quarterly_report",
+        "material_event"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics"
+      ]
+    },
+    {
+      "source_target_id": "src_target_semiconductor_engineering",
+      "name": "Semiconductor Engineering",
+      "source_class": "trade_press_specialist",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_periodic_watch",
+      "cadence_bucket": "daily",
+      "expected_artifact_types": [
+        "trade_article",
+        "industry_analysis",
+        "specialist_summary"
+      ],
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_semiconductor_today",
+      "name": "Semiconductor Today",
+      "source_class": "trade_press_specialist",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_periodic_watch",
+      "cadence_bucket": "daily",
+      "expected_artifact_types": [
+        "trade_article",
+        "industry_analysis",
+        "specialist_summary"
+      ],
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_company_bond_prospectuses",
+      "name": "Company bond prospectuses",
+      "source_class": "credit_debt_financing",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_periodic_watch",
+      "cadence_bucket": "event_driven",
+      "expected_artifact_types": [
+        "debt_filing",
+        "rating_note",
+        "prospectus"
+      ],
+      "reasons": [
+        "priority tier P2",
+        "targets equities, ai_infrastructure, photonics"
+      ]
+    },
+    {
+      "source_target_id": "src_target_debt_refinancing_and_shelf_registrations",
+      "name": "Debt refinancing and shelf registrations",
+      "source_class": "credit_debt_financing",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_periodic_watch",
+      "cadence_bucket": "event_driven",
+      "expected_artifact_types": [
+        "debt_filing",
+        "rating_note",
+        "prospectus"
+      ],
+      "reasons": [
+        "priority tier P2",
+        "targets equities, ai_infrastructure, photonics"
+      ]
+    },
+    {
+      "source_target_id": "src_target_jedec",
+      "name": "JEDEC",
+      "source_class": "industry_body_and_standards",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "monthly",
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    }
+  ]
+}

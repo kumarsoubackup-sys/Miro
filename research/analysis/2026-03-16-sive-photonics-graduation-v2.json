@@ -1,0 +1,81 @@
+{
+  "graduation_status": "pick_candidate",
+  "weighted_score_0_to_100": 92.89,
+  "gates": {
+    "source_gate": true,
+    "structure_gate": true,
+    "market_miss_gate": true,
+    "expression_gate": true,
+    "high_conviction_source_gate": true
+  },
+  "dimensions": {
+    "source_mix": {
+      "score_0_to_100": 90.0,
+      "detail": {
+        "total_sources": 5,
+        "evidence_count": 5,
+        "high_quality_count": 5,
+        "independent_count": 3,
+        "source_classes": [
+          "company_release",
+          "supplier_customer_disclosure",
+          "technical_conference_material"
+        ]
+      }
+    },
+    "structure_quality": {
+      "score_0_to_100": 90.54,
+      "detail": {
+        "entity_count": 17,
+        "relationship_count": 16,
+        "claim_count": 5,
+        "evidence_link_count": 22,
+        "inference_count": 1,
+        "entity_types": [
+          "Component",
+          "Event",
+          "ExpressionCandidate",
+          "Facility",
+          "ProcessLayer",
+          "PublicCompany",
+          "Subsystem",
+          "System",
+          "Theme"
+        ],
+        "relationship_types": [
+          "AFFECTED_BY_EVENT",
+          "CANDIDATE_EXPRESSION_FOR",
+          "DEPENDS_ON",
+          "EXPANDS_CAPACITY_FOR",
+          "PART_OF",
+          "QUALIFIED_BY",
+          "REPRICES_VIA",
+          "SUPPLIED_BY",
+          "USED_IN"
+        ]
+      }
+    },
+    "market_miss_quality": {
+      "score_0_to_100": 94.17,
+      "detail": {
+        "statement": "Independent partner and ecosystem evidence suggests the market may still treat Sivers as a messy small Nordic photonics company even though it sits upstream of external-light-source architectures that are technically and commercially moving forward.",
+        "confidence": "high",
+        "derived_claim_count": 5,
+        "derived_relationship_count": 11
+      }
+    },
+    "expression_readiness": {
+      "score_0_to_100": 100.0,
+      "detail": {
+        "expression_count": 1,
+        "expression_names": [
+          "Shares: SIVE"
+        ],
+        "expression_relationships_present": [
+          "CANDIDATE_EXPRESSION_FOR",
+          "REPRICES_VIA"
+        ]
+      }
+    }
+  }
+}

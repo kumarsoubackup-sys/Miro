@@ -1,0 +1,1353 @@
+{
+  "plan_version": "v1",
+  "generated_at": "2026-03-16T16:00:42.755821+00:00",
+  "project_name": "sive_photonics_source_bundle_v2",
+  "project_theme": "cpo_silicon_photonics_laser_supply",
+  "project_domains": [
+    "ai_infrastructure",
+    "photonics",
+    "robotics"
+  ],
+  "graduation_status": "pick_candidate",
+  "gap_flags": {
+    "needs_evidence_upgrade": false,
+    "needs_high_quality_sources": false,
+    "needs_industry_validation": true,
+    "needs_policy_context": false,
+    "needs_company_disclosures": false,
+    "needs_expression_validation": true,
+    "needs_cross_border_coverage": false
+  },
+  "top_recommendations": [
+    {
+      "source_target_id": "src_target_advanced_photonics_coalition",
+      "name": "Advanced Photonics Coalition",
+      "source_family": "industry_body_and_standards",
+      "source_class": "industry_body_and_standards",
+      "suggested_ingestion_class": "industry_body",
+      "canonical_url": "https://www.advanced-photonics.org/",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 96.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "global",
+      "category": "Industry bodies and standards / ecosystem organizations",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "energy_infrastructure",
+        "robotics",
+        "critical_materials"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "ai_optics",
+        "critical_materials",
+        "energy_infrastructure",
+        "photonics",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "monthly + event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "parser_focus": [
+        "System",
+        "Subsystem",
+        "Component",
+        "MaterialInput",
+        "ProcessLayer",
+        "USED_IN",
+        "DEPENDS_ON"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 78.15,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_designcon",
+      "name": "DesignCon",
+      "source_family": "technical_conference_material",
+      "source_class": "technical_conference_material",
+      "suggested_ingestion_class": "conference_material",
+      "canonical_url": "https://www.designcon.com/",
+      "role": "graph_forming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 88.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "global",
+      "category": "Technical conference materials",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "photonics",
+        "rare_earths",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "conference cycle + event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "conference_slide",
+        "talk_abstract",
+        "ecosystem_demo"
+      ],
+      "parser_focus": [
+        "System",
+        "Subsystem",
+        "Component",
+        "ProcessLayer",
+        "USED_IN",
+        "DEPENDS_ON"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 74.15,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_leaps_watchlist_refresh_workflow",
+      "name": "LEAPS watchlist refresh workflow",
+      "source_family": "market_data_snapshot",
+      "source_class": "market_data_snapshot",
+      "suggested_ingestion_class": "market_data_snapshot",
+      "canonical_url": null,
+      "role": "graph_confirming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 80.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 3,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 4,
+      "jurisdiction": "local_workflow",
+      "category": "Operational market-data workflows",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "equities",
+        "options",
+        "ai_infrastructure",
+        "photonics",
+        "critical_materials",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "equities",
+        "options",
+        "photonics",
+        "robotics"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "daily or multi-weekly for watchlist names",
+      "access_mode": "local_workflow",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "price_snapshot",
+        "options_chain",
+        "liquidity_check"
+      ],
+      "parser_focus": [
+        "ExpressionCandidate",
+        "REPRICES_VIA",
+        "implementation_viability"
+      ],
+      "status": "candidate",
+      "notes": [
+        "Use the local watchlist and resale-scenario tooling for repeated expression checks.",
+        "Primary scripts: scripts/refresh_leaps_watchlist.py and scripts/estimate_leaps_resale_scenarios.py."
+      ],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 10.0,
+      "acquisition_score_0_to_100": 69.75,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P1",
+        "targets equities, options, ai_infrastructure",
+        "helps validate stock-vs-LEAPS expression quality"
+      ]
+    },
+    {
+      "source_target_id": "src_target_global_electronics_association",
+      "name": "Global Electronics Association",
+      "source_family": "industry_body_and_standards",
+      "source_class": "industry_body_and_standards",
+      "suggested_ingestion_class": "industry_body",
+      "canonical_url": "https://www.electronics.org/",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 96.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "global",
+      "category": "Industry bodies and standards / ecosystem organizations",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "energy_infrastructure",
+        "robotics",
+        "critical_materials"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "photonics",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "monthly + event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "parser_focus": [
+        "System",
+        "Subsystem",
+        "Component",
+        "MaterialInput",
+        "ProcessLayer",
+        "USED_IN",
+        "DEPENDS_ON"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 78.15,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_heterogeneous_integration_roadmap_ieee_eps",
+      "name": "Heterogeneous Integration Roadmap (IEEE EPS)",
+      "source_family": "industry_body_and_standards",
+      "source_class": "industry_body_and_standards",
+      "suggested_ingestion_class": "industry_body",
+      "canonical_url": "https://eps.ieee.org/technology/heterogeneous-integration-roadmap",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 96.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "global",
+      "category": "Industry bodies and standards / ecosystem organizations",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "energy_infrastructure",
+        "robotics",
+        "critical_materials"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "photonics",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "monthly + event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "parser_focus": [
+        "System",
+        "Subsystem",
+        "Component",
+        "MaterialInput",
+        "ProcessLayer",
+        "USED_IN",
+        "DEPENDS_ON"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 78.15,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_dvcon",
+      "name": "DVCon",
+      "source_family": "technical_conference_material",
+      "source_class": "technical_conference_material",
+      "suggested_ingestion_class": "conference_material",
+      "canonical_url": "https://dvcon.org/",
+      "role": "graph_forming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 88.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "global",
+      "category": "Technical conference materials",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "photonics",
+        "rare_earths",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "conference cycle + event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "conference_slide",
+        "talk_abstract",
+        "ecosystem_demo"
+      ],
+      "parser_focus": [
+        "System",
+        "Subsystem",
+        "Component",
+        "ProcessLayer",
+        "USED_IN",
+        "DEPENDS_ON"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 74.15,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_ieee_symposium_on_vlsi_technology_circuits",
+      "name": "IEEE Symposium on VLSI Technology & Circuits",
+      "source_family": "technical_conference_material",
+      "source_class": "technical_conference_material",
+      "suggested_ingestion_class": "conference_material",
+      "canonical_url": "https://www.vlsisymposium.org/",
+      "role": "graph_forming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 88.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "global",
+      "category": "Technical conference materials",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "photonics",
+        "rare_earths",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "conference cycle + event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "conference_slide",
+        "talk_abstract",
+        "ecosystem_demo"
+      ],
+      "parser_focus": [
+        "System",
+        "Subsystem",
+        "Component",
+        "ProcessLayer",
+        "USED_IN",
+        "DEPENDS_ON"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 74.15,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_public_delayed_options_chain_capture_workflow",
+      "name": "Public delayed options chain capture workflow",
+      "source_family": "market_data_snapshot",
+      "source_class": "market_data_snapshot",
+      "suggested_ingestion_class": "market_data_snapshot",
+      "canonical_url": null,
+      "role": "graph_confirming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 80.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 3,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 4,
+      "jurisdiction": "local_workflow",
+      "category": "Operational market-data workflows",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "equities",
+        "options",
+        "ai_infrastructure",
+        "photonics",
+        "critical_materials",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "equities",
+        "options",
+        "photonics",
+        "robotics"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "daily or multi-weekly for watchlist names",
+      "access_mode": "local_workflow",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "price_snapshot",
+        "options_chain",
+        "liquidity_check"
+      ],
+      "parser_focus": [
+        "ExpressionCandidate",
+        "REPRICES_VIA",
+        "implementation_viability"
+      ],
+      "status": "candidate",
+      "notes": [
+        "Use the local Playwright capture and normalization flow for delayed public chains.",
+        "Primary scripts: scripts/capture_options_chain_playwright.mjs and scripts/normalize_options_chain_snapshot.py."
+      ],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 10.0,
+      "acquisition_score_0_to_100": 69.75,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P1",
+        "targets equities, options, ai_infrastructure",
+        "helps validate stock-vs-LEAPS expression quality"
+      ]
+    },
+    {
+      "source_target_id": "src_target_mckinsey_on_semiconductors",
+      "name": "McKinsey on Semiconductors",
+      "source_family": "trade_press_specialist",
+      "source_class": "trade_press_specialist",
+      "suggested_ingestion_class": "trade_press",
+      "canonical_url": "https://www.mckinsey.com/industries/semiconductors/our-insights/mckinsey-on-semiconductors",
+      "role": "graph_confirming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 76.0,
+      "authority_score_1_to_5": 3,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 4,
+      "jurisdiction": "global",
+      "category": "Authoritative trade press and specialist publications",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "energy_infrastructure",
+        "robotics",
+        "critical_materials"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "photonics",
+        "rare_earths",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "daily scan",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "trade_article",
+        "industry_analysis",
+        "specialist_summary"
+      ],
+      "parser_focus": [
+        "Context",
+        "DependencyBridge",
+        "MarketSignal"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 68.15,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_photonics21_reports",
+      "name": "Photonics21 Reports",
+      "source_family": "trade_press_specialist",
+      "source_class": "trade_press_specialist",
+      "suggested_ingestion_class": "trade_press",
+      "canonical_url": "https://www.photonics21.org/",
+      "role": "graph_confirming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 76.0,
+      "authority_score_1_to_5": 3,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 4,
+      "jurisdiction": "global",
+      "category": "Authoritative trade press and specialist publications",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "energy_infrastructure",
+        "robotics",
+        "critical_materials"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "ai_optics",
+        "critical_materials",
+        "energy_infrastructure",
+        "photonics",
+        "rare_earths",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "daily scan",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "trade_article",
+        "industry_analysis",
+        "specialist_summary"
+      ],
+      "parser_focus": [
+        "Context",
+        "DependencyBridge",
+        "MarketSignal"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 68.15,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    }
+  ],
+  "monitoring_queue": [
+    {
+      "source_target_id": "src_target_ieee_standards_association",
+      "name": "IEEE Standards Association",
+      "source_family": "industry_body_and_standards",
+      "source_class": "industry_body_and_standards",
+      "suggested_ingestion_class": "industry_body",
+      "canonical_url": "https://standards.ieee.org/",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 96.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "global",
+      "category": "Industry bodies and standards / ecosystem organizations",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "energy_infrastructure",
+        "robotics",
+        "critical_materials"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "photonics",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "monthly + event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "parser_focus": [
+        "System",
+        "Subsystem",
+        "Component",
+        "MaterialInput",
+        "ProcessLayer",
+        "USED_IN",
+        "DEPENDS_ON"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 78.15,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_international_energy_agency_iea",
+      "name": "International Energy Agency (IEA)",
+      "source_family": "industry_body_and_standards",
+      "source_class": "industry_body_and_standards",
+      "suggested_ingestion_class": "industry_body",
+      "canonical_url": "https://www.iea.org/",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 96.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "global",
+      "category": "Industry bodies and standards / ecosystem organizations",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "energy_infrastructure",
+        "robotics",
+        "critical_materials"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "grid_equipment",
+        "photonics",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "monthly + event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "parser_focus": [
+        "System",
+        "Subsystem",
+        "Component",
+        "MaterialInput",
+        "ProcessLayer",
+        "USED_IN",
+        "DEPENDS_ON"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 78.15,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_international_conference_on_frontiers_of_characterization_and_metrology_for_nanoelectronics_fcmn",
+      "name": "International Conference on Frontiers of Characterization and Metrology for Nanoelectronics (FCMN)",
+      "source_family": "technical_conference_material",
+      "source_class": "technical_conference_material",
+      "suggested_ingestion_class": "conference_material",
+      "canonical_url": "https://fcmn2026.avs.org/",
+      "role": "graph_forming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 88.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "global",
+      "category": "Technical conference materials",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "photonics",
+        "rare_earths",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "conference cycle + event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "conference_slide",
+        "talk_abstract",
+        "ecosystem_demo"
+      ],
+      "parser_focus": [
+        "System",
+        "Subsystem",
+        "Component",
+        "ProcessLayer",
+        "USED_IN",
+        "DEPENDS_ON"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 74.15,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_international_electron_devices_meeting_iedm",
+      "name": "International Electron Devices Meeting (IEDM)",
+      "source_family": "technical_conference_material",
+      "source_class": "technical_conference_material",
+      "suggested_ingestion_class": "conference_material",
+      "canonical_url": "https://www.ieee-iedm.org/",
+      "role": "graph_forming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 88.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "global",
+      "category": "Technical conference materials",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "photonics",
+        "rare_earths",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "conference cycle + event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "conference_slide",
+        "talk_abstract",
+        "ecosystem_demo"
+      ],
+      "parser_focus": [
+        "System",
+        "Subsystem",
+        "Component",
+        "ProcessLayer",
+        "USED_IN",
+        "DEPENDS_ON"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 74.15,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_sec_edgar_database_10_k_10_q_8_k_20_f",
+      "name": "SEC EDGAR Database (10-K, 10-Q, 8-K, 20-F)",
+      "source_family": "company_filing",
+      "source_class": "company_filing",
+      "suggested_ingestion_class": "company_filing",
+      "canonical_url": "https://www.sec.gov/edgar",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 96.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "US",
+      "category": "Primary company filings and official disclosures",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "photonics",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "filing-driven + daily watchlist monitoring",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "filing",
+        "annual_report",
+        "quarterly_report",
+        "material_event"
+      ],
+      "parser_focus": [
+        "PublicCompany",
+        "Facility",
+        "ProcessLayer",
+        "MaterialInput",
+        "SUPPLIED_BY",
+        "DEPENDS_ON",
+        "CANDIDATE_EXPRESSION_FOR"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 0.0,
+      "acquisition_score_0_to_100": 75.75,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics"
+      ]
+    },
+    {
+      "source_target_id": "src_target_semiconductor_engineering",
+      "name": "Semiconductor Engineering",
+      "source_family": "trade_press_specialist",
+      "source_class": "trade_press_specialist",
+      "suggested_ingestion_class": "trade_press",
+      "canonical_url": "https://semiengineering.com/",
+      "role": "graph_confirming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 76.0,
+      "authority_score_1_to_5": 3,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 4,
+      "jurisdiction": "global",
+      "category": "Authoritative trade press and specialist publications",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "energy_infrastructure",
+        "robotics",
+        "critical_materials"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "photonics",
+        "rare_earths",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "daily scan",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "trade_article",
+        "industry_analysis",
+        "specialist_summary"
+      ],
+      "parser_focus": [
+        "Context",
+        "DependencyBridge",
+        "MarketSignal"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 68.15,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_semiconductor_today",
+      "name": "Semiconductor Today",
+      "source_family": "trade_press_specialist",
+      "source_class": "trade_press_specialist",
+      "suggested_ingestion_class": "trade_press",
+      "canonical_url": "https://www.semiconductor-today.com/",
+      "role": "graph_confirming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 76.0,
+      "authority_score_1_to_5": 3,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 4,
+      "jurisdiction": "global",
+      "category": "Authoritative trade press and specialist publications",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "energy_infrastructure",
+        "robotics",
+        "critical_materials"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "photonics",
+        "rare_earths",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "daily scan",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "trade_article",
+        "industry_analysis",
+        "specialist_summary"
+      ],
+      "parser_focus": [
+        "Context",
+        "DependencyBridge",
+        "MarketSignal"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 68.15,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_company_bond_prospectuses",
+      "name": "Company bond prospectuses",
+      "source_family": "credit_debt_financing",
+      "source_class": "credit_debt_financing",
+      "suggested_ingestion_class": "company_filing",
+      "canonical_url": null,
+      "role": "graph_confirming",
+      "priority_tier": "P2",
+      "priority_score_0_to_100": 72.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 3,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 3,
+      "jurisdiction": "global",
+      "category": "Credit, debt, and financing documents",
+      "tier_section": "Tier 3: Useful edge sources",
+      "target_domains": [
+        "equities",
+        "ai_infrastructure",
+        "photonics",
+        "critical_materials",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "equities",
+        "photonics",
+        "robotics"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "debt_filing",
+        "rating_note",
+        "prospectus"
+      ],
+      "parser_focus": [
+        "balance_sheet",
+        "survivability",
+        "dilution_risk"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 0.0,
+      "acquisition_score_0_to_100": 63.75,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P2",
+        "targets equities, ai_infrastructure, photonics"
+      ]
+    },
+    {
+      "source_target_id": "src_target_debt_refinancing_and_shelf_registrations",
+      "name": "Debt refinancing and shelf registrations",
+      "source_family": "credit_debt_financing",
+      "source_class": "credit_debt_financing",
+      "suggested_ingestion_class": "company_filing",
+      "canonical_url": null,
+      "role": "graph_confirming",
+      "priority_tier": "P2",
+      "priority_score_0_to_100": 72.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 3,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 3,
+      "jurisdiction": "global",
+      "category": "Primary company filings and official disclosures",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "equities",
+        "ai_infrastructure",
+        "photonics",
+        "critical_materials",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "equities",
+        "photonics",
+        "robotics"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "debt_filing",
+        "rating_note",
+        "prospectus"
+      ],
+      "parser_focus": [
+        "balance_sheet",
+        "survivability",
+        "dilution_risk"
+      ],
+      "status": "candidate",
+      "notes": [
+        "Usually surfaced via SEC filings and material-event disclosures."
+      ],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 0.0,
+      "acquisition_score_0_to_100": 63.75,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P2",
+        "targets equities, ai_infrastructure, photonics"
+      ]
+    },
+    {
+      "source_target_id": "src_target_jedec",
+      "name": "JEDEC",
+      "source_family": "industry_body_and_standards",
+      "source_class": "industry_body_and_standards",
+      "suggested_ingestion_class": "industry_body",
+      "canonical_url": "https://www.jedec.org/",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 96.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "global",
+      "category": "Industry bodies and standards / ecosystem organizations",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "energy_infrastructure",
+        "robotics",
+        "critical_materials"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "photonics",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "monthly + event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "parser_focus": [
+        "System",
+        "Subsystem",
+        "Component",
+        "MaterialInput",
+        "ProcessLayer",
+        "USED_IN",
+        "DEPENDS_ON"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 95.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 78.15,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    }
+  ]
+}
