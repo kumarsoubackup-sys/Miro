@@ -1,0 +1,163 @@
+{
+  "watchlist_name": "LEAPS Watchlist V1",
+  "created_at": "2026-03-15T18:25:00Z",
+  "source_comparison": "research/analysis/2026-03-15-leaps-comparison-v1.json",
+  "notes": [
+    "Built from public delayed Yahoo Jan 15 2027 call-chain captures.",
+    "This is a research watchlist, not executable trade guidance."
+  ],
+  "pricing_assumptions": {
+    "risk_free_rate": 0.04,
+    "dividend_yield": 0.0,
+    "notes": [
+      "Used for rough pre-expiration scenario pricing only.",
+      "The baseline reference spots come from recent public delayed references, not synchronized live spot captures."
+    ]
+  },
+  "entries": [
+    {
+      "symbol": "MP",
+      "option_symbol": "MP270115C00070000",
+      "expiry": "2027-01-15",
+      "right": "call",
+      "strike": 70,
+      "reference_spot": 63.013,
+      "selection_basis": "Top combined chain-quality and thesis-overlay candidate.",
+      "snapshot_path": "research/options-data/2026-03-15/MP-chain-yahoo-2027-01-15.json",
+      "baseline_observation": {
+        "captured_at": "2026-03-15T17:57:39+00:00",
+        "snapshot_path": "research/options-data/2026-03-15/MP-chain-yahoo-2027-01-15.json",
+        "option_symbol": "MP270115C00070000",
+        "bid": 10.55,
+        "ask": 11.1,
+        "mid": 10.825,
+        "open_interest": 7947,
+        "volume": 28,
+        "implied_volatility": 0.7214,
+        "relative_spread": 0.0508
+      },
+      "tracking_history": [
+        {
+          "captured_at": "2026-03-15T17:57:39+00:00",
+          "snapshot_path": "research/options-data/2026-03-15/MP-chain-yahoo-2027-01-15.json",
+          "option_symbol": "MP270115C00070000",
+          "bid": 10.55,
+          "ask": 11.1,
+          "mid": 10.825,
+          "open_interest": 7947,
+          "volume": 28,
+          "implied_volatility": 0.7214,
+          "relative_spread": 0.0508
+        }
+      ],
+      "latest_observation": {
+        "captured_at": "2026-03-15T17:57:39+00:00",
+        "snapshot_path": "research/options-data/2026-03-15/MP-chain-yahoo-2027-01-15.json",
+        "option_symbol": "MP270115C00070000",
+        "bid": 10.55,
+        "ask": 11.1,
+        "mid": 10.825,
+        "open_interest": 7947,
+        "volume": 28,
+        "implied_volatility": 0.7214,
+        "relative_spread": 0.0508
+      }
+    },
+    {
+      "symbol": "MU",
+      "option_symbol": "MU270115C00440000",
+      "expiry": "2027-01-15",
+      "right": "call",
+      "strike": 440,
+      "reference_spot": 401.1,
+      "selection_basis": "Best far-dated spread quality in the initial public-chain comparison.",
+      "snapshot_path": "research/options-data/2026-03-15/MU-chain-yahoo-2027-01-15.json",
+      "baseline_observation": {
+        "captured_at": "2026-03-15T18:16:23+00:00",
+        "snapshot_path": "research/options-data/2026-03-15/MU-chain-yahoo-2027-01-15.json",
+        "option_symbol": "MU270115C00440000",
+        "bid": 106.05,
+        "ask": 109.1,
+        "mid": 107.575,
+        "open_interest": 892,
+        "volume": 2,
+        "implied_volatility": 0.7356,
+        "relative_spread": 0.0284
+      },
+      "tracking_history": [
+        {
+          "captured_at": "2026-03-15T18:16:23+00:00",
+          "snapshot_path": "research/options-data/2026-03-15/MU-chain-yahoo-2027-01-15.json",
+          "option_symbol": "MU270115C00440000",
+          "bid": 106.05,
+          "ask": 109.1,
+          "mid": 107.575,
+          "open_interest": 892,
+          "volume": 2,
+          "implied_volatility": 0.7356,
+          "relative_spread": 0.0284
+        }
+      ],
+      "latest_observation": {
+        "captured_at": "2026-03-15T18:16:23+00:00",
+        "snapshot_path": "research/options-data/2026-03-15/MU-chain-yahoo-2027-01-15.json",
+        "option_symbol": "MU270115C00440000",
+        "bid": 106.05,
+        "ask": 109.1,
+        "mid": 107.575,
+        "open_interest": 892,
+        "volume": 2,
+        "implied_volatility": 0.7356,
+        "relative_spread": 0.0284
+      }
+    },
+    {
+      "symbol": "VRT",
+      "option_symbol": "VRT270115C00270000",
+      "expiry": "2027-01-15",
+      "right": "call",
+      "strike": 270,
+      "reference_spot": 243.0,
+      "selection_basis": "Lowest candidate implied volatility in the initial far-dated comparison.",
+      "snapshot_path": "research/options-data/2026-03-15/VRT-chain-yahoo-2027-01-15.json",
+      "baseline_observation": {
+        "captured_at": "2026-03-15T18:16:23+00:00",
+        "snapshot_path": "research/options-data/2026-03-15/VRT-chain-yahoo-2027-01-15.json",
+        "option_symbol": "VRT270115C00270000",
+        "bid": 56.55,
+        "ask": 59.3,
+        "mid": 57.925,
+        "open_interest": 1040,
+        "volume": 2,
+        "implied_volatility": 0.6647,
+        "relative_spread": 0.0475
+      },
+      "tracking_history": [
+        {
+          "captured_at": "2026-03-15T18:16:23+00:00",
+          "snapshot_path": "research/options-data/2026-03-15/VRT-chain-yahoo-2027-01-15.json",
+          "option_symbol": "VRT270115C00270000",
+          "bid": 56.55,
+          "ask": 59.3,
+          "mid": 57.925,
+          "open_interest": 1040,
+          "volume": 2,
+          "implied_volatility": 0.6647,
+          "relative_spread": 0.0475
+        }
+      ],
+      "latest_observation": {
+        "captured_at": "2026-03-15T18:16:23+00:00",
+        "snapshot_path": "research/options-data/2026-03-15/VRT-chain-yahoo-2027-01-15.json",
+        "option_symbol": "VRT270115C00270000",
+        "bid": 56.55,
+        "ask": 59.3,
+        "mid": 57.925,
+        "open_interest": 1040,
+        "volume": 2,
+        "implied_volatility": 0.6647,
+        "relative_spread": 0.0475
+      }
+    }
+  ]
+}
