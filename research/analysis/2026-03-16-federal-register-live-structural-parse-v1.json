@@ -1,0 +1,513 @@
+{
+  "parser_version": "deterministic_v1",
+  "generated_at": "2026-03-16T20:45:12.268548+00:00",
+  "source_ids": [
+    "src_federal_register_2026_01044",
+    "src_federal_register_2026_03690",
+    "src_federal_register_2026_03744",
+    "src_federal_register_2026_04558",
+    "src_federal_register_2026_04823"
+  ],
+  "entities": [
+    {
+      "entity_id": "ent_event_administrative_revisions_to_regulations_related_to_outer_continental_shelf_minerals_other_than_oil_gas_and_sulphur",
+      "entity_type": "Event",
+      "canonical_name": "Administrative Revisions to Regulations Related to Outer Continental Shelf Minerals Other Than Oil, Gas, and Sulphur",
+      "aliases": [],
+      "description": "",
+      "attributes": {
+        "event_type": "policy_notice",
+        "document_number": "2026-03690",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          "Interior Department",
+          "Ocean Energy Management Bureau"
+        ]
+      },
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_event_deep_seabed_mining_revisions_to_regulations_for_exploration_license_and_commercial_recovery_permit_applications",
+      "entity_type": "Event",
+      "canonical_name": "Deep Seabed Mining: Revisions to Regulations for Exploration License and Commercial Recovery Permit Applications",
+      "aliases": [],
+      "description": "",
+      "attributes": {
+        "event_type": "policy_notice",
+        "document_number": "2026-01044",
+        "document_type": "Rule",
+        "agencies": [
+          "Commerce Department",
+          "National Oceanic and Atmospheric Administration"
+        ]
+      },
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_event_fee_schedules_fee_recovery_for_fiscal_year_2026",
+      "entity_type": "Event",
+      "canonical_name": "Fee Schedules; Fee Recovery for Fiscal Year 2026",
+      "aliases": [],
+      "description": "",
+      "attributes": {
+        "event_type": "policy_notice",
+        "document_number": "2026-04823",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          "Nuclear Regulatory Commission"
+        ]
+      },
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_event_marine_mammals_incidental_take_of_polar_bears_and_pacific_walruses_in_the_beaufort_sea_and_north_slope_of_alaska",
+      "entity_type": "Event",
+      "canonical_name": "Marine Mammals; Incidental Take of Polar Bears and Pacific Walruses in the Beaufort Sea and North Slope of Alaska",
+      "aliases": [],
+      "description": "",
+      "attributes": {
+        "event_type": "policy_notice",
+        "document_number": "2026-04558",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          "Interior Department",
+          "Fish and Wildlife Service"
+        ]
+      },
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_event_unlicensed_use_of_the_6_ghz_band_expanding_flexible_use_in_mid_band_spectrum_between_3_7_and_24_ghz",
+      "entity_type": "Event",
+      "canonical_name": "Unlicensed Use of the 6 GHz Band; Expanding Flexible Use in Mid-Band Spectrum Between 3.7 and 24 GHz",
+      "aliases": [],
+      "description": "",
+      "attributes": {
+        "event_type": "policy_notice",
+        "document_number": "2026-03744",
+        "document_type": "Rule",
+        "agencies": [
+          "Federal Communications Commission"
+        ]
+      },
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_geography_china",
+      "entity_type": "Geography",
+      "canonical_name": "China",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "medium"
+    },
+    {
+      "entity_id": "ent_processlayer_neodymium_processing",
+      "entity_type": "ProcessLayer",
+      "canonical_name": "Neodymium Processing",
+      "aliases": [],
+      "description": "",
+      "attributes": {
+        "process_stage": "policy_affected"
+      },
+      "confidence": "medium"
+    },
+    {
+      "entity_id": "ent_theme_critical_materials",
+      "entity_type": "Theme",
+      "canonical_name": "Critical Materials",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "medium"
+    },
+    {
+      "entity_id": "ent_theme_robotics_supply_chain",
+      "entity_type": "Theme",
+      "canonical_name": "Robotics Supply Chain",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "medium"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_id": "rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_administrative_revisions_to_regulations_related_to_outer_continental_shelf_minerals_other_than_oil_gas_and_sulphur",
+      "relationship_type": "AFFECTED_BY_EVENT",
+      "source_entity_id": "ent_processlayer_neodymium_processing",
+      "target_entity_id": "ent_event_administrative_revisions_to_regulations_related_to_outer_continental_shelf_minerals_other_than_oil_gas_and_sulphur",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "",
+      "confidence": "medium",
+      "evidence_refs": [
+        "ev_frag_federal_register_2026_03690_relationship_rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_administrative_revisions_to_regulations_related_to_outer_continental_shelf_minerals_other_than_oil_gas_and_sulphur"
+      ],
+      "notes": [],
+      "relationship_key": "2026-03690_affected_Neodymium Processing"
+    },
+    {
+      "relationship_id": "rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_deep_seabed_mining_revisions_to_regulations_for_exploration_license_and_commercial_recovery_permit_applications",
+      "relationship_type": "AFFECTED_BY_EVENT",
+      "source_entity_id": "ent_processlayer_neodymium_processing",
+      "target_entity_id": "ent_event_deep_seabed_mining_revisions_to_regulations_for_exploration_license_and_commercial_recovery_permit_applications",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "",
+      "confidence": "medium",
+      "evidence_refs": [
+        "ev_frag_federal_register_2026_01044_relationship_rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_deep_seabed_mining_revisions_to_regulations_for_exploration_license_and_commercial_recovery_permit_applications"
+      ],
+      "notes": [],
+      "relationship_key": "2026-01044_affected_Neodymium Processing"
+    },
+    {
+      "relationship_id": "rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_fee_schedules_fee_recovery_for_fiscal_year_2026",
+      "relationship_type": "AFFECTED_BY_EVENT",
+      "source_entity_id": "ent_processlayer_neodymium_processing",
+      "target_entity_id": "ent_event_fee_schedules_fee_recovery_for_fiscal_year_2026",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "",
+      "confidence": "medium",
+      "evidence_refs": [
+        "ev_frag_federal_register_2026_04823_relationship_rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_fee_schedules_fee_recovery_for_fiscal_year_2026"
+      ],
+      "notes": [],
+      "relationship_key": "2026-04823_affected_Neodymium Processing"
+    },
+    {
+      "relationship_id": "rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_marine_mammals_incidental_take_of_polar_bears_and_pacific_walruses_in_the_beaufort_sea_and_north_slope_of_alaska",
+      "relationship_type": "AFFECTED_BY_EVENT",
+      "source_entity_id": "ent_processlayer_neodymium_processing",
+      "target_entity_id": "ent_event_marine_mammals_incidental_take_of_polar_bears_and_pacific_walruses_in_the_beaufort_sea_and_north_slope_of_alaska",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "",
+      "confidence": "medium",
+      "evidence_refs": [
+        "ev_frag_federal_register_2026_04558_relationship_rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_marine_mammals_incidental_take_of_polar_bears_and_pacific_walruses_in_the_beaufort_sea_and_north_slope_of_alaska"
+      ],
+      "notes": [],
+      "relationship_key": "2026-04558_affected_Neodymium Processing"
+    },
+    {
+      "relationship_id": "rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_unlicensed_use_of_the_6_ghz_band_expanding_flexible_use_in_mid_band_spectrum_between_3_7_and_24_ghz",
+      "relationship_type": "AFFECTED_BY_EVENT",
+      "source_entity_id": "ent_processlayer_neodymium_processing",
+      "target_entity_id": "ent_event_unlicensed_use_of_the_6_ghz_band_expanding_flexible_use_in_mid_band_spectrum_between_3_7_and_24_ghz",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "",
+      "confidence": "medium",
+      "evidence_refs": [
+        "ev_frag_federal_register_2026_03744_relationship_rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_unlicensed_use_of_the_6_ghz_band_expanding_flexible_use_in_mid_band_spectrum_between_3_7_and_24_ghz"
+      ],
+      "notes": [],
+      "relationship_key": "2026-03744_affected_Neodymium Processing"
+    },
+    {
+      "relationship_id": "rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+      "relationship_type": "CONSTRAINED_BY",
+      "source_entity_id": "ent_processlayer_neodymium_processing",
+      "target_entity_id": "ent_geography_china",
+      "direction": "source_to_target",
+      "relationship_strength": "medium",
+      "causal_role": "",
+      "confidence": "medium",
+      "evidence_refs": [
+        "ev_frag_federal_register_2026_04823_relationship_rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+        "ev_frag_federal_register_2026_04558_relationship_rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+        "ev_frag_federal_register_2026_03744_relationship_rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+        "ev_frag_federal_register_2026_03690_relationship_rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+        "ev_frag_federal_register_2026_01044_relationship_rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china"
+      ],
+      "notes": [],
+      "relationship_key": "2026-04823_constrained_Neodymium Processing_China"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim_claim_2026_04823_policy_notice_affects_process_layers",
+      "claim_type": "policy_transmission_assertion",
+      "claim_text": "Fee Schedules; Fee Recovery for Fiscal Year 2026 may affect Neodymium Processing before downstream market narratives update.",
+      "claim_status": "supported",
+      "claim_kind": "inferential",
+      "confidence": "medium",
+      "entity_refs": [
+        "ent_event_fee_schedules_fee_recovery_for_fiscal_year_2026",
+        "ent_geography_china",
+        "ent_processlayer_neodymium_processing"
+      ],
+      "relationship_refs": [
+        "rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_fee_schedules_fee_recovery_for_fiscal_year_2026",
+        "rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china"
+      ],
+      "source_ids": [
+        "src_federal_register_2026_04823"
+      ],
+      "fragment_ids": [
+        "frag_federal_register_2026_04823"
+      ],
+      "notes": [],
+      "claim_key": "claim_2026-04823_policy_notice_affects_process_layers",
+      "evidence_refs": [
+        "ev_frag_federal_register_2026_04823_claim_claim_claim_2026_04823_policy_notice_affects_process_layers"
+      ]
+    },
+    {
+      "claim_id": "claim_claim_2026_04558_policy_notice_affects_process_layers",
+      "claim_type": "policy_transmission_assertion",
+      "claim_text": "Marine Mammals; Incidental Take of Polar Bears and Pacific Walruses in the Beaufort Sea and North Slope of Alaska may affect Neodymium Processing before downstream market narratives update.",
+      "claim_status": "supported",
+      "claim_kind": "inferential",
+      "confidence": "medium",
+      "entity_refs": [
+        "ent_event_marine_mammals_incidental_take_of_polar_bears_and_pacific_walruses_in_the_beaufort_sea_and_north_slope_of_alaska",
+        "ent_geography_china",
+        "ent_processlayer_neodymium_processing"
+      ],
+      "relationship_refs": [
+        "rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_marine_mammals_incidental_take_of_polar_bears_and_pacific_walruses_in_the_beaufort_sea_and_north_slope_of_alaska"
+      ],
+      "source_ids": [
+        "src_federal_register_2026_04558"
+      ],
+      "fragment_ids": [
+        "frag_federal_register_2026_04558"
+      ],
+      "notes": [],
+      "claim_key": "claim_2026-04558_policy_notice_affects_process_layers",
+      "evidence_refs": [
+        "ev_frag_federal_register_2026_04558_claim_claim_claim_2026_04558_policy_notice_affects_process_layers"
+      ]
+    },
+    {
+      "claim_id": "claim_claim_2026_03744_policy_notice_affects_process_layers",
+      "claim_type": "policy_transmission_assertion",
+      "claim_text": "Unlicensed Use of the 6 GHz Band; Expanding Flexible Use in Mid-Band Spectrum Between 3.7 and 24 GHz may affect Neodymium Processing before downstream market narratives update.",
+      "claim_status": "supported",
+      "claim_kind": "inferential",
+      "confidence": "medium",
+      "entity_refs": [
+        "ent_event_unlicensed_use_of_the_6_ghz_band_expanding_flexible_use_in_mid_band_spectrum_between_3_7_and_24_ghz",
+        "ent_geography_china",
+        "ent_processlayer_neodymium_processing"
+      ],
+      "relationship_refs": [
+        "rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_unlicensed_use_of_the_6_ghz_band_expanding_flexible_use_in_mid_band_spectrum_between_3_7_and_24_ghz"
+      ],
+      "source_ids": [
+        "src_federal_register_2026_03744"
+      ],
+      "fragment_ids": [
+        "frag_federal_register_2026_03744"
+      ],
+      "notes": [],
+      "claim_key": "claim_2026-03744_policy_notice_affects_process_layers",
+      "evidence_refs": [
+        "ev_frag_federal_register_2026_03744_claim_claim_claim_2026_03744_policy_notice_affects_process_layers"
+      ]
+    },
+    {
+      "claim_id": "claim_claim_2026_03690_policy_notice_affects_process_layers",
+      "claim_type": "policy_transmission_assertion",
+      "claim_text": "Administrative Revisions to Regulations Related to Outer Continental Shelf Minerals Other Than Oil, Gas, and Sulphur may affect Neodymium Processing before downstream market narratives update.",
+      "claim_status": "supported",
+      "claim_kind": "inferential",
+      "confidence": "medium",
+      "entity_refs": [
+        "ent_event_administrative_revisions_to_regulations_related_to_outer_continental_shelf_minerals_other_than_oil_gas_and_sulphur",
+        "ent_geography_china",
+        "ent_processlayer_neodymium_processing"
+      ],
+      "relationship_refs": [
+        "rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_administrative_revisions_to_regulations_related_to_outer_continental_shelf_minerals_other_than_oil_gas_and_sulphur"
+      ],
+      "source_ids": [
+        "src_federal_register_2026_03690"
+      ],
+      "fragment_ids": [
+        "frag_federal_register_2026_03690"
+      ],
+      "notes": [],
+      "claim_key": "claim_2026-03690_policy_notice_affects_process_layers",
+      "evidence_refs": [
+        "ev_frag_federal_register_2026_03690_claim_claim_claim_2026_03690_policy_notice_affects_process_layers"
+      ]
+    },
+    {
+      "claim_id": "claim_claim_2026_01044_policy_notice_affects_process_layers",
+      "claim_type": "policy_transmission_assertion",
+      "claim_text": "Deep Seabed Mining: Revisions to Regulations for Exploration License and Commercial Recovery Permit Applications may affect Neodymium Processing before downstream market narratives update.",
+      "claim_status": "supported",
+      "claim_kind": "inferential",
+      "confidence": "medium",
+      "entity_refs": [
+        "ent_event_deep_seabed_mining_revisions_to_regulations_for_exploration_license_and_commercial_recovery_permit_applications",
+        "ent_geography_china",
+        "ent_processlayer_neodymium_processing"
+      ],
+      "relationship_refs": [
+        "rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_deep_seabed_mining_revisions_to_regulations_for_exploration_license_and_commercial_recovery_permit_applications"
+      ],
+      "source_ids": [
+        "src_federal_register_2026_01044"
+      ],
+      "fragment_ids": [
+        "frag_federal_register_2026_01044"
+      ],
+      "notes": [],
+      "claim_key": "claim_2026-01044_policy_notice_affects_process_layers",
+      "evidence_refs": [
+        "ev_frag_federal_register_2026_01044_claim_claim_claim_2026_01044_policy_notice_affects_process_layers"
+      ]
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_link_id": "ev_frag_federal_register_2026_01044_claim_claim_claim_2026_01044_policy_notice_affects_process_layers",
+      "source_id": "src_federal_register_2026_01044",
+      "fragment_id": "frag_federal_register_2026_01044",
+      "supports_object_type": "claim",
+      "supports_object_id": "claim_claim_2026_01044_policy_notice_affects_process_layers",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_federal_register_2026_03690_claim_claim_claim_2026_03690_policy_notice_affects_process_layers",
+      "source_id": "src_federal_register_2026_03690",
+      "fragment_id": "frag_federal_register_2026_03690",
+      "supports_object_type": "claim",
+      "supports_object_id": "claim_claim_2026_03690_policy_notice_affects_process_layers",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_federal_register_2026_03744_claim_claim_claim_2026_03744_policy_notice_affects_process_layers",
+      "source_id": "src_federal_register_2026_03744",
+      "fragment_id": "frag_federal_register_2026_03744",
+      "supports_object_type": "claim",
+      "supports_object_id": "claim_claim_2026_03744_policy_notice_affects_process_layers",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_federal_register_2026_04558_claim_claim_claim_2026_04558_policy_notice_affects_process_layers",
+      "source_id": "src_federal_register_2026_04558",
+      "fragment_id": "frag_federal_register_2026_04558",
+      "supports_object_type": "claim",
+      "supports_object_id": "claim_claim_2026_04558_policy_notice_affects_process_layers",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_federal_register_2026_04823_claim_claim_claim_2026_04823_policy_notice_affects_process_layers",
+      "source_id": "src_federal_register_2026_04823",
+      "fragment_id": "frag_federal_register_2026_04823",
+      "supports_object_type": "claim",
+      "supports_object_id": "claim_claim_2026_04823_policy_notice_affects_process_layers",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_federal_register_2026_03690_relationship_rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_administrative_revisions_to_regulations_related_to_outer_continental_shelf_minerals_other_than_oil_gas_and_sulphur",
+      "source_id": "src_federal_register_2026_03690",
+      "fragment_id": "frag_federal_register_2026_03690",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_administrative_revisions_to_regulations_related_to_outer_continental_shelf_minerals_other_than_oil_gas_and_sulphur",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_federal_register_2026_01044_relationship_rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_deep_seabed_mining_revisions_to_regulations_for_exploration_license_and_commercial_recovery_permit_applications",
+      "source_id": "src_federal_register_2026_01044",
+      "fragment_id": "frag_federal_register_2026_01044",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_deep_seabed_mining_revisions_to_regulations_for_exploration_license_and_commercial_recovery_permit_applications",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_federal_register_2026_04823_relationship_rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_fee_schedules_fee_recovery_for_fiscal_year_2026",
+      "source_id": "src_federal_register_2026_04823",
+      "fragment_id": "frag_federal_register_2026_04823",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_fee_schedules_fee_recovery_for_fiscal_year_2026",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_federal_register_2026_04558_relationship_rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_marine_mammals_incidental_take_of_polar_bears_and_pacific_walruses_in_the_beaufort_sea_and_north_slope_of_alaska",
+      "source_id": "src_federal_register_2026_04558",
+      "fragment_id": "frag_federal_register_2026_04558",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_marine_mammals_incidental_take_of_polar_bears_and_pacific_walruses_in_the_beaufort_sea_and_north_slope_of_alaska",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_federal_register_2026_03744_relationship_rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_unlicensed_use_of_the_6_ghz_band_expanding_flexible_use_in_mid_band_spectrum_between_3_7_and_24_ghz",
+      "source_id": "src_federal_register_2026_03744",
+      "fragment_id": "frag_federal_register_2026_03744",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_affected_by_event_ent_processlayer_neodymium_processing_ent_event_unlicensed_use_of_the_6_ghz_band_expanding_flexible_use_in_mid_band_spectrum_between_3_7_and_24_ghz",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_federal_register_2026_01044_relationship_rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+      "source_id": "src_federal_register_2026_01044",
+      "fragment_id": "frag_federal_register_2026_01044",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_federal_register_2026_03690_relationship_rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+      "source_id": "src_federal_register_2026_03690",
+      "fragment_id": "frag_federal_register_2026_03690",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_federal_register_2026_03744_relationship_rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+      "source_id": "src_federal_register_2026_03744",
+      "fragment_id": "frag_federal_register_2026_03744",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_federal_register_2026_04558_relationship_rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+      "source_id": "src_federal_register_2026_04558",
+      "fragment_id": "frag_federal_register_2026_04558",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_federal_register_2026_04823_relationship_rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+      "source_id": "src_federal_register_2026_04823",
+      "fragment_id": "frag_federal_register_2026_04823",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+      "support_mode": "supporting",
+      "strength": "direct"
+    }
+  ],
+  "inferences": [],
+  "summary": {
+    "entity_count": 9,
+    "relationship_count": 6,
+    "claim_count": 5,
+    "evidence_link_count": 15,
+    "inference_count": 0
+  }
+}

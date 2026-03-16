@@ -1,0 +1,702 @@
+{
+  "name": "federal_register_policy_feed_live_v1",
+  "theme": "robotics_supply_chain",
+  "notes": [
+    "Fetched from Federal Register API.",
+    "Query: rare earth"
+  ],
+  "sources": [
+    {
+      "source_id": "src_federal_register_2026_04823",
+      "source_class": "government_policy_enforcement",
+      "title": "Fee Schedules; Fee Recovery for Fiscal Year 2026",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/03/12/2026-04823/fee-schedules-fee-recovery-for-fiscal-year-2026",
+      "publisher": "Federal Register",
+      "published_at": "2026-03-12",
+      "retrieved_at": "2026-03-16T20:45:02.478081+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "MP",
+        "UUUU"
+      ],
+      "theme_refs": [
+        "robotics_supply_chain",
+        "critical_materials"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Nuclear Regulatory Commission"
+      ],
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "policy_scope": [
+        "export_control"
+      ],
+      "document_id": "federal_register_2026-04823"
+    },
+    {
+      "source_id": "src_federal_register_2026_04558",
+      "source_class": "government_policy_enforcement",
+      "title": "Marine Mammals; Incidental Take of Polar Bears and Pacific Walruses in the Beaufort Sea and North Slope of Alaska",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/03/09/2026-04558/marine-mammals-incidental-take-of-polar-bears-and-pacific-walruses-in-the-beaufort-sea-and-north",
+      "publisher": "Federal Register",
+      "published_at": "2026-03-09",
+      "retrieved_at": "2026-03-16T20:45:02.478414+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "MP",
+        "UUUU"
+      ],
+      "theme_refs": [
+        "robotics_supply_chain",
+        "critical_materials"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Interior Department, Fish and Wildlife Service"
+      ],
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "policy_scope": [
+        "export_control"
+      ],
+      "document_id": "federal_register_2026-04558"
+    },
+    {
+      "source_id": "src_federal_register_2026_03744",
+      "source_class": "government_policy_enforcement",
+      "title": "Unlicensed Use of the 6 GHz Band; Expanding Flexible Use in Mid-Band Spectrum Between 3.7 and 24 GHz",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/02/25/2026-03744/unlicensed-use-of-the-6-ghz-band-expanding-flexible-use-in-mid-band-spectrum-between-37-and-24-ghz",
+      "publisher": "Federal Register",
+      "published_at": "2026-02-25",
+      "retrieved_at": "2026-03-16T20:45:02.478447+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "MP",
+        "UUUU"
+      ],
+      "theme_refs": [
+        "robotics_supply_chain",
+        "critical_materials"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Federal Communications Commission"
+      ],
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "policy_scope": [
+        "export_control"
+      ],
+      "document_id": "federal_register_2026-03744"
+    },
+    {
+      "source_id": "src_federal_register_2026_03690",
+      "source_class": "government_policy_enforcement",
+      "title": "Administrative Revisions to Regulations Related to Outer Continental Shelf Minerals Other Than Oil, Gas, and Sulphur",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/02/24/2026-03690/administrative-revisions-to-regulations-related-to-outer-continental-shelf-minerals-other-than-oil",
+      "publisher": "Federal Register",
+      "published_at": "2026-02-24",
+      "retrieved_at": "2026-03-16T20:45:02.478476+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "MP",
+        "UUUU"
+      ],
+      "theme_refs": [
+        "robotics_supply_chain",
+        "critical_materials"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Interior Department, Ocean Energy Management Bureau"
+      ],
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "policy_scope": [
+        "export_control"
+      ],
+      "document_id": "federal_register_2026-03690"
+    },
+    {
+      "source_id": "src_federal_register_2026_01044",
+      "source_class": "government_policy_enforcement",
+      "title": "Deep Seabed Mining: Revisions to Regulations for Exploration License and Commercial Recovery Permit Applications",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/01/21/2026-01044/deep-seabed-mining-revisions-to-regulations-for-exploration-license-and-commercial-recovery-permit",
+      "publisher": "Federal Register",
+      "published_at": "2026-01-21",
+      "retrieved_at": "2026-03-16T20:45:02.478516+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "MP",
+        "UUUU"
+      ],
+      "theme_refs": [
+        "robotics_supply_chain",
+        "critical_materials"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Commerce Department, National Oceanic and Atmospheric Administration"
+      ],
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "policy_scope": [
+        "export_control"
+      ],
+      "document_id": "federal_register_2026-01044"
+    }
+  ],
+  "fragments": [
+    {
+      "fragment_id": "frag_federal_register_2026_04823",
+      "source_id": "src_federal_register_2026_04823",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Federal Register",
+      "excerpt": "Power Reactors \n 85.6 \n 2.782 \n \n \n Spent Fuel Storage/Reactor Decommissioning \n 0.0 \n 0.000 \n \n \n Non-Power Production or Utilization Facilities \n 0.0 \n 0.000 \n \n \n Fuel Facilities \n 11.4 \n 0.370 \n \n \n Materials Users \n 3.0 \n 0.097 \n \n \n Transportation \n 0.0 \n 0.000 \n \n \n <span class=\"match\">Rare</span> <span class=\"match\">Earth</span> Facilities \n 0.0 \n 0.000 \n \n \n Uranium Recovery \n 0.0 \n 0.000 \n \n \n Total \n 100.0 \n 3.250 \n \n \n FY 2026 Fee Collection—Revised Annual Fees \n In accordance with SECY-05-0164, “Annual Fee Calculation Method,” the NRC rebaselines its annual fees every year. “Rebaselining”",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Robotics Supply Chain",
+          "Critical Materials"
+        ],
+        "process_layers": [
+          "Neodymium Processing"
+        ],
+        "geographies": [
+          "China"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Fee Schedules; Fee Recovery for Fiscal Year 2026",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2026-04823",
+            "document_type": "Proposed Rule",
+            "agencies": [
+              "Nuclear Regulatory Commission"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Robotics Supply Chain",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2026-04823_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "Fee Schedules; Fee Recovery for Fiscal Year 2026",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-04823_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2026-04823_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "Fee Schedules; Fee Recovery for Fiscal Year 2026 may affect Neodymium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "Fee Schedules; Fee Recovery for Fiscal Year 2026",
+            "Neodymium Processing",
+            "China"
+          ],
+          "relationship_keys": [
+            "2026-04823_affected_Neodymium Processing",
+            "2026-04823_constrained_Neodymium Processing_China"
+          ]
+        }
+      ],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "The U.S. Nuclear Regulatory Commission (NRC) is proposing to amend the licensing, inspection, special project, and annual fees charged to its applicants and licensees. The proposed amendments are necessary to comply with the Nuclear Energy Innovation and Modernization Act, which requires the NRC to recover, to the maximum extent practicable, approximately 100 percent of its annual budget less certain amounts excluded from this fee recovery requirement. In addition, the NRC is proposing amendments to establish fixed caps on service fees to implement section 5(a) of Executive Order 14300, \"Ordering the Reform of the Nuclear Regulatory Commission.\" The proposed fixed fee caps implementing Executive Order 14300 would drive increased efficiency and accountability in the NRC's licensing activities and other activities requested by applicants and licensees."
+    },
+    {
+      "fragment_id": "frag_federal_register_2026_04558",
+      "source_id": "src_federal_register_2026_04558",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Federal Register",
+      "excerpt": " (Top plot: Survival probabilities simulated with no disturbance from Industry. Bottom plot: Survival probabilities simulated with estimated Level A harassment from Industry activities.) \n 6. Lethal take via den abandonment is <span class=\"match\">rare</span> within the Southern Beaufort Sea stock. Records of den abandonment in the oilfield are <span class=\"match\">rare</span>—the FWS has only one account of potential den abandonment within the 13 case studies used to develop early denning period disturbance rates. Applying the denning model, the greatest annual simulated probability of lethal take throughout",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Robotics Supply Chain",
+          "Critical Materials"
+        ],
+        "process_layers": [
+          "Neodymium Processing"
+        ],
+        "geographies": [
+          "China"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Marine Mammals; Incidental Take of Polar Bears and Pacific Walruses in the Beaufort Sea and North Slope of Alaska",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2026-04558",
+            "document_type": "Proposed Rule",
+            "agencies": [
+              "Interior Department",
+              "Fish and Wildlife Service"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Robotics Supply Chain",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2026-04558_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "Marine Mammals; Incidental Take of Polar Bears and Pacific Walruses in the Beaufort Sea and North Slope of Alaska",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-04558_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2026-04558_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "Marine Mammals; Incidental Take of Polar Bears and Pacific Walruses in the Beaufort Sea and North Slope of Alaska may affect Neodymium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "Marine Mammals; Incidental Take of Polar Bears and Pacific Walruses in the Beaufort Sea and North Slope of Alaska",
+            "Neodymium Processing",
+            "China"
+          ],
+          "relationship_keys": [
+            "2026-04558_affected_Neodymium Processing",
+            "2026-04558_constrained_Neodymium Processing_China"
+          ]
+        }
+      ],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "We, the U.S. Fish and Wildlife Service, received a request under the Marine Mammal Protection Act of 1972 from the Alaska Oil and Gas Association to issue regulations facilitating the authorization of incidental, unintentional take of small numbers of polar bears (Ursus maritimus) and Pacific walruses (Odobenus rosmarus divergens) during year-round oil and gas industry activities in the Beaufort Sea (Alaska and the Outer Continental Shelf) and adjacent northern coast of Alaska. Take may result from oil and gas exploration, development, production, and transportation activities occurring for a period of 5 years. Oil and gas industry operations include similar types of activities covered by the previous 5-year Beaufort Sea incidental take regulations effective from August 5, 2021, through August 5, 2026. If this rule is finalized, we may issue letters of authorization, upon request, for specific proposed activities in accordance with this proposed regulation. We are proposing that this rule, if finalized, will be for 5 years. We intend that any final action resulting from this proposed rule will be as accurate and effective as possible. Therefore, we request comments or suggestions on these proposed regulations and the accompanying draft environmental assessment from the public, Tribes, and local, State, and Federal agencies."
+    },
+    {
+      "fragment_id": "frag_federal_register_2026_03744",
+      "source_id": "src_federal_register_2026_03744",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Federal Register",
+      "excerpt": "addressing the most efficient method for implementing incumbent protection.\n \n Protection of FSS \n \n The entire 6 GHz band is allocated for the FSS in the <span class=\"match\">Earth</span>-to-space direction, except for the 7.075-7.125 GHz portion of the band. Additionally, portions of the U-NII-7 and U-NII-8 bands are allocated for FSS space-to-<span class=\"match\">Earth</span> (downlink) operations. However, there are no licensed downlink <span class=\"match\">earth</span> stations in the U-NII-7 band. Sirius XM and Globalstar, the only satellite licensees who filed comments in response to the \n 6 GHz Second FNPRM, \n limited those",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Robotics Supply Chain",
+          "Critical Materials"
+        ],
+        "process_layers": [
+          "Neodymium Processing"
+        ],
+        "geographies": [
+          "China"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Unlicensed Use of the 6 GHz Band; Expanding Flexible Use in Mid-Band Spectrum Between 3.7 and 24 GHz",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2026-03744",
+            "document_type": "Rule",
+            "agencies": [
+              "Federal Communications Commission"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Robotics Supply Chain",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2026-03744_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "Unlicensed Use of the 6 GHz Band; Expanding Flexible Use in Mid-Band Spectrum Between 3.7 and 24 GHz",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03744_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2026-03744_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "Unlicensed Use of the 6 GHz Band; Expanding Flexible Use in Mid-Band Spectrum Between 3.7 and 24 GHz may affect Neodymium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "Unlicensed Use of the 6 GHz Band; Expanding Flexible Use in Mid-Band Spectrum Between 3.7 and 24 GHz",
+            "Neodymium Processing",
+            "China"
+          ],
+          "relationship_keys": [
+            "2026-03744_affected_Neodymium Processing",
+            "2026-03744_constrained_Neodymium Processing_China"
+          ]
+        }
+      ],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "In this document, the Federal Communications Commission (Commission or FCC) adopts rules allowing unlicensed geofenced variable power (GVP) devices to operate in the U-NII-5 and U-NII-7 portions of the 6 GHz band (5.925-7.125 GHz) at up to 11 dBm/MHz EIRP power spectral density and 24 dBm EIRP. GVP devices must use geofencing systems to prevent harmful interference to licensed microwave links and radio astronomy observatories. The geofencing systems will calculate exclusion zones where GVP devices cannot operate on specified frequencies. Each GVP access point must have a geolocation capability to determine its location and avoid operating on prohibited frequencies within the exclusion zones. Client devices must operate 6 dB below the access point's authorized power. These rules permit the GVP devices to operate at higher power than very lower power 6 GHz band unlicensed devices."
+    },
+    {
+      "fragment_id": "frag_federal_register_2026_03690",
+      "source_id": "src_federal_register_2026_03690",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Federal Register",
+      "excerpt": "regulatory amendments proposed with this action could allow the U.S. to more quickly access resources in seabed polymetallic nodules, other subsea geologic structures, and coastal deposits containing strategic minerals such as nickel, cobalt, copper, manganese, titanium, and <span class=\"match\">rare</span> <span class=\"match\">earth</span> elements. These resources are key to strengthening the U.S. economy, securing the U.S. energy future, and reducing dependence on foreign suppliers for critical minerals. \n \n List of Subjects \n \n Environmental assessment, Data, Geological and geophysical (G&amp;G), Mineral",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Robotics Supply Chain",
+          "Critical Materials"
+        ],
+        "process_layers": [
+          "Neodymium Processing"
+        ],
+        "geographies": [
+          "China"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Administrative Revisions to Regulations Related to Outer Continental Shelf Minerals Other Than Oil, Gas, and Sulphur",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2026-03690",
+            "document_type": "Proposed Rule",
+            "agencies": [
+              "Interior Department",
+              "Ocean Energy Management Bureau"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Robotics Supply Chain",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2026-03690_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "Administrative Revisions to Regulations Related to Outer Continental Shelf Minerals Other Than Oil, Gas, and Sulphur",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2026-03690_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "Administrative Revisions to Regulations Related to Outer Continental Shelf Minerals Other Than Oil, Gas, and Sulphur may affect Neodymium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "Administrative Revisions to Regulations Related to Outer Continental Shelf Minerals Other Than Oil, Gas, and Sulphur",
+            "Neodymium Processing",
+            "China"
+          ],
+          "relationship_keys": [
+            "2026-03690_affected_Neodymium Processing",
+            "2026-03690_constrained_Neodymium Processing_China"
+          ]
+        }
+      ],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "Consistent with Executive Order (E.O.) 14285, \"Unleashing America's Offshore Critical Minerals and Resources\" (April 24, 2025), E.O. 14154 \"Unleashing American Energy\" (January 20, 2025), E.O. 14192 \"Unleashing Prosperity through Deregulation\" (January 31, 2025), and consistent with agency policy, the Department of the Interior (the Department or DOI), acting through the Bureau of Ocean Energy Management (BOEM), proposes administrative revisions to regulations that govern prospecting, leasing, and operations related to minerals other than oil, gas, and sulphur (\"hard minerals\") on the Outer Continental Shelf (OCS)."
+    },
+    {
+      "fragment_id": "frag_federal_register_2026_01044",
+      "source_id": "src_federal_register_2026_01044",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Federal Register",
+      "excerpt": " Commenters stated that deep-sea ecosystems are important for protecting biodiversity and that the deep sea is the largest biome on <span class=\"match\">Earth</span>, with a unique set of characteristics that make it distinct from all other marine and terrestrial ecosystems. Commenters argued that baseline information regarding the deep sea is limited and that seabed mining could have lasting damage where the deep ocean remains one of <span class=\"match\">Earth's</span> least explored environments, with vast regions never sampled biologically. Commenters stated that deep-sea species are vulnerable to",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Robotics Supply Chain",
+          "Critical Materials"
+        ],
+        "process_layers": [
+          "Neodymium Processing"
+        ],
+        "geographies": [
+          "China"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Deep Seabed Mining: Revisions to Regulations for Exploration License and Commercial Recovery Permit Applications",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2026-01044",
+            "document_type": "Rule",
+            "agencies": [
+              "Commerce Department",
+              "National Oceanic and Atmospheric Administration"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Robotics Supply Chain",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2026-01044_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "Deep Seabed Mining: Revisions to Regulations for Exploration License and Commercial Recovery Permit Applications",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2026-01044_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "Deep Seabed Mining: Revisions to Regulations for Exploration License and Commercial Recovery Permit Applications may affect Neodymium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "Deep Seabed Mining: Revisions to Regulations for Exploration License and Commercial Recovery Permit Applications",
+            "Neodymium Processing",
+            "China"
+          ],
+          "relationship_keys": [
+            "2026-01044_affected_Neodymium Processing",
+            "2026-01044_constrained_Neodymium Processing_China"
+          ]
+        }
+      ],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "The Deep Seabed Hard Mineral Resources Act (DSHMRA or the Act) charges NOAA with the responsibility for issuing licenses for exploration and permits for commercial recovery of hard mineral resources, as defined in the Act, from the deep seabed in areas beyond national jurisdiction and promulgating regulations necessary to carry out the provisions of the Act. Some provisions of the regulations require updating to reflect significant technological and information changes since promulgation of the initial regulations in the 1980s. NOAA has included a consolidated license and permit application process in a section of the regulations reserved for this purpose and has made other clarifying and conforming changes."
+    }
+  ],
+  "connector_metadata": {
+    "connector_family": "policy_feed",
+    "connector_versions": [
+      "federal_register_bis_v1"
+    ],
+    "source_targets": [
+      "Federal Register Notices"
+    ],
+    "document_count": 5,
+    "generated_at": "2026-03-16T20:45:11.915202+00:00",
+    "synthetic_sample": false
+  }
+}
