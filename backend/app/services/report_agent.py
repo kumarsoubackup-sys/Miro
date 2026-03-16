@@ -1154,7 +1154,7 @@ class ReportAgent:
             progress_callback("planning", 0, "正在分析模拟需求...")
         
         # 首先获取模拟上下文
-        context = self.zep_tools.get_simulation_context(
+        context = self.graph_tools.get_simulation_context(
             graph_id=self.graph_id,
             simulation_requirement=self.simulation_requirement
         )
