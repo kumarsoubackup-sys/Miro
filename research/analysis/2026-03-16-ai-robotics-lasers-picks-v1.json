@@ -1,0 +1,1409 @@
+{
+  "method": "market scan -> mispricing score -> stock-vs-LEAPS choice -> ranked picks",
+  "rows": [
+    {
+      "name": "MP equity on magnet sovereignty and humanoid demand",
+      "underlying": "MP",
+      "market_theme": "Rare earths / robotics / defense",
+      "thesis": "MP Materials sits on the domestic rare-earth magnet sovereignty theme, with AI infrastructure, robotics, EVs, and defense all tightening attention on high-performance magnet supply.",
+      "bottleneck_layer": "Heavy rare earth and permanent magnet manufacturing",
+      "value_capture_layer": "Domestic magnet and separation stack",
+      "why_missed": [
+        "market still treats rare earths as a commodity story instead of a sovereignty chokepoint",
+        "robotics and defense demand are not yet fully embedded in consensus narratives"
+      ],
+      "catalysts": [
+        "domestic magnet ramp milestones",
+        "additional strategic contracts",
+        "further export-control pressure on the ex-China chain"
+      ],
+      "invalidations": [
+        "magnet ramp disappoints",
+        "pricing power remains weak",
+        "alternative supply scales faster than expected"
+      ],
+      "mispricing": {
+        "candidate_name": "MP equity on magnet sovereignty and humanoid demand",
+        "score_type": "mispricing",
+        "score_0_to_100": 83.6,
+        "band": "critical",
+        "weighted_signals": {
+          "hiddenness": 0.72,
+          "recognition_gap": 0.81,
+          "catalyst_clarity": 0.64,
+          "propagation_asymmetry": 0.63,
+          "duration_mismatch": 0.48,
+          "evidence_quality": 0.45,
+          "crowding_inverse": 0.21,
+          "valuation_nonlinearity": 0.24
+        },
+        "strongest_drivers": [
+          [
+            "recognition_gap",
+            0.81
+          ],
+          [
+            "hiddenness",
+            0.72
+          ],
+          [
+            "catalyst_clarity",
+            0.64
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "crowding_inverse",
+            0.21
+          ],
+          [
+            "valuation_nonlinearity",
+            0.24
+          ]
+        ],
+        "explanation": "MP equity on magnet sovereignty and humanoid demand scores 83.6/100 (critical) on mispricing plausibility. The strongest weighted drivers are recognition gap, hiddenness, catalyst clarity. The least supportive signals are crowding inverse, valuation nonlinearity. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "MP equity on magnet sovereignty and humanoid demand",
+        "score_type": "options_fit",
+        "score_0_to_100": 70.6,
+        "band": "high",
+        "weighted_signals": {
+          "convexity_need": 0.63,
+          "tenor_alignment": 0.72,
+          "vol_expansion_potential": 0.63,
+          "downside_definedness": 0.42,
+          "liquidity_path": 0.48,
+          "implementation_simplicity": 0.35,
+          "catalyst_timing_specificity": 0.3
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.72
+          ],
+          [
+            "convexity_need",
+            0.63
+          ],
+          [
+            "vol_expansion_potential",
+            0.63
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "catalyst_timing_specificity",
+            0.3
+          ],
+          [
+            "implementation_simplicity",
+            0.35
+          ]
+        ],
+        "explanation": "MP equity on magnet sovereignty and humanoid demand scores 70.6/100 (high) on options-expression fit. The strongest weighted drivers are tenor alignment, convexity need, vol expansion potential. The least supportive signals are catalyst timing specificity, implementation simplicity. This screen helps decide whether options are a sensible expression path."
+      },
+      "stock_fit": {
+        "score_0_to_100": 80.6,
+        "weighted_signals": {
+          "market_accessibility": 0.72,
+          "implementation_simplicity": 0.81,
+          "balance_sheet_resilience": 0.49,
+          "dilution_risk_inverse": 0.49,
+          "thesis_linearity": 0.56,
+          "duration_tolerance": 0.56,
+          "listing_quality": 0.4
+        },
+        "strongest_drivers": [
+          [
+            "implementation_simplicity",
+            0.81
+          ],
+          [
+            "market_accessibility",
+            0.72
+          ],
+          [
+            "thesis_linearity",
+            0.56
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "balance_sheet_resilience",
+            0.49
+          ],
+          [
+            "listing_quality",
+            0.4
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "pick_score": 78.19
+    },
+    {
+      "name": "HUBB equity on transformer lead-time persistence",
+      "underlying": "HUBB",
+      "market_theme": "AI power / grid equipment",
+      "thesis": "Hubbell sits near the grid hard-goods bottleneck created by AI load growth, utility capex, and long transformer and related equipment lead times.",
+      "bottleneck_layer": "Utility-scale power transformers and related grid equipment",
+      "value_capture_layer": "Grid hardware supplier with pricing power and replacement demand",
+      "why_missed": [
+        "grid capex stories remain less exciting than semis and GPUs",
+        "AI demand is often modeled at the compute layer, not the power-delivery layer"
+      ],
+      "catalysts": [
+        "grid spending guidance",
+        "continued transformer scarcity",
+        "data-center load forecasts"
+      ],
+      "invalidations": [
+        "transformer lead times normalize quickly",
+        "utility spending weakens",
+        "AI power demand expectations cool"
+      ],
+      "mispricing": {
+        "candidate_name": "HUBB equity on transformer lead-time persistence",
+        "score_type": "mispricing",
+        "score_0_to_100": 77.4,
+        "band": "high",
+        "weighted_signals": {
+          "hiddenness": 0.63,
+          "recognition_gap": 0.72,
+          "catalyst_clarity": 0.64,
+          "propagation_asymmetry": 0.56,
+          "duration_mismatch": 0.48,
+          "evidence_quality": 0.45,
+          "crowding_inverse": 0.21,
+          "valuation_nonlinearity": 0.18
+        },
+        "strongest_drivers": [
+          [
+            "recognition_gap",
+            0.72
+          ],
+          [
+            "catalyst_clarity",
+            0.64
+          ],
+          [
+            "hiddenness",
+            0.63
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "valuation_nonlinearity",
+            0.18
+          ],
+          [
+            "crowding_inverse",
+            0.21
+          ]
+        ],
+        "explanation": "HUBB equity on transformer lead-time persistence scores 77.4/100 (high) on mispricing plausibility. The strongest weighted drivers are recognition gap, catalyst clarity, hiddenness. The least supportive signals are valuation nonlinearity, crowding inverse. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "HUBB equity on transformer lead-time persistence",
+        "score_type": "options_fit",
+        "score_0_to_100": 49.4,
+        "band": "moderate",
+        "weighted_signals": {
+          "convexity_need": 0.36,
+          "tenor_alignment": 0.45,
+          "vol_expansion_potential": 0.36,
+          "downside_definedness": 0.35,
+          "liquidity_path": 0.3,
+          "implementation_simplicity": 0.4,
+          "catalyst_timing_specificity": 0.25
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.45
+          ],
+          [
+            "implementation_simplicity",
+            0.4
+          ],
+          [
+            "convexity_need",
+            0.36
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "catalyst_timing_specificity",
+            0.25
+          ],
+          [
+            "liquidity_path",
+            0.3
+          ]
+        ],
+        "explanation": "HUBB equity on transformer lead-time persistence scores 49.4/100 (moderate) on options-expression fit. The strongest weighted drivers are tenor alignment, implementation simplicity, convexity need. The least supportive signals are catalyst timing specificity, liquidity path. This screen helps decide whether options are a sensible expression path."
+      },
+      "stock_fit": {
+        "score_0_to_100": 88.6,
+        "weighted_signals": {
+          "market_accessibility": 0.72,
+          "implementation_simplicity": 0.81,
+          "balance_sheet_resilience": 0.63,
+          "dilution_risk_inverse": 0.63,
+          "thesis_linearity": 0.63,
+          "duration_tolerance": 0.56,
+          "listing_quality": 0.45
+        },
+        "strongest_drivers": [
+          [
+            "implementation_simplicity",
+            0.81
+          ],
+          [
+            "market_accessibility",
+            0.72
+          ],
+          [
+            "balance_sheet_resilience",
+            0.63
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "duration_tolerance",
+            0.56
+          ],
+          [
+            "listing_quality",
+            0.45
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "pick_score": 77.58
+    },
+    {
+      "name": "MU equity on HBM and packaging persistence",
+      "underlying": "MU",
+      "market_theme": "AI memory / advanced packaging",
+      "thesis": "Micron remains exposed to prolonged HBM and advanced packaging tightness, but the market may still underestimate duration while overpricing some of the listed optionality.",
+      "bottleneck_layer": "HBM memory stack supply",
+      "value_capture_layer": "Memory supplier with AI-specific mix shift",
+      "why_missed": [
+        "market may underprice duration but not the existence of the bottleneck",
+        "headline AI semis attention can obscure product-mix and supply-duration effects"
+      ],
+      "catalysts": [
+        "HBM contract extensions",
+        "continued AI server demand",
+        "packaging tightness persisting through next cycle"
+      ],
+      "invalidations": [
+        "packaging clears faster than expected",
+        "AI demand weakens materially",
+        "memory pricing rolls over"
+      ],
+      "mispricing": {
+        "candidate_name": "MU equity on HBM and packaging persistence",
+        "score_type": "mispricing",
+        "score_0_to_100": 73.2,
+        "band": "high",
+        "weighted_signals": {
+          "hiddenness": 0.54,
+          "recognition_gap": 0.63,
+          "catalyst_clarity": 0.64,
+          "propagation_asymmetry": 0.56,
+          "duration_mismatch": 0.48,
+          "evidence_quality": 0.45,
+          "crowding_inverse": 0.15,
+          "valuation_nonlinearity": 0.21
+        },
+        "strongest_drivers": [
+          [
+            "catalyst_clarity",
+            0.64
+          ],
+          [
+            "recognition_gap",
+            0.63
+          ],
+          [
+            "propagation_asymmetry",
+            0.56
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "crowding_inverse",
+            0.15
+          ],
+          [
+            "valuation_nonlinearity",
+            0.21
+          ]
+        ],
+        "explanation": "MU equity on HBM and packaging persistence scores 73.2/100 (high) on mispricing plausibility. The strongest weighted drivers are catalyst clarity, recognition gap, propagation asymmetry. The least supportive signals are crowding inverse, valuation nonlinearity. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "MU equity on HBM and packaging persistence",
+        "score_type": "options_fit",
+        "score_0_to_100": 67.4,
+        "band": "high",
+        "weighted_signals": {
+          "convexity_need": 0.54,
+          "tenor_alignment": 0.72,
+          "vol_expansion_potential": 0.45,
+          "downside_definedness": 0.42,
+          "liquidity_path": 0.54,
+          "implementation_simplicity": 0.4,
+          "catalyst_timing_specificity": 0.3
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.72
+          ],
+          [
+            "convexity_need",
+            0.54
+          ],
+          [
+            "liquidity_path",
+            0.54
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "catalyst_timing_specificity",
+            0.3
+          ],
+          [
+            "implementation_simplicity",
+            0.4
+          ]
+        ],
+        "explanation": "MU equity on HBM and packaging persistence scores 67.4/100 (high) on options-expression fit. The strongest weighted drivers are tenor alignment, convexity need, liquidity path. The least supportive signals are catalyst timing specificity, implementation simplicity. This screen helps decide whether options are a sensible expression path."
+      },
+      "stock_fit": {
+        "score_0_to_100": 89.8,
+        "weighted_signals": {
+          "market_accessibility": 0.8,
+          "implementation_simplicity": 0.81,
+          "balance_sheet_resilience": 0.56,
+          "dilution_risk_inverse": 0.7,
+          "thesis_linearity": 0.56,
+          "duration_tolerance": 0.56,
+          "listing_quality": 0.5
+        },
+        "strongest_drivers": [
+          [
+            "implementation_simplicity",
+            0.81
+          ],
+          [
+            "market_accessibility",
+            0.8
+          ],
+          [
+            "dilution_risk_inverse",
+            0.7
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "balance_sheet_resilience",
+            0.56
+          ],
+          [
+            "listing_quality",
+            0.5
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "pick_score": 75.69
+    },
+    {
+      "name": "VRT equity on AI cooling deployment bottleneck",
+      "underlying": "VRT",
+      "market_theme": "AI infrastructure / cooling",
+      "thesis": "Vertiv is exposed to the facility-side cooling and power-density ramp that may matter more than any single chip-level thermal component as AI factories scale.",
+      "bottleneck_layer": "Facility-side coolant distribution and thermal-chain execution",
+      "value_capture_layer": "Integrated deployment and service-heavy cooling stack",
+      "why_missed": [
+        "market can still underweight deployment bottlenecks versus chip narratives",
+        "cooling is often discussed as a theme but not always modeled as a systems constraint"
+      ],
+      "catalysts": [
+        "rack density increases",
+        "liquid cooling default adoption",
+        "AI factory buildout guidance"
+      ],
+      "invalidations": [
+        "cooling commoditizes faster than expected",
+        "deployment margins compress",
+        "AI capex slows materially"
+      ],
+      "mispricing": {
+        "candidate_name": "VRT equity on AI cooling deployment bottleneck",
+        "score_type": "mispricing",
+        "score_0_to_100": 71.4,
+        "band": "high",
+        "weighted_signals": {
+          "hiddenness": 0.54,
+          "recognition_gap": 0.63,
+          "catalyst_clarity": 0.64,
+          "propagation_asymmetry": 0.56,
+          "duration_mismatch": 0.42,
+          "evidence_quality": 0.45,
+          "crowding_inverse": 0.15,
+          "valuation_nonlinearity": 0.18
+        },
+        "strongest_drivers": [
+          [
+            "catalyst_clarity",
+            0.64
+          ],
+          [
+            "recognition_gap",
+            0.63
+          ],
+          [
+            "propagation_asymmetry",
+            0.56
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "crowding_inverse",
+            0.15
+          ],
+          [
+            "valuation_nonlinearity",
+            0.18
+          ]
+        ],
+        "explanation": "VRT equity on AI cooling deployment bottleneck scores 71.4/100 (high) on mispricing plausibility. The strongest weighted drivers are catalyst clarity, recognition gap, propagation asymmetry. The least supportive signals are crowding inverse, valuation nonlinearity. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "VRT equity on AI cooling deployment bottleneck",
+        "score_type": "options_fit",
+        "score_0_to_100": 56.8,
+        "band": "moderate",
+        "weighted_signals": {
+          "convexity_need": 0.45,
+          "tenor_alignment": 0.54,
+          "vol_expansion_potential": 0.45,
+          "downside_definedness": 0.28,
+          "liquidity_path": 0.42,
+          "implementation_simplicity": 0.4,
+          "catalyst_timing_specificity": 0.3
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.54
+          ],
+          [
+            "convexity_need",
+            0.45
+          ],
+          [
+            "vol_expansion_potential",
+            0.45
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "downside_definedness",
+            0.28
+          ],
+          [
+            "catalyst_timing_specificity",
+            0.3
+          ]
+        ],
+        "explanation": "VRT equity on AI cooling deployment bottleneck scores 56.8/100 (moderate) on options-expression fit. The strongest weighted drivers are tenor alignment, convexity need, vol expansion potential. The least supportive signals are downside definedness, catalyst timing specificity. This screen helps decide whether options are a sensible expression path."
+      },
+      "stock_fit": {
+        "score_0_to_100": 87.2,
+        "weighted_signals": {
+          "market_accessibility": 0.72,
+          "implementation_simplicity": 0.81,
+          "balance_sheet_resilience": 0.56,
+          "dilution_risk_inverse": 0.63,
+          "thesis_linearity": 0.63,
+          "duration_tolerance": 0.56,
+          "listing_quality": 0.45
+        },
+        "strongest_drivers": [
+          [
+            "implementation_simplicity",
+            0.81
+          ],
+          [
+            "market_accessibility",
+            0.72
+          ],
+          [
+            "dilution_risk_inverse",
+            0.63
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "balance_sheet_resilience",
+            0.56
+          ],
+          [
+            "listing_quality",
+            0.45
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "pick_score": 73.79
+    },
+    {
+      "name": "ONTO equity on AI advanced packaging metrology",
+      "underlying": "ONTO",
+      "market_theme": "AI packaging / semicap",
+      "thesis": "Onto Innovation may be a cleaner metrology beneficiary of sustained advanced packaging and heterogeneous integration demand than more crowded GPU-adjacent names.",
+      "bottleneck_layer": "Advanced packaging process control and metrology",
+      "value_capture_layer": "Tooling and control layer for packaging throughput",
+      "why_missed": [
+        "attention concentrates on foundries and memory suppliers instead of process-control enablers",
+        "metrology is less intuitive to many investors than packaging capacity itself"
+      ],
+      "catalysts": [
+        "advanced packaging capacity expansion",
+        "HBM and 2.5D throughput bottlenecks",
+        "tool order growth"
+      ],
+      "invalidations": [
+        "packaging spending normalizes quickly",
+        "tool demand lags capacity announcements"
+      ],
+      "mispricing": {
+        "candidate_name": "ONTO equity on AI advanced packaging metrology",
+        "score_type": "mispricing",
+        "score_0_to_100": 72.2,
+        "band": "high",
+        "weighted_signals": {
+          "hiddenness": 0.63,
+          "recognition_gap": 0.72,
+          "catalyst_clarity": 0.56,
+          "propagation_asymmetry": 0.49,
+          "duration_mismatch": 0.42,
+          "evidence_quality": 0.4,
+          "crowding_inverse": 0.21,
+          "valuation_nonlinearity": 0.18
+        },
+        "strongest_drivers": [
+          [
+            "recognition_gap",
+            0.72
+          ],
+          [
+            "hiddenness",
+            0.63
+          ],
+          [
+            "catalyst_clarity",
+            0.56
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "valuation_nonlinearity",
+            0.18
+          ],
+          [
+            "crowding_inverse",
+            0.21
+          ]
+        ],
+        "explanation": "ONTO equity on AI advanced packaging metrology scores 72.2/100 (high) on mispricing plausibility. The strongest weighted drivers are recognition gap, hiddenness, catalyst clarity. The least supportive signals are valuation nonlinearity, crowding inverse. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "ONTO equity on AI advanced packaging metrology",
+        "score_type": "options_fit",
+        "score_0_to_100": 49.4,
+        "band": "moderate",
+        "weighted_signals": {
+          "convexity_need": 0.36,
+          "tenor_alignment": 0.45,
+          "vol_expansion_potential": 0.36,
+          "downside_definedness": 0.35,
+          "liquidity_path": 0.3,
+          "implementation_simplicity": 0.4,
+          "catalyst_timing_specificity": 0.25
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.45
+          ],
+          [
+            "implementation_simplicity",
+            0.4
+          ],
+          [
+            "convexity_need",
+            0.36
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "catalyst_timing_specificity",
+            0.25
+          ],
+          [
+            "liquidity_path",
+            0.3
+          ]
+        ],
+        "explanation": "ONTO equity on AI advanced packaging metrology scores 49.4/100 (moderate) on options-expression fit. The strongest weighted drivers are tenor alignment, implementation simplicity, convexity need. The least supportive signals are catalyst timing specificity, liquidity path. This screen helps decide whether options are a sensible expression path."
+      },
+      "stock_fit": {
+        "score_0_to_100": 85.8,
+        "weighted_signals": {
+          "market_accessibility": 0.72,
+          "implementation_simplicity": 0.81,
+          "balance_sheet_resilience": 0.56,
+          "dilution_risk_inverse": 0.63,
+          "thesis_linearity": 0.56,
+          "duration_tolerance": 0.56,
+          "listing_quality": 0.45
+        },
+        "strongest_drivers": [
+          [
+            "implementation_simplicity",
+            0.81
+          ],
+          [
+            "market_accessibility",
+            0.72
+          ],
+          [
+            "dilution_risk_inverse",
+            0.63
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "balance_sheet_resilience",
+            0.56
+          ],
+          [
+            "listing_quality",
+            0.45
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "pick_score": 73.74
+    },
+    {
+      "name": "SIVE equity on CPO laser bottleneck",
+      "underlying": "SIVE",
+      "market_theme": "AI photonics / CPO",
+      "thesis": "Sivers may be an underfollowed upstream InP DFB laser supplier to emerging silicon-photonics and external-light-source architectures, with the market still valuing it far below better-known downstream photonics names.",
+      "bottleneck_layer": "InP laser and external light source capacity",
+      "value_capture_layer": "Specialized upstream laser supplier with ecosystem leverage",
+      "why_missed": [
+        "small-cap and underfollowed listing",
+        "market attention focused on larger optical names",
+        "customer and supply-chain links are not obvious from headline financials"
+      ],
+      "catalysts": [
+        "customer qualification progress",
+        "CPO / silicon photonics adoption milestones",
+        "revenue conversion from photonics pipeline"
+      ],
+      "invalidations": [
+        "CPO ramp delays materially",
+        "customer relationships fail to convert into volume",
+        "dilution offsets operating progress"
+      ],
+      "mispricing": {
+        "candidate_name": "SIVE equity on CPO laser bottleneck",
+        "score_type": "mispricing",
+        "score_0_to_100": 81.6,
+        "band": "critical",
+        "weighted_signals": {
+          "hiddenness": 0.81,
+          "recognition_gap": 0.81,
+          "catalyst_clarity": 0.56,
+          "propagation_asymmetry": 0.56,
+          "duration_mismatch": 0.48,
+          "evidence_quality": 0.35,
+          "crowding_inverse": 0.27,
+          "valuation_nonlinearity": 0.24
+        },
+        "strongest_drivers": [
+          [
+            "hiddenness",
+            0.81
+          ],
+          [
+            "recognition_gap",
+            0.81
+          ],
+          [
+            "catalyst_clarity",
+            0.56
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "valuation_nonlinearity",
+            0.24
+          ],
+          [
+            "crowding_inverse",
+            0.27
+          ]
+        ],
+        "explanation": "SIVE equity on CPO laser bottleneck scores 81.6/100 (critical) on mispricing plausibility. The strongest weighted drivers are hiddenness, recognition gap, catalyst clarity. The least supportive signals are valuation nonlinearity, crowding inverse. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "SIVE equity on CPO laser bottleneck",
+        "score_type": "options_fit",
+        "score_0_to_100": 44.8,
+        "band": "emerging",
+        "weighted_signals": {
+          "convexity_need": 0.36,
+          "tenor_alignment": 0.45,
+          "vol_expansion_potential": 0.45,
+          "downside_definedness": 0.21,
+          "liquidity_path": 0.12,
+          "implementation_simplicity": 0.4,
+          "catalyst_timing_specificity": 0.25
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.45
+          ],
+          [
+            "vol_expansion_potential",
+            0.45
+          ],
+          [
+            "implementation_simplicity",
+            0.4
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "liquidity_path",
+            0.12
+          ],
+          [
+            "downside_definedness",
+            0.21
+          ]
+        ],
+        "explanation": "SIVE equity on CPO laser bottleneck scores 44.8/100 (emerging) on options-expression fit. The strongest weighted drivers are tenor alignment, vol expansion potential, implementation simplicity. The least supportive signals are liquidity path, downside definedness. This screen helps decide whether options are a sensible expression path."
+      },
+      "stock_fit": {
+        "score_0_to_100": 60.4,
+        "weighted_signals": {
+          "market_accessibility": 0.4,
+          "implementation_simplicity": 0.81,
+          "balance_sheet_resilience": 0.28,
+          "dilution_risk_inverse": 0.28,
+          "thesis_linearity": 0.49,
+          "duration_tolerance": 0.56,
+          "listing_quality": 0.2
+        },
+        "strongest_drivers": [
+          [
+            "implementation_simplicity",
+            0.81
+          ],
+          [
+            "duration_tolerance",
+            0.56
+          ],
+          [
+            "thesis_linearity",
+            0.49
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "balance_sheet_resilience",
+            0.28
+          ],
+          [
+            "listing_quality",
+            0.2
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "pick_score": 70.02
+    },
+    {
+      "name": "COHR equity on AI optical component vertical integration",
+      "underlying": "COHR",
+      "market_theme": "AI photonics / lasers",
+      "thesis": "Coherent has meaningful leverage to AI optical scaling through InP capacity, CW lasers, and broader photonics vertical integration, but the market may still treat it as a noisier legacy photonics name.",
+      "bottleneck_layer": "Laser and advanced photonics production capacity",
+      "value_capture_layer": "Scaled integrated photonics manufacturer",
+      "why_missed": [
+        "company story spans many end markets and can look messy",
+        "market attention has favored cleaner single-theme optical winners"
+      ],
+      "catalysts": [
+        "AI optical revenue mix increasing",
+        "6-inch InP capacity ramp",
+        "CPO / silicon photonics design wins"
+      ],
+      "invalidations": [
+        "AI optics growth disappoints",
+        "integration complexity masks earnings power",
+        "competition compresses margins"
+      ],
+      "mispricing": {
+        "candidate_name": "COHR equity on AI optical component vertical integration",
+        "score_type": "mispricing",
+        "score_0_to_100": 68.6,
+        "band": "high",
+        "weighted_signals": {
+          "hiddenness": 0.54,
+          "recognition_gap": 0.63,
+          "catalyst_clarity": 0.56,
+          "propagation_asymmetry": 0.49,
+          "duration_mismatch": 0.42,
+          "evidence_quality": 0.4,
+          "crowding_inverse": 0.18,
+          "valuation_nonlinearity": 0.21
+        },
+        "strongest_drivers": [
+          [
+            "recognition_gap",
+            0.63
+          ],
+          [
+            "catalyst_clarity",
+            0.56
+          ],
+          [
+            "hiddenness",
+            0.54
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "crowding_inverse",
+            0.18
+          ],
+          [
+            "valuation_nonlinearity",
+            0.21
+          ]
+        ],
+        "explanation": "COHR equity on AI optical component vertical integration scores 68.6/100 (high) on mispricing plausibility. The strongest weighted drivers are recognition gap, catalyst clarity, hiddenness. The least supportive signals are crowding inverse, valuation nonlinearity. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "COHR equity on AI optical component vertical integration",
+        "score_type": "options_fit",
+        "score_0_to_100": 54.6,
+        "band": "moderate",
+        "weighted_signals": {
+          "convexity_need": 0.45,
+          "tenor_alignment": 0.54,
+          "vol_expansion_potential": 0.45,
+          "downside_definedness": 0.28,
+          "liquidity_path": 0.36,
+          "implementation_simplicity": 0.4,
+          "catalyst_timing_specificity": 0.25
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.54
+          ],
+          [
+            "convexity_need",
+            0.45
+          ],
+          [
+            "vol_expansion_potential",
+            0.45
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "catalyst_timing_specificity",
+            0.25
+          ],
+          [
+            "downside_definedness",
+            0.28
+          ]
+        ],
+        "explanation": "COHR equity on AI optical component vertical integration scores 54.6/100 (moderate) on options-expression fit. The strongest weighted drivers are tenor alignment, convexity need, vol expansion potential. The least supportive signals are catalyst timing specificity, downside definedness. This screen helps decide whether options are a sensible expression path."
+      },
+      "stock_fit": {
+        "score_0_to_100": 79.8,
+        "weighted_signals": {
+          "market_accessibility": 0.72,
+          "implementation_simplicity": 0.72,
+          "balance_sheet_resilience": 0.49,
+          "dilution_risk_inverse": 0.56,
+          "thesis_linearity": 0.49,
+          "duration_tolerance": 0.56,
+          "listing_quality": 0.45
+        },
+        "strongest_drivers": [
+          [
+            "market_accessibility",
+            0.72
+          ],
+          [
+            "implementation_simplicity",
+            0.72
+          ],
+          [
+            "dilution_risk_inverse",
+            0.56
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "balance_sheet_resilience",
+            0.49
+          ],
+          [
+            "listing_quality",
+            0.45
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "pick_score": 69.66
+    },
+    {
+      "name": "FN equity on optical manufacturing scale",
+      "underlying": "FN",
+      "market_theme": "AI optics / manufacturing",
+      "thesis": "Fabrinet has leverage to optical module and transceiver scaling, but the story is less hidden and less bottleneck-pure than upstream laser or photonics component suppliers.",
+      "bottleneck_layer": "Optical manufacturing scale and module assembly",
+      "value_capture_layer": "High-quality manufacturing partner",
+      "why_missed": [
+        "can be treated as contract manufacturing rather than strategic optical capacity"
+      ],
+      "catalysts": [
+        "continued optical demand growth",
+        "AI networking scale-up"
+      ],
+      "invalidations": [
+        "mix shifts away from most profitable programs",
+        "the market already fully recognizes the AI optical link"
+      ],
+      "mispricing": {
+        "candidate_name": "FN equity on optical manufacturing scale",
+        "score_type": "mispricing",
+        "score_0_to_100": 60.6,
+        "band": "moderate",
+        "weighted_signals": {
+          "hiddenness": 0.45,
+          "recognition_gap": 0.54,
+          "catalyst_clarity": 0.56,
+          "propagation_asymmetry": 0.42,
+          "duration_mismatch": 0.36,
+          "evidence_quality": 0.4,
+          "crowding_inverse": 0.15,
+          "valuation_nonlinearity": 0.15
+        },
+        "strongest_drivers": [
+          [
+            "catalyst_clarity",
+            0.56
+          ],
+          [
+            "recognition_gap",
+            0.54
+          ],
+          [
+            "hiddenness",
+            0.45
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "valuation_nonlinearity",
+            0.15
+          ],
+          [
+            "crowding_inverse",
+            0.15
+          ]
+        ],
+        "explanation": "FN equity on optical manufacturing scale scores 60.6/100 (moderate) on mispricing plausibility. The strongest weighted drivers are catalyst clarity, recognition gap, hiddenness. The least supportive signals are valuation nonlinearity, crowding inverse. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "FN equity on optical manufacturing scale",
+        "score_type": "options_fit",
+        "score_0_to_100": 47.6,
+        "band": "moderate",
+        "weighted_signals": {
+          "convexity_need": 0.36,
+          "tenor_alignment": 0.45,
+          "vol_expansion_potential": 0.27,
+          "downside_definedness": 0.35,
+          "liquidity_path": 0.3,
+          "implementation_simplicity": 0.4,
+          "catalyst_timing_specificity": 0.25
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.45
+          ],
+          [
+            "implementation_simplicity",
+            0.4
+          ],
+          [
+            "convexity_need",
+            0.36
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "catalyst_timing_specificity",
+            0.25
+          ],
+          [
+            "vol_expansion_potential",
+            0.27
+          ]
+        ],
+        "explanation": "FN equity on optical manufacturing scale scores 47.6/100 (moderate) on options-expression fit. The strongest weighted drivers are tenor alignment, implementation simplicity, convexity need. The least supportive signals are catalyst timing specificity, vol expansion potential. This screen helps decide whether options are a sensible expression path."
+      },
+      "stock_fit": {
+        "score_0_to_100": 85.8,
+        "weighted_signals": {
+          "market_accessibility": 0.72,
+          "implementation_simplicity": 0.81,
+          "balance_sheet_resilience": 0.63,
+          "dilution_risk_inverse": 0.63,
+          "thesis_linearity": 0.49,
+          "duration_tolerance": 0.56,
+          "listing_quality": 0.45
+        },
+        "strongest_drivers": [
+          [
+            "implementation_simplicity",
+            0.81
+          ],
+          [
+            "market_accessibility",
+            0.72
+          ],
+          [
+            "balance_sheet_resilience",
+            0.63
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "thesis_linearity",
+            0.49
+          ],
+          [
+            "listing_quality",
+            0.45
+          ]
+        ]
+      },
+      "final_expression": "reject",
+      "pick_score": 51.36
+    },
+    {
+      "name": "LITE equity on external light source leadership",
+      "underlying": "LITE",
+      "market_theme": "AI photonics / lasers",
+      "thesis": "Lumentum is a direct beneficiary of AI optical scaling and external light source demand, but the bottleneck story is now widely recognized and much less hidden than smaller upstream names.",
+      "bottleneck_layer": "Laser and CPO light source supply",
+      "value_capture_layer": "Large listed optical incumbent",
+      "why_missed": [
+        "some investors may still think of the company through legacy cycles rather than AI optics"
+      ],
+      "catalysts": [
+        "continued AI optical demand",
+        "customer ramps",
+        "CPO qualification wins"
+      ],
+      "invalidations": [
+        "valuation already fully discounts AI optical upside",
+        "competition erodes scarcity premium"
+      ],
+      "mispricing": {
+        "candidate_name": "LITE equity on external light source leadership",
+        "score_type": "mispricing",
+        "score_0_to_100": 58.4,
+        "band": "moderate",
+        "weighted_signals": {
+          "hiddenness": 0.36,
+          "recognition_gap": 0.45,
+          "catalyst_clarity": 0.64,
+          "propagation_asymmetry": 0.42,
+          "duration_mismatch": 0.36,
+          "evidence_quality": 0.45,
+          "crowding_inverse": 0.09,
+          "valuation_nonlinearity": 0.15
+        },
+        "strongest_drivers": [
+          [
+            "catalyst_clarity",
+            0.64
+          ],
+          [
+            "evidence_quality",
+            0.45
+          ],
+          [
+            "recognition_gap",
+            0.45
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "crowding_inverse",
+            0.09
+          ],
+          [
+            "valuation_nonlinearity",
+            0.15
+          ]
+        ],
+        "explanation": "LITE equity on external light source leadership scores 58.4/100 (moderate) on mispricing plausibility. The strongest weighted drivers are catalyst clarity, evidence quality, recognition gap. The least supportive signals are crowding inverse, valuation nonlinearity. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "LITE equity on external light source leadership",
+        "score_type": "options_fit",
+        "score_0_to_100": 54.4,
+        "band": "moderate",
+        "weighted_signals": {
+          "convexity_need": 0.45,
+          "tenor_alignment": 0.54,
+          "vol_expansion_potential": 0.27,
+          "downside_definedness": 0.28,
+          "liquidity_path": 0.48,
+          "implementation_simplicity": 0.4,
+          "catalyst_timing_specificity": 0.3
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.54
+          ],
+          [
+            "liquidity_path",
+            0.48
+          ],
+          [
+            "convexity_need",
+            0.45
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "vol_expansion_potential",
+            0.27
+          ],
+          [
+            "downside_definedness",
+            0.28
+          ]
+        ],
+        "explanation": "LITE equity on external light source leadership scores 54.4/100 (moderate) on options-expression fit. The strongest weighted drivers are tenor alignment, liquidity path, convexity need. The least supportive signals are vol expansion potential, downside definedness. This screen helps decide whether options are a sensible expression path."
+      },
+      "stock_fit": {
+        "score_0_to_100": 84.4,
+        "weighted_signals": {
+          "market_accessibility": 0.72,
+          "implementation_simplicity": 0.81,
+          "balance_sheet_resilience": 0.56,
+          "dilution_risk_inverse": 0.63,
+          "thesis_linearity": 0.49,
+          "duration_tolerance": 0.56,
+          "listing_quality": 0.45
+        },
+        "strongest_drivers": [
+          [
+            "implementation_simplicity",
+            0.81
+          ],
+          [
+            "market_accessibility",
+            0.72
+          ],
+          [
+            "dilution_risk_inverse",
+            0.63
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "thesis_linearity",
+            0.49
+          ],
+          [
+            "listing_quality",
+            0.45
+          ]
+        ]
+      },
+      "final_expression": "reject",
+      "pick_score": 49.66
+    },
+    {
+      "name": "POET equity on optical interposer packaging leverage",
+      "underlying": "POET",
+      "market_theme": "AI photonics / packaging",
+      "thesis": "POET sits at an interesting AI optical packaging layer through its Optical Interposer, but the execution path and balance-sheet profile make it a noisier expression than the core laser and scaled-infrastructure names.",
+      "bottleneck_layer": "Optical interposer and packaging integration",
+      "value_capture_layer": "Early-stage packaging enabler",
+      "why_missed": [
+        "small-cap, thinly followed photonics packaging story"
+      ],
+      "catalysts": [
+        "prototype milestones",
+        "customer qualification progress",
+        "production readiness"
+      ],
+      "invalidations": [
+        "execution delays",
+        "customer concentration risk",
+        "dilution risk"
+      ],
+      "mispricing": {
+        "candidate_name": "POET equity on optical interposer packaging leverage",
+        "score_type": "mispricing",
+        "score_0_to_100": 71.6,
+        "band": "high",
+        "weighted_signals": {
+          "hiddenness": 0.72,
+          "recognition_gap": 0.72,
+          "catalyst_clarity": 0.48,
+          "propagation_asymmetry": 0.49,
+          "duration_mismatch": 0.42,
+          "evidence_quality": 0.3,
+          "crowding_inverse": 0.21,
+          "valuation_nonlinearity": 0.24
+        },
+        "strongest_drivers": [
+          [
+            "hiddenness",
+            0.72
+          ],
+          [
+            "recognition_gap",
+            0.72
+          ],
+          [
+            "propagation_asymmetry",
+            0.49
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "crowding_inverse",
+            0.21
+          ],
+          [
+            "valuation_nonlinearity",
+            0.24
+          ]
+        ],
+        "explanation": "POET equity on optical interposer packaging leverage scores 71.6/100 (high) on mispricing plausibility. The strongest weighted drivers are hiddenness, recognition gap, propagation asymmetry. The least supportive signals are crowding inverse, valuation nonlinearity. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "POET equity on optical interposer packaging leverage",
+        "score_type": "options_fit",
+        "score_0_to_100": 37.0,
+        "band": "emerging",
+        "weighted_signals": {
+          "convexity_need": 0.27,
+          "tenor_alignment": 0.36,
+          "vol_expansion_potential": 0.36,
+          "downside_definedness": 0.14,
+          "liquidity_path": 0.12,
+          "implementation_simplicity": 0.4,
+          "catalyst_timing_specificity": 0.2
+        },
+        "strongest_drivers": [
+          [
+            "implementation_simplicity",
+            0.4
+          ],
+          [
+            "tenor_alignment",
+            0.36
+          ],
+          [
+            "vol_expansion_potential",
+            0.36
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "liquidity_path",
+            0.12
+          ],
+          [
+            "downside_definedness",
+            0.14
+          ]
+        ],
+        "explanation": "POET equity on optical interposer packaging leverage scores 37.0/100 (emerging) on options-expression fit. The strongest weighted drivers are implementation simplicity, tenor alignment, vol expansion potential. The least supportive signals are liquidity path, downside definedness. This screen helps decide whether options are a sensible expression path."
+      },
+      "stock_fit": {
+        "score_0_to_100": 54.4,
+        "weighted_signals": {
+          "market_accessibility": 0.56,
+          "implementation_simplicity": 0.72,
+          "balance_sheet_resilience": 0.21,
+          "dilution_risk_inverse": 0.21,
+          "thesis_linearity": 0.35,
+          "duration_tolerance": 0.42,
+          "listing_quality": 0.25
+        },
+        "strongest_drivers": [
+          [
+            "implementation_simplicity",
+            0.72
+          ],
+          [
+            "market_accessibility",
+            0.56
+          ],
+          [
+            "duration_tolerance",
+            0.42
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "dilution_risk_inverse",
+            0.21
+          ],
+          [
+            "balance_sheet_resilience",
+            0.21
+          ]
+        ]
+      },
+      "final_expression": "reject",
+      "pick_score": 46.42
+    }
+  ]
+}

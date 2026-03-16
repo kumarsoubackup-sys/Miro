@@ -1,0 +1,528 @@
+{
+  "rows": [
+    {
+      "name": "SIVE equity on CPO laser bottleneck",
+      "market_theme": "AI photonics / CPO",
+      "thesis": "Sivers may be an underfollowed upstream InP DFB laser supplier to emerging silicon-photonics and external-light-source architectures, with the market still valuing it far below better-known downstream photonics names.",
+      "underlying": "SIVE",
+      "mispricing_type": "hidden_bottleneck",
+      "time_horizon": "12-24m",
+      "linked_companies": ["SIVE", "POET", "Ayar Labs", "WIN Semiconductors"],
+      "bottleneck_layer": "InP laser and external light source capacity",
+      "value_capture_layer": "Specialized upstream laser supplier with ecosystem leverage",
+      "why_missed": [
+        "small-cap and underfollowed listing",
+        "market attention focused on larger optical names",
+        "customer and supply-chain links are not obvious from headline financials"
+      ],
+      "catalysts": [
+        "customer qualification progress",
+        "CPO / silicon photonics adoption milestones",
+        "revenue conversion from photonics pipeline"
+      ],
+      "invalidations": [
+        "CPO ramp delays materially",
+        "customer relationships fail to convert into volume",
+        "dilution offsets operating progress"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 4.5,
+        "recognition_gap": 4.5,
+        "catalyst_clarity": 3.5,
+        "propagation_asymmetry": 4.0,
+        "duration_mismatch": 4.0,
+        "evidence_quality": 3.5,
+        "crowding_inverse": 4.5,
+        "valuation_nonlinearity": 4.0
+      },
+      "options_expression_signals": {
+        "convexity_need": 2.0,
+        "tenor_alignment": 2.5,
+        "vol_expansion_potential": 2.5,
+        "downside_definedness": 1.5,
+        "liquidity_path": 1.0,
+        "implementation_simplicity": 4.0,
+        "catalyst_timing_specificity": 2.5
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 2.5,
+        "implementation_simplicity": 4.5,
+        "balance_sheet_resilience": 2.0,
+        "dilution_risk_inverse": 2.0,
+        "thesis_linearity": 3.5,
+        "duration_tolerance": 4.0,
+        "listing_quality": 2.0
+      }
+    },
+    {
+      "name": "MP equity on magnet sovereignty and humanoid demand",
+      "market_theme": "Rare earths / robotics / defense",
+      "thesis": "MP Materials sits on the domestic rare-earth magnet sovereignty theme, with AI infrastructure, robotics, EVs, and defense all tightening attention on high-performance magnet supply.",
+      "underlying": "MP",
+      "mispricing_type": "hidden_bottleneck",
+      "time_horizon": "12-24m",
+      "linked_companies": ["MP", "DoD", "GM"],
+      "bottleneck_layer": "Heavy rare earth and permanent magnet manufacturing",
+      "value_capture_layer": "Domestic magnet and separation stack",
+      "why_missed": [
+        "market still treats rare earths as a commodity story instead of a sovereignty chokepoint",
+        "robotics and defense demand are not yet fully embedded in consensus narratives"
+      ],
+      "catalysts": [
+        "domestic magnet ramp milestones",
+        "additional strategic contracts",
+        "further export-control pressure on the ex-China chain"
+      ],
+      "invalidations": [
+        "magnet ramp disappoints",
+        "pricing power remains weak",
+        "alternative supply scales faster than expected"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 4.0,
+        "recognition_gap": 4.5,
+        "catalyst_clarity": 4.0,
+        "propagation_asymmetry": 4.5,
+        "duration_mismatch": 4.0,
+        "evidence_quality": 4.5,
+        "crowding_inverse": 3.5,
+        "valuation_nonlinearity": 4.0
+      },
+      "options_expression_signals": {
+        "convexity_need": 3.5,
+        "tenor_alignment": 4.0,
+        "vol_expansion_potential": 3.5,
+        "downside_definedness": 3.0,
+        "liquidity_path": 4.0,
+        "implementation_simplicity": 3.5,
+        "catalyst_timing_specificity": 3.0
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 4.5,
+        "implementation_simplicity": 4.5,
+        "balance_sheet_resilience": 3.5,
+        "dilution_risk_inverse": 3.5,
+        "thesis_linearity": 4.0,
+        "duration_tolerance": 4.0,
+        "listing_quality": 4.0
+      }
+    },
+    {
+      "name": "VRT equity on AI cooling deployment bottleneck",
+      "market_theme": "AI infrastructure / cooling",
+      "thesis": "Vertiv is exposed to the facility-side cooling and power-density ramp that may matter more than any single chip-level thermal component as AI factories scale.",
+      "underlying": "VRT",
+      "mispricing_type": "second_order_beneficiary",
+      "time_horizon": "12-24m",
+      "linked_companies": ["VRT", "NVIDIA", "Schneider Electric"],
+      "bottleneck_layer": "Facility-side coolant distribution and thermal-chain execution",
+      "value_capture_layer": "Integrated deployment and service-heavy cooling stack",
+      "why_missed": [
+        "market can still underweight deployment bottlenecks versus chip narratives",
+        "cooling is often discussed as a theme but not always modeled as a systems constraint"
+      ],
+      "catalysts": [
+        "rack density increases",
+        "liquid cooling default adoption",
+        "AI factory buildout guidance"
+      ],
+      "invalidations": [
+        "cooling commoditizes faster than expected",
+        "deployment margins compress",
+        "AI capex slows materially"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 3.0,
+        "recognition_gap": 3.5,
+        "catalyst_clarity": 4.0,
+        "propagation_asymmetry": 4.0,
+        "duration_mismatch": 3.5,
+        "evidence_quality": 4.5,
+        "crowding_inverse": 2.5,
+        "valuation_nonlinearity": 3.0
+      },
+      "options_expression_signals": {
+        "convexity_need": 2.5,
+        "tenor_alignment": 3.0,
+        "vol_expansion_potential": 2.5,
+        "downside_definedness": 2.0,
+        "liquidity_path": 3.5,
+        "implementation_simplicity": 4.0,
+        "catalyst_timing_specificity": 3.0
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 4.5,
+        "implementation_simplicity": 4.5,
+        "balance_sheet_resilience": 4.0,
+        "dilution_risk_inverse": 4.5,
+        "thesis_linearity": 4.5,
+        "duration_tolerance": 4.0,
+        "listing_quality": 4.5
+      }
+    },
+    {
+      "name": "HUBB equity on transformer lead-time persistence",
+      "market_theme": "AI power / grid equipment",
+      "thesis": "Hubbell sits near the grid hard-goods bottleneck created by AI load growth, utility capex, and long transformer and related equipment lead times.",
+      "underlying": "HUBB",
+      "mispricing_type": "duration_underpricing",
+      "time_horizon": "12-24m",
+      "linked_companies": ["HUBB", "utilities", "data centers"],
+      "bottleneck_layer": "Utility-scale power transformers and related grid equipment",
+      "value_capture_layer": "Grid hardware supplier with pricing power and replacement demand",
+      "why_missed": [
+        "grid capex stories remain less exciting than semis and GPUs",
+        "AI demand is often modeled at the compute layer, not the power-delivery layer"
+      ],
+      "catalysts": [
+        "grid spending guidance",
+        "continued transformer scarcity",
+        "data-center load forecasts"
+      ],
+      "invalidations": [
+        "transformer lead times normalize quickly",
+        "utility spending weakens",
+        "AI power demand expectations cool"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 3.5,
+        "recognition_gap": 4.0,
+        "catalyst_clarity": 4.0,
+        "propagation_asymmetry": 4.0,
+        "duration_mismatch": 4.0,
+        "evidence_quality": 4.5,
+        "crowding_inverse": 3.5,
+        "valuation_nonlinearity": 3.0
+      },
+      "options_expression_signals": {
+        "convexity_need": 2.0,
+        "tenor_alignment": 2.5,
+        "vol_expansion_potential": 2.0,
+        "downside_definedness": 2.5,
+        "liquidity_path": 2.5,
+        "implementation_simplicity": 4.0,
+        "catalyst_timing_specificity": 2.5
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 4.5,
+        "implementation_simplicity": 4.5,
+        "balance_sheet_resilience": 4.5,
+        "dilution_risk_inverse": 4.5,
+        "thesis_linearity": 4.5,
+        "duration_tolerance": 4.0,
+        "listing_quality": 4.5
+      }
+    },
+    {
+      "name": "MU equity on HBM and packaging persistence",
+      "market_theme": "AI memory / advanced packaging",
+      "thesis": "Micron remains exposed to prolonged HBM and advanced packaging tightness, but the market may still underestimate duration while overpricing some of the listed optionality.",
+      "underlying": "MU",
+      "mispricing_type": "variance_underpricing",
+      "time_horizon": "12-24m",
+      "linked_companies": ["MU", "TSM", "SK Hynix"],
+      "bottleneck_layer": "HBM memory stack supply",
+      "value_capture_layer": "Memory supplier with AI-specific mix shift",
+      "why_missed": [
+        "market may underprice duration but not the existence of the bottleneck",
+        "headline AI semis attention can obscure product-mix and supply-duration effects"
+      ],
+      "catalysts": [
+        "HBM contract extensions",
+        "continued AI server demand",
+        "packaging tightness persisting through next cycle"
+      ],
+      "invalidations": [
+        "packaging clears faster than expected",
+        "AI demand weakens materially",
+        "memory pricing rolls over"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 3.0,
+        "recognition_gap": 3.5,
+        "catalyst_clarity": 4.0,
+        "propagation_asymmetry": 4.0,
+        "duration_mismatch": 4.0,
+        "evidence_quality": 4.5,
+        "crowding_inverse": 2.5,
+        "valuation_nonlinearity": 3.5
+      },
+      "options_expression_signals": {
+        "convexity_need": 3.0,
+        "tenor_alignment": 4.0,
+        "vol_expansion_potential": 2.5,
+        "downside_definedness": 3.0,
+        "liquidity_path": 4.5,
+        "implementation_simplicity": 4.0,
+        "catalyst_timing_specificity": 3.0
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 5.0,
+        "implementation_simplicity": 4.5,
+        "balance_sheet_resilience": 4.0,
+        "dilution_risk_inverse": 5.0,
+        "thesis_linearity": 4.0,
+        "duration_tolerance": 4.0,
+        "listing_quality": 5.0
+      }
+    },
+    {
+      "name": "COHR equity on AI optical component vertical integration",
+      "market_theme": "AI photonics / lasers",
+      "thesis": "Coherent has meaningful leverage to AI optical scaling through InP capacity, CW lasers, and broader photonics vertical integration, but the market may still treat it as a noisier legacy photonics name.",
+      "underlying": "COHR",
+      "mispricing_type": "hidden_bottleneck",
+      "time_horizon": "12-24m",
+      "linked_companies": ["COHR", "NVIDIA", "CPO ecosystem"],
+      "bottleneck_layer": "Laser and advanced photonics production capacity",
+      "value_capture_layer": "Scaled integrated photonics manufacturer",
+      "why_missed": [
+        "company story spans many end markets and can look messy",
+        "market attention has favored cleaner single-theme optical winners"
+      ],
+      "catalysts": [
+        "AI optical revenue mix increasing",
+        "6-inch InP capacity ramp",
+        "CPO / silicon photonics design wins"
+      ],
+      "invalidations": [
+        "AI optics growth disappoints",
+        "integration complexity masks earnings power",
+        "competition compresses margins"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 3.0,
+        "recognition_gap": 3.5,
+        "catalyst_clarity": 3.5,
+        "propagation_asymmetry": 3.5,
+        "duration_mismatch": 3.5,
+        "evidence_quality": 4.0,
+        "crowding_inverse": 3.0,
+        "valuation_nonlinearity": 3.5
+      },
+      "options_expression_signals": {
+        "convexity_need": 2.5,
+        "tenor_alignment": 3.0,
+        "vol_expansion_potential": 2.5,
+        "downside_definedness": 2.0,
+        "liquidity_path": 3.0,
+        "implementation_simplicity": 4.0,
+        "catalyst_timing_specificity": 2.5
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 4.5,
+        "implementation_simplicity": 4.0,
+        "balance_sheet_resilience": 3.5,
+        "dilution_risk_inverse": 4.0,
+        "thesis_linearity": 3.5,
+        "duration_tolerance": 4.0,
+        "listing_quality": 4.5
+      }
+    },
+    {
+      "name": "LITE equity on external light source leadership",
+      "market_theme": "AI photonics / lasers",
+      "thesis": "Lumentum is a direct beneficiary of AI optical scaling and external light source demand, but the bottleneck story is now widely recognized and much less hidden than smaller upstream names.",
+      "underlying": "LITE",
+      "mispricing_type": "recognized_beneficiary",
+      "time_horizon": "12-24m",
+      "linked_companies": ["LITE", "NVIDIA", "Ayar Labs"],
+      "bottleneck_layer": "Laser and CPO light source supply",
+      "value_capture_layer": "Large listed optical incumbent",
+      "why_missed": [
+        "some investors may still think of the company through legacy cycles rather than AI optics"
+      ],
+      "catalysts": [
+        "continued AI optical demand",
+        "customer ramps",
+        "CPO qualification wins"
+      ],
+      "invalidations": [
+        "valuation already fully discounts AI optical upside",
+        "competition erodes scarcity premium"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 2.0,
+        "recognition_gap": 2.5,
+        "catalyst_clarity": 4.0,
+        "propagation_asymmetry": 3.0,
+        "duration_mismatch": 3.0,
+        "evidence_quality": 4.5,
+        "crowding_inverse": 1.5,
+        "valuation_nonlinearity": 2.5
+      },
+      "options_expression_signals": {
+        "convexity_need": 2.5,
+        "tenor_alignment": 3.0,
+        "vol_expansion_potential": 1.5,
+        "downside_definedness": 2.0,
+        "liquidity_path": 4.0,
+        "implementation_simplicity": 4.0,
+        "catalyst_timing_specificity": 3.0
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 4.5,
+        "implementation_simplicity": 4.5,
+        "balance_sheet_resilience": 4.0,
+        "dilution_risk_inverse": 4.5,
+        "thesis_linearity": 3.5,
+        "duration_tolerance": 4.0,
+        "listing_quality": 4.5
+      }
+    },
+    {
+      "name": "POET equity on optical interposer packaging leverage",
+      "market_theme": "AI photonics / packaging",
+      "thesis": "POET sits at an interesting AI optical packaging layer through its Optical Interposer, but the execution path and balance-sheet profile make it a noisier expression than the core laser and scaled-infrastructure names.",
+      "underlying": "POET",
+      "mispricing_type": "speculative_enabler",
+      "time_horizon": "12-24m",
+      "linked_companies": ["POET", "SIVE", "Celestial AI"],
+      "bottleneck_layer": "Optical interposer and packaging integration",
+      "value_capture_layer": "Early-stage packaging enabler",
+      "why_missed": [
+        "small-cap, thinly followed photonics packaging story"
+      ],
+      "catalysts": [
+        "prototype milestones",
+        "customer qualification progress",
+        "production readiness"
+      ],
+      "invalidations": [
+        "execution delays",
+        "customer concentration risk",
+        "dilution risk"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 4.0,
+        "recognition_gap": 4.0,
+        "catalyst_clarity": 3.0,
+        "propagation_asymmetry": 3.5,
+        "duration_mismatch": 3.5,
+        "evidence_quality": 3.0,
+        "crowding_inverse": 3.5,
+        "valuation_nonlinearity": 4.0
+      },
+      "options_expression_signals": {
+        "convexity_need": 1.5,
+        "tenor_alignment": 2.0,
+        "vol_expansion_potential": 2.0,
+        "downside_definedness": 1.0,
+        "liquidity_path": 1.0,
+        "implementation_simplicity": 4.0,
+        "catalyst_timing_specificity": 2.0
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 3.5,
+        "implementation_simplicity": 4.0,
+        "balance_sheet_resilience": 1.5,
+        "dilution_risk_inverse": 1.5,
+        "thesis_linearity": 2.5,
+        "duration_tolerance": 3.0,
+        "listing_quality": 2.5
+      }
+    },
+    {
+      "name": "ONTO equity on AI advanced packaging metrology",
+      "market_theme": "AI packaging / semicap",
+      "thesis": "Onto Innovation may be a cleaner metrology beneficiary of sustained advanced packaging and heterogeneous integration demand than more crowded GPU-adjacent names.",
+      "underlying": "ONTO",
+      "mispricing_type": "second_order_beneficiary",
+      "time_horizon": "12-24m",
+      "linked_companies": ["ONTO", "TSM", "OSAT ecosystem"],
+      "bottleneck_layer": "Advanced packaging process control and metrology",
+      "value_capture_layer": "Tooling and control layer for packaging throughput",
+      "why_missed": [
+        "attention concentrates on foundries and memory suppliers instead of process-control enablers",
+        "metrology is less intuitive to many investors than packaging capacity itself"
+      ],
+      "catalysts": [
+        "advanced packaging capacity expansion",
+        "HBM and 2.5D throughput bottlenecks",
+        "tool order growth"
+      ],
+      "invalidations": [
+        "packaging spending normalizes quickly",
+        "tool demand lags capacity announcements"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 3.5,
+        "recognition_gap": 4.0,
+        "catalyst_clarity": 3.5,
+        "propagation_asymmetry": 3.5,
+        "duration_mismatch": 3.5,
+        "evidence_quality": 4.0,
+        "crowding_inverse": 3.5,
+        "valuation_nonlinearity": 3.0
+      },
+      "options_expression_signals": {
+        "convexity_need": 2.0,
+        "tenor_alignment": 2.5,
+        "vol_expansion_potential": 2.0,
+        "downside_definedness": 2.5,
+        "liquidity_path": 2.5,
+        "implementation_simplicity": 4.0,
+        "catalyst_timing_specificity": 2.5
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 4.5,
+        "implementation_simplicity": 4.5,
+        "balance_sheet_resilience": 4.0,
+        "dilution_risk_inverse": 4.5,
+        "thesis_linearity": 4.0,
+        "duration_tolerance": 4.0,
+        "listing_quality": 4.5
+      }
+    },
+    {
+      "name": "FN equity on optical manufacturing scale",
+      "market_theme": "AI optics / manufacturing",
+      "thesis": "Fabrinet has leverage to optical module and transceiver scaling, but the story is less hidden and less bottleneck-pure than upstream laser or photonics component suppliers.",
+      "underlying": "FN",
+      "mispricing_type": "recognized_beneficiary",
+      "time_horizon": "12-24m",
+      "linked_companies": ["FN", "LITE", "optical module ecosystem"],
+      "bottleneck_layer": "Optical manufacturing scale and module assembly",
+      "value_capture_layer": "High-quality manufacturing partner",
+      "why_missed": [
+        "can be treated as contract manufacturing rather than strategic optical capacity"
+      ],
+      "catalysts": [
+        "continued optical demand growth",
+        "AI networking scale-up"
+      ],
+      "invalidations": [
+        "mix shifts away from most profitable programs",
+        "the market already fully recognizes the AI optical link"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 2.5,
+        "recognition_gap": 3.0,
+        "catalyst_clarity": 3.5,
+        "propagation_asymmetry": 3.0,
+        "duration_mismatch": 3.0,
+        "evidence_quality": 4.0,
+        "crowding_inverse": 2.5,
+        "valuation_nonlinearity": 2.5
+      },
+      "options_expression_signals": {
+        "convexity_need": 2.0,
+        "tenor_alignment": 2.5,
+        "vol_expansion_potential": 1.5,
+        "downside_definedness": 2.5,
+        "liquidity_path": 2.5,
+        "implementation_simplicity": 4.0,
+        "catalyst_timing_specificity": 2.5
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 4.5,
+        "implementation_simplicity": 4.5,
+        "balance_sheet_resilience": 4.5,
+        "dilution_risk_inverse": 4.5,
+        "thesis_linearity": 3.5,
+        "duration_tolerance": 4.0,
+        "listing_quality": 4.5
+      }
+    }
+  ]
+}
