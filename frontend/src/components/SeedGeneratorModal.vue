@@ -76,21 +76,21 @@
             <div class="progress-bar-track">
               <div
                 class="progress-bar-fill"
-                :style="{ width: progress + '%' }"
+                :style="{ width: seedTaskState.progress + '%' }"
               ></div>
             </div>
-            <div class="progress-text">{{ progress }}%</div>
+            <div class="progress-text">{{ seedTaskState.progress }}%</div>
           </div>
 
-          <div v-if="currentFile" class="current-file">
+          <div v-if="seedTaskState.currentFile" class="current-file">
             <span class="spinner"></span>
-            Researching {{ currentFile }}...
+            Researching {{ seedTaskState.currentFile }}...
           </div>
 
-          <div class="completed-list" v-if="completedFiles.length > 0">
+          <div class="completed-list" v-if="seedTaskState.completedFiles.length > 0">
             <div class="section-label">COMPLETED</div>
             <div
-              v-for="file in completedFiles"
+              v-for="file in seedTaskState.completedFiles"
               :key="file.name"
               class="completed-item"
             >
@@ -99,8 +99,8 @@
             </div>
           </div>
 
-          <div v-if="generationError" class="error-message">
-            Research generation failed: {{ generationError }}
+          <div v-if="seedTaskState.error" class="error-message">
+            Research generation failed: {{ seedTaskState.error }}
           </div>
         </div>
 
@@ -114,7 +114,7 @@
           <div class="section-label">GENERATED FILES</div>
           <div class="file-list">
             <div
-              v-for="file in completedFiles"
+              v-for="file in seedTaskState.completedFiles"
               :key="file.name"
               class="file-item"
             >
@@ -150,8 +150,14 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue';
+import { ref, computed, watch, onMounted } from 'vue';
 import { generateSeedAPI, getSeedTaskAPI, getSeedFileAPI } from '../api/seed.js';
+import {
+  seedTaskState,
+  startSeedTask,
+  updateSeedProgress,
+  resetSeedTask,
+} from '../store/seedTask.js';
 
 const props = defineProps({
   prompt: { type: String, default: '' },
@@ -161,26 +167,27 @@ const props = defineProps({
 
 const emit = defineEmits(['files-ready', 'close']);
 
-// Phase: 'select' | 'progress' | 'complete'
-const phase = ref('select');
+// UI-only local state (selection phase)
 const selectedIds = ref([]);
 const depth = ref('quick');
-
-// Progress state
-const progress = ref(0);
-const currentFile = ref('');
-const completedFiles = ref([]);
-const generationError = ref('');
-const taskId = ref('');
 
 // Preview state
 const previewContent = ref(null);
 const previewTitle = ref('');
 
-// Polling interval handle
+// Module-level poll timer — persists across modal open/close cycles
 let pollTimer = null;
 
-// Pre-check recommended categories when categories change
+// Phase is derived from store status
+const phase = computed(() => {
+  const status = seedTaskState.status;
+  if (status === 'completed') return 'complete';
+  if (status === 'generating' || status === 'analyzing') return 'progress';
+  if (status === 'failed') return 'progress'; // show error inside progress view
+  return 'select';
+});
+
+// Pre-check recommended categories when categories prop changes
 watch(
   () => props.categories,
   (cats) => {
@@ -193,33 +200,40 @@ watch(
   { immediate: true }
 );
 
-// Reset state when modal is shown
+// When modal opens: reset preview, re-apply selections if idle.
+// When modal closes: do NOT stop polling — let it continue in the background.
 watch(
   () => props.show,
   (isVisible) => {
     if (isVisible) {
-      phase.value = 'select';
-      progress.value = 0;
-      currentFile.value = '';
-      completedFiles.value = [];
-      generationError.value = '';
-      taskId.value = '';
       previewContent.value = null;
       previewTitle.value = '';
-      // Re-apply recommended selections
-      if (props.categories && props.categories.length > 0) {
-        selectedIds.value = props.categories
-          .filter((c) => c.recommended)
-          .map((c) => c.id);
+      // Only reset selections when there is no active task
+      if (seedTaskState.status === 'idle') {
+        if (props.categories && props.categories.length > 0) {
+          selectedIds.value = props.categories
+            .filter((c) => c.recommended)
+            .map((c) => c.id);
+        }
       }
-    } else {
-      stopPolling();
+      // If an active task exists and we're not already polling, resume
+      if (seedTaskState.active && !pollTimer) {
+        startPolling();
+      }
     }
+    // Intentionally not stopping polling on close
   }
 );
 
+// On mount: resume polling if the store already has an active task
+onMounted(() => {
+  if (seedTaskState.active && !pollTimer) {
+    startPolling();
+  }
+});
+
 const handleClose = () => {
-  stopPolling();
+  // Do NOT stop polling — background task continues
   emit('close');
 };
 
@@ -230,11 +244,8 @@ const startGeneration = async () => {
 
   if (selectedCategories.length === 0) return;
 
-  phase.value = 'progress';
-  progress.value = 0;
-  currentFile.value = '';
-  completedFiles.value = [];
-  generationError.value = '';
+  // Reset store so template immediately shows progress phase
+  resetSeedTask();
 
   try {
     const res = await generateSeedAPI(
@@ -242,10 +253,17 @@ const startGeneration = async () => {
       selectedCategories,
       depth.value
     );
-    taskId.value = res.task_id;
+    startSeedTask(res.task_id, props.prompt, selectedCategories, depth.value);
     startPolling();
   } catch (err) {
-    generationError.value = err.message || 'Failed to start generation';
+    // Surface the error in the store so the template can show it
+    updateSeedProgress({
+      status: 'failed',
+      progress: 0,
+      current_file: '',
+      completed_files: [],
+      error: err.message || 'Failed to start generation',
+    });
   }
 };
 
@@ -262,32 +280,30 @@ const stopPolling = () => {
 };
 
 const pollTask = async () => {
-  if (!taskId.value) return;
+  if (!seedTaskState.taskId) return;
 
   try {
-    const res = await getSeedTaskAPI(taskId.value);
-    progress.value = res.progress || 0;
-    currentFile.value = res.current_file || '';
-    completedFiles.value = res.completed_files || [];
+    const res = await getSeedTaskAPI(seedTaskState.taskId);
+    updateSeedProgress(res);
 
-    if (res.status === 'completed') {
+    if (res.status === 'completed' || res.status === 'failed') {
       stopPolling();
-      phase.value = 'complete';
-      progress.value = 100;
-      currentFile.value = '';
-    } else if (res.status === 'failed') {
-      stopPolling();
-      generationError.value = res.error || 'Unknown error';
     }
   } catch (err) {
     stopPolling();
-    generationError.value = err.message || 'Failed to poll task status';
+    updateSeedProgress({
+      status: 'failed',
+      progress: seedTaskState.progress,
+      current_file: '',
+      completed_files: seedTaskState.completedFiles,
+      error: err.message || 'Failed to poll task status',
+    });
   }
 };
 
 const previewFile = async (file) => {
   try {
-    const res = await getSeedFileAPI(taskId.value, file.name);
+    const res = await getSeedFileAPI(seedTaskState.taskId, file.name);
     previewContent.value = res.content;
     previewTitle.value = file.display_name;
   } catch (err) {
@@ -297,10 +313,10 @@ const previewFile = async (file) => {
 };
 
 const confirmFiles = () => {
-  const files = completedFiles.value.map((f) => ({
+  const files = seedTaskState.completedFiles.map((f) => ({
     name: f.name,
     displayName: f.display_name,
-    taskId: taskId.value,
+    taskId: seedTaskState.taskId,
     filename: f.name,
   }));
   emit('files-ready', files);
