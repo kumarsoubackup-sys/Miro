@@ -11,9 +11,12 @@ evidence without custom downstream handling.
 ## Implementation
 
 - Service: [policy_feed_connector.py](/home/d/codex/MiroFish/backend/app/services/policy_feed_connector.py)
+- Live Federal Register fetcher: [federal_register_feed.py](/home/d/codex/MiroFish/backend/app/services/federal_register_feed.py)
 - CLI: [build_policy_feed_source_bundle.py](/home/d/codex/MiroFish/scripts/build_policy_feed_source_bundle.py)
+- Live fetch CLI: [fetch_federal_register_policy_feed.py](/home/d/codex/MiroFish/scripts/fetch_federal_register_policy_feed.py)
 - API route:
   - `POST /research/project/<id>/source-bundle/policy-feed-import`
+  - `POST /research/project/<id>/source-bundle/federal-register-fetch`
 
 ## Input Contract
 
@@ -64,6 +67,8 @@ That means it can flow directly into:
 Synthetic sample input:
 
 - [federal-register-bis-policy-feed-template-v1.json](/home/d/codex/MiroFish/research/templates/federal-register-bis-policy-feed-template-v1.json)
+- [federal-register-api-sample-response-v1.json](/home/d/codex/MiroFish/research/templates/federal-register-api-sample-response-v1.json)
+- [federal-register-live-fetch-sample-policy-feed-v1.json](/home/d/codex/MiroFish/research/analysis/2026-03-16-federal-register-live-fetch-sample-policy-feed-v1.json)
 
 The sample is explicitly synthetic and should be treated as a connector
 validation artifact, not evidence.
@@ -89,8 +94,15 @@ to:
 
 ## Next Steps
 
-The next useful expansion is:
+The Federal Register retrieval layer now exists in code. The next useful
+expansion is:
 
-- live Federal Register / BIS retrieval
-- fragment extraction from real notices
+- live runtime validation against the real Federal Register API
+- selective query profiles by theme
+- BIS retrieval layer parallel to the Federal Register path
 - event-driven project updates for tracked theses
+
+Current limitation:
+
+- the live fetcher is fully implemented and tested with mocked API responses
+- it was not executed against the real network in this environment

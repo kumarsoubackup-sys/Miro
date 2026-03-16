@@ -50,6 +50,11 @@ from .research_ontology import (
 )
 from .structural_parser import build_structural_parse_from_source_bundle
 from .policy_feed_connector import build_policy_feed_source_bundle, merge_source_bundles
+from .federal_register_feed import (
+    FEDERAL_REGISTER_API_URL,
+    build_federal_register_documents_url,
+    fetch_federal_register_policy_feed,
+)
 from .source_registry import (
     DEFAULT_DOCS_DIR as SOURCE_REGISTRY_DOCS_DIR,
     DEFAULT_MATRIX_PATH as SOURCE_REGISTRY_MATRIX_PATH,
@@ -116,6 +121,9 @@ __all__ = [
     'build_structural_parse_from_source_bundle',
     'build_policy_feed_source_bundle',
     'merge_source_bundles',
+    'FEDERAL_REGISTER_API_URL',
+    'build_federal_register_documents_url',
+    'fetch_federal_register_policy_feed',
     'SOURCE_REGISTRY_DOCS_DIR',
     'SOURCE_REGISTRY_MATRIX_PATH',
     'SOURCE_REGISTRY_INVESTIGATION_PATH',

@@ -16,6 +16,7 @@ from ..services import (
     MispricingCandidate,
     MispricingSignals,
     OptionsExpressionSignals,
+    fetch_federal_register_policy_feed,
     build_policy_feed_source_bundle,
     build_source_acquisition_plan,
     build_research_ontology_spec,
@@ -225,6 +226,59 @@ def import_policy_feed_source_bundle(research_project_id: str):
         }), 404
     except Exception as e:
         logger.error(f"导入 policy feed source bundle 失败: {str(e)}")
+        return jsonify({
+            "success": False,
+            "error": str(e),
+            "traceback": traceback.format_exc(),
+        }), 500
+
+
+@research_bp.route("/project/<research_project_id>/source-bundle/federal-register-fetch", methods=["POST"])
+def fetch_federal_register_into_source_bundle(research_project_id: str):
+    """Fetch live Federal Register policy documents and merge them into a source bundle."""
+    try:
+        payload = request.get_json() or {}
+        merge_existing = bool(payload.get("merge_existing", True))
+        existing_source_bundle = None
+        if merge_existing:
+            existing_source_bundle = ResearchProjectManager.get_source_bundle(research_project_id)
+            if not isinstance(existing_source_bundle, dict):
+                existing_source_bundle = None
+
+        policy_feed = fetch_federal_register_policy_feed(
+            query=payload.get("query", ""),
+            agencies=payload.get("agencies"),
+            document_types=payload.get("document_types"),
+            published_gte=payload.get("published_gte"),
+            published_lte=payload.get("published_lte"),
+            per_page=int(payload.get("per_page", 20)),
+            page=int(payload.get("page", 1)),
+            target_themes=payload.get("target_themes"),
+            focus_process_layers=payload.get("focus_process_layers"),
+            focus_geographies=payload.get("focus_geographies"),
+            ticker_refs=payload.get("ticker_refs"),
+            policy_scope=payload.get("policy_scope"),
+        )
+        source_bundle = build_policy_feed_source_bundle(
+            policy_feed,
+            existing_source_bundle=existing_source_bundle,
+        )
+        project = ResearchProjectManager.save_source_bundle(research_project_id, source_bundle)
+        return jsonify({
+            "success": True,
+            "data": {
+                "research_project": project.to_dict(),
+                "policy_feed": policy_feed,
+                "source_bundle": source_bundle,
+            },
+        })
+    except ValueError as e:
+        return jsonify({
+            "success": False,
+            "error": str(e),
+        }), 404
+    except Exception as e:
+        logger.error(f"抓取 Federal Register 失败: {str(e)}")
         return jsonify({
             "success": False,
             "error": str(e),

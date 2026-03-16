@@ -1,0 +1,45 @@
+{
+  "count": 2,
+  "total_pages": 1,
+  "results": [
+    {
+      "abstract": "Sample Federal Register abstract discussing export-control implications for strategic materials and advanced technology.",
+      "agencies": [
+        {
+          "name": "Bureau of Industry and Security"
+        }
+      ],
+      "document_number": "2026-00001",
+      "excerpts": [
+        "Strategic-material processing remains relevant to national-security and industrial-base concerns."
+      ],
+      "html_url": "https://www.federalregister.gov/documents/2026/01/02/2026-00001/sample-notice-1",
+      "publication_date": "2026-01-02",
+      "title": "Sample notice on strategic-material export review",
+      "topics": [
+        "Exports",
+        "Critical Materials"
+      ],
+      "type": "RULE"
+    },
+    {
+      "abstract": "Sample Federal Register abstract on advanced-technology compliance obligations.",
+      "agencies": [
+        {
+          "name": "Department of Commerce"
+        }
+      ],
+      "document_number": "2026-00002",
+      "excerpts": [
+        "Advanced-technology compliance requirements may affect process-layer execution."
+      ],
+      "html_url": "https://www.federalregister.gov/documents/2026/01/03/2026-00002/sample-notice-2",
+      "publication_date": "2026-01-03",
+      "title": "Sample notice on advanced-technology compliance",
+      "topics": [
+        "Semiconductors"
+      ],
+      "type": "NOTICE"
+    }
+  ]
+}

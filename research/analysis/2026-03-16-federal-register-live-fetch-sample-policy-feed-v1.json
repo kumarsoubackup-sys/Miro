@@ -1,0 +1,270 @@
+{
+  "name": "federal_register_policy_feed_live_v1",
+  "theme": "robotics_supply_chain",
+  "synthetic_sample": false,
+  "notes": [
+    "Fetched from Federal Register API.",
+    "Query: rare earth robotics"
+  ],
+  "feed_documents": [
+    {
+      "document_id": "federal_register_2026-00001",
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "source_class": "government_policy_enforcement",
+      "publisher": "Federal Register",
+      "title": "Sample notice on strategic-material export review",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/01/02/2026-00001/sample-notice-1",
+      "published_at": "2026-01-02",
+      "retrieved_at": "2026-03-16T20:41:59.352298+00:00",
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "jurisdiction": "US",
+      "language": "en",
+      "ticker_refs": [
+        "MP",
+        "UUUU"
+      ],
+      "theme_refs": [
+        "robotics_supply_chain",
+        "critical_materials"
+      ],
+      "policy_scope": [
+        "export_control"
+      ],
+      "summary": "Sample Federal Register abstract discussing export-control implications for strategic materials and advanced technology.",
+      "excerpt": "Strategic-material processing remains relevant to national-security and industrial-base concerns.",
+      "research_tags": {
+        "themes": [
+          "Robotics Supply Chain",
+          "Critical Materials"
+        ],
+        "process_layers": [
+          "Neodymium Processing"
+        ],
+        "geographies": [
+          "China"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Sample notice on strategic-material export review",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2026-00001",
+            "document_type": "RULE",
+            "agencies": [
+              "Bureau of Industry and Security"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Robotics Supply Chain",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2026-00001_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "Sample notice on strategic-material export review",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-00001_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2026-00001_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "Sample notice on strategic-material export review may affect Neodymium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "Sample notice on strategic-material export review",
+            "Neodymium Processing",
+            "China"
+          ],
+          "relationship_keys": [
+            "2026-00001_affected_Neodymium Processing",
+            "2026-00001_constrained_Neodymium Processing_China"
+          ]
+        }
+      ],
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Bureau of Industry and Security"
+      ]
+    },
+    {
+      "document_id": "federal_register_2026-00002",
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "source_class": "government_policy_enforcement",
+      "publisher": "Federal Register",
+      "title": "Sample notice on advanced-technology compliance",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/01/03/2026-00002/sample-notice-2",
+      "published_at": "2026-01-03",
+      "retrieved_at": "2026-03-16T20:41:59.352421+00:00",
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "jurisdiction": "US",
+      "language": "en",
+      "ticker_refs": [
+        "MP",
+        "UUUU"
+      ],
+      "theme_refs": [
+        "robotics_supply_chain",
+        "critical_materials"
+      ],
+      "policy_scope": [
+        "export_control"
+      ],
+      "summary": "Sample Federal Register abstract on advanced-technology compliance obligations.",
+      "excerpt": "Advanced-technology compliance requirements may affect process-layer execution.",
+      "research_tags": {
+        "themes": [
+          "Robotics Supply Chain",
+          "Critical Materials"
+        ],
+        "process_layers": [
+          "Neodymium Processing"
+        ],
+        "geographies": [
+          "China"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Sample notice on advanced-technology compliance",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2026-00002",
+            "document_type": "NOTICE",
+            "agencies": [
+              "Department of Commerce"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Robotics Supply Chain",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2026-00002_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "Sample notice on advanced-technology compliance",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-00002_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2026-00002_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "Sample notice on advanced-technology compliance may affect Neodymium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "Sample notice on advanced-technology compliance",
+            "Neodymium Processing",
+            "China"
+          ],
+          "relationship_keys": [
+            "2026-00002_affected_Neodymium Processing",
+            "2026-00002_constrained_Neodymium Processing_China"
+          ]
+        }
+      ],
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Department of Commerce"
+      ]
+    }
+  ],
+  "fetch_metadata": {
+    "api_url": "https://www.federalregister.gov/api/v1/documents.json?fields%5B%5D=abstract&fields%5B%5D=agencies&fields%5B%5D=document_number&fields%5B%5D=excerpts&fields%5B%5D=html_url&fields%5B%5D=publication_date&fields%5B%5D=title&fields%5B%5D=topics&fields%5B%5D=type&conditions%5Bterm%5D=rare+earth+robotics&conditions%5Bagencies%5D%5B%5D=bureau-of-industry-and-security&per_page=5&page=1&order=newest",
+    "result_count": 2,
+    "retrieved_at": "2026-03-16T20:41:59.352481+00:00",
+    "agencies": [
+      "bureau-of-industry-and-security"
+    ],
+    "document_types": []
+  }
+}
