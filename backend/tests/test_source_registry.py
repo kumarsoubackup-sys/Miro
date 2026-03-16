@@ -37,3 +37,65 @@ def test_build_source_registry_from_docs():
     assert linked_in["requires_login"] is True
 
     assert Path(payload["generated_from"][0]).name == "2026-03-16-source-investigation-list-v1.md"
+
+
+def test_build_source_acquisition_plan_for_robotics_parse():
+    registry = source_registry.build_source_registry_from_docs()
+
+    source_bundle = {
+        "name": "robotics_actuation_source_bundle_v1",
+        "theme": "robotics_supply_chain",
+        "sources": [
+            {
+                "source_id": "src_alea_post",
+                "source_class": "investor_post",
+                "source_quality": "medium",
+                "usage_mode": "exploration",
+            }
+        ],
+        "fragments": [],
+    }
+    structural_parse = {
+        "entities": [
+            {"entity_type": "System", "canonical_name": "Humanoid Robot"},
+            {"entity_type": "Subsystem", "canonical_name": "Actuation / Motion"},
+            {"entity_type": "Component", "canonical_name": "Permanent Magnet Motor"},
+            {"entity_type": "MaterialInput", "canonical_name": "Neodymium"},
+            {"entity_type": "ExpressionCandidate", "canonical_name": "MP"},
+            {"entity_type": "Geography", "canonical_name": "China"},
+        ],
+        "relationships": [
+            {"relationship_type": "DEPENDS_ON"},
+        ],
+        "inferences": [
+            {"inference_type": "market_miss", "summary": "actuation chain may be underfollowed"},
+        ],
+    }
+    graduation = {
+        "graduation_status": "exploratory_only",
+        "gates": {
+            "source_gate": False,
+            "high_conviction_source_gate": False,
+        },
+    }
+
+    plan = source_registry.build_source_acquisition_plan(
+        registry,
+        source_bundle=source_bundle,
+        structural_parse=structural_parse,
+        graduation=graduation,
+        limit=5,
+    )
+
+    assert plan["plan_version"] == "v1"
+    assert plan["project_domains"] == ["critical_materials", "robotics"]
+    assert plan["gap_flags"]["needs_evidence_upgrade"] is True
+    assert len(plan["top_recommendations"]) == 5
+    assert any(
+        row["source_class"] == "government_policy_enforcement"
+        for row in plan["top_recommendations"]
+    )
+    assert any(
+        row["source_class"] == "company_filing"
+        for row in plan["top_recommendations"]
+    )

@@ -1,0 +1,1345 @@
+{
+  "plan_version": "v1",
+  "generated_at": "2026-03-16T15:21:32.209539+00:00",
+  "project_name": "robotics_actuation_source_bundle_v1",
+  "project_theme": "robotics_supply_chain",
+  "project_domains": [
+    "critical_materials",
+    "robotics"
+  ],
+  "graduation_status": "exploratory_only",
+  "gap_flags": {
+    "needs_evidence_upgrade": true,
+    "needs_high_quality_sources": true,
+    "needs_industry_validation": true,
+    "needs_policy_context": true,
+    "needs_company_disclosures": true,
+    "needs_expression_validation": true,
+    "needs_cross_border_coverage": true
+  },
+  "top_recommendations": [
+    {
+      "source_target_id": "src_target_bureau_of_industry_and_security_bis_u_s_department_of_commerce",
+      "name": "Bureau of Industry and Security (BIS), U.S. Department of Commerce",
+      "source_family": "government_policy_enforcement",
+      "source_class": "government_policy_enforcement",
+      "suggested_ingestion_class": "government",
+      "canonical_url": "https://www.bis.doc.gov/",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 100.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "US",
+      "category": "Government policy and enforcement sources",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "event-driven + weekly sweep",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "policy_notice",
+        "enforcement_notice",
+        "rule_update"
+      ],
+      "parser_focus": [
+        "PolicyAction",
+        "Geography",
+        "MaterialInput",
+        "ProcessLayer",
+        "AFFECTED_BY_EVENT",
+        "CONSTRAINED_BY"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 58.0,
+      "acquisition_score_0_to_100": 84.35,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "upgrades exploratory inputs into graph-forming evidence",
+        "adds higher-authority corroboration"
+      ]
+    },
+    {
+      "source_target_id": "src_target_arpa_e",
+      "name": "ARPA-E",
+      "source_family": "government_industrial_base_award",
+      "source_class": "government_industrial_base_award",
+      "suggested_ingestion_class": "government",
+      "canonical_url": "https://arpa-e.energy.gov/",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 100.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "US",
+      "category": "Procurement, grant, subsidy, and industrial-base award sources",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics",
+        "defense"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "defense",
+        "energy_infrastructure",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "event-driven + weekly sweep",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "award_notice",
+        "grant_announcement",
+        "contract_notice"
+      ],
+      "parser_focus": [
+        "Event",
+        "Facility",
+        "ProcessLayer",
+        "PublicCompany",
+        "EXPANDS_CAPACITY_FOR",
+        "AFFECTED_BY_EVENT"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 48.0,
+      "acquisition_score_0_to_100": 82.35,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "upgrades exploratory inputs into graph-forming evidence",
+        "adds higher-authority corroboration"
+      ]
+    },
+    {
+      "source_target_id": "src_target_sec_edgar_database_10_k_10_q_8_k_20_f",
+      "name": "SEC EDGAR Database (10-K, 10-Q, 8-K, 20-F)",
+      "source_family": "company_filing",
+      "source_class": "company_filing",
+      "suggested_ingestion_class": "company_filing",
+      "canonical_url": "https://www.sec.gov/edgar",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 96.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "US",
+      "category": "Primary company filings and official disclosures",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "photonics",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "filing-driven + daily watchlist monitoring",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "filing",
+        "annual_report",
+        "quarterly_report",
+        "material_event"
+      ],
+      "parser_focus": [
+        "PublicCompany",
+        "Facility",
+        "ProcessLayer",
+        "MaterialInput",
+        "SUPPLIED_BY",
+        "DEPENDS_ON",
+        "CANDIDATE_EXPRESSION_FOR"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 50.0,
+      "acquisition_score_0_to_100": 80.75,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "upgrades exploratory inputs into graph-forming evidence",
+        "adds higher-authority corroboration"
+      ]
+    },
+    {
+      "source_target_id": "src_target_partnership_announcements",
+      "name": "Partnership announcements",
+      "source_family": "supplier_customer_disclosure",
+      "source_class": "supplier_customer_disclosure",
+      "suggested_ingestion_class": "company_release",
+      "canonical_url": null,
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 88.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "global",
+      "category": "Supplier / customer relationship disclosures",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "photonics",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "daily / event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "partnership_release",
+        "qualification_update",
+        "production_readiness"
+      ],
+      "parser_focus": [
+        "PublicCompany",
+        "ProcessLayer",
+        "QUALIFIED_BY",
+        "SUPPLIED_BY",
+        "EXPANDS_CAPACITY_FOR"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 55.0,
+      "gap_closure_score_0_to_100": 50.0,
+      "acquisition_score_0_to_100": 71.75,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "upgrades exploratory inputs into graph-forming evidence",
+        "adds higher-authority corroboration"
+      ]
+    },
+    {
+      "source_target_id": "src_target_asx_australian_securities_exchange",
+      "name": "ASX (Australian Securities Exchange)",
+      "source_family": "foreign_exchange_filing",
+      "source_class": "foreign_exchange_filing",
+      "suggested_ingestion_class": "company_filing",
+      "canonical_url": "https://www.asx.com.au/",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 92.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "US",
+      "category": "Exchange and listing disclosures outside the U.S.",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "critical_materials",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "photonics",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "daily for tracked names",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "exchange_filing",
+        "issuer_disclosure",
+        "market_notice"
+      ],
+      "parser_focus": [
+        "PublicCompany",
+        "Facility",
+        "ProcessLayer",
+        "MaterialInput",
+        "Event"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 60.0,
+      "acquisition_score_0_to_100": 80.75,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "upgrades exploratory inputs into graph-forming evidence",
+        "adds higher-authority corroboration"
+      ]
+    },
+    {
+      "source_target_id": "src_target_advanced_photonics_coalition",
+      "name": "Advanced Photonics Coalition",
+      "source_family": "industry_body_and_standards",
+      "source_class": "industry_body_and_standards",
+      "suggested_ingestion_class": "industry_body",
+      "canonical_url": "https://www.advanced-photonics.org/",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 96.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "global",
+      "category": "Industry bodies and standards / ecosystem organizations",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "energy_infrastructure",
+        "robotics",
+        "critical_materials"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "ai_optics",
+        "critical_materials",
+        "energy_infrastructure",
+        "photonics",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "monthly + event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "parser_focus": [
+        "System",
+        "Subsystem",
+        "Component",
+        "MaterialInput",
+        "ProcessLayer",
+        "USED_IN",
+        "DEPENDS_ON"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 48.0,
+      "acquisition_score_0_to_100": 80.35,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "upgrades exploratory inputs into graph-forming evidence",
+        "adds higher-authority corroboration"
+      ]
+    },
+    {
+      "source_target_id": "src_target_designcon",
+      "name": "DesignCon",
+      "source_family": "technical_conference_material",
+      "source_class": "technical_conference_material",
+      "suggested_ingestion_class": "conference_material",
+      "canonical_url": "https://www.designcon.com/",
+      "role": "graph_forming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 88.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "global",
+      "category": "Technical conference materials",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "photonics",
+        "rare_earths",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "conference cycle + event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "conference_slide",
+        "talk_abstract",
+        "ecosystem_demo"
+      ],
+      "parser_focus": [
+        "System",
+        "Subsystem",
+        "Component",
+        "ProcessLayer",
+        "USED_IN",
+        "DEPENDS_ON"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 34.0,
+      "acquisition_score_0_to_100": 73.55,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "upgrades exploratory inputs into graph-forming evidence",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_ihs_global_trade_atlas",
+      "name": "IHS Global Trade Atlas",
+      "source_family": "shipping_trade_flow_data",
+      "source_class": "shipping_trade_flow_data",
+      "suggested_ingestion_class": "market_data_snapshot",
+      "canonical_url": null,
+      "role": "graph_confirming",
+      "priority_tier": "P2",
+      "priority_score_0_to_100": 76.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 3,
+      "jurisdiction": "global",
+      "category": "Import / export / customs / shipping data",
+      "tier_section": "Tier 3: Useful edge sources",
+      "target_domains": [
+        "critical_materials",
+        "semiconductors",
+        "energy_infrastructure",
+        "robotics"
+      ],
+      "target_themes": [
+        "critical_materials",
+        "energy_infrastructure",
+        "rare_earths",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "monthly + thesis-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "trade_table",
+        "flow_snapshot",
+        "customs_dataset"
+      ],
+      "parser_focus": [
+        "Geography",
+        "MaterialInput",
+        "flow_validation"
+      ],
+      "status": "candidate",
+      "notes": [
+        "Subscription-based trade-flow source."
+      ],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 10.0,
+      "acquisition_score_0_to_100": 62.75,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P2",
+        "targets critical_materials, semiconductors, energy_infrastructure",
+        "improves cross-border and concentration coverage"
+      ]
+    },
+    {
+      "source_target_id": "src_target_chips_and_science_act_office_u_s_commerce_department",
+      "name": "CHIPS and Science Act Office, U.S. Commerce Department",
+      "source_family": "government_policy_enforcement",
+      "source_class": "government_policy_enforcement",
+      "suggested_ingestion_class": "government",
+      "canonical_url": "https://www.commerce.gov/issues/semiconductor-industry",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 100.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "US",
+      "category": "Government policy and enforcement sources",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "event-driven + weekly sweep",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "policy_notice",
+        "enforcement_notice",
+        "rule_update"
+      ],
+      "parser_focus": [
+        "PolicyAction",
+        "Geography",
+        "MaterialInput",
+        "ProcessLayer",
+        "AFFECTED_BY_EVENT",
+        "CONSTRAINED_BY"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 58.0,
+      "acquisition_score_0_to_100": 84.35,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "upgrades exploratory inputs into graph-forming evidence",
+        "adds higher-authority corroboration"
+      ]
+    },
+    {
+      "source_target_id": "src_target_federal_register_notices",
+      "name": "Federal Register Notices",
+      "source_family": "government_policy_enforcement",
+      "source_class": "government_policy_enforcement",
+      "suggested_ingestion_class": "government",
+      "canonical_url": "https://www.federalregister.gov/",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 100.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "US",
+      "category": "Government policy and enforcement sources",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "event-driven + weekly sweep",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "policy_notice",
+        "enforcement_notice",
+        "rule_update"
+      ],
+      "parser_focus": [
+        "PolicyAction",
+        "Geography",
+        "MaterialInput",
+        "ProcessLayer",
+        "AFFECTED_BY_EVENT",
+        "CONSTRAINED_BY"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 58.0,
+      "acquisition_score_0_to_100": 84.35,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "upgrades exploratory inputs into graph-forming evidence",
+        "adds higher-authority corroboration"
+      ]
+    }
+  ],
+  "monitoring_queue": [
+    {
+      "source_target_id": "src_target_government_accountability_office_gao_reports",
+      "name": "Government Accountability Office (GAO) Reports",
+      "source_family": "government_policy_enforcement",
+      "source_class": "government_policy_enforcement",
+      "suggested_ingestion_class": "government",
+      "canonical_url": "https://www.gao.gov/",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 100.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "US",
+      "category": "Government policy and enforcement sources",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "event-driven + weekly sweep",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "policy_notice",
+        "enforcement_notice",
+        "rule_update"
+      ],
+      "parser_focus": [
+        "PolicyAction",
+        "Geography",
+        "MaterialInput",
+        "ProcessLayer",
+        "AFFECTED_BY_EVENT",
+        "CONSTRAINED_BY"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 58.0,
+      "acquisition_score_0_to_100": 84.35,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "upgrades exploratory inputs into graph-forming evidence",
+        "adds higher-authority corroboration"
+      ]
+    },
+    {
+      "source_target_id": "src_target_national_institute_of_standards_and_technology_nist",
+      "name": "National Institute of Standards and Technology (NIST)",
+      "source_family": "government_policy_enforcement",
+      "source_class": "government_policy_enforcement",
+      "suggested_ingestion_class": "government",
+      "canonical_url": "https://www.nist.gov/",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 100.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "US",
+      "category": "Government policy and enforcement sources",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "event-driven + weekly sweep",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "policy_notice",
+        "enforcement_notice",
+        "rule_update"
+      ],
+      "parser_focus": [
+        "PolicyAction",
+        "Geography",
+        "MaterialInput",
+        "ProcessLayer",
+        "AFFECTED_BY_EVENT",
+        "CONSTRAINED_BY"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 58.0,
+      "acquisition_score_0_to_100": 84.35,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "upgrades exploratory inputs into graph-forming evidence",
+        "adds higher-authority corroboration"
+      ]
+    },
+    {
+      "source_target_id": "src_target_darpa",
+      "name": "DARPA",
+      "source_family": "government_industrial_base_award",
+      "source_class": "government_industrial_base_award",
+      "suggested_ingestion_class": "government",
+      "canonical_url": "https://www.darpa.mil/",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 100.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "global",
+      "category": "Procurement, grant, subsidy, and industrial-base award sources",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics",
+        "defense"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "defense",
+        "energy_infrastructure",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "event-driven + weekly sweep",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "award_notice",
+        "grant_announcement",
+        "contract_notice"
+      ],
+      "parser_focus": [
+        "Event",
+        "Facility",
+        "ProcessLayer",
+        "PublicCompany",
+        "EXPANDS_CAPACITY_FOR",
+        "AFFECTED_BY_EVENT"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 48.0,
+      "acquisition_score_0_to_100": 82.35,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "upgrades exploratory inputs into graph-forming evidence",
+        "adds higher-authority corroboration"
+      ]
+    },
+    {
+      "source_target_id": "src_target_dod_awards_and_contracts_via_sam_gov",
+      "name": "DoD awards and contracts via SAM.gov",
+      "source_family": "government_industrial_base_award",
+      "source_class": "government_industrial_base_award",
+      "suggested_ingestion_class": "government",
+      "canonical_url": "https://sam.gov/",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 100.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "US",
+      "category": "Procurement, grant, subsidy, and industrial-base award sources",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics",
+        "defense"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "defense",
+        "energy_infrastructure",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "event-driven + weekly sweep",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "award_notice",
+        "grant_announcement",
+        "contract_notice"
+      ],
+      "parser_focus": [
+        "Event",
+        "Facility",
+        "ProcessLayer",
+        "PublicCompany",
+        "EXPANDS_CAPACITY_FOR",
+        "AFFECTED_BY_EVENT"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 48.0,
+      "acquisition_score_0_to_100": 82.35,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "upgrades exploratory inputs into graph-forming evidence",
+        "adds higher-authority corroboration"
+      ]
+    },
+    {
+      "source_target_id": "src_target_global_electronics_association",
+      "name": "Global Electronics Association",
+      "source_family": "industry_body_and_standards",
+      "source_class": "industry_body_and_standards",
+      "suggested_ingestion_class": "industry_body",
+      "canonical_url": "https://www.electronics.org/",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 96.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "global",
+      "category": "Industry bodies and standards / ecosystem organizations",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "energy_infrastructure",
+        "robotics",
+        "critical_materials"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "photonics",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "monthly + event-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "parser_focus": [
+        "System",
+        "Subsystem",
+        "Component",
+        "MaterialInput",
+        "ProcessLayer",
+        "USED_IN",
+        "DEPENDS_ON"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 48.0,
+      "acquisition_score_0_to_100": 80.35,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "upgrades exploratory inputs into graph-forming evidence",
+        "adds higher-authority corroboration"
+      ]
+    },
+    {
+      "source_target_id": "src_target_mckinsey_on_semiconductors",
+      "name": "McKinsey on Semiconductors",
+      "source_family": "trade_press_specialist",
+      "source_class": "trade_press_specialist",
+      "suggested_ingestion_class": "trade_press",
+      "canonical_url": "https://www.mckinsey.com/industries/semiconductors/our-insights/mckinsey-on-semiconductors",
+      "role": "graph_confirming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 76.0,
+      "authority_score_1_to_5": 3,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 4,
+      "jurisdiction": "global",
+      "category": "Authoritative trade press and specialist publications",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "energy_infrastructure",
+        "robotics",
+        "critical_materials"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "photonics",
+        "rare_earths",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "daily scan",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "trade_article",
+        "industry_analysis",
+        "specialist_summary"
+      ],
+      "parser_focus": [
+        "Context",
+        "DependencyBridge",
+        "MarketSignal"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 63.15,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_photonics21_reports",
+      "name": "Photonics21 Reports",
+      "source_family": "trade_press_specialist",
+      "source_class": "trade_press_specialist",
+      "suggested_ingestion_class": "trade_press",
+      "canonical_url": "https://www.photonics21.org/",
+      "role": "graph_confirming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 76.0,
+      "authority_score_1_to_5": 3,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 4,
+      "jurisdiction": "global",
+      "category": "Authoritative trade press and specialist publications",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "photonics",
+        "energy_infrastructure",
+        "robotics",
+        "critical_materials"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "ai_optics",
+        "critical_materials",
+        "energy_infrastructure",
+        "photonics",
+        "rare_earths",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "daily scan",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "trade_article",
+        "industry_analysis",
+        "specialist_summary"
+      ],
+      "parser_focus": [
+        "Context",
+        "DependencyBridge",
+        "MarketSignal"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 12.0,
+      "acquisition_score_0_to_100": 63.15,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics",
+        "improves industry-wide bottleneck validation"
+      ]
+    },
+    {
+      "source_target_id": "src_target_u_s_international_trade_commission_usitc_dataweb",
+      "name": "U.S. International Trade Commission (USITC) DataWeb",
+      "source_family": "shipping_trade_flow_data",
+      "source_class": "shipping_trade_flow_data",
+      "suggested_ingestion_class": "market_data_snapshot",
+      "canonical_url": "https://dataweb.usitc.gov/",
+      "role": "graph_confirming",
+      "priority_tier": "P2",
+      "priority_score_0_to_100": 76.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 3,
+      "jurisdiction": "US",
+      "category": "Import / export / customs / shipping data",
+      "tier_section": "Tier 3: Useful edge sources",
+      "target_domains": [
+        "critical_materials",
+        "semiconductors",
+        "energy_infrastructure",
+        "robotics"
+      ],
+      "target_themes": [
+        "critical_materials",
+        "energy_infrastructure",
+        "rare_earths",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "monthly + thesis-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "trade_table",
+        "flow_snapshot",
+        "customs_dataset"
+      ],
+      "parser_focus": [
+        "Geography",
+        "MaterialInput",
+        "flow_validation"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 10.0,
+      "acquisition_score_0_to_100": 62.75,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P2",
+        "targets critical_materials, semiconductors, energy_infrastructure",
+        "improves cross-border and concentration coverage"
+      ]
+    },
+    {
+      "source_target_id": "src_target_un_comtrade",
+      "name": "UN Comtrade",
+      "source_family": "shipping_trade_flow_data",
+      "source_class": "shipping_trade_flow_data",
+      "suggested_ingestion_class": "market_data_snapshot",
+      "canonical_url": "https://comtradeplus.un.org/",
+      "role": "graph_confirming",
+      "priority_tier": "P2",
+      "priority_score_0_to_100": 76.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 4,
+      "market_impact_score_1_to_5": 4,
+      "parse_utility_score_1_to_5": 3,
+      "jurisdiction": "global",
+      "category": "Import / export / customs / shipping data",
+      "tier_section": "Tier 3: Useful edge sources",
+      "target_domains": [
+        "critical_materials",
+        "semiconductors",
+        "energy_infrastructure",
+        "robotics"
+      ],
+      "target_themes": [
+        "critical_materials",
+        "energy_infrastructure",
+        "rare_earths",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "monthly + thesis-driven",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "trade_table",
+        "flow_snapshot",
+        "customs_dataset"
+      ],
+      "parser_focus": [
+        "Geography",
+        "MaterialInput",
+        "flow_validation"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 10.0,
+      "acquisition_score_0_to_100": 62.75,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P2",
+        "targets critical_materials, semiconductors, energy_infrastructure",
+        "improves cross-border and concentration coverage"
+      ]
+    },
+    {
+      "source_target_id": "src_target_office_of_foreign_assets_control_ofac_u_s_treasury",
+      "name": "Office of Foreign Assets Control (OFAC), U.S. Treasury",
+      "source_family": "government_policy_enforcement",
+      "source_class": "government_policy_enforcement",
+      "suggested_ingestion_class": "government",
+      "canonical_url": "https://home.treasury.gov/policy-issues/office-of-foreign-assets-control-sanctions-programs-and-information",
+      "role": "graph_forming",
+      "priority_tier": "P0",
+      "priority_score_0_to_100": 100.0,
+      "authority_score_1_to_5": 5,
+      "lead_time_score_1_to_5": 5,
+      "graph_centrality_score_1_to_5": 5,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 5,
+      "jurisdiction": "US",
+      "category": "Government policy and enforcement sources",
+      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
+      "target_domains": [
+        "semiconductors",
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "energy_infrastructure",
+        "robotics",
+        "semiconductors"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "event-driven + weekly sweep",
+      "access_mode": "web_public",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "policy_notice",
+        "enforcement_notice",
+        "rule_update"
+      ],
+      "parser_focus": [
+        "PolicyAction",
+        "Geography",
+        "MaterialInput",
+        "ProcessLayer",
+        "AFFECTED_BY_EVENT",
+        "CONSTRAINED_BY"
+      ],
+      "status": "candidate",
+      "notes": [],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 58.0,
+      "acquisition_score_0_to_100": 84.35,
+      "recommendation": "monitor_event_driven",
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "upgrades exploratory inputs into graph-forming evidence",
+        "adds higher-authority corroboration"
+      ]
+    }
+  ]
+}

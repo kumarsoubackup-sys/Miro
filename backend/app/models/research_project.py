@@ -55,6 +55,7 @@ class ResearchProject:
     scorecard_count: int = 0
     mispricing_candidate_count: int = 0
     source_registry_count: int = 0
+    source_acquisition_plan_count: int = 0
     tags: List[str] = field(default_factory=list)
     focus_areas: List[str] = field(default_factory=list)
     source_files: List[Dict[str, Any]] = field(default_factory=list)
@@ -85,6 +86,7 @@ class ResearchProject:
             "scorecard_count": self.scorecard_count,
             "mispricing_candidate_count": self.mispricing_candidate_count,
             "source_registry_count": self.source_registry_count,
+            "source_acquisition_plan_count": self.source_acquisition_plan_count,
             "tags": self.tags,
             "focus_areas": self.focus_areas,
             "source_files": self.source_files,
@@ -119,6 +121,7 @@ class ResearchProject:
             scorecard_count=data.get("scorecard_count", 0),
             mispricing_candidate_count=data.get("mispricing_candidate_count", 0),
             source_registry_count=data.get("source_registry_count", 0),
+            source_acquisition_plan_count=data.get("source_acquisition_plan_count", 0),
             tags=data.get("tags", []),
             focus_areas=data.get("focus_areas", []),
             source_files=data.get("source_files", []),
@@ -459,6 +462,35 @@ class ResearchProjectManager:
             return json.load(f)
 
     @classmethod
+    def save_source_acquisition_plan(
+        cls, research_project_id: str, source_acquisition_plan: Dict[str, Any]
+    ) -> ResearchProject:
+        project = cls.get_project(research_project_id)
+        if not project:
+            raise ValueError(f"research project not found: {research_project_id}")
+
+        with open(
+            cls._get_artifact_path(research_project_id, "source_acquisition_plan.json"),
+            "w",
+            encoding="utf-8",
+        ) as f:
+            json.dump(source_acquisition_plan, f, ensure_ascii=False, indent=2)
+
+        top_recommendations = cls._count_items(source_acquisition_plan, "top_recommendations")
+        monitoring_queue = cls._count_items(source_acquisition_plan, "monitoring_queue")
+        project.source_acquisition_plan_count = top_recommendations + monitoring_queue
+        cls.save_project(project)
+        return project
+
+    @classmethod
+    def get_source_acquisition_plan(cls, research_project_id: str) -> Dict[str, Any]:
+        path = cls._get_artifact_path(research_project_id, "source_acquisition_plan.json")
+        if not os.path.exists(path):
+            return {}
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    @classmethod
     def save_mispricing_candidates(
         cls, research_project_id: str, mispricing_candidates: List[Dict[str, Any]]
     ) -> ResearchProject:
@@ -510,5 +542,6 @@ class ResearchProjectManager:
             "scorecards": cls.get_scorecards(research_project_id),
             "mispricing_candidates": cls.get_mispricing_candidates(research_project_id),
             "source_registry": cls.get_source_registry(research_project_id),
+            "source_acquisition_plan": cls.get_source_acquisition_plan(research_project_id),
             "summary": cls.get_summary(research_project_id),
         }

@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import datetime, timezone
+from collections import Counter
 import re
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
@@ -651,9 +652,338 @@ def build_source_registry_from_docs(
     }
 
 
+KEYWORD_TO_DOMAIN: List[tuple[str, str]] = [
+    ("robot", "robotics"),
+    ("humanoid", "robotics"),
+    ("actuation", "robotics"),
+    ("motion", "robotics"),
+    ("neodymium", "critical_materials"),
+    ("rare earth", "critical_materials"),
+    ("magnet", "critical_materials"),
+    ("photon", "photonics"),
+    ("optical", "photonics"),
+    ("laser", "photonics"),
+    ("cpo", "ai_infrastructure"),
+    ("silicon photonics", "photonics"),
+    ("memory", "semiconductors"),
+    ("packaging", "semiconductors"),
+    ("wafer", "semiconductors"),
+    ("chip", "semiconductors"),
+    ("data center", "ai_infrastructure"),
+    ("grid", "energy_infrastructure"),
+    ("transformer", "energy_infrastructure"),
+    ("cooling", "energy_infrastructure"),
+    ("power", "energy_infrastructure"),
+]
+
+
+def _text_blob(*parts: Any) -> str:
+    out: List[str] = []
+    for part in parts:
+        if isinstance(part, str):
+            out.append(part)
+        elif isinstance(part, dict):
+            for value in part.values():
+                if isinstance(value, (str, int, float)):
+                    out.append(str(value))
+                elif isinstance(value, list):
+                    out.extend(str(item) for item in value if isinstance(item, (str, int, float)))
+        elif isinstance(part, list):
+            out.extend(str(item) for item in part if isinstance(item, (str, int, float)))
+    return " ".join(out).lower()
+
+
+def _infer_project_domains(*parts: Any) -> List[str]:
+    blob = _text_blob(*parts)
+    domains = {domain for keyword, domain in KEYWORD_TO_DOMAIN if keyword in blob}
+    return sorted(domains)
+
+
+def _gap_flags(
+    source_bundle: Dict[str, Any],
+    structural_parse: Dict[str, Any],
+    graduation: Dict[str, Any] | None,
+) -> Dict[str, bool]:
+    sources = source_bundle.get("sources", [])
+    evidence_count = sum(1 for source in sources if source.get("usage_mode") == "evidence")
+    high_quality_count = sum(1 for source in sources if source.get("source_quality") == "high")
+    source_classes = {source.get("source_class", "") for source in sources}
+    entities = structural_parse.get("entities", [])
+    entity_types = {entity.get("entity_type") for entity in entities}
+    relationships = structural_parse.get("relationships", [])
+    relationship_types = {relationship.get("relationship_type") for relationship in relationships}
+
+    source_gate = bool((graduation or {}).get("gates", {}).get("source_gate", False))
+    high_conviction_source_gate = bool((graduation or {}).get("gates", {}).get("high_conviction_source_gate", False))
+
+    return {
+        "needs_evidence_upgrade": evidence_count == 0 or not source_gate,
+        "needs_high_quality_sources": high_quality_count == 0 or not high_conviction_source_gate,
+        "needs_industry_validation": "industry_body" not in source_classes and "technical_paper" not in source_classes,
+        "needs_policy_context": "Event" not in entity_types and "AFFECTED_BY_EVENT" not in relationship_types,
+        "needs_company_disclosures": not any(
+            rel_type in relationship_types for rel_type in ["QUALIFIED_BY", "EXPANDS_CAPACITY_FOR", "AFFECTED_BY_EVENT"]
+        ),
+        "needs_expression_validation": "ExpressionCandidate" in entity_types,
+        "needs_cross_border_coverage": "Geography" in entity_types or "critical_materials" in _infer_project_domains(_text_blob(structural_parse)),
+    }
+
+
+def _target_match_score(row: Dict[str, Any], project_domains: Iterable[str]) -> float:
+    project_domains = set(project_domains)
+    if not project_domains:
+        return 40.0
+    row_targets = set(row.get("target_domains", [])) | set(row.get("target_themes", []))
+    overlap = len(project_domains & row_targets)
+    if overlap == 0:
+        return 20.0
+    return min(100.0, 35.0 + (overlap * 20.0))
+
+
+def _gap_closure_score(row: Dict[str, Any], gap_flags: Dict[str, bool]) -> tuple[float, List[str]]:
+    score = 0.0
+    reasons: List[str] = []
+    source_class = row.get("source_class")
+    role = row.get("role")
+    priority_tier = row.get("priority_tier")
+
+    if gap_flags["needs_evidence_upgrade"] and role == "graph_forming":
+        score += 22.0
+        reasons.append("upgrades exploratory inputs into graph-forming evidence")
+    if gap_flags["needs_high_quality_sources"] and priority_tier == "P0":
+        score += 14.0
+        reasons.append("adds higher-authority corroboration")
+    if gap_flags["needs_industry_validation"] and source_class in {
+        "industry_body_and_standards",
+        "technical_conference_material",
+        "trade_press_specialist",
+    }:
+        score += 12.0
+        reasons.append("improves industry-wide bottleneck validation")
+    if gap_flags["needs_policy_context"] and source_class in {
+        "government_policy_enforcement",
+        "government_industrial_base_award",
+        "policy_tracker",
+        "procurement_capex_guidance",
+    }:
+        score += 12.0
+        reasons.append("adds event and policy transmission context")
+    if gap_flags["needs_company_disclosures"] and source_class in {
+        "company_filing",
+        "earnings_transcript",
+        "supplier_customer_disclosure",
+        "foreign_exchange_filing",
+    }:
+        score += 14.0
+        reasons.append("can confirm supplier, capacity, or qualification edges")
+    if gap_flags["needs_expression_validation"] and source_class == "market_data_snapshot":
+        score += 10.0
+        reasons.append("helps validate stock-vs-LEAPS expression quality")
+    if gap_flags["needs_cross_border_coverage"] and source_class in {
+        "foreign_exchange_filing",
+        "government_policy_enforcement",
+        "shipping_trade_flow_data",
+    }:
+        score += 10.0
+        reasons.append("improves cross-border and concentration coverage")
+
+    if row.get("requires_login"):
+        score -= 6.0
+        reasons.append("less attractive near-term because access is gated")
+
+    return score, reasons
+
+
+def _recommendation_label(score: float, cadence: str) -> str:
+    if score >= 88:
+        return "ingest_now"
+    if score >= 74:
+        return "monitor_event_driven" if "event-driven" in cadence else "monitor_weekly"
+    if score >= 60:
+        return "monitor_weekly"
+    return "backlog_only"
+
+
+def _select_diverse_rows(
+    rows: List[Dict[str, Any]],
+    *,
+    limit: int,
+    per_class_limit: int = 2,
+    per_role_limit: int = 4,
+) -> List[Dict[str, Any]]:
+    selected: List[Dict[str, Any]] = []
+    class_counts: Counter[str] = Counter()
+    role_counts: Counter[str] = Counter()
+
+    for row in rows:
+        source_class = row.get("source_class", "unknown")
+        role = row.get("role", "unknown")
+        if class_counts[source_class] >= per_class_limit:
+            continue
+        if role_counts[role] >= per_role_limit:
+            continue
+        selected.append(row)
+        class_counts[source_class] += 1
+        role_counts[role] += 1
+        if len(selected) >= limit:
+            return selected
+
+    for row in rows:
+        if row in selected:
+            continue
+        selected.append(row)
+        if len(selected) >= limit:
+            break
+    return selected
+
+
+def _coverage_target_classes(gap_flags: Dict[str, bool]) -> List[str]:
+    target_classes: List[str] = []
+    if gap_flags["needs_policy_context"]:
+        target_classes.extend([
+            "government_policy_enforcement",
+            "government_industrial_base_award",
+        ])
+    if gap_flags["needs_company_disclosures"]:
+        target_classes.extend([
+            "company_filing",
+            "supplier_customer_disclosure",
+            "foreign_exchange_filing",
+        ])
+    if gap_flags["needs_industry_validation"]:
+        target_classes.extend([
+            "industry_body_and_standards",
+            "technical_conference_material",
+        ])
+    if gap_flags["needs_expression_validation"]:
+        target_classes.append("market_data_snapshot")
+    if gap_flags["needs_cross_border_coverage"]:
+        target_classes.append("shipping_trade_flow_data")
+
+    ordered: List[str] = []
+    seen: set[str] = set()
+    for source_class in target_classes:
+        if source_class not in seen:
+            ordered.append(source_class)
+            seen.add(source_class)
+    return ordered
+
+
+def build_source_acquisition_plan(
+    source_registry: Dict[str, Any],
+    *,
+    thesis_intake: Dict[str, Any] | None = None,
+    source_bundle: Dict[str, Any] | None = None,
+    structural_parse: Dict[str, Any] | None = None,
+    graduation: Dict[str, Any] | None = None,
+    limit: int = 10,
+) -> Dict[str, Any]:
+    thesis_intake = thesis_intake or {}
+    source_bundle = source_bundle or {}
+    structural_parse = structural_parse or {}
+    graduation = graduation or {}
+
+    project_name = source_bundle.get("name") or thesis_intake.get("name") or "unnamed_project"
+    project_theme = source_bundle.get("theme") or thesis_intake.get("theme") or ""
+    project_domains = _infer_project_domains(
+        project_name,
+        project_theme,
+        thesis_intake,
+        source_bundle.get("notes", []),
+        structural_parse.get("inferences", []),
+        [entity.get("canonical_name", "") for entity in structural_parse.get("entities", [])],
+    )
+    gap_flags = _gap_flags(source_bundle, structural_parse, graduation)
+    source_rows = list(source_registry.get("rows", []))
+
+    prioritized_rows: List[Dict[str, Any]] = []
+    for row in source_rows:
+        target_match_score = _target_match_score(row, project_domains)
+        gap_score, gap_reasons = _gap_closure_score(row, gap_flags)
+        base_priority = float(row.get("priority_score_0_to_100") or 0.0)
+        accessibility_bonus = 4.0 if not row.get("requires_login") else -2.0
+        final_score = round(
+            base_priority * 0.50
+            + target_match_score * 0.25
+            + gap_score * 0.20
+            + accessibility_bonus,
+            2,
+        )
+        reasons = [
+            f"priority tier {row.get('priority_tier')}",
+            f"targets {', '.join(row.get('target_domains', [])[:3]) or 'general structural domains'}",
+        ]
+        reasons.extend(gap_reasons[:3])
+
+        prioritized_rows.append(
+            {
+                **row,
+                "project_match_score_0_to_100": round(target_match_score, 2),
+                "gap_closure_score_0_to_100": round(max(0.0, gap_score), 2),
+                "acquisition_score_0_to_100": final_score,
+                "recommendation": _recommendation_label(final_score, row.get("ingestion_cadence", "")),
+                "reasons": reasons[:4],
+            }
+        )
+
+    prioritized_rows.sort(
+        key=lambda row: (
+            row["recommendation"] == "ingest_now",
+            row["recommendation"] == "monitor_event_driven",
+            row["recommendation"] == "monitor_weekly",
+            row["acquisition_score_0_to_100"],
+            row["priority_score_0_to_100"],
+        ),
+        reverse=True,
+    )
+
+    top_recommendations: List[Dict[str, Any]] = []
+    for source_class in _coverage_target_classes(gap_flags):
+        for row in prioritized_rows:
+            if row.get("source_class") != source_class or row in top_recommendations:
+                continue
+            top_recommendations.append(row)
+            break
+        if len(top_recommendations) >= limit:
+            break
+
+    if len(top_recommendations) < limit:
+        remaining_pool = [row for row in prioritized_rows if row not in top_recommendations]
+        top_recommendations.extend(
+            _select_diverse_rows(
+                remaining_pool,
+                limit=limit - len(top_recommendations),
+            )
+        )
+    remaining_rows = [row for row in prioritized_rows if row not in top_recommendations]
+    monitoring_candidates = [
+        row for row in remaining_rows
+        if row["recommendation"] in {"monitor_event_driven", "monitor_weekly"}
+    ]
+    monitoring_queue = _select_diverse_rows(
+        monitoring_candidates,
+        limit=10,
+        per_class_limit=2,
+        per_role_limit=5,
+    )
+
+    return {
+        "plan_version": "v1",
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "project_name": project_name,
+        "project_theme": project_theme,
+        "project_domains": project_domains,
+        "graduation_status": graduation.get("graduation_status"),
+        "gap_flags": gap_flags,
+        "top_recommendations": top_recommendations,
+        "monitoring_queue": monitoring_queue,
+    }
+
+
 __all__ = [
     "DEFAULT_DOCS_DIR",
     "DEFAULT_MATRIX_PATH",
     "DEFAULT_INVESTIGATION_PATH",
     "build_source_registry_from_docs",
+    "build_source_acquisition_plan",
 ]

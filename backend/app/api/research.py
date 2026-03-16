@@ -16,6 +16,7 @@ from ..services import (
     MispricingCandidate,
     MispricingSignals,
     OptionsExpressionSignals,
+    build_source_acquisition_plan,
     build_research_ontology_spec,
     build_source_registry_from_docs,
     build_structural_parse_from_source_bundle,
@@ -269,6 +270,121 @@ def import_source_registry(research_project_id: str):
         }), 404
     except Exception as e:
         logger.error(f"导入 source registry 失败: {str(e)}")
+        return jsonify({
+            "success": False,
+            "error": str(e),
+            "traceback": traceback.format_exc(),
+        }), 500
+
+
+@research_bp.route("/project/<research_project_id>/source-acquisition-plan", methods=["GET"])
+def get_source_acquisition_plan(research_project_id: str):
+    """Return the saved source acquisition plan for a research project."""
+    project = ResearchProjectManager.get_project(research_project_id)
+    if not project:
+        return jsonify({
+            "success": False,
+            "error": f"研究项目不存在: {research_project_id}",
+        }), 404
+
+    return jsonify({
+        "success": True,
+        "data": ResearchProjectManager.get_source_acquisition_plan(research_project_id),
+    })
+
+
+@research_bp.route("/project/<research_project_id>/source-acquisition-plan", methods=["POST"])
+def save_source_acquisition_plan(research_project_id: str):
+    """Persist a source acquisition plan for a research project."""
+    try:
+        source_acquisition_plan = request.get_json() or {}
+        if not isinstance(source_acquisition_plan, dict):
+            return jsonify({
+                "success": False,
+                "error": "source acquisition plan payload must be an object",
+            }), 400
+
+        project = ResearchProjectManager.save_source_acquisition_plan(
+            research_project_id, source_acquisition_plan
+        )
+        return jsonify({
+            "success": True,
+            "data": {
+                "research_project": project.to_dict(),
+                "source_acquisition_plan": source_acquisition_plan,
+            },
+        })
+    except ValueError as e:
+        return jsonify({
+            "success": False,
+            "error": str(e),
+        }), 404
+    except Exception as e:
+        logger.error(f"保存 source acquisition plan 失败: {str(e)}")
+        return jsonify({
+            "success": False,
+            "error": str(e),
+            "traceback": traceback.format_exc(),
+        }), 500
+
+
+@research_bp.route(
+    "/project/<research_project_id>/source-acquisition-plan/generate",
+    methods=["POST"],
+)
+def generate_source_acquisition_plan(research_project_id: str):
+    """Generate and persist a source acquisition plan for a research project."""
+    try:
+        payload = request.get_json(silent=True) or {}
+        thesis_intake = payload.get("thesis_intake")
+        if thesis_intake is None:
+            thesis_intake = ResearchProjectManager.get_thesis_intake(research_project_id) or {}
+
+        source_registry = payload.get("source_registry")
+        if source_registry is None:
+            source_registry = ResearchProjectManager.get_source_registry(research_project_id)
+        if not source_registry:
+            return jsonify({
+                "success": False,
+                "error": "no source registry available for source acquisition plan generation",
+            }), 400
+
+        source_bundle = payload.get("source_bundle")
+        if source_bundle is None:
+            source_bundle = ResearchProjectManager.get_source_bundle(research_project_id)
+
+        structural_parse = payload.get("structural_parse")
+        if structural_parse is None:
+            structural_parse = ResearchProjectManager.get_structural_parse(research_project_id)
+
+        graduation = payload.get("graduation") or {}
+        limit = payload.get("limit", 10)
+
+        source_acquisition_plan = build_source_acquisition_plan(
+            source_registry,
+            thesis_intake=thesis_intake,
+            source_bundle=source_bundle,
+            structural_parse=structural_parse,
+            graduation=graduation,
+            limit=limit,
+        )
+        project = ResearchProjectManager.save_source_acquisition_plan(
+            research_project_id, source_acquisition_plan
+        )
+        return jsonify({
+            "success": True,
+            "data": {
+                "research_project": project.to_dict(),
+                "source_acquisition_plan": source_acquisition_plan,
+            },
+        })
+    except ValueError as e:
+        return jsonify({
+            "success": False,
+            "error": str(e),
+        }), 404
+    except Exception as e:
+        logger.error(f"生成 source acquisition plan 失败: {str(e)}")
         return jsonify({
             "success": False,
             "error": str(e),

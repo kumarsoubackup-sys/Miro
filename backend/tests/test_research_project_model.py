@@ -97,6 +97,23 @@ def test_research_project_manager_round_trip(tmp_path):
                 ]
             },
         )
+        ResearchProjectManager.save_source_acquisition_plan(
+            project.research_project_id,
+            {
+                "top_recommendations": [
+                    {
+                        "source_target_id": "src_target_sec_edgar",
+                        "recommendation": "ingest_now",
+                    }
+                ],
+                "monitoring_queue": [
+                    {
+                        "source_target_id": "src_target_bis",
+                        "recommendation": "monitor_event_driven",
+                    }
+                ],
+            },
+        )
         ResearchProjectManager.save_mispricing_candidates(
             project.research_project_id,
             [{"candidate_name": "MU LEAPS", "mispricing": {"score_0_to_100": 82.4}}],
@@ -121,11 +138,16 @@ def test_research_project_manager_round_trip(tmp_path):
         assert loaded.claims_audit_count == 1
         assert loaded.scorecard_count == 1
         assert loaded.source_registry_count == 1
+        assert loaded.source_acquisition_plan_count == 2
         assert loaded.mispricing_candidate_count == 1
         assert artifacts["thesis_intake"]["theme"] == "HBM / advanced packaging"
         assert artifacts["source_bundle"]["sources"][0]["source_id"] == "src_1"
         assert artifacts["structural_parse"]["claims"][0]["claim_id"] == "claim_1"
         assert artifacts["source_registry"]["rows"][0]["source_target_id"] == "src_target_sec_edgar"
+        assert (
+            artifacts["source_acquisition_plan"]["top_recommendations"][0]["source_target_id"]
+            == "src_target_sec_edgar"
+        )
         assert artifacts["mispricing_candidates"][0]["candidate_name"] == "MU LEAPS"
         assert artifacts["summary"]["top_severity_layer"] == "CoWoS-class packaging"
 

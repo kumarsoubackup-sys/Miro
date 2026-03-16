@@ -53,6 +53,7 @@ from .source_registry import (
     DEFAULT_DOCS_DIR as SOURCE_REGISTRY_DOCS_DIR,
     DEFAULT_MATRIX_PATH as SOURCE_REGISTRY_MATRIX_PATH,
     DEFAULT_INVESTIGATION_PATH as SOURCE_REGISTRY_INVESTIGATION_PATH,
+    build_source_acquisition_plan,
     build_source_registry_from_docs,
 )
 from .mispricing_screening import (
@@ -113,6 +114,7 @@ __all__ = [
     'SOURCE_REGISTRY_DOCS_DIR',
     'SOURCE_REGISTRY_MATRIX_PATH',
     'SOURCE_REGISTRY_INVESTIGATION_PATH',
+    'build_source_acquisition_plan',
     'build_source_registry_from_docs',
     'DEFAULT_MISPRICING_WEIGHTS',
     'DEFAULT_OPTIONS_FIT_WEIGHTS',
