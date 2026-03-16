@@ -971,7 +971,7 @@ class OasisProfileGenerator:
         
         logger.info(get_error_message('log_profile_parallel_start', locale).format(total=total, parallel=parallel_count))
         print(f"\n{'='*60}")
-        print(f"开始生成Agent人设 - 共 {total} 个实体，并行数: {parallel_count}")
+        print(f"Starting agent profile generation - {total} entities, parallelism: {parallel_count}")
         print(f"{'='*60}\n")
         
         # 使用线程池并行执行
@@ -1002,7 +1002,9 @@ class OasisProfileGenerator:
                         progress_callback(
                             current, 
                             total, 
-                            f"已完成 {current}/{total}: {entity.name}（{entity_type}）"
+                            get_error_message('sim_profile_done_item', locale).format(
+                                current=current, total=total, name=entity.name, type=entity_type
+                            )
                         )
                     
                     if error:

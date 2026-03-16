@@ -12,6 +12,7 @@ from datetime import datetime
 from enum import Enum
 
 from ..utils.logger import get_logger
+from ..utils.error_messages import get_error_message
 from .zep_entity_reader import ZepEntityReader
 from .oasis_profile_generator import OasisProfileGenerator
 from .simulation_config_generator import SimulationConfigGenerator
@@ -306,7 +307,7 @@ class SimulationManager:
             if progress_callback:
                 progress_callback(
                     "generating_profiles", 0, 
-                    "开始生成...",
+                    get_error_message('sim_profile_start', locale),
                     current=0,
                     total=total_entities
                 )
@@ -395,7 +396,7 @@ class SimulationManager:
             if progress_callback:
                 progress_callback(
                     "generating_config", 30, 
-                    "正在调用LLM生成配置...",
+                    get_error_message('sim_config_llm_calling', locale),
                     current=1,
                     total=3
                 )

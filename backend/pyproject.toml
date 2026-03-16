@@ -53,3 +53,7 @@ dev = [
 
 [tool.hatch.build.targets.wheel]
 packages = ["app"]
+
+[tool.ruff]
+lint.ignore = ["E402", "E722", "E741"]
+exclude = ["scripts/"]

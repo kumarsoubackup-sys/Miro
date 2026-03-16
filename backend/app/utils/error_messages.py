@@ -201,6 +201,9 @@ MESSAGES = {
         'sim_stage_profiles': '生成Agent人设',
         'sim_stage_config': '生成模拟配置',
         'sim_stage_scripts': '准备模拟脚本',
+        'sim_profile_start': '开始生成...',
+        'sim_profile_done_item': '已完成 {current}/{total}: {name}（{type}）',
+        'sim_config_llm_calling': '正在调用LLM生成配置...',
 
         # ===== report_agent.py logger messages =====
         'log_report_agent_init': 'ReportAgent 初始化完成: graph_id={graph_id}, simulation_id={simulation_id}',
@@ -468,6 +471,9 @@ MESSAGES = {
         'sim_stage_profiles': 'Generating Agent profiles',
         'sim_stage_config': 'Generating simulation config',
         'sim_stage_scripts': 'Preparing simulation scripts',
+        'sim_profile_start': 'Starting generation...',
+        'sim_profile_done_item': 'Completed {current}/{total}: {name} ({type})',
+        'sim_config_llm_calling': 'Calling LLM to generate config...',
 
         # ===== report_agent.py logger messages =====
         'log_report_agent_init': 'ReportAgent initialized: graph_id={graph_id}, simulation_id={simulation_id}',
@@ -735,6 +741,9 @@ MESSAGES = {
         'sim_stage_profiles': 'Agent 페르소나 생성',
         'sim_stage_config': '시뮬레이션 설정 생성',
         'sim_stage_scripts': '시뮬레이션 스크립트 준비',
+        'sim_profile_start': '생성 시작...',
+        'sim_profile_done_item': '완료 {current}/{total}: {name} ({type})',
+        'sim_config_llm_calling': 'LLM으로 설정 생성 중...',
 
         # ===== report_agent.py logger messages =====
         'log_report_agent_init': 'ReportAgent 초기화 완료: graph_id={graph_id}, simulation_id={simulation_id}',
