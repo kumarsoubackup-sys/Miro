@@ -1,0 +1,109 @@
+{
+  "report_version": "v1",
+  "generated_at": "2026-03-16T15:44:10.561638+00:00",
+  "project_name": "robotics_actuation_source_bundle_v2",
+  "graduation_status": "pick_candidate",
+  "next_promotion_target": "maintain_pick_quality",
+  "blocking_gates": [],
+  "gap_flags": {
+    "needs_evidence_upgrade": false,
+    "needs_high_quality_sources": false,
+    "needs_industry_validation": false,
+    "needs_policy_context": true,
+    "needs_company_disclosures": false,
+    "needs_expression_validation": true,
+    "needs_cross_border_coverage": true
+  },
+  "required_source_classes": [
+    "government_policy_enforcement",
+    "government_industrial_base_award",
+    "market_data_snapshot",
+    "shipping_trade_flow_data"
+  ],
+  "target_companies": [
+    "Equity basket: MP / NEO / UUUU",
+    "Shares: MP",
+    "Shares: NEO",
+    "Shares: UUUU",
+    "MP",
+    "NEO"
+  ],
+  "targeted_next_steps": [
+    {
+      "source_class": "government_policy_enforcement",
+      "recommended_source": "Bureau of Industry and Security (BIS), U.S. Department of Commerce",
+      "recommendation": "monitor_weekly",
+      "expected_artifact_types": [
+        "policy_notice",
+        "enforcement_notice",
+        "rule_update"
+      ],
+      "target_companies": [
+        "Equity basket: MP / NEO / UUUU",
+        "Shares: MP",
+        "Shares: NEO",
+        "Shares: UUUU",
+        "MP",
+        "NEO"
+      ],
+      "why_it_matters": "adds policy transmission and export-control context that can change the dependency graph before consensus updates"
+    },
+    {
+      "source_class": "government_industrial_base_award",
+      "recommended_source": "ARPA-E",
+      "recommendation": "monitor_weekly",
+      "expected_artifact_types": [
+        "award_notice",
+        "grant_announcement",
+        "contract_notice"
+      ],
+      "target_companies": [
+        "Equity basket: MP / NEO / UUUU",
+        "Shares: MP",
+        "Shares: NEO",
+        "Shares: UUUU",
+        "MP",
+        "NEO"
+      ],
+      "why_it_matters": "shows what strategic buyers or the state are funding as real bottlenecks"
+    },
+    {
+      "source_class": "market_data_snapshot",
+      "recommended_source": "LEAPS watchlist refresh workflow",
+      "recommendation": "monitor_weekly",
+      "expected_artifact_types": [
+        "price_snapshot",
+        "options_chain",
+        "liquidity_check"
+      ],
+      "target_companies": [
+        "Equity basket: MP / NEO / UUUU",
+        "Shares: MP",
+        "Shares: NEO",
+        "Shares: UUUU",
+        "MP",
+        "NEO"
+      ],
+      "why_it_matters": "checks whether the proposed stock or LEAPS expression is actually tradable and justified"
+    },
+    {
+      "source_class": "shipping_trade_flow_data",
+      "recommended_source": "IHS Global Trade Atlas",
+      "recommendation": "monitor_weekly",
+      "expected_artifact_types": [
+        "trade_table",
+        "flow_snapshot",
+        "customs_dataset"
+      ],
+      "target_companies": [
+        "Equity basket: MP / NEO / UUUU",
+        "Shares: MP",
+        "Shares: NEO",
+        "Shares: UUUU",
+        "MP",
+        "NEO"
+      ],
+      "why_it_matters": "validates cross-border concentration and physical flow assumptions"
+    }
+  ]
+}

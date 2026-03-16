@@ -1,0 +1,87 @@
+{
+  "graduation_status": "pick_candidate",
+  "weighted_score_0_to_100": 94.86,
+  "gates": {
+    "source_gate": true,
+    "structure_gate": true,
+    "market_miss_gate": true,
+    "expression_gate": true,
+    "high_conviction_source_gate": true
+  },
+  "dimensions": {
+    "source_mix": {
+      "score_0_to_100": 82.86,
+      "detail": {
+        "total_sources": 7,
+        "evidence_count": 6,
+        "high_quality_count": 6,
+        "independent_count": 4,
+        "source_classes": [
+          "company_release",
+          "government",
+          "industry_body",
+          "technical_paper",
+          "user_note"
+        ]
+      }
+    },
+    "structure_quality": {
+      "score_0_to_100": 100.0,
+      "detail": {
+        "entity_count": 22,
+        "relationship_count": 20,
+        "claim_count": 7,
+        "evidence_link_count": 28,
+        "inference_count": 1,
+        "entity_types": [
+          "Component",
+          "ExpressionCandidate",
+          "Facility",
+          "Geography",
+          "MaterialInput",
+          "ProcessLayer",
+          "PublicCompany",
+          "Subsystem",
+          "System",
+          "Theme"
+        ],
+        "relationship_types": [
+          "CANDIDATE_EXPRESSION_FOR",
+          "CONSTRAINED_BY",
+          "DEPENDS_ON",
+          "EXPANDS_CAPACITY_FOR",
+          "PART_OF",
+          "PROCESSED_BY",
+          "REPRICES_VIA",
+          "SUPPLIED_BY",
+          "USED_IN"
+        ]
+      }
+    },
+    "market_miss_quality": {
+      "score_0_to_100": 100.0,
+      "detail": {
+        "statement": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+        "confidence": "high",
+        "derived_claim_count": 7,
+        "derived_relationship_count": 13
+      }
+    },
+    "expression_readiness": {
+      "score_0_to_100": 100.0,
+      "detail": {
+        "expression_count": 4,
+        "expression_names": [
+          "Equity basket: MP / NEO / UUUU",
+          "Shares: MP",
+          "Shares: NEO",
+          "Shares: UUUU"
+        ],
+        "expression_relationships_present": [
+          "CANDIDATE_EXPRESSION_FOR",
+          "REPRICES_VIA"
+        ]
+      }
+    }
+  }
+}

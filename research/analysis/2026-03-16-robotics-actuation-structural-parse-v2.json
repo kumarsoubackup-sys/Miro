@@ -1,0 +1,1041 @@
+{
+  "parser_version": "deterministic_v1",
+  "generated_at": "2026-03-16T15:43:57.181363+00:00",
+  "source_ids": [
+    "src_doe_rare_earth_free_motors",
+    "src_energyfuels_rare_earth_elements_2026",
+    "src_iea_concentration_2025",
+    "src_maxon_robotics_page_2026",
+    "src_mp_magnet_production_2025",
+    "src_neo_magnetic_materials_2026",
+    "src_robotics_actuation_synthesis_v2"
+  ],
+  "entities": [
+    {
+      "entity_id": "ent_component_frameless_brushless_dc_motor",
+      "entity_type": "Component",
+      "canonical_name": "Frameless Brushless DC Motor",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_component_permanent_magnet_motor",
+      "entity_type": "Component",
+      "canonical_name": "Permanent Magnet Motor",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_expressioncandidate_equity_basket_mp_neo_uuuu",
+      "entity_type": "ExpressionCandidate",
+      "canonical_name": "Equity basket: MP / NEO / UUUU",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_expressioncandidate_shares_mp",
+      "entity_type": "ExpressionCandidate",
+      "canonical_name": "Shares: MP",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_expressioncandidate_shares_neo",
+      "entity_type": "ExpressionCandidate",
+      "canonical_name": "Shares: NEO",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_expressioncandidate_shares_uuuu",
+      "entity_type": "ExpressionCandidate",
+      "canonical_name": "Shares: UUUU",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_facility_independence_magnetics_facility",
+      "entity_type": "Facility",
+      "canonical_name": "Independence Magnetics Facility",
+      "aliases": [],
+      "description": "",
+      "attributes": {
+        "location": "Texas"
+      },
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_facility_white_mesa_mill",
+      "entity_type": "Facility",
+      "canonical_name": "White Mesa Mill",
+      "aliases": [],
+      "description": "",
+      "attributes": {
+        "location": "Utah"
+      },
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_geography_china",
+      "entity_type": "Geography",
+      "canonical_name": "China",
+      "aliases": [],
+      "description": "",
+      "attributes": {
+        "risk_profile": "extreme_concentration"
+      },
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_geography_united_states",
+      "entity_type": "Geography",
+      "canonical_name": "United States",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_materialinput_ndfeb_permanent_magnet",
+      "entity_type": "MaterialInput",
+      "canonical_name": "NdFeB Permanent Magnet",
+      "aliases": [],
+      "description": "",
+      "attributes": {
+        "material_role": "motor_magnet"
+      },
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_materialinput_neodymium",
+      "entity_type": "MaterialInput",
+      "canonical_name": "Neodymium",
+      "aliases": [],
+      "description": "",
+      "attributes": {
+        "material_role": "rare_earth_feedstock"
+      },
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_processlayer_ndfeb_magnetic_powders_and_alloys",
+      "entity_type": "ProcessLayer",
+      "canonical_name": "NdFeB Magnetic Powders and Alloys",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_processlayer_neodymium_processing",
+      "entity_type": "ProcessLayer",
+      "canonical_name": "Neodymium Processing",
+      "aliases": [],
+      "description": "",
+      "attributes": {
+        "process_stage": "separation_and_refining"
+      },
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+      "entity_type": "ProcessLayer",
+      "canonical_name": "Sintered NdFeB Magnet Manufacturing",
+      "aliases": [],
+      "description": "",
+      "attributes": {
+        "process_stage": "finished_magnet_manufacturing"
+      },
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_publiccompany_mp",
+      "entity_type": "PublicCompany",
+      "canonical_name": "MP",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "medium"
+    },
+    {
+      "entity_id": "ent_publiccompany_neo",
+      "entity_type": "PublicCompany",
+      "canonical_name": "NEO",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "medium"
+    },
+    {
+      "entity_id": "ent_publiccompany_uuuu",
+      "entity_type": "PublicCompany",
+      "canonical_name": "UUUU",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "medium"
+    },
+    {
+      "entity_id": "ent_subsystem_actuation_motion",
+      "entity_type": "Subsystem",
+      "canonical_name": "Actuation / Motion",
+      "aliases": [],
+      "description": "",
+      "attributes": {
+        "bom_role": "primary_motion_subsystem"
+      },
+      "confidence": "high"
+    },
+    {
+      "entity_id": "ent_system_humanoid_robot",
+      "entity_type": "System",
+      "canonical_name": "Humanoid Robot",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "medium"
+    },
+    {
+      "entity_id": "ent_system_industrial_motor_system",
+      "entity_type": "System",
+      "canonical_name": "Industrial Motor System",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "medium"
+    },
+    {
+      "entity_id": "ent_theme_robotics_supply_chain",
+      "entity_type": "Theme",
+      "canonical_name": "Robotics Supply Chain",
+      "aliases": [],
+      "description": "",
+      "attributes": {},
+      "confidence": "high"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_id": "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_neodymium_processing",
+      "relationship_type": "CANDIDATE_EXPRESSION_FOR",
+      "source_entity_id": "ent_expressioncandidate_equity_basket_mp_neo_uuuu",
+      "target_entity_id": "ent_processlayer_neodymium_processing",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "basket_expression",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_robotics_actuation_market_miss_synthesis_v2_relationship_rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_neodymium_processing"
+      ],
+      "notes": [],
+      "relationship_key": "basket_expression_for_ndpr_v2"
+    },
+    {
+      "relationship_id": "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+      "relationship_type": "CANDIDATE_EXPRESSION_FOR",
+      "source_entity_id": "ent_expressioncandidate_equity_basket_mp_neo_uuuu",
+      "target_entity_id": "ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+      "direction": "source_to_target",
+      "relationship_strength": "medium",
+      "causal_role": "basket_expression",
+      "confidence": "medium",
+      "evidence_refs": [
+        "ev_frag_robotics_actuation_market_miss_synthesis_v2_relationship_rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_sintered_ndfeb_magnet_manufacturing"
+      ],
+      "notes": [],
+      "relationship_key": "basket_expression_for_ndfeb_v2"
+    },
+    {
+      "relationship_id": "rel_candidate_expression_for_ent_expressioncandidate_shares_mp_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+      "relationship_type": "CANDIDATE_EXPRESSION_FOR",
+      "source_entity_id": "ent_expressioncandidate_shares_mp",
+      "target_entity_id": "ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "public_market_expression",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_mp_domestic_magnet_capacity_relationship_rel_candidate_expression_for_ent_expressioncandidate_shares_mp_ent_processlayer_sintered_ndfeb_magnet_manufacturing"
+      ],
+      "notes": [],
+      "relationship_key": "mp_shares_expression_v2"
+    },
+    {
+      "relationship_id": "rel_candidate_expression_for_ent_expressioncandidate_shares_neo_ent_processlayer_ndfeb_magnetic_powders_and_alloys",
+      "relationship_type": "CANDIDATE_EXPRESSION_FOR",
+      "source_entity_id": "ent_expressioncandidate_shares_neo",
+      "target_entity_id": "ent_processlayer_ndfeb_magnetic_powders_and_alloys",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "public_market_expression",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_neo_and_uuuu_processing_exposure_relationship_rel_candidate_expression_for_ent_expressioncandidate_shares_neo_ent_processlayer_ndfeb_magnetic_powders_and_alloys"
+      ],
+      "notes": [],
+      "relationship_key": "neo_shares_expression_v2"
+    },
+    {
+      "relationship_id": "rel_candidate_expression_for_ent_expressioncandidate_shares_uuuu_ent_processlayer_neodymium_processing",
+      "relationship_type": "CANDIDATE_EXPRESSION_FOR",
+      "source_entity_id": "ent_expressioncandidate_shares_uuuu",
+      "target_entity_id": "ent_processlayer_neodymium_processing",
+      "direction": "source_to_target",
+      "relationship_strength": "medium",
+      "causal_role": "public_market_expression",
+      "confidence": "medium",
+      "evidence_refs": [
+        "ev_frag_uuuu_ndpr_processing_exposure_relationship_rel_candidate_expression_for_ent_expressioncandidate_shares_uuuu_ent_processlayer_neodymium_processing"
+      ],
+      "notes": [],
+      "relationship_key": "uuuu_shares_expression_v2"
+    },
+    {
+      "relationship_id": "rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+      "relationship_type": "CONSTRAINED_BY",
+      "source_entity_id": "ent_processlayer_neodymium_processing",
+      "target_entity_id": "ent_geography_china",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "dominant_processing_geography",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_iea_rare_earth_concentration_robotics_relationship_rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china"
+      ],
+      "notes": [],
+      "relationship_key": "ndpr_processing_constrained_by_china_v2"
+    },
+    {
+      "relationship_id": "rel_constrained_by_ent_processlayer_sintered_ndfeb_magnet_manufacturing_ent_geography_china",
+      "relationship_type": "CONSTRAINED_BY",
+      "source_entity_id": "ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+      "target_entity_id": "ent_geography_china",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "dominant_finished_magnet_geography",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_iea_rare_earth_concentration_robotics_relationship_rel_constrained_by_ent_processlayer_sintered_ndfeb_magnet_manufacturing_ent_geography_china"
+      ],
+      "notes": [],
+      "relationship_key": "ndfeb_manufacturing_constrained_by_china_v2"
+    },
+    {
+      "relationship_id": "rel_depends_on_ent_component_permanent_magnet_motor_ent_materialinput_ndfeb_permanent_magnet",
+      "relationship_type": "DEPENDS_ON",
+      "source_entity_id": "ent_component_permanent_magnet_motor",
+      "target_entity_id": "ent_materialinput_ndfeb_permanent_magnet",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "required_motor_material",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_doe_motor_rare_earth_dependency_relationship_rel_depends_on_ent_component_permanent_magnet_motor_ent_materialinput_ndfeb_permanent_magnet"
+      ],
+      "notes": [],
+      "relationship_key": "pm_motor_depends_on_ndfeb_v2"
+    },
+    {
+      "relationship_id": "rel_depends_on_ent_materialinput_ndfeb_permanent_magnet_ent_materialinput_neodymium",
+      "relationship_type": "DEPENDS_ON",
+      "source_entity_id": "ent_materialinput_ndfeb_permanent_magnet",
+      "target_entity_id": "ent_materialinput_neodymium",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "feedstock_dependency",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_doe_motor_rare_earth_dependency_relationship_rel_depends_on_ent_materialinput_ndfeb_permanent_magnet_ent_materialinput_neodymium"
+      ],
+      "notes": [],
+      "relationship_key": "ndfeb_depends_on_neodymium_v2"
+    },
+    {
+      "relationship_id": "rel_expands_capacity_for_ent_facility_white_mesa_mill_ent_processlayer_neodymium_processing",
+      "relationship_type": "EXPANDS_CAPACITY_FOR",
+      "source_entity_id": "ent_facility_white_mesa_mill",
+      "target_entity_id": "ent_processlayer_neodymium_processing",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "processing_capacity",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_uuuu_ndpr_processing_exposure_relationship_rel_expands_capacity_for_ent_facility_white_mesa_mill_ent_processlayer_neodymium_processing"
+      ],
+      "notes": [],
+      "relationship_key": "white_mesa_expands_ndpr_processing_v2"
+    },
+    {
+      "relationship_id": "rel_part_of_ent_component_frameless_brushless_dc_motor_ent_subsystem_actuation_motion",
+      "relationship_type": "PART_OF",
+      "source_entity_id": "ent_component_frameless_brushless_dc_motor",
+      "target_entity_id": "ent_subsystem_actuation_motion",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "core_actuation_component",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_robotics_actuation_motor_architecture_relationship_rel_part_of_ent_component_frameless_brushless_dc_motor_ent_subsystem_actuation_motion"
+      ],
+      "notes": [],
+      "relationship_key": "frameless_motor_part_of_actuation_v2"
+    },
+    {
+      "relationship_id": "rel_part_of_ent_component_permanent_magnet_motor_ent_subsystem_actuation_motion",
+      "relationship_type": "PART_OF",
+      "source_entity_id": "ent_component_permanent_magnet_motor",
+      "target_entity_id": "ent_subsystem_actuation_motion",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "motor_architecture",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_robotics_actuation_motor_architecture_relationship_rel_part_of_ent_component_permanent_magnet_motor_ent_subsystem_actuation_motion"
+      ],
+      "notes": [],
+      "relationship_key": "pm_motor_part_of_actuation_v2"
+    },
+    {
+      "relationship_id": "rel_part_of_ent_subsystem_actuation_motion_ent_system_humanoid_robot",
+      "relationship_type": "PART_OF",
+      "source_entity_id": "ent_subsystem_actuation_motion",
+      "target_entity_id": "ent_system_humanoid_robot",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "primary_motion_subsystem",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_robotics_actuation_motor_architecture_relationship_rel_part_of_ent_subsystem_actuation_motion_ent_system_humanoid_robot"
+      ],
+      "notes": [],
+      "relationship_key": "actuation_part_of_humanoid_v2"
+    },
+    {
+      "relationship_id": "rel_processed_by_ent_materialinput_neodymium_ent_processlayer_neodymium_processing",
+      "relationship_type": "PROCESSED_BY",
+      "source_entity_id": "ent_materialinput_neodymium",
+      "target_entity_id": "ent_processlayer_neodymium_processing",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "industrial_conversion_layer",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_doe_motor_rare_earth_dependency_relationship_rel_processed_by_ent_materialinput_neodymium_ent_processlayer_neodymium_processing"
+      ],
+      "notes": [],
+      "relationship_key": "neodymium_processed_by_ndpr_layer_v2"
+    },
+    {
+      "relationship_id": "rel_reprices_via_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_theme_robotics_supply_chain",
+      "relationship_type": "REPRICES_VIA",
+      "source_entity_id": "ent_expressioncandidate_equity_basket_mp_neo_uuuu",
+      "target_entity_id": "ent_theme_robotics_supply_chain",
+      "direction": "source_to_target",
+      "relationship_strength": "medium",
+      "causal_role": "market_recognition_path",
+      "confidence": "medium",
+      "evidence_refs": [
+        "ev_frag_robotics_actuation_market_miss_synthesis_v2_relationship_rel_reprices_via_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_theme_robotics_supply_chain"
+      ],
+      "notes": [],
+      "relationship_key": "basket_reprices_via_robotics_recognition_v2"
+    },
+    {
+      "relationship_id": "rel_supplied_by_ent_processlayer_ndfeb_magnetic_powders_and_alloys_ent_publiccompany_neo",
+      "relationship_type": "SUPPLIED_BY",
+      "source_entity_id": "ent_processlayer_ndfeb_magnetic_powders_and_alloys",
+      "target_entity_id": "ent_publiccompany_neo",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "listed_powder_and_alloy_exposure",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_neo_and_uuuu_processing_exposure_relationship_rel_supplied_by_ent_processlayer_ndfeb_magnetic_powders_and_alloys_ent_publiccompany_neo"
+      ],
+      "notes": [],
+      "relationship_key": "ndfeb_powders_supplied_by_neo_v2"
+    },
+    {
+      "relationship_id": "rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_mp",
+      "relationship_type": "SUPPLIED_BY",
+      "source_entity_id": "ent_processlayer_neodymium_processing",
+      "target_entity_id": "ent_publiccompany_mp",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "listed_processing_exposure",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_mp_domestic_magnet_capacity_relationship_rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_mp"
+      ],
+      "notes": [],
+      "relationship_key": "ndpr_processing_supplied_by_mp_v2"
+    },
+    {
+      "relationship_id": "rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_uuuu",
+      "relationship_type": "SUPPLIED_BY",
+      "source_entity_id": "ent_processlayer_neodymium_processing",
+      "target_entity_id": "ent_publiccompany_uuuu",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "listed_processing_exposure",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_uuuu_ndpr_processing_exposure_relationship_rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_uuuu"
+      ],
+      "notes": [],
+      "relationship_key": "ndpr_processing_supplied_by_uuuu_v2"
+    },
+    {
+      "relationship_id": "rel_supplied_by_ent_processlayer_sintered_ndfeb_magnet_manufacturing_ent_publiccompany_mp",
+      "relationship_type": "SUPPLIED_BY",
+      "source_entity_id": "ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+      "target_entity_id": "ent_publiccompany_mp",
+      "direction": "source_to_target",
+      "relationship_strength": "high",
+      "causal_role": "listed_magnet_exposure",
+      "confidence": "high",
+      "evidence_refs": [
+        "ev_frag_mp_domestic_magnet_capacity_relationship_rel_supplied_by_ent_processlayer_sintered_ndfeb_magnet_manufacturing_ent_publiccompany_mp"
+      ],
+      "notes": [],
+      "relationship_key": "ndfeb_manufacturing_supplied_by_mp_v2"
+    },
+    {
+      "relationship_id": "rel_used_in_ent_component_permanent_magnet_motor_ent_system_industrial_motor_system",
+      "relationship_type": "USED_IN",
+      "source_entity_id": "ent_component_permanent_magnet_motor",
+      "target_entity_id": "ent_system_industrial_motor_system",
+      "direction": "source_to_target",
+      "relationship_strength": "medium",
+      "causal_role": "downstream_use_case",
+      "confidence": "medium",
+      "evidence_refs": [
+        "ev_frag_iea_rare_earth_concentration_robotics_relationship_rel_used_in_ent_component_permanent_magnet_motor_ent_system_industrial_motor_system"
+      ],
+      "notes": [],
+      "relationship_key": "pm_motor_used_in_industrial_motor_system_v2"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim_claim_actuation_depends_on_motor_architecture_v2",
+      "claim_type": "component_dependency",
+      "claim_text": "Robotic actuation and motion architectures rely on electric motor layers that sit inside the highest-value motion subsystem.",
+      "claim_status": "supported",
+      "claim_kind": "inferential",
+      "confidence": "high",
+      "entity_refs": [
+        "ent_component_frameless_brushless_dc_motor",
+        "ent_component_permanent_magnet_motor",
+        "ent_subsystem_actuation_motion",
+        "ent_system_humanoid_robot"
+      ],
+      "relationship_refs": [
+        "rel_part_of_ent_component_frameless_brushless_dc_motor_ent_subsystem_actuation_motion",
+        "rel_part_of_ent_component_permanent_magnet_motor_ent_subsystem_actuation_motion",
+        "rel_part_of_ent_subsystem_actuation_motion_ent_system_humanoid_robot"
+      ],
+      "source_ids": [
+        "src_maxon_robotics_page_2026"
+      ],
+      "fragment_ids": [
+        "frag_robotics_actuation_motor_architecture"
+      ],
+      "notes": [],
+      "claim_key": "claim_actuation_depends_on_motor_architecture_v2",
+      "evidence_refs": [
+        "ev_frag_robotics_actuation_motor_architecture_claim_claim_claim_actuation_depends_on_motor_architecture_v2"
+      ]
+    },
+    {
+      "claim_id": "claim_claim_motor_to_processing_chain_v2",
+      "claim_type": "material_or_processing_dependency",
+      "claim_text": "If actuation relies on permanent magnet motors, then upstream NdFeB and neodymium processing become relevant bottleneck layers.",
+      "claim_status": "supported",
+      "claim_kind": "inferential",
+      "confidence": "high",
+      "entity_refs": [
+        "ent_component_permanent_magnet_motor",
+        "ent_materialinput_ndfeb_permanent_magnet",
+        "ent_materialinput_neodymium",
+        "ent_processlayer_neodymium_processing"
+      ],
+      "relationship_refs": [
+        "rel_depends_on_ent_component_permanent_magnet_motor_ent_materialinput_ndfeb_permanent_magnet",
+        "rel_depends_on_ent_materialinput_ndfeb_permanent_magnet_ent_materialinput_neodymium",
+        "rel_processed_by_ent_materialinput_neodymium_ent_processlayer_neodymium_processing"
+      ],
+      "source_ids": [
+        "src_doe_rare_earth_free_motors"
+      ],
+      "fragment_ids": [
+        "frag_doe_motor_rare_earth_dependency"
+      ],
+      "notes": [],
+      "claim_key": "claim_motor_to_processing_chain_v2",
+      "evidence_refs": [
+        "ev_frag_doe_motor_rare_earth_dependency_claim_claim_claim_motor_to_processing_chain_v2"
+      ]
+    },
+    {
+      "claim_id": "claim_claim_processing_and_magnets_are_concentrated_v2",
+      "claim_type": "market_share_or_concentration",
+      "claim_text": "The rare-earth processing and finished magnet layers remain extremely concentrated in China, making them structurally vulnerable supply nodes.",
+      "claim_status": "supported",
+      "claim_kind": "inferential",
+      "confidence": "high",
+      "entity_refs": [
+        "ent_geography_china",
+        "ent_processlayer_neodymium_processing",
+        "ent_processlayer_sintered_ndfeb_magnet_manufacturing"
+      ],
+      "relationship_refs": [
+        "rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+        "rel_constrained_by_ent_processlayer_sintered_ndfeb_magnet_manufacturing_ent_geography_china"
+      ],
+      "source_ids": [
+        "src_iea_concentration_2025"
+      ],
+      "fragment_ids": [
+        "frag_iea_rare_earth_concentration_robotics"
+      ],
+      "notes": [],
+      "claim_key": "claim_processing_and_magnets_are_concentrated_v2",
+      "evidence_refs": [
+        "ev_frag_iea_rare_earth_concentration_robotics_claim_claim_claim_processing_and_magnets_are_concentrated_v2"
+      ]
+    },
+    {
+      "claim_id": "claim_claim_mp_is_direct_magnet_exposure_v2",
+      "claim_type": "value_capture_assertion",
+      "claim_text": "MP is no longer only an upstream mining name; it now has direct listed exposure to U.S. rare-earth processing and magnet manufacturing.",
+      "claim_status": "supported",
+      "claim_kind": "inferential",
+      "confidence": "high",
+      "entity_refs": [
+        "ent_expressioncandidate_shares_mp",
+        "ent_processlayer_neodymium_processing",
+        "ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+        "ent_publiccompany_mp"
+      ],
+      "relationship_refs": [
+        "rel_candidate_expression_for_ent_expressioncandidate_shares_mp_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+        "rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_mp",
+        "rel_supplied_by_ent_processlayer_sintered_ndfeb_magnet_manufacturing_ent_publiccompany_mp"
+      ],
+      "source_ids": [
+        "src_mp_magnet_production_2025"
+      ],
+      "fragment_ids": [
+        "frag_mp_domestic_magnet_capacity"
+      ],
+      "notes": [],
+      "claim_key": "claim_mp_is_direct_magnet_exposure_v2",
+      "evidence_refs": [
+        "ev_frag_mp_domestic_magnet_capacity_claim_claim_claim_mp_is_direct_magnet_exposure_v2"
+      ]
+    },
+    {
+      "claim_id": "claim_claim_neo_is_listed_robotics_magnet_materials_exposure_v2",
+      "claim_type": "value_capture_assertion",
+      "claim_text": "NEO offers listed exposure to the magnetic powders and alloy layer that sits between rare-earth processing and downstream motor or robotics demand.",
+      "claim_status": "supported",
+      "claim_kind": "inferential",
+      "confidence": "high",
+      "entity_refs": [
+        "ent_expressioncandidate_shares_neo",
+        "ent_processlayer_ndfeb_magnetic_powders_and_alloys",
+        "ent_publiccompany_neo"
+      ],
+      "relationship_refs": [
+        "rel_candidate_expression_for_ent_expressioncandidate_shares_neo_ent_processlayer_ndfeb_magnetic_powders_and_alloys",
+        "rel_supplied_by_ent_processlayer_ndfeb_magnetic_powders_and_alloys_ent_publiccompany_neo"
+      ],
+      "source_ids": [
+        "src_neo_magnetic_materials_2026"
+      ],
+      "fragment_ids": [
+        "frag_neo_and_uuuu_processing_exposure"
+      ],
+      "notes": [],
+      "claim_key": "claim_neo_is_listed_robotics_magnet_materials_exposure_v2",
+      "evidence_refs": [
+        "ev_frag_neo_and_uuuu_processing_exposure_claim_claim_claim_neo_is_listed_robotics_magnet_materials_exposure_v2"
+      ]
+    },
+    {
+      "claim_id": "claim_claim_uuuu_is_us_ndpr_processing_exposure_v2",
+      "claim_type": "value_capture_assertion",
+      "claim_text": "UUUU offers public exposure to the separated NdPr and domestic processing layer rather than only a generic mining narrative.",
+      "claim_status": "supported",
+      "claim_kind": "inferential",
+      "confidence": "high",
+      "entity_refs": [
+        "ent_expressioncandidate_shares_uuuu",
+        "ent_facility_white_mesa_mill",
+        "ent_processlayer_neodymium_processing",
+        "ent_publiccompany_uuuu"
+      ],
+      "relationship_refs": [
+        "rel_candidate_expression_for_ent_expressioncandidate_shares_uuuu_ent_processlayer_neodymium_processing",
+        "rel_expands_capacity_for_ent_facility_white_mesa_mill_ent_processlayer_neodymium_processing",
+        "rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_uuuu"
+      ],
+      "source_ids": [
+        "src_energyfuels_rare_earth_elements_2026"
+      ],
+      "fragment_ids": [
+        "frag_uuuu_ndpr_processing_exposure"
+      ],
+      "notes": [],
+      "claim_key": "claim_uuuu_is_us_ndpr_processing_exposure_v2",
+      "evidence_refs": [
+        "ev_frag_uuuu_ndpr_processing_exposure_claim_claim_claim_uuuu_is_us_ndpr_processing_exposure_v2"
+      ]
+    },
+    {
+      "claim_id": "claim_claim_processing_layer_better_than_robot_oem_narrative_v2",
+      "claim_type": "valuation_gap_assertion",
+      "claim_text": "The market may be looking too far downstream at robot OEM narratives and not enough at the upstream processing and magnet materials layers that feed actuation.",
+      "claim_status": "supported",
+      "claim_kind": "inferential",
+      "confidence": "high",
+      "entity_refs": [
+        "ent_expressioncandidate_equity_basket_mp_neo_uuuu",
+        "ent_processlayer_neodymium_processing",
+        "ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+        "ent_theme_robotics_supply_chain"
+      ],
+      "relationship_refs": [
+        "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_neodymium_processing",
+        "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+        "rel_reprices_via_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_theme_robotics_supply_chain"
+      ],
+      "source_ids": [
+        "src_robotics_actuation_synthesis_v2"
+      ],
+      "fragment_ids": [
+        "frag_robotics_actuation_market_miss_synthesis_v2"
+      ],
+      "notes": [],
+      "claim_key": "claim_processing_layer_better_than_robot_oem_narrative_v2",
+      "evidence_refs": [
+        "ev_frag_robotics_actuation_market_miss_synthesis_v2_claim_claim_claim_processing_layer_better_than_robot_oem_narrative_v2"
+      ]
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_link_id": "ev_frag_robotics_actuation_motor_architecture_claim_claim_claim_actuation_depends_on_motor_architecture_v2",
+      "source_id": "src_maxon_robotics_page_2026",
+      "fragment_id": "frag_robotics_actuation_motor_architecture",
+      "supports_object_type": "claim",
+      "supports_object_id": "claim_claim_actuation_depends_on_motor_architecture_v2",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_doe_motor_rare_earth_dependency_claim_claim_claim_motor_to_processing_chain_v2",
+      "source_id": "src_doe_rare_earth_free_motors",
+      "fragment_id": "frag_doe_motor_rare_earth_dependency",
+      "supports_object_type": "claim",
+      "supports_object_id": "claim_claim_motor_to_processing_chain_v2",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_mp_domestic_magnet_capacity_claim_claim_claim_mp_is_direct_magnet_exposure_v2",
+      "source_id": "src_mp_magnet_production_2025",
+      "fragment_id": "frag_mp_domestic_magnet_capacity",
+      "supports_object_type": "claim",
+      "supports_object_id": "claim_claim_mp_is_direct_magnet_exposure_v2",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_neo_and_uuuu_processing_exposure_claim_claim_claim_neo_is_listed_robotics_magnet_materials_exposure_v2",
+      "source_id": "src_neo_magnetic_materials_2026",
+      "fragment_id": "frag_neo_and_uuuu_processing_exposure",
+      "supports_object_type": "claim",
+      "supports_object_id": "claim_claim_neo_is_listed_robotics_magnet_materials_exposure_v2",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_iea_rare_earth_concentration_robotics_claim_claim_claim_processing_and_magnets_are_concentrated_v2",
+      "source_id": "src_iea_concentration_2025",
+      "fragment_id": "frag_iea_rare_earth_concentration_robotics",
+      "supports_object_type": "claim",
+      "supports_object_id": "claim_claim_processing_and_magnets_are_concentrated_v2",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_robotics_actuation_market_miss_synthesis_v2_claim_claim_claim_processing_layer_better_than_robot_oem_narrative_v2",
+      "source_id": "src_robotics_actuation_synthesis_v2",
+      "fragment_id": "frag_robotics_actuation_market_miss_synthesis_v2",
+      "supports_object_type": "claim",
+      "supports_object_id": "claim_claim_processing_layer_better_than_robot_oem_narrative_v2",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_uuuu_ndpr_processing_exposure_claim_claim_claim_uuuu_is_us_ndpr_processing_exposure_v2",
+      "source_id": "src_energyfuels_rare_earth_elements_2026",
+      "fragment_id": "frag_uuuu_ndpr_processing_exposure",
+      "supports_object_type": "claim",
+      "supports_object_id": "claim_claim_uuuu_is_us_ndpr_processing_exposure_v2",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_robotics_actuation_market_miss_synthesis_v2_inference_inf_inf_market_miss_robotics_processing_v2",
+      "source_id": "src_robotics_actuation_synthesis_v2",
+      "fragment_id": "frag_robotics_actuation_market_miss_synthesis_v2",
+      "supports_object_type": "inference",
+      "supports_object_id": "inf_inf_market_miss_robotics_processing_v2",
+      "support_mode": "supporting",
+      "strength": "contextual"
+    },
+    {
+      "evidence_link_id": "ev_frag_robotics_actuation_market_miss_synthesis_v2_relationship_rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_neodymium_processing",
+      "source_id": "src_robotics_actuation_synthesis_v2",
+      "fragment_id": "frag_robotics_actuation_market_miss_synthesis_v2",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_neodymium_processing",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_robotics_actuation_market_miss_synthesis_v2_relationship_rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+      "source_id": "src_robotics_actuation_synthesis_v2",
+      "fragment_id": "frag_robotics_actuation_market_miss_synthesis_v2",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_mp_domestic_magnet_capacity_relationship_rel_candidate_expression_for_ent_expressioncandidate_shares_mp_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+      "source_id": "src_mp_magnet_production_2025",
+      "fragment_id": "frag_mp_domestic_magnet_capacity",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_candidate_expression_for_ent_expressioncandidate_shares_mp_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_neo_and_uuuu_processing_exposure_relationship_rel_candidate_expression_for_ent_expressioncandidate_shares_neo_ent_processlayer_ndfeb_magnetic_powders_and_alloys",
+      "source_id": "src_neo_magnetic_materials_2026",
+      "fragment_id": "frag_neo_and_uuuu_processing_exposure",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_candidate_expression_for_ent_expressioncandidate_shares_neo_ent_processlayer_ndfeb_magnetic_powders_and_alloys",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_uuuu_ndpr_processing_exposure_relationship_rel_candidate_expression_for_ent_expressioncandidate_shares_uuuu_ent_processlayer_neodymium_processing",
+      "source_id": "src_energyfuels_rare_earth_elements_2026",
+      "fragment_id": "frag_uuuu_ndpr_processing_exposure",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_candidate_expression_for_ent_expressioncandidate_shares_uuuu_ent_processlayer_neodymium_processing",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_iea_rare_earth_concentration_robotics_relationship_rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+      "source_id": "src_iea_concentration_2025",
+      "fragment_id": "frag_iea_rare_earth_concentration_robotics",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_iea_rare_earth_concentration_robotics_relationship_rel_constrained_by_ent_processlayer_sintered_ndfeb_magnet_manufacturing_ent_geography_china",
+      "source_id": "src_iea_concentration_2025",
+      "fragment_id": "frag_iea_rare_earth_concentration_robotics",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_constrained_by_ent_processlayer_sintered_ndfeb_magnet_manufacturing_ent_geography_china",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_doe_motor_rare_earth_dependency_relationship_rel_depends_on_ent_component_permanent_magnet_motor_ent_materialinput_ndfeb_permanent_magnet",
+      "source_id": "src_doe_rare_earth_free_motors",
+      "fragment_id": "frag_doe_motor_rare_earth_dependency",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_depends_on_ent_component_permanent_magnet_motor_ent_materialinput_ndfeb_permanent_magnet",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_doe_motor_rare_earth_dependency_relationship_rel_depends_on_ent_materialinput_ndfeb_permanent_magnet_ent_materialinput_neodymium",
+      "source_id": "src_doe_rare_earth_free_motors",
+      "fragment_id": "frag_doe_motor_rare_earth_dependency",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_depends_on_ent_materialinput_ndfeb_permanent_magnet_ent_materialinput_neodymium",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_uuuu_ndpr_processing_exposure_relationship_rel_expands_capacity_for_ent_facility_white_mesa_mill_ent_processlayer_neodymium_processing",
+      "source_id": "src_energyfuels_rare_earth_elements_2026",
+      "fragment_id": "frag_uuuu_ndpr_processing_exposure",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_expands_capacity_for_ent_facility_white_mesa_mill_ent_processlayer_neodymium_processing",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_robotics_actuation_motor_architecture_relationship_rel_part_of_ent_component_frameless_brushless_dc_motor_ent_subsystem_actuation_motion",
+      "source_id": "src_maxon_robotics_page_2026",
+      "fragment_id": "frag_robotics_actuation_motor_architecture",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_part_of_ent_component_frameless_brushless_dc_motor_ent_subsystem_actuation_motion",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_robotics_actuation_motor_architecture_relationship_rel_part_of_ent_component_permanent_magnet_motor_ent_subsystem_actuation_motion",
+      "source_id": "src_maxon_robotics_page_2026",
+      "fragment_id": "frag_robotics_actuation_motor_architecture",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_part_of_ent_component_permanent_magnet_motor_ent_subsystem_actuation_motion",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_robotics_actuation_motor_architecture_relationship_rel_part_of_ent_subsystem_actuation_motion_ent_system_humanoid_robot",
+      "source_id": "src_maxon_robotics_page_2026",
+      "fragment_id": "frag_robotics_actuation_motor_architecture",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_part_of_ent_subsystem_actuation_motion_ent_system_humanoid_robot",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_doe_motor_rare_earth_dependency_relationship_rel_processed_by_ent_materialinput_neodymium_ent_processlayer_neodymium_processing",
+      "source_id": "src_doe_rare_earth_free_motors",
+      "fragment_id": "frag_doe_motor_rare_earth_dependency",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_processed_by_ent_materialinput_neodymium_ent_processlayer_neodymium_processing",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_robotics_actuation_market_miss_synthesis_v2_relationship_rel_reprices_via_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_theme_robotics_supply_chain",
+      "source_id": "src_robotics_actuation_synthesis_v2",
+      "fragment_id": "frag_robotics_actuation_market_miss_synthesis_v2",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_reprices_via_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_theme_robotics_supply_chain",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_neo_and_uuuu_processing_exposure_relationship_rel_supplied_by_ent_processlayer_ndfeb_magnetic_powders_and_alloys_ent_publiccompany_neo",
+      "source_id": "src_neo_magnetic_materials_2026",
+      "fragment_id": "frag_neo_and_uuuu_processing_exposure",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_supplied_by_ent_processlayer_ndfeb_magnetic_powders_and_alloys_ent_publiccompany_neo",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_mp_domestic_magnet_capacity_relationship_rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_mp",
+      "source_id": "src_mp_magnet_production_2025",
+      "fragment_id": "frag_mp_domestic_magnet_capacity",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_mp",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_uuuu_ndpr_processing_exposure_relationship_rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_uuuu",
+      "source_id": "src_energyfuels_rare_earth_elements_2026",
+      "fragment_id": "frag_uuuu_ndpr_processing_exposure",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_uuuu",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_mp_domestic_magnet_capacity_relationship_rel_supplied_by_ent_processlayer_sintered_ndfeb_magnet_manufacturing_ent_publiccompany_mp",
+      "source_id": "src_mp_magnet_production_2025",
+      "fragment_id": "frag_mp_domestic_magnet_capacity",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_supplied_by_ent_processlayer_sintered_ndfeb_magnet_manufacturing_ent_publiccompany_mp",
+      "support_mode": "supporting",
+      "strength": "direct"
+    },
+    {
+      "evidence_link_id": "ev_frag_iea_rare_earth_concentration_robotics_relationship_rel_used_in_ent_component_permanent_magnet_motor_ent_system_industrial_motor_system",
+      "source_id": "src_iea_concentration_2025",
+      "fragment_id": "frag_iea_rare_earth_concentration_robotics",
+      "supports_object_type": "relationship",
+      "supports_object_id": "rel_used_in_ent_component_permanent_magnet_motor_ent_system_industrial_motor_system",
+      "support_mode": "supporting",
+      "strength": "direct"
+    }
+  ],
+  "inferences": [
+    {
+      "inference_id": "inf_inf_market_miss_robotics_processing_v2",
+      "inference_type": "market_miss",
+      "statement": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+      "derived_from_claim_ids": [
+        "claim_claim_actuation_depends_on_motor_architecture_v2",
+        "claim_claim_motor_to_processing_chain_v2",
+        "claim_claim_mp_is_direct_magnet_exposure_v2",
+        "claim_claim_neo_is_listed_robotics_magnet_materials_exposure_v2",
+        "claim_claim_processing_and_magnets_are_concentrated_v2",
+        "claim_claim_processing_layer_better_than_robot_oem_narrative_v2",
+        "claim_claim_uuuu_is_us_ndpr_processing_exposure_v2"
+      ],
+      "derived_from_relationship_ids": [
+        "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_neodymium_processing",
+        "rel_candidate_expression_for_ent_expressioncandidate_equity_basket_mp_neo_uuuu_ent_processlayer_sintered_ndfeb_magnet_manufacturing",
+        "rel_constrained_by_ent_processlayer_neodymium_processing_ent_geography_china",
+        "rel_constrained_by_ent_processlayer_sintered_ndfeb_magnet_manufacturing_ent_geography_china",
+        "rel_depends_on_ent_component_permanent_magnet_motor_ent_materialinput_ndfeb_permanent_magnet",
+        "rel_depends_on_ent_materialinput_ndfeb_permanent_magnet_ent_materialinput_neodymium",
+        "rel_part_of_ent_component_permanent_magnet_motor_ent_subsystem_actuation_motion",
+        "rel_part_of_ent_subsystem_actuation_motion_ent_system_humanoid_robot",
+        "rel_processed_by_ent_materialinput_neodymium_ent_processlayer_neodymium_processing",
+        "rel_supplied_by_ent_processlayer_ndfeb_magnetic_powders_and_alloys_ent_publiccompany_neo",
+        "rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_mp",
+        "rel_supplied_by_ent_processlayer_neodymium_processing_ent_publiccompany_uuuu",
+        "rel_supplied_by_ent_processlayer_sintered_ndfeb_magnet_manufacturing_ent_publiccompany_mp"
+      ],
+      "confidence": "high",
+      "falsifiers": [
+        "robotic actuation shifts away from permanent magnet motor architectures",
+        "China concentration in processing and finished magnets falls faster than expected",
+        "MP, NEO, and UUUU fail to capture economics from the relevant processing or magnet layers"
+      ],
+      "notes": [],
+      "evidence_refs": [
+        "ev_frag_robotics_actuation_market_miss_synthesis_v2_inference_inf_inf_market_miss_robotics_processing_v2"
+      ]
+    }
+  ],
+  "summary": {
+    "entity_count": 22,
+    "relationship_count": 20,
+    "claim_count": 7,
+    "evidence_link_count": 28,
+    "inference_count": 1
+  }
+}

@@ -1,0 +1,868 @@
+{
+  "name": "robotics_actuation_source_bundle_v2",
+  "theme": "robotics_supply_chain",
+  "notes": [
+    "This bundle upgrades the robotics actuation thesis from social-fragment exploration into an evidence-backed corroboration pass.",
+    "The goal is to validate the component -> material -> processing -> equity chain with authoritative sources before promotion.",
+    "This v2 bundle should be compared directly against robotics_actuation_source_bundle_v1 to measure the effect of stronger source mix on graduation."
+  ],
+  "sources": [
+    {
+      "source_id": "src_maxon_robotics_page_2026",
+      "source_class": "technical_paper",
+      "title": "Robotics - maxon group",
+      "canonical_url": "https://www.maxongroup.com/maxon/view/content/robotics",
+      "publisher": "maxon",
+      "published_at": "",
+      "retrieved_at": "2026-03-16T00:00:00Z",
+      "language": "en",
+      "jurisdiction": "global",
+      "ticker_refs": [],
+      "theme_refs": [
+        "robotics_supply_chain",
+        "actuation_motion"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.81,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Official robotics application page supporting the use of frameless and dynamic motors inside robotic systems."
+      ]
+    },
+    {
+      "source_id": "src_doe_rare_earth_free_motors",
+      "source_class": "government",
+      "title": "Options for Rare-Earth-Free Electric Motors",
+      "canonical_url": "https://www.energy.gov/eere/vehicles/articles/options-rare-earth-free-electric-motors",
+      "publisher": "U.S. Department of Energy",
+      "published_at": "",
+      "retrieved_at": "2026-03-16T00:00:00Z",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [],
+      "theme_refs": [
+        "robotics_supply_chain",
+        "actuation_motion",
+        "rare_earth_magnets"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.89,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Government source supporting that high-performance motor architectures rely on rare-earth permanent magnets."
+      ]
+    },
+    {
+      "source_id": "src_iea_concentration_2025",
+      "source_class": "industry_body",
+      "title": "With new export controls on critical minerals, supply concentration risks become reality",
+      "canonical_url": "https://www.iea.org/commentaries/with-new-export-controls-on-critical-minerals-supply-concentration-risks-become-reality",
+      "publisher": "International Energy Agency",
+      "published_at": "2025-05-28T00:00:00Z",
+      "retrieved_at": "2026-03-16T00:00:00Z",
+      "language": "en",
+      "jurisdiction": "global",
+      "ticker_refs": [],
+      "theme_refs": [
+        "robotics_supply_chain",
+        "rare_earth_magnets",
+        "ndpr_processing"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.93,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "High-authority source for refining and magnet-manufacturing concentration."
+      ]
+    },
+    {
+      "source_id": "src_mp_magnet_production_2025",
+      "source_class": "company_release",
+      "title": "MP Materials Restores U.S. Rare Earth Magnet Production",
+      "canonical_url": "https://investors.mpmaterials.com/investor-news/news-details/2025/MP-Materials-Restores-U.S.-Rare-Earth-Magnet-Production/default.aspx?query=email%25252525252525252525252520marketing",
+      "publisher": "MP Materials",
+      "published_at": "2025-04-17T00:00:00Z",
+      "retrieved_at": "2026-03-16T00:00:00Z",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "MP"
+      ],
+      "theme_refs": [
+        "robotics_supply_chain",
+        "ndpr_processing",
+        "magnet_manufacturing"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.88,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Official source for domestic sintered NdFeB production and downstream magnet capacity."
+      ]
+    },
+    {
+      "source_id": "src_neo_magnetic_materials_2026",
+      "source_class": "company_release",
+      "title": "Rare Earth and Magnetic Materials",
+      "canonical_url": "https://www.neomaterials.com/rare-earth-and-magnetic-materials/",
+      "publisher": "Neo Performance Materials",
+      "published_at": "",
+      "retrieved_at": "2026-03-16T00:00:00Z",
+      "language": "en",
+      "jurisdiction": "global",
+      "ticker_refs": [
+        "NEO"
+      ],
+      "theme_refs": [
+        "robotics_supply_chain",
+        "ndpr_processing",
+        "magnet_materials"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.84,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Official product page supporting Neo's role in magnetic powders, bonded magnets, and robotics-linked end markets."
+      ]
+    },
+    {
+      "source_id": "src_energyfuels_rare_earth_elements_2026",
+      "source_class": "company_release",
+      "title": "Rare Earth Elements",
+      "canonical_url": "https://energyfuels.com/rare-earth-elements",
+      "publisher": "Energy Fuels",
+      "published_at": "",
+      "retrieved_at": "2026-03-16T00:00:00Z",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "UUUU"
+      ],
+      "theme_refs": [
+        "robotics_supply_chain",
+        "ndpr_processing",
+        "monazite_processing"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.83,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Official source supporting White Mesa rare-earth processing and separated NdPr production."
+      ]
+    },
+    {
+      "source_id": "src_robotics_actuation_synthesis_v2",
+      "source_class": "user_note",
+      "title": "Robotics actuation corroboration synthesis",
+      "canonical_url": "research/analysis/2026-03-16-robotics-actuation-source-bundle-v2.json",
+      "publisher": "MiroFish research",
+      "published_at": "2026-03-16T00:00:00Z",
+      "retrieved_at": "2026-03-16T00:00:00Z",
+      "language": "en",
+      "jurisdiction": "global",
+      "ticker_refs": [
+        "MP",
+        "NEO",
+        "UUUU"
+      ],
+      "theme_refs": [
+        "robotics_supply_chain",
+        "actuation_motion",
+        "ndpr_processing"
+      ],
+      "source_quality": "medium",
+      "source_reliability_score": 0.72,
+      "usage_mode": "context",
+      "attachment_type": "json",
+      "notes": [
+        "Internal synthesis layer used only to tie the authoritative sources into an explicit market-miss and expression hypothesis."
+      ]
+    }
+  ],
+  "fragments": [
+    {
+      "fragment_id": "frag_robotics_actuation_motor_architecture",
+      "source_id": "src_maxon_robotics_page_2026",
+      "fragment_type": "application_excerpt",
+      "section_label": "Robotics motion stack",
+      "excerpt": "maxon positions frameless and dynamic electric motors as core building blocks for robotics, including joint and motion-heavy robot designs.",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Robotics Supply Chain"
+        ],
+        "systems": [
+          "Humanoid Robot"
+        ],
+        "subsystems": [
+          "Actuation / Motion"
+        ],
+        "components": [
+          "Frameless Brushless DC Motor",
+          "Permanent Magnet Motor"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Robotics Supply Chain",
+          "confidence": "high"
+        },
+        {
+          "entity_type": "System",
+          "canonical_name": "Humanoid Robot",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Subsystem",
+          "canonical_name": "Actuation / Motion",
+          "attributes": {
+            "bom_role": "primary_motion_subsystem"
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "Component",
+          "canonical_name": "Frameless Brushless DC Motor",
+          "confidence": "high"
+        },
+        {
+          "entity_type": "Component",
+          "canonical_name": "Permanent Magnet Motor",
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "actuation_part_of_humanoid_v2",
+          "relationship_type": "PART_OF",
+          "source_type": "Subsystem",
+          "source_name": "Actuation / Motion",
+          "target_type": "System",
+          "target_name": "Humanoid Robot",
+          "relationship_strength": "high",
+          "causal_role": "primary_motion_subsystem",
+          "confidence": "high"
+        },
+        {
+          "key": "frameless_motor_part_of_actuation_v2",
+          "relationship_type": "PART_OF",
+          "source_type": "Component",
+          "source_name": "Frameless Brushless DC Motor",
+          "target_type": "Subsystem",
+          "target_name": "Actuation / Motion",
+          "relationship_strength": "high",
+          "causal_role": "core_actuation_component",
+          "confidence": "high"
+        },
+        {
+          "key": "pm_motor_part_of_actuation_v2",
+          "relationship_type": "PART_OF",
+          "source_type": "Component",
+          "source_name": "Permanent Magnet Motor",
+          "target_type": "Subsystem",
+          "target_name": "Actuation / Motion",
+          "relationship_strength": "high",
+          "causal_role": "motor_architecture",
+          "confidence": "high"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_actuation_depends_on_motor_architecture_v2",
+          "claim_type": "component_dependency",
+          "claim_text": "Robotic actuation and motion architectures rely on electric motor layers that sit inside the highest-value motion subsystem.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "high",
+          "entity_names": [
+            "Humanoid Robot",
+            "Actuation / Motion",
+            "Frameless Brushless DC Motor",
+            "Permanent Magnet Motor"
+          ],
+          "relationship_keys": [
+            "actuation_part_of_humanoid_v2",
+            "frameless_motor_part_of_actuation_v2",
+            "pm_motor_part_of_actuation_v2"
+          ]
+        }
+      ]
+    },
+    {
+      "fragment_id": "frag_doe_motor_rare_earth_dependency",
+      "source_id": "src_doe_rare_earth_free_motors",
+      "fragment_type": "government_report_excerpt",
+      "section_label": "Motor materials",
+      "excerpt": "DOE explains that many high-performance electric motors use permanent magnets containing rare-earth materials, which is why rare-earth-free motor alternatives remain a strategic research target.",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "materials": [
+          "Neodymium",
+          "NdFeB Permanent Magnet"
+        ],
+        "components": [
+          "Permanent Magnet Motor"
+        ],
+        "process_layers": [
+          "Neodymium Processing"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "MaterialInput",
+          "canonical_name": "NdFeB Permanent Magnet",
+          "attributes": {
+            "material_role": "motor_magnet"
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "MaterialInput",
+          "canonical_name": "Neodymium",
+          "attributes": {
+            "material_role": "rare_earth_feedstock"
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "separation_and_refining"
+          },
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "pm_motor_depends_on_ndfeb_v2",
+          "relationship_type": "DEPENDS_ON",
+          "source_type": "Component",
+          "source_name": "Permanent Magnet Motor",
+          "target_type": "MaterialInput",
+          "target_name": "NdFeB Permanent Magnet",
+          "relationship_strength": "high",
+          "causal_role": "required_motor_material",
+          "confidence": "high"
+        },
+        {
+          "key": "ndfeb_depends_on_neodymium_v2",
+          "relationship_type": "DEPENDS_ON",
+          "source_type": "MaterialInput",
+          "source_name": "NdFeB Permanent Magnet",
+          "target_type": "MaterialInput",
+          "target_name": "Neodymium",
+          "relationship_strength": "high",
+          "causal_role": "feedstock_dependency",
+          "confidence": "high"
+        },
+        {
+          "key": "neodymium_processed_by_ndpr_layer_v2",
+          "relationship_type": "PROCESSED_BY",
+          "source_type": "MaterialInput",
+          "source_name": "Neodymium",
+          "target_type": "ProcessLayer",
+          "target_name": "Neodymium Processing",
+          "relationship_strength": "high",
+          "causal_role": "industrial_conversion_layer",
+          "confidence": "high"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_motor_to_processing_chain_v2",
+          "claim_type": "material_or_processing_dependency",
+          "claim_text": "If actuation relies on permanent magnet motors, then upstream NdFeB and neodymium processing become relevant bottleneck layers.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "high",
+          "entity_names": [
+            "Permanent Magnet Motor",
+            "NdFeB Permanent Magnet",
+            "Neodymium",
+            "Neodymium Processing"
+          ],
+          "relationship_keys": [
+            "pm_motor_depends_on_ndfeb_v2",
+            "ndfeb_depends_on_neodymium_v2",
+            "neodymium_processed_by_ndpr_layer_v2"
+          ]
+        }
+      ]
+    },
+    {
+      "fragment_id": "frag_iea_rare_earth_concentration_robotics",
+      "source_id": "src_iea_concentration_2025",
+      "fragment_type": "industry_report_excerpt",
+      "section_label": "Concentration risk",
+      "excerpt": "IEA says China accounted for about 91% of magnet rare earth separation and refining in 2024 and 94% of sintered permanent magnet production used across industrial motors and other strategic systems.",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "systems": [
+          "Industrial Motor System"
+        ],
+        "process_layers": [
+          "Neodymium Processing",
+          "Sintered NdFeB Magnet Manufacturing"
+        ],
+        "geographies": [
+          "China"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Sintered NdFeB Magnet Manufacturing",
+          "attributes": {
+            "process_stage": "finished_magnet_manufacturing"
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "System",
+          "canonical_name": "Industrial Motor System",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "attributes": {
+            "risk_profile": "extreme_concentration"
+          },
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "ndpr_processing_constrained_by_china_v2",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "high",
+          "causal_role": "dominant_processing_geography",
+          "confidence": "high"
+        },
+        {
+          "key": "ndfeb_manufacturing_constrained_by_china_v2",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Sintered NdFeB Magnet Manufacturing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "high",
+          "causal_role": "dominant_finished_magnet_geography",
+          "confidence": "high"
+        },
+        {
+          "key": "pm_motor_used_in_industrial_motor_system_v2",
+          "relationship_type": "USED_IN",
+          "source_type": "Component",
+          "source_name": "Permanent Magnet Motor",
+          "target_type": "System",
+          "target_name": "Industrial Motor System",
+          "relationship_strength": "medium",
+          "causal_role": "downstream_use_case",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_processing_and_magnets_are_concentrated_v2",
+          "claim_type": "market_share_or_concentration",
+          "claim_text": "The rare-earth processing and finished magnet layers remain extremely concentrated in China, making them structurally vulnerable supply nodes.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "high",
+          "entity_names": [
+            "Neodymium Processing",
+            "Sintered NdFeB Magnet Manufacturing",
+            "China"
+          ],
+          "relationship_keys": [
+            "ndpr_processing_constrained_by_china_v2",
+            "ndfeb_manufacturing_constrained_by_china_v2"
+          ]
+        }
+      ]
+    },
+    {
+      "fragment_id": "frag_mp_domestic_magnet_capacity",
+      "source_id": "src_mp_magnet_production_2025",
+      "fragment_type": "company_release_excerpt",
+      "section_label": "Domestic capacity buildout",
+      "excerpt": "MP says it restored U.S. rare earth magnet production and began trial production of automotive-grade sintered NdFeB magnets in Texas, extending its role beyond mining into downstream magnet manufacturing.",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "process_layers": [
+          "Neodymium Processing",
+          "Sintered NdFeB Magnet Manufacturing"
+        ],
+        "geographies": [
+          "United States"
+        ],
+        "expressions": [
+          "Shares: MP"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Facility",
+          "canonical_name": "Independence Magnetics Facility",
+          "attributes": {
+            "location": "Texas"
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "United States",
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ExpressionCandidate",
+          "canonical_name": "Shares: MP",
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "ndpr_processing_supplied_by_mp_v2",
+          "relationship_type": "SUPPLIED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "PublicCompany",
+          "target_name": "MP",
+          "relationship_strength": "high",
+          "causal_role": "listed_processing_exposure",
+          "confidence": "high"
+        },
+        {
+          "key": "ndfeb_manufacturing_supplied_by_mp_v2",
+          "relationship_type": "SUPPLIED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Sintered NdFeB Magnet Manufacturing",
+          "target_type": "PublicCompany",
+          "target_name": "MP",
+          "relationship_strength": "high",
+          "causal_role": "listed_magnet_exposure",
+          "confidence": "high"
+        },
+        {
+          "key": "mp_shares_expression_v2",
+          "relationship_type": "CANDIDATE_EXPRESSION_FOR",
+          "source_type": "ExpressionCandidate",
+          "source_name": "Shares: MP",
+          "target_type": "ProcessLayer",
+          "target_name": "Sintered NdFeB Magnet Manufacturing",
+          "relationship_strength": "high",
+          "causal_role": "public_market_expression",
+          "confidence": "high"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_mp_is_direct_magnet_exposure_v2",
+          "claim_type": "value_capture_assertion",
+          "claim_text": "MP is no longer only an upstream mining name; it now has direct listed exposure to U.S. rare-earth processing and magnet manufacturing.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "high",
+          "entity_names": [
+            "MP",
+            "Neodymium Processing",
+            "Sintered NdFeB Magnet Manufacturing",
+            "Shares: MP"
+          ],
+          "relationship_keys": [
+            "ndpr_processing_supplied_by_mp_v2",
+            "ndfeb_manufacturing_supplied_by_mp_v2",
+            "mp_shares_expression_v2"
+          ]
+        }
+      ]
+    },
+    {
+      "fragment_id": "frag_neo_and_uuuu_processing_exposure",
+      "source_id": "src_neo_magnetic_materials_2026",
+      "fragment_type": "company_page_excerpt",
+      "section_label": "Western listed processing and magnet materials",
+      "excerpt": "Neo describes its rare earth and magnetic materials segment as supplying magnetic powders, bonded magnets, and assemblies into industrial automation and robotics-linked end markets.",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "process_layers": [
+          "NdFeB Magnetic Powders and Alloys"
+        ],
+        "expressions": [
+          "Shares: NEO"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "NdFeB Magnetic Powders and Alloys",
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ExpressionCandidate",
+          "canonical_name": "Shares: NEO",
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "ndfeb_powders_supplied_by_neo_v2",
+          "relationship_type": "SUPPLIED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "NdFeB Magnetic Powders and Alloys",
+          "target_type": "PublicCompany",
+          "target_name": "NEO",
+          "relationship_strength": "high",
+          "causal_role": "listed_powder_and_alloy_exposure",
+          "confidence": "high"
+        },
+        {
+          "key": "neo_shares_expression_v2",
+          "relationship_type": "CANDIDATE_EXPRESSION_FOR",
+          "source_type": "ExpressionCandidate",
+          "source_name": "Shares: NEO",
+          "target_type": "ProcessLayer",
+          "target_name": "NdFeB Magnetic Powders and Alloys",
+          "relationship_strength": "high",
+          "causal_role": "public_market_expression",
+          "confidence": "high"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_neo_is_listed_robotics_magnet_materials_exposure_v2",
+          "claim_type": "value_capture_assertion",
+          "claim_text": "NEO offers listed exposure to the magnetic powders and alloy layer that sits between rare-earth processing and downstream motor or robotics demand.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "high",
+          "entity_names": [
+            "NEO",
+            "NdFeB Magnetic Powders and Alloys",
+            "Shares: NEO"
+          ],
+          "relationship_keys": [
+            "ndfeb_powders_supplied_by_neo_v2",
+            "neo_shares_expression_v2"
+          ]
+        }
+      ]
+    },
+    {
+      "fragment_id": "frag_uuuu_ndpr_processing_exposure",
+      "source_id": "src_energyfuels_rare_earth_elements_2026",
+      "fragment_type": "company_page_excerpt",
+      "section_label": "Separated NdPr production",
+      "excerpt": "Energy Fuels says its White Mesa platform can process monazite and produce separated NdPr, giving UUUU direct exposure to the U.S. rare-earth separation layer.",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "process_layers": [
+          "Neodymium Processing"
+        ],
+        "geographies": [
+          "United States"
+        ],
+        "expressions": [
+          "Shares: UUUU"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Facility",
+          "canonical_name": "White Mesa Mill",
+          "attributes": {
+            "location": "Utah"
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ExpressionCandidate",
+          "canonical_name": "Shares: UUUU",
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "ndpr_processing_supplied_by_uuuu_v2",
+          "relationship_type": "SUPPLIED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "PublicCompany",
+          "target_name": "UUUU",
+          "relationship_strength": "high",
+          "causal_role": "listed_processing_exposure",
+          "confidence": "high"
+        },
+        {
+          "key": "white_mesa_expands_ndpr_processing_v2",
+          "relationship_type": "EXPANDS_CAPACITY_FOR",
+          "source_type": "Facility",
+          "source_name": "White Mesa Mill",
+          "target_type": "ProcessLayer",
+          "target_name": "Neodymium Processing",
+          "relationship_strength": "high",
+          "causal_role": "processing_capacity",
+          "confidence": "high"
+        },
+        {
+          "key": "uuuu_shares_expression_v2",
+          "relationship_type": "CANDIDATE_EXPRESSION_FOR",
+          "source_type": "ExpressionCandidate",
+          "source_name": "Shares: UUUU",
+          "target_type": "ProcessLayer",
+          "target_name": "Neodymium Processing",
+          "relationship_strength": "medium",
+          "causal_role": "public_market_expression",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_uuuu_is_us_ndpr_processing_exposure_v2",
+          "claim_type": "value_capture_assertion",
+          "claim_text": "UUUU offers public exposure to the separated NdPr and domestic processing layer rather than only a generic mining narrative.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "high",
+          "entity_names": [
+            "UUUU",
+            "White Mesa Mill",
+            "Neodymium Processing",
+            "Shares: UUUU"
+          ],
+          "relationship_keys": [
+            "ndpr_processing_supplied_by_uuuu_v2",
+            "white_mesa_expands_ndpr_processing_v2",
+            "uuuu_shares_expression_v2"
+          ]
+        }
+      ]
+    },
+    {
+      "fragment_id": "frag_robotics_actuation_market_miss_synthesis_v2",
+      "source_id": "src_robotics_actuation_synthesis_v2",
+      "fragment_type": "research_synthesis",
+      "section_label": "Promotion synthesis",
+      "excerpt": "If humanoid actuation depends on permanent magnet motor architectures and the upstream rare-earth processing plus magnet layers remain China-concentrated, then the cleaner Western listed leverage may sit in MP, NEO, and UUUU rather than downstream robot narratives.",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "expressions": [
+          "Equity basket: MP / NEO / UUUU"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "ExpressionCandidate",
+          "canonical_name": "Equity basket: MP / NEO / UUUU",
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "basket_expression_for_ndpr_v2",
+          "relationship_type": "CANDIDATE_EXPRESSION_FOR",
+          "source_type": "ExpressionCandidate",
+          "source_name": "Equity basket: MP / NEO / UUUU",
+          "target_type": "ProcessLayer",
+          "target_name": "Neodymium Processing",
+          "relationship_strength": "high",
+          "causal_role": "basket_expression",
+          "confidence": "high"
+        },
+        {
+          "key": "basket_expression_for_ndfeb_v2",
+          "relationship_type": "CANDIDATE_EXPRESSION_FOR",
+          "source_type": "ExpressionCandidate",
+          "source_name": "Equity basket: MP / NEO / UUUU",
+          "target_type": "ProcessLayer",
+          "target_name": "Sintered NdFeB Magnet Manufacturing",
+          "relationship_strength": "medium",
+          "causal_role": "basket_expression",
+          "confidence": "medium"
+        },
+        {
+          "key": "basket_reprices_via_robotics_recognition_v2",
+          "relationship_type": "REPRICES_VIA",
+          "source_type": "ExpressionCandidate",
+          "source_name": "Equity basket: MP / NEO / UUUU",
+          "target_type": "Theme",
+          "target_name": "Robotics Supply Chain",
+          "relationship_strength": "medium",
+          "causal_role": "market_recognition_path",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_processing_layer_better_than_robot_oem_narrative_v2",
+          "claim_type": "valuation_gap_assertion",
+          "claim_text": "The market may be looking too far downstream at robot OEM narratives and not enough at the upstream processing and magnet materials layers that feed actuation.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "high",
+          "entity_names": [
+            "Robotics Supply Chain",
+            "Neodymium Processing",
+            "Sintered NdFeB Magnet Manufacturing",
+            "Equity basket: MP / NEO / UUUU"
+          ],
+          "relationship_keys": [
+            "basket_expression_for_ndpr_v2",
+            "basket_expression_for_ndfeb_v2",
+            "basket_reprices_via_robotics_recognition_v2"
+          ]
+        }
+      ],
+      "inference_candidates": [
+        {
+          "inference_key": "inf_market_miss_robotics_processing_v2",
+          "inference_type": "market_miss",
+          "statement": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+          "claim_keys": [
+            "claim_actuation_depends_on_motor_architecture_v2",
+            "claim_motor_to_processing_chain_v2",
+            "claim_processing_and_magnets_are_concentrated_v2",
+            "claim_mp_is_direct_magnet_exposure_v2",
+            "claim_neo_is_listed_robotics_magnet_materials_exposure_v2",
+            "claim_uuuu_is_us_ndpr_processing_exposure_v2",
+            "claim_processing_layer_better_than_robot_oem_narrative_v2"
+          ],
+          "relationship_keys": [
+            "actuation_part_of_humanoid_v2",
+            "pm_motor_part_of_actuation_v2",
+            "pm_motor_depends_on_ndfeb_v2",
+            "ndfeb_depends_on_neodymium_v2",
+            "neodymium_processed_by_ndpr_layer_v2",
+            "ndpr_processing_constrained_by_china_v2",
+            "ndfeb_manufacturing_constrained_by_china_v2",
+            "ndpr_processing_supplied_by_mp_v2",
+            "ndfeb_manufacturing_supplied_by_mp_v2",
+            "ndfeb_powders_supplied_by_neo_v2",
+            "ndpr_processing_supplied_by_uuuu_v2",
+            "basket_expression_for_ndpr_v2",
+            "basket_expression_for_ndfeb_v2"
+          ],
+          "confidence": "high",
+          "falsifiers": [
+            "robotic actuation shifts away from permanent magnet motor architectures",
+            "China concentration in processing and finished magnets falls faster than expected",
+            "MP, NEO, and UUUU fail to capture economics from the relevant processing or magnet layers"
+          ]
+        }
+      ]
+    }
+  ]
+}

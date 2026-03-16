@@ -1,0 +1,428 @@
+{
+  "monitor_plan_version": "v1",
+  "generated_at": "2026-03-16T15:44:22.886721+00:00",
+  "project_name": "robotics_actuation_source_bundle_v2",
+  "task_count": 20,
+  "summary": {
+    "automation_readiness": {
+      "web_monitor_ready": 18,
+      "automatable_now": 2
+    },
+    "cadence_buckets": {
+      "weekly": 10,
+      "daily": 4,
+      "monthly": 6
+    },
+    "next_actions": {
+      "add_event_watch": 10,
+      "run_local_capture": 2,
+      "add_periodic_watch": 8
+    }
+  },
+  "tasks": [
+    {
+      "source_target_id": "src_target_bureau_of_industry_and_security_bis_u_s_department_of_commerce",
+      "name": "Bureau of Industry and Security (BIS), U.S. Department of Commerce",
+      "source_class": "government_policy_enforcement",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "weekly",
+      "expected_artifact_types": [
+        "policy_notice",
+        "enforcement_notice",
+        "rule_update"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "adds event and policy transmission context",
+        "improves cross-border and concentration coverage"
+      ]
+    },
+    {
+      "source_target_id": "src_target_arpa_e",
+      "name": "ARPA-E",
+      "source_class": "government_industrial_base_award",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "weekly",
+      "expected_artifact_types": [
+        "award_notice",
+        "grant_announcement",
+        "contract_notice"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "adds event and policy transmission context"
+      ]
+    },
+    {
+      "source_target_id": "src_target_leaps_watchlist_refresh_workflow",
+      "name": "LEAPS watchlist refresh workflow",
+      "source_class": "market_data_snapshot",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "local_workflow",
+      "automation_readiness": "automatable_now",
+      "next_action": "run_local_capture",
+      "cadence_bucket": "daily",
+      "expected_artifact_types": [
+        "price_snapshot",
+        "options_chain",
+        "liquidity_check"
+      ],
+      "reasons": [
+        "priority tier P1",
+        "targets equities, options, ai_infrastructure",
+        "helps validate stock-vs-LEAPS expression quality"
+      ]
+    },
+    {
+      "source_target_id": "src_target_ihs_global_trade_atlas",
+      "name": "IHS Global Trade Atlas",
+      "source_class": "shipping_trade_flow_data",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_periodic_watch",
+      "cadence_bucket": "monthly",
+      "expected_artifact_types": [
+        "trade_table",
+        "flow_snapshot",
+        "customs_dataset"
+      ],
+      "reasons": [
+        "priority tier P2",
+        "targets critical_materials, semiconductors, energy_infrastructure",
+        "improves cross-border and concentration coverage"
+      ]
+    },
+    {
+      "source_target_id": "src_target_chips_and_science_act_office_u_s_commerce_department",
+      "name": "CHIPS and Science Act Office, U.S. Commerce Department",
+      "source_class": "government_policy_enforcement",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "weekly",
+      "expected_artifact_types": [
+        "policy_notice",
+        "enforcement_notice",
+        "rule_update"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "adds event and policy transmission context",
+        "improves cross-border and concentration coverage"
+      ]
+    },
+    {
+      "source_target_id": "src_target_federal_register_notices",
+      "name": "Federal Register Notices",
+      "source_class": "government_policy_enforcement",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "weekly",
+      "expected_artifact_types": [
+        "policy_notice",
+        "enforcement_notice",
+        "rule_update"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "adds event and policy transmission context",
+        "improves cross-border and concentration coverage"
+      ]
+    },
+    {
+      "source_target_id": "src_target_darpa",
+      "name": "DARPA",
+      "source_class": "government_industrial_base_award",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "weekly",
+      "expected_artifact_types": [
+        "award_notice",
+        "grant_announcement",
+        "contract_notice"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "adds event and policy transmission context"
+      ]
+    },
+    {
+      "source_target_id": "src_target_dod_awards_and_contracts_via_sam_gov",
+      "name": "DoD awards and contracts via SAM.gov",
+      "source_class": "government_industrial_base_award",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "weekly",
+      "expected_artifact_types": [
+        "award_notice",
+        "grant_announcement",
+        "contract_notice"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "adds event and policy transmission context"
+      ]
+    },
+    {
+      "source_target_id": "src_target_public_delayed_options_chain_capture_workflow",
+      "name": "Public delayed options chain capture workflow",
+      "source_class": "market_data_snapshot",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "local_workflow",
+      "automation_readiness": "automatable_now",
+      "next_action": "run_local_capture",
+      "cadence_bucket": "daily",
+      "expected_artifact_types": [
+        "price_snapshot",
+        "options_chain",
+        "liquidity_check"
+      ],
+      "reasons": [
+        "priority tier P1",
+        "targets equities, options, ai_infrastructure",
+        "helps validate stock-vs-LEAPS expression quality"
+      ]
+    },
+    {
+      "source_target_id": "src_target_u_s_international_trade_commission_usitc_dataweb",
+      "name": "U.S. International Trade Commission (USITC) DataWeb",
+      "source_class": "shipping_trade_flow_data",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_periodic_watch",
+      "cadence_bucket": "monthly",
+      "expected_artifact_types": [
+        "trade_table",
+        "flow_snapshot",
+        "customs_dataset"
+      ],
+      "reasons": [
+        "priority tier P2",
+        "targets critical_materials, semiconductors, energy_infrastructure",
+        "improves cross-border and concentration coverage"
+      ]
+    },
+    {
+      "source_target_id": "src_target_government_accountability_office_gao_reports",
+      "name": "Government Accountability Office (GAO) Reports",
+      "source_class": "government_policy_enforcement",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "weekly",
+      "expected_artifact_types": [
+        "policy_notice",
+        "enforcement_notice",
+        "rule_update"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "adds event and policy transmission context",
+        "improves cross-border and concentration coverage"
+      ]
+    },
+    {
+      "source_target_id": "src_target_national_institute_of_standards_and_technology_nist",
+      "name": "National Institute of Standards and Technology (NIST)",
+      "source_class": "government_policy_enforcement",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "weekly",
+      "expected_artifact_types": [
+        "policy_notice",
+        "enforcement_notice",
+        "rule_update"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "adds event and policy transmission context",
+        "improves cross-border and concentration coverage"
+      ]
+    },
+    {
+      "source_target_id": "src_target_doe_grants",
+      "name": "DOE grants",
+      "source_class": "government_industrial_base_award",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "weekly",
+      "expected_artifact_types": [
+        "award_notice",
+        "grant_announcement",
+        "contract_notice"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "adds event and policy transmission context"
+      ]
+    },
+    {
+      "source_target_id": "src_target_advanced_photonics_coalition",
+      "name": "Advanced Photonics Coalition",
+      "source_class": "industry_body_and_standards",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_periodic_watch",
+      "cadence_bucket": "monthly",
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics"
+      ]
+    },
+    {
+      "source_target_id": "src_target_global_electronics_association",
+      "name": "Global Electronics Association",
+      "source_class": "industry_body_and_standards",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_periodic_watch",
+      "cadence_bucket": "monthly",
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, photonics"
+      ]
+    },
+    {
+      "source_target_id": "src_target_un_comtrade",
+      "name": "UN Comtrade",
+      "source_class": "shipping_trade_flow_data",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_periodic_watch",
+      "cadence_bucket": "monthly",
+      "expected_artifact_types": [
+        "trade_table",
+        "flow_snapshot",
+        "customs_dataset"
+      ],
+      "reasons": [
+        "priority tier P2",
+        "targets critical_materials, semiconductors, energy_infrastructure",
+        "improves cross-border and concentration coverage"
+      ]
+    },
+    {
+      "source_target_id": "src_target_wto_stats",
+      "name": "WTO Stats",
+      "source_class": "shipping_trade_flow_data",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_periodic_watch",
+      "cadence_bucket": "monthly",
+      "expected_artifact_types": [
+        "trade_table",
+        "flow_snapshot",
+        "customs_dataset"
+      ],
+      "reasons": [
+        "priority tier P2",
+        "targets critical_materials, semiconductors, energy_infrastructure",
+        "improves cross-border and concentration coverage"
+      ]
+    },
+    {
+      "source_target_id": "src_target_mckinsey_on_semiconductors",
+      "name": "McKinsey on Semiconductors",
+      "source_class": "trade_press_specialist",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_periodic_watch",
+      "cadence_bucket": "daily",
+      "expected_artifact_types": [
+        "trade_article",
+        "industry_analysis",
+        "specialist_summary"
+      ],
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics"
+      ]
+    },
+    {
+      "source_target_id": "src_target_photonics21_reports",
+      "name": "Photonics21 Reports",
+      "source_class": "trade_press_specialist",
+      "recommendation": "monitor_weekly",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_periodic_watch",
+      "cadence_bucket": "daily",
+      "expected_artifact_types": [
+        "trade_article",
+        "industry_analysis",
+        "specialist_summary"
+      ],
+      "reasons": [
+        "priority tier P1",
+        "targets semiconductors, ai_infrastructure, photonics"
+      ]
+    },
+    {
+      "source_target_id": "src_target_office_of_foreign_assets_control_ofac_u_s_treasury",
+      "name": "Office of Foreign Assets Control (OFAC), U.S. Treasury",
+      "source_class": "government_policy_enforcement",
+      "recommendation": "monitor_event_driven",
+      "collection_mode": "web_public",
+      "automation_readiness": "web_monitor_ready",
+      "next_action": "add_event_watch",
+      "cadence_bucket": "weekly",
+      "expected_artifact_types": [
+        "policy_notice",
+        "enforcement_notice",
+        "rule_update"
+      ],
+      "reasons": [
+        "priority tier P0",
+        "targets semiconductors, ai_infrastructure, critical_materials",
+        "adds event and policy transmission context",
+        "improves cross-border and concentration coverage"
+      ]
+    }
+  ]
+}
