@@ -35,3 +35,5 @@ export function setLocale(lang) {
 export function getLocale() {
   return state.locale;
 }
+
+export { state };

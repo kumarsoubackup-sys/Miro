@@ -264,4 +264,24 @@ export default {
   // ===== Language toggle =====
   'lang.en': 'EN',
   'lang.ms': 'MS',
+
+  // ===== Seed Generator =====
+  'seed.banner': 'Tiada data benih dimuat naik. Mahu ARUS menyelidik dan menjananya untuk anda?',
+  'seed.generate': 'Jana Data Penyelidikan',
+  'seed.title': 'Pembantu Penyelidikan AI',
+  'seed.description': 'ARUS akan menyelidik topik anda menggunakan data web langsung dan menjana fail benih yang komprehensif.',
+  'seed.selectCategories': 'Pilih kategori penyelidikan',
+  'seed.depth': 'Kedalaman penyelidikan',
+  'seed.quick': 'Pantas',
+  'seed.quickDesc': 'Carian web lebih luas, laporan ringkas (~1 min)',
+  'seed.thorough': 'Mendalam',
+  'seed.thoroughDesc': 'Penyelidikan menyeluruh, ratusan sumber (~3 min)',
+  'seed.startResearch': 'Mula Penyelidikan',
+  'seed.researching': 'Menyelidik',
+  'seed.complete': 'Penyelidikan selesai!',
+  'seed.filesReady': 'fail sedia. Semak dan lancarkan apabila sedia.',
+  'seed.useFiles': 'Gunakan Fail Ini',
+  'seed.preview': 'Pratonton',
+  'seed.cancel': 'Batal',
+  'seed.error': 'Penjanaan penyelidikan gagal',
 };

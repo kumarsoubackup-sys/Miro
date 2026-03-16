@@ -1,15 +1,18 @@
 <template>
   <div class="lang-fab" @click="toggleLang">
-    {{ getLocale() === 'en' ? 'EN' : 'MS' }}
+    {{ locale === 'en' ? 'EN' : 'MS' }}
   </div>
   <router-view />
 </template>
 
 <script setup>
-import { setLocale, getLocale } from './i18n/index.js';
+import { computed } from 'vue';
+import { setLocale, getLocale, state } from './i18n/index.js';
+
+const locale = computed(() => state.locale);
 
 const toggleLang = () => {
-  setLocale(getLocale() === 'en' ? 'ms' : 'en');
+  setLocale(locale.value === 'en' ? 'ms' : 'en');
 };
 </script>
 

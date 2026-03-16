@@ -29,6 +29,7 @@ from ..config import Config
 #                                    event_config_system_prompt,
 #                                    agent_config_prompt,
 #                                    agent_config_system_prompt
+#   5. seed_generator — seed_analyze_prompt, seed_generate_prompt
 # ═══════════════════════════════════════════════════════════════════════════════
 
 PROMPTS: dict[str, dict[str, str]] = {
@@ -1509,6 +1510,85 @@ Kembalikan format JSON (tanpa markdown):
     'agent_config_system_prompt': {
         'en': 'You are a social-media behaviour analysis expert. Return pure JSON. Configuration should reflect general daily activity patterns.',
         'ms': 'Anda adalah pakar analisis tingkah laku media sosial. Kembalikan JSON tulen. Konfigurasi harus mencerminkan corak aktiviti harian umum.',
+    },
+
+    # ═══════════════════════════════════════════════════════════════════════════
+    # 5. SEED DATA GENERATOR
+    # ═══════════════════════════════════════════════════════════════════════════
+
+    'seed_analyze_prompt': {
+        'en': """\
+You are an expert research strategist. Given a simulation topic, suggest 3-5 categories of background research that would produce the most realistic social media simulation.
+
+Consider these dimensions:
+- Historical precedents (similar events that happened before)
+- Key stakeholders and their positions
+- Social media dynamics and public sentiment patterns
+- Political/regulatory landscape
+- Economic data and impact analysis
+
+For each category, provide:
+- id: short snake_case identifier
+- name: human-readable category name
+- description: one sentence explaining what this research covers
+- recommended: true if essential, false if optional
+
+Return a JSON object: {"categories": [...]}
+
+Tailor categories to the specific topic — a political event needs different research than a product launch or natural disaster.""",
+
+        'ms': """\
+Anda adalah pakar strategi penyelidikan. Diberikan topik simulasi, cadangkan 3-5 kategori penyelidikan latar belakang yang akan menghasilkan simulasi media sosial yang paling realistik.
+
+Pertimbangkan dimensi ini:
+- Preseden sejarah (peristiwa serupa yang pernah berlaku)
+- Pihak berkepentingan utama dan pendirian mereka
+- Dinamik media sosial dan corak sentimen awam
+- Landskap politik/peraturan
+- Data ekonomi dan analisis impak
+
+Untuk setiap kategori, berikan:
+- id: pengecam snake_case pendek
+- name: nama kategori yang boleh dibaca
+- description: satu ayat menerangkan apa yang diliputi penyelidikan ini
+- recommended: true jika penting, false jika pilihan
+
+Kembalikan objek JSON: {"categories": [...]}""",
+    },
+
+    'seed_generate_prompt': {
+        'en': """\
+You are a research analyst preparing comprehensive background material for a social media public-opinion simulation engine called ARUS.
+
+Your task: Write a detailed research document about the specified category related to the given topic.
+
+Requirements:
+- Include real events, statistics, named individuals/organizations, and timelines
+- Quote specific numbers, dates, and facts
+- Describe key actors: their roles, positions, motivations, and likely social media behavior
+- Cover social media reactions and public sentiment patterns where relevant
+- Include multiple perspectives (government, opposition, public, media, international)
+- Cite your sources with URLs where possible
+- Write in markdown format with clear headers and sections
+- Be comprehensive: 2,000-5,000 words
+- Focus on information that helps create realistic simulated agents with distinct personalities and viewpoints
+
+This document will be used as "seed data" to generate AI agents who will simulate social media discussions about this topic.""",
+
+        'ms': """\
+Anda adalah penganalisis penyelidikan yang menyediakan bahan latar belakang komprehensif untuk enjin simulasi pendapat awam media sosial dipanggil ARUS.
+
+Tugas anda: Tulis dokumen penyelidikan terperinci tentang kategori yang dinyatakan berkaitan dengan topik yang diberikan.
+
+Keperluan:
+- Sertakan peristiwa sebenar, statistik, individu/organisasi yang dinamakan, dan garis masa
+- Petik nombor, tarikh, dan fakta tertentu
+- Terangkan aktor utama: peranan, pendirian, motivasi, dan tingkah laku media sosial mereka yang mungkin
+- Liputi reaksi media sosial dan corak sentimen awam di mana berkaitan
+- Sertakan pelbagai perspektif (kerajaan, pembangkang, awam, media, antarabangsa)
+- Petik sumber anda dengan URL di mana mungkin
+- Tulis dalam format markdown dengan tajuk dan bahagian yang jelas
+- Jadilah komprehensif: 2,000-5,000 patah perkataan""",
     },
 }
 

@@ -264,4 +264,24 @@ export default {
   // ===== Language toggle =====
   'lang.en': 'EN',
   'lang.ms': 'MS',
+
+  // ===== Seed Generator =====
+  'seed.banner': 'No seed data uploaded. Want ARUS to research and generate it for you?',
+  'seed.generate': 'Generate Research Data',
+  'seed.title': 'AI Research Assistant',
+  'seed.description': 'ARUS will research your topic using live web data and generate comprehensive seed files.',
+  'seed.selectCategories': 'Select research categories',
+  'seed.depth': 'Research depth',
+  'seed.quick': 'Quick',
+  'seed.quickDesc': 'Broader web search, concise reports (~1 min)',
+  'seed.thorough': 'Thorough',
+  'seed.thoroughDesc': 'Exhaustive research, hundreds of sources (~3 min)',
+  'seed.startResearch': 'Start Research',
+  'seed.researching': 'Researching',
+  'seed.complete': 'Research complete!',
+  'seed.filesReady': 'files ready. Review and launch when ready.',
+  'seed.useFiles': 'Use These Files',
+  'seed.preview': 'Preview',
+  'seed.cancel': 'Cancel',
+  'seed.error': 'Research generation failed',
 };

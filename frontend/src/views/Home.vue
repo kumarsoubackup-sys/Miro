@@ -17,7 +17,7 @@
             @click="setLocale('ms')"
           >{{ t('lang.ms') }}</button>
         </div>
-        <a href="https://github.com/666ghj/MiroFish" target="_blank" class="github-link">
+        <a href="https://github.com/truthwatcher-ai/MiroFish" target="_blank" class="github-link">
           {{ t('home.githubLink') }} <span class="arrow">↗</span>
         </a>
       </div>
@@ -216,6 +216,15 @@
       <!-- 历史项目数据库 -->
       <HistoryDatabase />
     </div>
+
+    <!-- Seed Generator Modal -->
+    <SeedGeneratorModal
+      :show="showSeedModal"
+      :prompt="formData.simulationRequirement"
+      :categories="seedCategories"
+      @files-ready="handleSeedFilesReady"
+      @close="showSeedModal = false"
+    />
   </div>
 </template>
 
@@ -223,6 +232,8 @@
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import HistoryDatabase from '../components/HistoryDatabase.vue'
+import SeedGeneratorModal from '../components/SeedGeneratorModal.vue'
+import { analyzeTopicAPI, getSeedFileAPI } from '../api/seed.js'
 import { t, setLocale, getLocale } from '../i18n/index.js'
 
 const router = useRouter()
@@ -240,12 +251,16 @@ const loading = ref(false)
 const error = ref('')
 const isDragOver = ref(false)
 
+// Seed generator state
+const showSeedModal = ref(false)
+const seedCategories = ref([])
+
 // 文件输入引用
 const fileInput = ref(null)
 
-// 计算属性:是否可以提交
+// 计算属性:是否可以提交 (allow submit with just a prompt; seed modal handles no-files case)
 const canSubmit = computed(() => {
-  return formData.value.simulationRequirement.trim() !== '' && files.value.length > 0
+  return formData.value.simulationRequirement.trim() !== ''
 })
 
 // 触发文件选择
@@ -302,9 +317,25 @@ const scrollToBottom = () => {
   })
 }
 
-// 开始模拟 - 立即跳转，API调用在Process页面进行
-const startSimulation = () => {
+// 开始模拟 - if no files, trigger seed generator; otherwise proceed normally
+const startSimulation = async () => {
   if (!canSubmit.value || loading.value) return
+
+  // If no files uploaded, analyze topic and show seed generator modal
+  if (files.value.length === 0) {
+    loading.value = true
+    try {
+      const res = await analyzeTopicAPI(formData.value.simulationRequirement)
+      seedCategories.value = res.categories || []
+      showSeedModal.value = true
+    } catch (err) {
+      error.value = err.message || 'Failed to analyze topic'
+      console.error('Topic analysis failed:', err)
+    } finally {
+      loading.value = false
+    }
+    return
+  }
 
   // 存储待上传的数据
   import('../store/pendingUpload.js').then(({ setPendingUpload }) => {
@@ -316,6 +347,34 @@ const startSimulation = () => {
       params: { projectId: 'new' }
     })
   })
+}
+
+// Handle seed files ready from the SeedGeneratorModal
+const handleSeedFilesReady = async (seedFiles) => {
+  showSeedModal.value = false
+  loading.value = true
+
+  try {
+    for (const sf of seedFiles) {
+      const res = await getSeedFileAPI(sf.taskId, sf.filename)
+      const blob = new Blob([res.content], { type: 'text/markdown' })
+      const file = new File([blob], sf.name, { type: 'text/markdown' })
+      files.value.push(file)
+    }
+
+    // Now that files are populated, navigate to the Process page
+    const { setPendingUpload } = await import('../store/pendingUpload.js')
+    setPendingUpload(files.value, formData.value.simulationRequirement)
+    router.push({
+      name: 'Process',
+      params: { projectId: 'new' }
+    })
+  } catch (err) {
+    error.value = err.message || 'Failed to fetch seed files'
+    console.error('Seed file fetch failed:', err)
+  } finally {
+    loading.value = false
+  }
 }
 </script>
 
@@ -373,7 +432,7 @@ const startSimulation = () => {
 .lang-btn {
   background: none;
   border: none;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.4);
   font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 600;
@@ -384,17 +443,17 @@ const startSimulation = () => {
 }
 
 .lang-btn:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .lang-btn.active {
-  color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.15);
+  color: #000000;
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
 }
 
 .lang-divider {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(0, 0, 0, 0.3);
   font-size: 0.8rem;
 }
 
