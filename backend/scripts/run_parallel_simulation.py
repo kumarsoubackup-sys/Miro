@@ -1067,6 +1067,10 @@ def get_active_agents_for_round(
         agent_id = cfg.get("agent_id", 0)
         active_hours = cfg.get("active_hours", list(range(8, 23)))
         activity_level = cfg.get("activity_level", 0.5)
+        injection_round = int(cfg.get("injection_round", 0) or 0)
+
+        if injection_round > 0 and (round_num + 1) < injection_round:
+            continue
         
         if current_hour not in active_hours:
             continue
@@ -1088,6 +1092,57 @@ def get_active_agents_for_round(
             pass
     
     return active_agents
+
+
+async def run_scheduled_events_for_round(
+    env,
+    scheduled_events: List[Dict[str, Any]],
+    current_round: int,
+    platform: str,
+):
+    """执行当前轮次的计划事件，并返回已占用的 agent_id。"""
+    event_actions = {}
+    triggered_agent_ids = set()
+
+    for event in scheduled_events:
+        try:
+            event_round = int(event.get("round_num", 0) or 0)
+        except Exception:
+            event_round = 0
+
+        if event_round != current_round:
+            continue
+
+        event_platform = (event.get("platform") or "all").lower()
+        if event_platform not in ("all", platform):
+            continue
+
+        agent_id = event.get("poster_agent_id")
+        content = (event.get("content") or "").strip()
+        if agent_id is None or not content:
+            continue
+
+        try:
+            agent = env.agent_graph.get_agent(agent_id)
+        except Exception:
+            continue
+
+        action = ManualAction(
+            action_type=ActionType.CREATE_POST,
+            action_args={"content": content}
+        )
+        if agent in event_actions:
+            if not isinstance(event_actions[agent], list):
+                event_actions[agent] = [event_actions[agent]]
+            event_actions[agent].append(action)
+        else:
+            event_actions[agent] = action
+        triggered_agent_ids.add(agent_id)
+
+    if event_actions:
+        await env.step(event_actions)
+
+    return triggered_agent_ids, len(event_actions)
 
 
 class PlatformSimulation:
@@ -1171,6 +1226,7 @@ async def run_twitter_simulation(
     # 执行初始事件
     event_config = config.get("event_config", {})
     initial_posts = event_config.get("initial_posts", [])
+    scheduled_events = event_config.get("scheduled_events", [])
     
     # 记录 round 0 开始（初始事件阶段）
     if action_logger:
@@ -1243,15 +1299,26 @@ async def run_twitter_simulation(
         # 无论是否有活跃agent，都记录round开始
         if action_logger:
             action_logger.log_round_start(round_num + 1, simulated_hour)
+
+        scheduled_agent_ids, scheduled_count = await run_scheduled_events_for_round(
+            result.env,
+            scheduled_events,
+            round_num + 1,
+            "twitter",
+        )
         
         if not active_agents:
-            # 没有活跃agent时也记录round结束（actions_count=0）
+            active_agents = []
+        elif scheduled_agent_ids:
+            active_agents = [(agent_id, agent) for agent_id, agent in active_agents if agent_id not in scheduled_agent_ids]
+
+        if active_agents:
+            actions = {agent: LLMAction() for _, agent in active_agents}
+            await result.env.step(actions)
+        elif scheduled_count == 0:
             if action_logger:
                 action_logger.log_round_end(round_num + 1, 0)
             continue
-        
-        actions = {agent: LLMAction() for _, agent in active_agents}
-        await result.env.step(actions)
         
         # 从数据库获取实际执行的动作并记录
         actual_actions, last_rowid = fetch_new_actions_from_db(
@@ -1362,6 +1429,7 @@ async def run_reddit_simulation(
     # 执行初始事件
     event_config = config.get("event_config", {})
     initial_posts = event_config.get("initial_posts", [])
+    scheduled_events = event_config.get("scheduled_events", [])
     
     # 记录 round 0 开始（初始事件阶段）
     if action_logger:
@@ -1442,15 +1510,26 @@ async def run_reddit_simulation(
         # 无论是否有活跃agent，都记录round开始
         if action_logger:
             action_logger.log_round_start(round_num + 1, simulated_hour)
+
+        scheduled_agent_ids, scheduled_count = await run_scheduled_events_for_round(
+            result.env,
+            scheduled_events,
+            round_num + 1,
+            "reddit",
+        )
         
         if not active_agents:
-            # 没有活跃agent时也记录round结束（actions_count=0）
+            active_agents = []
+        elif scheduled_agent_ids:
+            active_agents = [(agent_id, agent) for agent_id, agent in active_agents if agent_id not in scheduled_agent_ids]
+
+        if active_agents:
+            actions = {agent: LLMAction() for _, agent in active_agents}
+            await result.env.step(actions)
+        elif scheduled_count == 0:
             if action_logger:
                 action_logger.log_round_end(round_num + 1, 0)
             continue
-        
-        actions = {agent: LLMAction() for _, agent in active_agents}
-        await result.env.step(actions)
         
         # 从数据库获取实际执行的动作并记录
         actual_actions, last_rowid = fetch_new_actions_from_db(

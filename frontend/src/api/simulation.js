@@ -185,3 +185,11 @@ export const getSimulationHistory = (limit = 20) => {
   return service.get('/api/simulation/history', { params: { limit } })
 }
 
+/**
+ * 基于历史模拟创建反事实分支
+ * @param {string} simulationId
+ * @param {Object} data - { actor, injection_round, opening_statement? }
+ */
+export const createCounterfactualSimulation = (simulationId, data) => {
+  return requestWithRetry(() => service.post(`/api/simulation/${simulationId}/counterfactual`, data), 2, 500)
+}

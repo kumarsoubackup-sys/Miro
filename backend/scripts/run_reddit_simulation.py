@@ -498,6 +498,10 @@ class RedditSimulationRunner:
             agent_id = cfg.get("agent_id", 0)
             active_hours = cfg.get("active_hours", list(range(8, 23)))
             activity_level = cfg.get("activity_level", 0.5)
+            injection_round = int(cfg.get("injection_round", 0) or 0)
+
+            if injection_round > 0 and (round_num + 1) < injection_round:
+                continue
             
             if current_hour not in active_hours:
                 continue
@@ -519,6 +523,54 @@ class RedditSimulationRunner:
                 pass
         
         return active_agents
+
+    async def _run_scheduled_events_for_round(self, current_round: int) -> set:
+        """执行当前轮次的计划事件，并返回已占用的 agent_id。"""
+        event_config = self.config.get("event_config", {})
+        scheduled_events = event_config.get("scheduled_events", [])
+        event_actions = {}
+        triggered_agent_ids = set()
+
+        for event in scheduled_events:
+            try:
+                event_round = int(event.get("round_num", 0) or 0)
+            except Exception:
+                event_round = 0
+
+            if event_round != current_round:
+                continue
+
+            event_platform = (event.get("platform") or "all").lower()
+            if event_platform not in ("all", "reddit"):
+                continue
+
+            agent_id = event.get("poster_agent_id")
+            content = (event.get("content") or "").strip()
+            if agent_id is None or not content:
+                continue
+
+            try:
+                agent = self.env.agent_graph.get_agent(agent_id)
+            except Exception as e:
+                print(f"  警告: 无法执行计划事件 Agent {agent_id}: {e}")
+                continue
+
+            action = ManualAction(
+                action_type=ActionType.CREATE_POST,
+                action_args={"content": content}
+            )
+            if agent in event_actions:
+                if not isinstance(event_actions[agent], list):
+                    event_actions[agent] = [event_actions[agent]]
+                event_actions[agent].append(action)
+            else:
+                event_actions[agent] = action
+            triggered_agent_ids.add(agent_id)
+
+        if event_actions:
+            await self.env.step(event_actions)
+
+        return triggered_agent_ids
     
     async def run(self, max_rounds: int = None):
         """运行Reddit模拟
@@ -631,16 +683,22 @@ class RedditSimulationRunner:
             active_agents = self._get_active_agents_for_round(
                 self.env, simulated_hour, round_num
             )
+
+            scheduled_agent_ids = await self._run_scheduled_events_for_round(round_num + 1)
+            if scheduled_agent_ids:
+                active_agents = [(agent_id, agent) for agent_id, agent in active_agents if agent_id not in scheduled_agent_ids]
             
             if not active_agents:
-                continue
+                if not scheduled_agent_ids:
+                    continue
             
-            actions = {
-                agent: LLMAction()
-                for _, agent in active_agents
-            }
-            
-            await self.env.step(actions)
+            if active_agents:
+                actions = {
+                    agent: LLMAction()
+                    for _, agent in active_agents
+                }
+                
+                await self.env.step(actions)
             
             if (round_num + 1) % 10 == 0 or round_num == 0:
                 elapsed = (datetime.now() - start_time).total_seconds()
@@ -766,4 +824,3 @@ if __name__ == "__main__":
         pass
     finally:
         print("模拟进程已退出")
-

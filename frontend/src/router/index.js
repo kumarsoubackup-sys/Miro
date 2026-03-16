@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import Process from '../views/MainView.vue'
 import SimulationView from '../views/SimulationView.vue'
 import SimulationRunView from '../views/SimulationRunView.vue'
+import SimulationCounterfactualView from '../views/SimulationCounterfactualView.vue'
 import ReportView from '../views/ReportView.vue'
 import InteractionView from '../views/InteractionView.vue'
 
@@ -28,6 +29,12 @@ const routes = [
     path: '/simulation/:simulationId/start',
     name: 'SimulationRun',
     component: SimulationRunView,
+    props: true
+  },
+  {
+    path: '/simulation/:simulationId/counterfactual',
+    name: 'SimulationCounterfactual',
+    component: SimulationCounterfactualView,
     props: true
   },
   {

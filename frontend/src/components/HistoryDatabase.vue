@@ -170,6 +170,15 @@
                 <span class="btn-text">环境搭建</span>
               </button>
               <button 
+                class="modal-btn btn-counterfactual" 
+                @click="goToCounterfactual"
+                :disabled="!selectedProject.simulation_id"
+              >
+                <span class="btn-step">Step3</span>
+                <span class="btn-icon">▣</span>
+                <span class="btn-text">反事实注入</span>
+              </button>
+              <button 
                 class="modal-btn btn-report" 
                 @click="goToReport"
                 :disabled="!selectedProject.report_id"
@@ -179,9 +188,8 @@
                 <span class="btn-text">分析报告</span>
               </button>
             </div>
-            <!-- 不可回放提示 -->
             <div class="modal-playback-hint">
-              <span class="hint-text">Step3「开始模拟」与 Step5「深度互动」需在运行中启动，不支持历史回放</span>
+              <span class="hint-text">Step3 使用历史动作搭建反事实实验室；Step5「深度互动」仍需运行中的模拟环境</span>
             </div>
           </div>
         </div>
@@ -417,6 +425,17 @@ const goToSimulation = () => {
   if (selectedProject.value?.simulation_id) {
     router.push({
       name: 'Simulation',
+      params: { simulationId: selectedProject.value.simulation_id }
+    })
+    closeModal()
+  }
+}
+
+// 导航到反事实实验室
+const goToCounterfactual = () => {
+  if (selectedProject.value?.simulation_id) {
+    router.push({
+      name: 'SimulationCounterfactual',
       params: { simulationId: selectedProject.value.simulation_id }
     })
     closeModal()
@@ -1256,6 +1275,7 @@ onUnmounted(() => {
 /* 导航按钮 */
 .modal-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   padding: 20px 32px;
   background: #FFFFFF;
@@ -1263,6 +1283,7 @@ onUnmounted(() => {
 
 .modal-btn {
   flex: 1;
+  min-width: 110px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1314,6 +1335,7 @@ onUnmounted(() => {
 
 .modal-btn.btn-project .btn-icon { color: #3B82F6; }
 .modal-btn.btn-simulation .btn-icon { color: #F59E0B; }
+.modal-btn.btn-counterfactual .btn-icon { color: #8B5CF6; }
 .modal-btn.btn-report .btn-icon { color: #10B981; }
 
 .modal-btn:hover:not(:disabled) .btn-text {

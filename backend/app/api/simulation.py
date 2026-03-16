@@ -236,6 +236,45 @@ def create_simulation():
         }), 500
 
 
+@simulation_bp.route('/<simulation_id>/counterfactual', methods=['POST'])
+def create_counterfactual_simulation(simulation_id: str):
+    """基于历史模拟创建一个注入新角色的反事实分支。"""
+    try:
+        data = request.get_json() or {}
+        actor = data.get('actor') or {}
+        injection_round = data.get('injection_round', 0)
+        opening_statement = data.get('opening_statement', '')
+
+        manager = SimulationManager()
+        result = manager.create_counterfactual_simulation(
+            base_simulation_id=simulation_id,
+            actor_data=actor,
+            injection_round=injection_round,
+            opening_statement=opening_statement,
+        )
+
+        return jsonify({
+            "success": True,
+            "data": {
+                "simulation": result["state"].to_dict(),
+                "counterfactual": result["counterfactual"],
+            }
+        })
+
+    except ValueError as e:
+        return jsonify({
+            "success": False,
+            "error": str(e),
+        }), 400
+    except Exception as e:
+        logger.error(f"创建反事实分支失败: {str(e)}")
+        return jsonify({
+            "success": False,
+            "error": str(e),
+            "traceback": traceback.format_exc()
+        }), 500
+
+
 def _check_simulation_prepared(simulation_id: str) -> tuple:
     """
     检查模拟是否已经准备完成

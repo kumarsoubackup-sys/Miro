@@ -4,6 +4,7 @@
 """
 
 import os
+import re
 import uuid
 import time
 import threading
@@ -215,6 +216,19 @@ class GraphBuilderService:
             if attr_name.lower() in RESERVED_NAMES:
                 return f"entity_{attr_name}"
             return attr_name
+
+        def safe_edge_name(raw_name: str, used_names: set[str]) -> str:
+            """Normalize edge names to the format Zep requires."""
+            normalized = re.sub(r"[^A-Za-z0-9]+", "_", str(raw_name or "").strip())
+            normalized = re.sub(r"(?<!^)(?=[A-Z])", "_", normalized)
+            normalized = re.sub(r"_+", "_", normalized).strip("_").upper() or "RELATES_TO"
+            candidate = normalized
+            suffix = 2
+            while candidate in used_names:
+                candidate = f"{normalized}_{suffix}"
+                suffix += 1
+            used_names.add(candidate)
+            return candidate
         
         # 动态创建实体类型
         entity_types = {}
@@ -242,8 +256,9 @@ class GraphBuilderService:
         
         # 动态创建边类型
         edge_definitions = {}
+        used_edge_names = set()
         for edge_def in ontology.get("edge_types", []):
-            name = edge_def["name"]
+            name = safe_edge_name(edge_def["name"], used_edge_names)
             description = edge_def.get("description", f"A {name} relationship.")
             
             # 创建属性字典和类型注解
@@ -497,4 +512,3 @@ class GraphBuilderService:
     def delete_graph(self, graph_id: str):
         """删除图谱"""
         self.client.graph.delete(graph_id=graph_id)
-
