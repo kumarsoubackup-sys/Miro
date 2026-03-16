@@ -22,6 +22,7 @@ from ..services import (
     build_research_ontology_spec,
     build_source_registry_from_docs,
     build_structural_parse_from_source_bundle,
+    list_query_profiles,
     screen_candidates,
 )
 from ..utils.logger import get_logger
@@ -233,6 +234,15 @@ def import_policy_feed_source_bundle(research_project_id: str):
         }), 500
 
 
+@research_bp.route("/federal-register/query-profiles", methods=["GET"])
+def get_federal_register_query_profiles():
+    """List available Federal Register query profiles."""
+    return jsonify({
+        "success": True,
+        "data": list_query_profiles(),
+    })
+
+
 @research_bp.route("/project/<research_project_id>/source-bundle/federal-register-fetch", methods=["POST"])
 def fetch_federal_register_into_source_bundle(research_project_id: str):
     """Fetch live Federal Register policy documents and merge them into a source bundle."""
@@ -246,6 +256,7 @@ def fetch_federal_register_into_source_bundle(research_project_id: str):
                 existing_source_bundle = None
 
         policy_feed = fetch_federal_register_policy_feed(
+            query_profile=payload.get("query_profile"),
             query=payload.get("query", ""),
             agencies=payload.get("agencies"),
             document_types=payload.get("document_types"),

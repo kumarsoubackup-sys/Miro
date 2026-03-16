@@ -55,6 +55,15 @@ from .federal_register_feed import (
     build_federal_register_documents_url,
     fetch_federal_register_policy_feed,
 )
+from .federal_register_query_profiles import (
+    KNOWN_AGENCY_SLUGS,
+    QUERY_PROFILES,
+    get_query_profile,
+    list_query_profiles,
+    resolve_query_profile,
+    validate_agency_slug,
+    validate_agency_slugs,
+)
 from .source_registry import (
     DEFAULT_DOCS_DIR as SOURCE_REGISTRY_DOCS_DIR,
     DEFAULT_MATRIX_PATH as SOURCE_REGISTRY_MATRIX_PATH,
@@ -124,6 +133,13 @@ __all__ = [
     'FEDERAL_REGISTER_API_URL',
     'build_federal_register_documents_url',
     'fetch_federal_register_policy_feed',
+    'KNOWN_AGENCY_SLUGS',
+    'QUERY_PROFILES',
+    'get_query_profile',
+    'list_query_profiles',
+    'resolve_query_profile',
+    'validate_agency_slug',
+    'validate_agency_slugs',
     'SOURCE_REGISTRY_DOCS_DIR',
     'SOURCE_REGISTRY_MATRIX_PATH',
     'SOURCE_REGISTRY_INVESTIGATION_PATH',

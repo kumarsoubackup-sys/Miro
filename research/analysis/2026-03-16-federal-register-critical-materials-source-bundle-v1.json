@@ -1,0 +1,4574 @@
+{
+  "name": "federal_register_policy_feed_live_v1",
+  "theme": "critical_materials",
+  "notes": [
+    "Fetched from Federal Register API.",
+    "Query profile: critical_materials",
+    "Query: critical minerals rare earth strategic materials"
+  ],
+  "sources": [
+    {
+      "source_id": "src_federal_register_2026_03690",
+      "source_class": "government_policy_enforcement",
+      "title": "Administrative Revisions to Regulations Related to Outer Continental Shelf Minerals Other Than Oil, Gas, and Sulphur",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/02/24/2026-03690/administrative-revisions-to-regulations-related-to-outer-continental-shelf-minerals-other-than-oil",
+      "publisher": "Federal Register",
+      "published_at": "2026-02-24",
+      "retrieved_at": "2026-03-16T21:42:36.893814+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "MP",
+        "UUUU",
+        "LAC",
+        "ALB",
+        "LTHM"
+      ],
+      "theme_refs": [
+        "critical_materials",
+        "supply_chain_risk"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Interior Department, Ocean Energy Management Bureau"
+      ],
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "policy_scope": [
+        "export_control",
+        "stockpile",
+        "industrial_policy"
+      ],
+      "document_id": "federal_register_2026-03690"
+    },
+    {
+      "source_id": "src_federal_register_2026_01044",
+      "source_class": "government_policy_enforcement",
+      "title": "Deep Seabed Mining: Revisions to Regulations for Exploration License and Commercial Recovery Permit Applications",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/01/21/2026-01044/deep-seabed-mining-revisions-to-regulations-for-exploration-license-and-commercial-recovery-permit",
+      "publisher": "Federal Register",
+      "published_at": "2026-01-21",
+      "retrieved_at": "2026-03-16T21:42:36.893925+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "MP",
+        "UUUU",
+        "LAC",
+        "ALB",
+        "LTHM"
+      ],
+      "theme_refs": [
+        "critical_materials",
+        "supply_chain_risk"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Commerce Department, National Oceanic and Atmospheric Administration"
+      ],
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "policy_scope": [
+        "export_control",
+        "stockpile",
+        "industrial_policy"
+      ],
+      "document_id": "federal_register_2026-01044"
+    },
+    {
+      "source_id": "src_federal_register_2025_19813",
+      "source_class": "government_policy_enforcement",
+      "title": "Final 2025 List of Critical Minerals",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/11/07/2025-19813/final-2025-list-of-critical-minerals",
+      "publisher": "Federal Register",
+      "published_at": "2025-11-07",
+      "retrieved_at": "2026-03-16T21:42:36.893990+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "MP",
+        "UUUU",
+        "LAC",
+        "ALB",
+        "LTHM"
+      ],
+      "theme_refs": [
+        "critical_materials",
+        "supply_chain_risk"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Interior Department, Geological Survey"
+      ],
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "policy_scope": [
+        "export_control",
+        "stockpile",
+        "industrial_policy"
+      ],
+      "document_id": "federal_register_2025-19813"
+    },
+    {
+      "source_id": "src_federal_register_2025_16311",
+      "source_class": "government_policy_enforcement",
+      "title": "2025 Draft List of Critical Minerals",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/08/26/2025-16311/2025-draft-list-of-critical-minerals",
+      "publisher": "Federal Register",
+      "published_at": "2025-08-26",
+      "retrieved_at": "2026-03-16T21:42:36.894060+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "MP",
+        "UUUU",
+        "LAC",
+        "ALB",
+        "LTHM"
+      ],
+      "theme_refs": [
+        "critical_materials",
+        "supply_chain_risk"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Interior Department, Geological Survey"
+      ],
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "policy_scope": [
+        "export_control",
+        "stockpile",
+        "industrial_policy"
+      ],
+      "document_id": "federal_register_2025-16311"
+    },
+    {
+      "source_id": "src_federal_register_2025_07273",
+      "source_class": "government_policy_enforcement",
+      "title": "Notice of Request for Public Comments on Section 232 National Security Investigation of Imports of Processed Critical Minerals and Derivative Products",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/04/25/2025-07273/notice-of-request-for-public-comments-on-section-232-national-security-investigation-of-imports-of",
+      "publisher": "Federal Register",
+      "published_at": "2025-04-25",
+      "retrieved_at": "2026-03-16T21:42:36.894152+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "MP",
+        "UUUU",
+        "LAC",
+        "ALB",
+        "LTHM"
+      ],
+      "theme_refs": [
+        "critical_materials",
+        "supply_chain_risk"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Commerce Department, Industry and Security Bureau"
+      ],
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "policy_scope": [
+        "export_control",
+        "stockpile",
+        "industrial_policy"
+      ],
+      "document_id": "federal_register_2025-07273"
+    },
+    {
+      "source_id": "src_federal_register_2025_00704",
+      "source_class": "government_policy_enforcement",
+      "title": "Addition of Entities to and Revision of Entry on the Entity List",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/01/16/2025-00704/addition-of-entities-to-and-revision-of-entry-on-the-entity-list",
+      "publisher": "Federal Register",
+      "published_at": "2025-01-16",
+      "retrieved_at": "2026-03-16T21:42:36.894224+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "MP",
+        "UUUU",
+        "LAC",
+        "ALB",
+        "LTHM"
+      ],
+      "theme_refs": [
+        "critical_materials",
+        "supply_chain_risk"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Commerce Department, Industry and Security Bureau"
+      ],
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "policy_scope": [
+        "export_control",
+        "stockpile",
+        "industrial_policy"
+      ],
+      "document_id": "federal_register_2025-00704"
+    },
+    {
+      "source_id": "src_federal_register_2024_19422",
+      "source_class": "government_policy_enforcement",
+      "title": "Request for Public Comments on the Potential Market Impact of the Proposed Fiscal Year 2026 Annual Materials Plan From the National Defense Stockpile Market Impact Committee",
+      "canonical_url": "https://www.federalregister.gov/documents/2024/08/29/2024-19422/request-for-public-comments-on-the-potential-market-impact-of-the-proposed-fiscal-year-2026-annual",
+      "publisher": "Federal Register",
+      "published_at": "2024-08-29",
+      "retrieved_at": "2026-03-16T21:42:36.894291+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "MP",
+        "UUUU",
+        "LAC",
+        "ALB",
+        "LTHM"
+      ],
+      "theme_refs": [
+        "critical_materials",
+        "supply_chain_risk"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Commerce Department, Industry and Security Bureau"
+      ],
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "policy_scope": [
+        "export_control",
+        "stockpile",
+        "industrial_policy"
+      ],
+      "document_id": "federal_register_2024-19422"
+    },
+    {
+      "source_id": "src_federal_register_2023_28456",
+      "source_class": "government_policy_enforcement",
+      "title": "Endangered and Threatened Wildlife and Plants; Endangered Species Status for Black-Capped Petrel",
+      "canonical_url": "https://www.federalregister.gov/documents/2023/12/28/2023-28456/endangered-and-threatened-wildlife-and-plants-endangered-species-status-for-black-capped-petrel",
+      "publisher": "Federal Register",
+      "published_at": "2023-12-28",
+      "retrieved_at": "2026-03-16T21:42:36.894351+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "MP",
+        "UUUU",
+        "LAC",
+        "ALB",
+        "LTHM"
+      ],
+      "theme_refs": [
+        "critical_materials",
+        "supply_chain_risk"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Interior Department, Fish and Wildlife Service"
+      ],
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "policy_scope": [
+        "export_control",
+        "stockpile",
+        "industrial_policy"
+      ],
+      "document_id": "federal_register_2023-28456"
+    },
+    {
+      "source_id": "src_federal_register_2023_25514",
+      "source_class": "government_policy_enforcement",
+      "title": "Energy Conservation Program: Energy Conservation Standards for Consumer Furnaces",
+      "canonical_url": "https://www.federalregister.gov/documents/2023/12/18/2023-25514/energy-conservation-program-energy-conservation-standards-for-consumer-furnaces",
+      "publisher": "Federal Register",
+      "published_at": "2023-12-18",
+      "retrieved_at": "2026-03-16T21:42:36.894420+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "MP",
+        "UUUU",
+        "LAC",
+        "ALB",
+        "LTHM"
+      ],
+      "theme_refs": [
+        "critical_materials",
+        "supply_chain_risk"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Energy Department"
+      ],
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "policy_scope": [
+        "export_control",
+        "stockpile",
+        "industrial_policy"
+      ],
+      "document_id": "federal_register_2023-25514"
+    },
+    {
+      "source_id": "src_federal_register_2023_24238",
+      "source_class": "government_policy_enforcement",
+      "title": "Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to the Port of Alaska's North Extension Stabilization Step 1 (NES1) Project in Anchorage, Alaska",
+      "canonical_url": "https://www.federalregister.gov/documents/2023/11/06/2023-24238/takes-of-marine-mammals-incidental-to-specified-activities-taking-marine-mammals-incidental-to-the",
+      "publisher": "Federal Register",
+      "published_at": "2023-11-06",
+      "retrieved_at": "2026-03-16T21:42:36.894479+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [
+        "MP",
+        "UUUU",
+        "LAC",
+        "ALB",
+        "LTHM"
+      ],
+      "theme_refs": [
+        "critical_materials",
+        "supply_chain_risk"
+      ],
+      "source_quality": "high",
+      "source_reliability_score": 0.95,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live Federal Register API response.",
+        "Agencies: Commerce Department, National Oceanic and Atmospheric Administration"
+      ],
+      "source_target_id": "src_target_federal_register_notices",
+      "source_target_name": "Federal Register Notices",
+      "policy_scope": [
+        "export_control",
+        "stockpile",
+        "industrial_policy"
+      ],
+      "document_id": "federal_register_2023-24238"
+    }
+  ],
+  "fragments": [
+    {
+      "fragment_id": "frag_federal_register_2026_03690",
+      "source_id": "src_federal_register_2026_03690",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Federal Register",
+      "excerpt": "operations related to <span class=\"match\">critical</span> <span class=\"match\">minerals</span> located on the OCS. If finalized, some of the regulatory amendments proposed with this action could allow the U.S. to more quickly access resources in seabed polymetallic nodules, other subsea geologic structures, and coastal deposits containing <span class=\"match\">strategic</span> <span class=\"match\">minerals</span> such as nickel, cobalt, copper, manganese, titanium, and <span class=\"match\">rare</span> <span class=\"match\">earth</span> elements. These resources are key to strengthening the U.S. economy, securing the U.S. energy future, and reducing dependence on foreign suppliers for <span class=\"match\">critical</span> <span class=\"match\">minerals</span>. \n \n List of Subjects",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Critical Materials",
+          "Supply Chain Risk"
+        ],
+        "process_layers": [
+          "Rare Earth Mining",
+          "Rare Earth Separation",
+          "Neodymium Processing",
+          "Cobalt Refining",
+          "Lithium Processing"
+        ],
+        "geographies": [
+          "China",
+          "DRC",
+          "Australia",
+          "Canada"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Administrative Revisions to Regulations Related to Outer Continental Shelf Minerals Other Than Oil, Gas, and Sulphur",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2026-03690",
+            "document_type": "Proposed Rule",
+            "agencies": [
+              "Interior Department",
+              "Ocean Energy Management Bureau"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Mining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Separation",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Cobalt Refining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Lithium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "DRC",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Australia",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Canada",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Supply Chain Risk",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2026-03690_affected_Rare Earth Mining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Event",
+          "target_name": "Administrative Revisions to Regulations Related to Outer Continental Shelf Minerals Other Than Oil, Gas, and Sulphur",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Rare Earth Mining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Rare Earth Mining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Rare Earth Mining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Rare Earth Mining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_affected_Rare Earth Separation",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Event",
+          "target_name": "Administrative Revisions to Regulations Related to Outer Continental Shelf Minerals Other Than Oil, Gas, and Sulphur",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Rare Earth Separation_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Rare Earth Separation_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Rare Earth Separation_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Rare Earth Separation_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "Administrative Revisions to Regulations Related to Outer Continental Shelf Minerals Other Than Oil, Gas, and Sulphur",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Neodymium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Neodymium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Neodymium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_affected_Cobalt Refining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Event",
+          "target_name": "Administrative Revisions to Regulations Related to Outer Continental Shelf Minerals Other Than Oil, Gas, and Sulphur",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Cobalt Refining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Cobalt Refining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Cobalt Refining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Cobalt Refining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_affected_Lithium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Event",
+          "target_name": "Administrative Revisions to Regulations Related to Outer Continental Shelf Minerals Other Than Oil, Gas, and Sulphur",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Lithium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Lithium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Lithium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-03690_constrained_Lithium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2026-03690_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "Administrative Revisions to Regulations Related to Outer Continental Shelf Minerals Other Than Oil, Gas, and Sulphur may affect Rare Earth Mining, Rare Earth Separation, Neodymium Processing, Cobalt Refining, Lithium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "Administrative Revisions to Regulations Related to Outer Continental Shelf Minerals Other Than Oil, Gas, and Sulphur",
+            "Rare Earth Mining",
+            "Rare Earth Separation",
+            "Neodymium Processing",
+            "Cobalt Refining",
+            "Lithium Processing",
+            "China",
+            "DRC",
+            "Australia",
+            "Canada"
+          ],
+          "relationship_keys": [
+            "2026-03690_affected_Rare Earth Mining",
+            "2026-03690_constrained_Rare Earth Mining_China",
+            "2026-03690_constrained_Rare Earth Mining_DRC",
+            "2026-03690_constrained_Rare Earth Mining_Australia",
+            "2026-03690_constrained_Rare Earth Mining_Canada",
+            "2026-03690_affected_Rare Earth Separation",
+            "2026-03690_constrained_Rare Earth Separation_China",
+            "2026-03690_constrained_Rare Earth Separation_DRC",
+            "2026-03690_constrained_Rare Earth Separation_Australia",
+            "2026-03690_constrained_Rare Earth Separation_Canada",
+            "2026-03690_affected_Neodymium Processing",
+            "2026-03690_constrained_Neodymium Processing_China",
+            "2026-03690_constrained_Neodymium Processing_DRC",
+            "2026-03690_constrained_Neodymium Processing_Australia",
+            "2026-03690_constrained_Neodymium Processing_Canada",
+            "2026-03690_affected_Cobalt Refining",
+            "2026-03690_constrained_Cobalt Refining_China",
+            "2026-03690_constrained_Cobalt Refining_DRC",
+            "2026-03690_constrained_Cobalt Refining_Australia",
+            "2026-03690_constrained_Cobalt Refining_Canada",
+            "2026-03690_affected_Lithium Processing",
+            "2026-03690_constrained_Lithium Processing_China",
+            "2026-03690_constrained_Lithium Processing_DRC",
+            "2026-03690_constrained_Lithium Processing_Australia",
+            "2026-03690_constrained_Lithium Processing_Canada"
+          ]
+        }
+      ],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "Consistent with Executive Order (E.O.) 14285, \"Unleashing America's Offshore Critical Minerals and Resources\" (April 24, 2025), E.O. 14154 \"Unleashing American Energy\" (January 20, 2025), E.O. 14192 \"Unleashing Prosperity through Deregulation\" (January 31, 2025), and consistent with agency policy, the Department of the Interior (the Department or DOI), acting through the Bureau of Ocean Energy Management (BOEM), proposes administrative revisions to regulations that govern prospecting, leasing, and operations related to minerals other than oil, gas, and sulphur (\"hard minerals\") on the Outer Continental Shelf (OCS)."
+    },
+    {
+      "fragment_id": "frag_federal_register_2026_01044",
+      "source_id": "src_federal_register_2026_01044",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Federal Register",
+      "excerpt": "that deep seabed <span class=\"match\">minerals</span> are not needed to meet U.S. demand for <span class=\"match\">critical</span> <span class=\"match\">minerals</span> and domestic sources and recycling of such <span class=\"match\">minerals</span> should be used instead; the U.S. needs to focus on building domestic refineries; using renewable and alternative resources rather than deep-sea <span class=\"match\">minerals</span>; and jeopardizing vital carbon sinks. Commenters argued that deep-sea <span class=\"match\">minerals</span> are not necessary to address national security issues and that the real problem is foreign dominance in processing <span class=\"match\">critical</span> <span class=\"match\">minerals</span>, not in extracting <span class=\"match\">critical</span> <span class=\"match\">minerals</span>. General opposition",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Critical Materials",
+          "Supply Chain Risk"
+        ],
+        "process_layers": [
+          "Rare Earth Mining",
+          "Rare Earth Separation",
+          "Neodymium Processing",
+          "Cobalt Refining",
+          "Lithium Processing"
+        ],
+        "geographies": [
+          "China",
+          "DRC",
+          "Australia",
+          "Canada"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Deep Seabed Mining: Revisions to Regulations for Exploration License and Commercial Recovery Permit Applications",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2026-01044",
+            "document_type": "Rule",
+            "agencies": [
+              "Commerce Department",
+              "National Oceanic and Atmospheric Administration"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Mining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Separation",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Cobalt Refining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Lithium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "DRC",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Australia",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Canada",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Supply Chain Risk",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2026-01044_affected_Rare Earth Mining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Event",
+          "target_name": "Deep Seabed Mining: Revisions to Regulations for Exploration License and Commercial Recovery Permit Applications",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Rare Earth Mining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Rare Earth Mining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Rare Earth Mining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Rare Earth Mining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_affected_Rare Earth Separation",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Event",
+          "target_name": "Deep Seabed Mining: Revisions to Regulations for Exploration License and Commercial Recovery Permit Applications",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Rare Earth Separation_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Rare Earth Separation_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Rare Earth Separation_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Rare Earth Separation_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "Deep Seabed Mining: Revisions to Regulations for Exploration License and Commercial Recovery Permit Applications",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Neodymium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Neodymium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Neodymium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_affected_Cobalt Refining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Event",
+          "target_name": "Deep Seabed Mining: Revisions to Regulations for Exploration License and Commercial Recovery Permit Applications",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Cobalt Refining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Cobalt Refining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Cobalt Refining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Cobalt Refining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_affected_Lithium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Event",
+          "target_name": "Deep Seabed Mining: Revisions to Regulations for Exploration License and Commercial Recovery Permit Applications",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Lithium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Lithium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Lithium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2026-01044_constrained_Lithium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2026-01044_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "Deep Seabed Mining: Revisions to Regulations for Exploration License and Commercial Recovery Permit Applications may affect Rare Earth Mining, Rare Earth Separation, Neodymium Processing, Cobalt Refining, Lithium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "Deep Seabed Mining: Revisions to Regulations for Exploration License and Commercial Recovery Permit Applications",
+            "Rare Earth Mining",
+            "Rare Earth Separation",
+            "Neodymium Processing",
+            "Cobalt Refining",
+            "Lithium Processing",
+            "China",
+            "DRC",
+            "Australia",
+            "Canada"
+          ],
+          "relationship_keys": [
+            "2026-01044_affected_Rare Earth Mining",
+            "2026-01044_constrained_Rare Earth Mining_China",
+            "2026-01044_constrained_Rare Earth Mining_DRC",
+            "2026-01044_constrained_Rare Earth Mining_Australia",
+            "2026-01044_constrained_Rare Earth Mining_Canada",
+            "2026-01044_affected_Rare Earth Separation",
+            "2026-01044_constrained_Rare Earth Separation_China",
+            "2026-01044_constrained_Rare Earth Separation_DRC",
+            "2026-01044_constrained_Rare Earth Separation_Australia",
+            "2026-01044_constrained_Rare Earth Separation_Canada",
+            "2026-01044_affected_Neodymium Processing",
+            "2026-01044_constrained_Neodymium Processing_China",
+            "2026-01044_constrained_Neodymium Processing_DRC",
+            "2026-01044_constrained_Neodymium Processing_Australia",
+            "2026-01044_constrained_Neodymium Processing_Canada",
+            "2026-01044_affected_Cobalt Refining",
+            "2026-01044_constrained_Cobalt Refining_China",
+            "2026-01044_constrained_Cobalt Refining_DRC",
+            "2026-01044_constrained_Cobalt Refining_Australia",
+            "2026-01044_constrained_Cobalt Refining_Canada",
+            "2026-01044_affected_Lithium Processing",
+            "2026-01044_constrained_Lithium Processing_China",
+            "2026-01044_constrained_Lithium Processing_DRC",
+            "2026-01044_constrained_Lithium Processing_Australia",
+            "2026-01044_constrained_Lithium Processing_Canada"
+          ]
+        }
+      ],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "The Deep Seabed Hard Mineral Resources Act (DSHMRA or the Act) charges NOAA with the responsibility for issuing licenses for exploration and permits for commercial recovery of hard mineral resources, as defined in the Act, from the deep seabed in areas beyond national jurisdiction and promulgating regulations necessary to carry out the provisions of the Act. Some provisions of the regulations require updating to reflect significant technological and information changes since promulgation of the initial regulations in the 1980s. NOAA has included a consolidated license and permit application process in a section of the regulations reserved for this purpose and has made other clarifying and conforming changes."
+    },
+    {
+      "fragment_id": "frag_federal_register_2025_19813",
+      "source_id": "src_federal_register_2025_19813",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Federal Register",
+      "excerpt": " Chromium \n No. \n \n \n Cobalt \n Yes \n Nickel, copper. \n \n \n Copper \n No. \n \n \n Dysprosium \n Yes \n Other <span class=\"match\">rare</span> <span class=\"match\">earths</span>, iron ore, heavy <span class=\"match\">mineral</span> sands (titanium, zirconium). \n \n \n Erbium \n Yes \n Other <span class=\"match\">rare</span> <span class=\"match\">earths</span>, iron ore, heavy <span class=\"match\">mineral</span> sands (titanium, zirconium). \n \n \n Europium \n Yes \n Other <span class=\"match\">rare</span> <span class=\"match\">earths</span>, iron ore, heavy <span class=\"match\">mineral</span> sands (titanium, zirconium). \n \n \n Fluorspar \n No. \n \n \n Gadolinium \n Yes \n Other <span class=\"match\">rare</span> <span class=\"match\">earths</span>, iron ore, heavy <span class=\"match\">mineral</span> sands (titanium, zirconium). \n \n \n Gallium \n Yes \n Bauxite and zinc. \n \n \n Germanium \n Yes \n Zinc and coal",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Critical Materials",
+          "Supply Chain Risk"
+        ],
+        "process_layers": [
+          "Rare Earth Mining",
+          "Rare Earth Separation",
+          "Neodymium Processing",
+          "Cobalt Refining",
+          "Lithium Processing"
+        ],
+        "geographies": [
+          "China",
+          "DRC",
+          "Australia",
+          "Canada"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Final 2025 List of Critical Minerals",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2025-19813",
+            "document_type": "Notice",
+            "agencies": [
+              "Interior Department",
+              "Geological Survey"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Mining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Separation",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Cobalt Refining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Lithium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "DRC",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Australia",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Canada",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Supply Chain Risk",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2025-19813_affected_Rare Earth Mining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Event",
+          "target_name": "Final 2025 List of Critical Minerals",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Rare Earth Mining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Rare Earth Mining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Rare Earth Mining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Rare Earth Mining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_affected_Rare Earth Separation",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Event",
+          "target_name": "Final 2025 List of Critical Minerals",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Rare Earth Separation_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Rare Earth Separation_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Rare Earth Separation_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Rare Earth Separation_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "Final 2025 List of Critical Minerals",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Neodymium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Neodymium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Neodymium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_affected_Cobalt Refining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Event",
+          "target_name": "Final 2025 List of Critical Minerals",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Cobalt Refining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Cobalt Refining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Cobalt Refining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Cobalt Refining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_affected_Lithium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Event",
+          "target_name": "Final 2025 List of Critical Minerals",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Lithium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Lithium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Lithium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-19813_constrained_Lithium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2025-19813_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "Final 2025 List of Critical Minerals may affect Rare Earth Mining, Rare Earth Separation, Neodymium Processing, Cobalt Refining, Lithium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "Final 2025 List of Critical Minerals",
+            "Rare Earth Mining",
+            "Rare Earth Separation",
+            "Neodymium Processing",
+            "Cobalt Refining",
+            "Lithium Processing",
+            "China",
+            "DRC",
+            "Australia",
+            "Canada"
+          ],
+          "relationship_keys": [
+            "2025-19813_affected_Rare Earth Mining",
+            "2025-19813_constrained_Rare Earth Mining_China",
+            "2025-19813_constrained_Rare Earth Mining_DRC",
+            "2025-19813_constrained_Rare Earth Mining_Australia",
+            "2025-19813_constrained_Rare Earth Mining_Canada",
+            "2025-19813_affected_Rare Earth Separation",
+            "2025-19813_constrained_Rare Earth Separation_China",
+            "2025-19813_constrained_Rare Earth Separation_DRC",
+            "2025-19813_constrained_Rare Earth Separation_Australia",
+            "2025-19813_constrained_Rare Earth Separation_Canada",
+            "2025-19813_affected_Neodymium Processing",
+            "2025-19813_constrained_Neodymium Processing_China",
+            "2025-19813_constrained_Neodymium Processing_DRC",
+            "2025-19813_constrained_Neodymium Processing_Australia",
+            "2025-19813_constrained_Neodymium Processing_Canada",
+            "2025-19813_affected_Cobalt Refining",
+            "2025-19813_constrained_Cobalt Refining_China",
+            "2025-19813_constrained_Cobalt Refining_DRC",
+            "2025-19813_constrained_Cobalt Refining_Australia",
+            "2025-19813_constrained_Cobalt Refining_Canada",
+            "2025-19813_affected_Lithium Processing",
+            "2025-19813_constrained_Lithium Processing_China",
+            "2025-19813_constrained_Lithium Processing_DRC",
+            "2025-19813_constrained_Lithium Processing_Australia",
+            "2025-19813_constrained_Lithium Processing_Canada"
+          ]
+        }
+      ],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "Critical minerals are essential for national security, economic stability, and supply chain resilience because they underpin key industries, drive technological innovation, and support critical infrastructure vital for a modern American economy. The United States is heavily reliant on imports of certain mineral commodities from foreign sources, some of which are at risk of serious, sustained, and long-term supply chain disruptions. The United States' dependence on imports and the vulnerability of supply chains raise the potential for risks to national security, defense readiness, price stability, and economic prosperity and resilience. The Nation possesses vast mineral resources that can create jobs, fuel prosperity, and significantly reduce our reliance on foreign nations, and the United States is taking actions to facilitate domestic mineral production. The List of Critical Minerals guides strategies to secure the Nation's mineral supply chains. By this notice, the Secretary of the Interior, acting through the Director of the U.S. Geological Survey (USGS), presents the final 2025 List of Critical Minerals and the methodology used to develop the List. Mineral criticality changes over time and therefore this final 2025 List of Critical Minerals is not a permanent list but will be dynamic and updated not less than biannually to reflect current data on supply, demand, and concentration of production, as well as current policy priorities. The final 2025 List of Critical Minerals, which revises the final List published by the Secretary in 2022, includes the following 60 minerals: aluminum, antimony, arsenic, barite, beryllium, bismuth, boron, cerium, cesium, chromium, cobalt, copper, dysprosium, erbium, europium, fluorspar, gadolinium, gallium, germanium, graphite, hafnium, holmium, indium, iridium, lanthanum, lead, lithium, lutetium, magnesium, manganese, metallurgical coal, neodymium, nickel, niobium, palladium, phosphate, platinum, potash, praseodymium, rhenium, rhodium, rubidium, ruthenium, samarium, scandium, silicon, silver, tantalum, tellurium, terbium, thulium, tin, titanium, tungsten, uranium, vanadium, ytterbium, yttrium, zinc, and zirconium."
+    },
+    {
+      "fragment_id": "frag_federal_register_2025_16311",
+      "source_id": "src_federal_register_2025_16311",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Federal Register",
+      "excerpt": "\n Zirconium. \n \n \n Holmium \n Yes \n Other <span class=\"match\">rare</span> <span class=\"match\">earths</span>, iron ore, heavy <span class=\"match\">mineral</span> sands (titanium, zirconium). \n \n \n Indium \n Yes \n Zinc. \n \n \n Iridium \n Yes \n Platinum, nickel. \n \n \n Lanthanum \n Yes \n Other <span class=\"match\">rare</span> <span class=\"match\">earths</span>, iron ore, heavy <span class=\"match\">mineral</span> sands (titanium, zirconium). \n \n \n Lead \n No \n \n \n Lithium \n No \n \n \n Lutetium \n Yes \n Other <span class=\"match\">rare</span> <span class=\"match\">earths</span>, iron ore, heavy <span class=\"match\">mineral</span> sands (titanium, zirconium). \n \n \n Magnesium \n No \n \n \n Manganese \n No \n \n \n Neodymium \n Yes \n Other <span class=\"match\">rare</span> <span class=\"match\">earths</span>, iron ore, heavy <span class=\"match\">mineral</span> sands (titanium, zirconium). \n \n \n Nickel",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Critical Materials",
+          "Supply Chain Risk"
+        ],
+        "process_layers": [
+          "Rare Earth Mining",
+          "Rare Earth Separation",
+          "Neodymium Processing",
+          "Cobalt Refining",
+          "Lithium Processing"
+        ],
+        "geographies": [
+          "China",
+          "DRC",
+          "Australia",
+          "Canada"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "2025 Draft List of Critical Minerals",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2025-16311",
+            "document_type": "Notice",
+            "agencies": [
+              "Interior Department",
+              "Geological Survey"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Mining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Separation",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Cobalt Refining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Lithium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "DRC",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Australia",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Canada",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Supply Chain Risk",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2025-16311_affected_Rare Earth Mining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Event",
+          "target_name": "2025 Draft List of Critical Minerals",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Rare Earth Mining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Rare Earth Mining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Rare Earth Mining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Rare Earth Mining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_affected_Rare Earth Separation",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Event",
+          "target_name": "2025 Draft List of Critical Minerals",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Rare Earth Separation_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Rare Earth Separation_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Rare Earth Separation_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Rare Earth Separation_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "2025 Draft List of Critical Minerals",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Neodymium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Neodymium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Neodymium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_affected_Cobalt Refining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Event",
+          "target_name": "2025 Draft List of Critical Minerals",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Cobalt Refining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Cobalt Refining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Cobalt Refining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Cobalt Refining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_affected_Lithium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Event",
+          "target_name": "2025 Draft List of Critical Minerals",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Lithium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Lithium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Lithium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-16311_constrained_Lithium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2025-16311_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "2025 Draft List of Critical Minerals may affect Rare Earth Mining, Rare Earth Separation, Neodymium Processing, Cobalt Refining, Lithium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "2025 Draft List of Critical Minerals",
+            "Rare Earth Mining",
+            "Rare Earth Separation",
+            "Neodymium Processing",
+            "Cobalt Refining",
+            "Lithium Processing",
+            "China",
+            "DRC",
+            "Australia",
+            "Canada"
+          ],
+          "relationship_keys": [
+            "2025-16311_affected_Rare Earth Mining",
+            "2025-16311_constrained_Rare Earth Mining_China",
+            "2025-16311_constrained_Rare Earth Mining_DRC",
+            "2025-16311_constrained_Rare Earth Mining_Australia",
+            "2025-16311_constrained_Rare Earth Mining_Canada",
+            "2025-16311_affected_Rare Earth Separation",
+            "2025-16311_constrained_Rare Earth Separation_China",
+            "2025-16311_constrained_Rare Earth Separation_DRC",
+            "2025-16311_constrained_Rare Earth Separation_Australia",
+            "2025-16311_constrained_Rare Earth Separation_Canada",
+            "2025-16311_affected_Neodymium Processing",
+            "2025-16311_constrained_Neodymium Processing_China",
+            "2025-16311_constrained_Neodymium Processing_DRC",
+            "2025-16311_constrained_Neodymium Processing_Australia",
+            "2025-16311_constrained_Neodymium Processing_Canada",
+            "2025-16311_affected_Cobalt Refining",
+            "2025-16311_constrained_Cobalt Refining_China",
+            "2025-16311_constrained_Cobalt Refining_DRC",
+            "2025-16311_constrained_Cobalt Refining_Australia",
+            "2025-16311_constrained_Cobalt Refining_Canada",
+            "2025-16311_affected_Lithium Processing",
+            "2025-16311_constrained_Lithium Processing_China",
+            "2025-16311_constrained_Lithium Processing_DRC",
+            "2025-16311_constrained_Lithium Processing_Australia",
+            "2025-16311_constrained_Lithium Processing_Canada"
+          ]
+        }
+      ],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "The United States remains heavily dependent on imports of certain mineral commodities that are vital to the Nation's economic and national security interests. This dependency has the potential to create strategic vulnerabilities arising from adverse foreign actions, pandemics, natural disasters, or other events that can disrupt the supply of critical minerals. The Department of the Interior (DOI) published Lists of Critical Minerals in 2018 \\1\\ and 2022.\\2\\ Section 7002 of the Energy Act of 2020 requires the U.S. Geological Survey (USGS) on behalf of the Secretary of the Interior (Secretary) to update the List of Critical Minerals every three years. This is a Notice of an opportunity to comment on the 2025 draft List of Critical Minerals."
+    },
+    {
+      "fragment_id": "frag_federal_register_2025_07273",
+      "source_id": "src_federal_register_2025_07273",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Federal Register",
+      "excerpt": "identified as <span class=\"match\">rare</span> <span class=\"match\">earth</span> elements by the Department of Energy (DOE) in the April 2020 publication, “<span class=\"match\">Critical</span> <span class=\"match\">Materials</span> <span class=\"match\">Rare</span> <span class=\"match\">Earths</span> Supply Chain.” Generally, <span class=\"match\">rare</span> <span class=\"match\">earth</span> elements are considered a subset of <span class=\"match\">critical</span> <span class=\"match\">minerals</span>. The term also includes any additional elements that either the USGS or DOE determines in any subsequent official report or publication should be considered <span class=\"match\">rare</span> <span class=\"match\">earth</span> elements. The term “processed <span class=\"match\">critical</span> <span class=\"match\">minerals</span>” refers to <span class=\"match\">critical</span> <span class=\"match\">minerals</span> that have undergone the activities that occur after <span class=\"match\">critical</span> <span class=\"match\">mineral</span> ore is extracted",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Critical Materials",
+          "Supply Chain Risk"
+        ],
+        "process_layers": [
+          "Rare Earth Mining",
+          "Rare Earth Separation",
+          "Neodymium Processing",
+          "Cobalt Refining",
+          "Lithium Processing"
+        ],
+        "geographies": [
+          "China",
+          "DRC",
+          "Australia",
+          "Canada"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Notice of Request for Public Comments on Section 232 National Security Investigation of Imports of Processed Critical Minerals and Derivative Products",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2025-07273",
+            "document_type": "Notice",
+            "agencies": [
+              "Commerce Department",
+              "Industry and Security Bureau"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Mining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Separation",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Cobalt Refining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Lithium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "DRC",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Australia",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Canada",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Supply Chain Risk",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2025-07273_affected_Rare Earth Mining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Event",
+          "target_name": "Notice of Request for Public Comments on Section 232 National Security Investigation of Imports of Processed Critical Minerals and Derivative Products",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Rare Earth Mining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Rare Earth Mining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Rare Earth Mining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Rare Earth Mining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_affected_Rare Earth Separation",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Event",
+          "target_name": "Notice of Request for Public Comments on Section 232 National Security Investigation of Imports of Processed Critical Minerals and Derivative Products",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Rare Earth Separation_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Rare Earth Separation_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Rare Earth Separation_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Rare Earth Separation_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "Notice of Request for Public Comments on Section 232 National Security Investigation of Imports of Processed Critical Minerals and Derivative Products",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Neodymium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Neodymium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Neodymium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_affected_Cobalt Refining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Event",
+          "target_name": "Notice of Request for Public Comments on Section 232 National Security Investigation of Imports of Processed Critical Minerals and Derivative Products",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Cobalt Refining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Cobalt Refining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Cobalt Refining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Cobalt Refining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_affected_Lithium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Event",
+          "target_name": "Notice of Request for Public Comments on Section 232 National Security Investigation of Imports of Processed Critical Minerals and Derivative Products",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Lithium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Lithium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Lithium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-07273_constrained_Lithium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2025-07273_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "Notice of Request for Public Comments on Section 232 National Security Investigation of Imports of Processed Critical Minerals and Derivative Products may affect Rare Earth Mining, Rare Earth Separation, Neodymium Processing, Cobalt Refining, Lithium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "Notice of Request for Public Comments on Section 232 National Security Investigation of Imports of Processed Critical Minerals and Derivative Products",
+            "Rare Earth Mining",
+            "Rare Earth Separation",
+            "Neodymium Processing",
+            "Cobalt Refining",
+            "Lithium Processing",
+            "China",
+            "DRC",
+            "Australia",
+            "Canada"
+          ],
+          "relationship_keys": [
+            "2025-07273_affected_Rare Earth Mining",
+            "2025-07273_constrained_Rare Earth Mining_China",
+            "2025-07273_constrained_Rare Earth Mining_DRC",
+            "2025-07273_constrained_Rare Earth Mining_Australia",
+            "2025-07273_constrained_Rare Earth Mining_Canada",
+            "2025-07273_affected_Rare Earth Separation",
+            "2025-07273_constrained_Rare Earth Separation_China",
+            "2025-07273_constrained_Rare Earth Separation_DRC",
+            "2025-07273_constrained_Rare Earth Separation_Australia",
+            "2025-07273_constrained_Rare Earth Separation_Canada",
+            "2025-07273_affected_Neodymium Processing",
+            "2025-07273_constrained_Neodymium Processing_China",
+            "2025-07273_constrained_Neodymium Processing_DRC",
+            "2025-07273_constrained_Neodymium Processing_Australia",
+            "2025-07273_constrained_Neodymium Processing_Canada",
+            "2025-07273_affected_Cobalt Refining",
+            "2025-07273_constrained_Cobalt Refining_China",
+            "2025-07273_constrained_Cobalt Refining_DRC",
+            "2025-07273_constrained_Cobalt Refining_Australia",
+            "2025-07273_constrained_Cobalt Refining_Canada",
+            "2025-07273_affected_Lithium Processing",
+            "2025-07273_constrained_Lithium Processing_China",
+            "2025-07273_constrained_Lithium Processing_DRC",
+            "2025-07273_constrained_Lithium Processing_Australia",
+            "2025-07273_constrained_Lithium Processing_Canada"
+          ]
+        }
+      ],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "On April 22, 2025, the Secretary of Commerce initiated an investigation to determine the effects on the national security of imports of processed critical minerals as well as their derivative products. This investigation has been initiated under section 232 of the Trade Expansion Act of 1962, as amended (Section 232). Interested parties are invited to submit written comments, data, analyses, or other information pertinent to the investigation to the Department of Commerce's (Department) Bureau of Industry and Security (BIS), Office of Strategic Industries and Economic Security. This notice identifies issues on which the Department is especially interested in obtaining the public's views."
+    },
+    {
+      "fragment_id": "frag_federal_register_2025_00704",
+      "source_id": "src_federal_register_2025_00704",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Federal Register",
+      "excerpt": "to part 744 of the EAR. Modifying the Department of Atomic Energy entry to remove Indian <span class=\"match\">Rare</span> <span class=\"match\">Earths</span>, IGCAR, and BARC will support U.S. foreign policy objectives by reducing barriers to advance energy cooperation, including joint research and development and science and technology cooperation, towards shared energy security needs and goals. It will also enable closer cooperation between the United States and India to secure more resilient <span class=\"match\">critical</span> <span class=\"match\">minerals</span> and clean energy supply chains, following through on a leader-level commitment to hasten bilateral",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Critical Materials",
+          "Supply Chain Risk"
+        ],
+        "process_layers": [
+          "Rare Earth Mining",
+          "Rare Earth Separation",
+          "Neodymium Processing",
+          "Cobalt Refining",
+          "Lithium Processing"
+        ],
+        "geographies": [
+          "China",
+          "DRC",
+          "Australia",
+          "Canada"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Addition of Entities to and Revision of Entry on the Entity List",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2025-00704",
+            "document_type": "Rule",
+            "agencies": [
+              "Commerce Department",
+              "Industry and Security Bureau"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Mining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Separation",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Cobalt Refining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Lithium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "DRC",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Australia",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Canada",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Supply Chain Risk",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2025-00704_affected_Rare Earth Mining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Event",
+          "target_name": "Addition of Entities to and Revision of Entry on the Entity List",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Rare Earth Mining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Rare Earth Mining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Rare Earth Mining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Rare Earth Mining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_affected_Rare Earth Separation",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Event",
+          "target_name": "Addition of Entities to and Revision of Entry on the Entity List",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Rare Earth Separation_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Rare Earth Separation_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Rare Earth Separation_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Rare Earth Separation_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "Addition of Entities to and Revision of Entry on the Entity List",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Neodymium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Neodymium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Neodymium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_affected_Cobalt Refining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Event",
+          "target_name": "Addition of Entities to and Revision of Entry on the Entity List",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Cobalt Refining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Cobalt Refining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Cobalt Refining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Cobalt Refining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_affected_Lithium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Event",
+          "target_name": "Addition of Entities to and Revision of Entry on the Entity List",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Lithium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Lithium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Lithium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2025-00704_constrained_Lithium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2025-00704_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "Addition of Entities to and Revision of Entry on the Entity List may affect Rare Earth Mining, Rare Earth Separation, Neodymium Processing, Cobalt Refining, Lithium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "Addition of Entities to and Revision of Entry on the Entity List",
+            "Rare Earth Mining",
+            "Rare Earth Separation",
+            "Neodymium Processing",
+            "Cobalt Refining",
+            "Lithium Processing",
+            "China",
+            "DRC",
+            "Australia",
+            "Canada"
+          ],
+          "relationship_keys": [
+            "2025-00704_affected_Rare Earth Mining",
+            "2025-00704_constrained_Rare Earth Mining_China",
+            "2025-00704_constrained_Rare Earth Mining_DRC",
+            "2025-00704_constrained_Rare Earth Mining_Australia",
+            "2025-00704_constrained_Rare Earth Mining_Canada",
+            "2025-00704_affected_Rare Earth Separation",
+            "2025-00704_constrained_Rare Earth Separation_China",
+            "2025-00704_constrained_Rare Earth Separation_DRC",
+            "2025-00704_constrained_Rare Earth Separation_Australia",
+            "2025-00704_constrained_Rare Earth Separation_Canada",
+            "2025-00704_affected_Neodymium Processing",
+            "2025-00704_constrained_Neodymium Processing_China",
+            "2025-00704_constrained_Neodymium Processing_DRC",
+            "2025-00704_constrained_Neodymium Processing_Australia",
+            "2025-00704_constrained_Neodymium Processing_Canada",
+            "2025-00704_affected_Cobalt Refining",
+            "2025-00704_constrained_Cobalt Refining_China",
+            "2025-00704_constrained_Cobalt Refining_DRC",
+            "2025-00704_constrained_Cobalt Refining_Australia",
+            "2025-00704_constrained_Cobalt Refining_Canada",
+            "2025-00704_affected_Lithium Processing",
+            "2025-00704_constrained_Lithium Processing_China",
+            "2025-00704_constrained_Lithium Processing_DRC",
+            "2025-00704_constrained_Lithium Processing_Australia",
+            "2025-00704_constrained_Lithium Processing_Canada"
+          ]
+        }
+      ],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "In this rule, the Bureau of Industry and Security (BIS) amends the Export Administration Regulations (EAR) by adding 11 entities under 11 entries to the Entity List. These entries are listed on the Entity List under the destination of China, People's Republic of (China) (11). These entities have been determined by the U.S. Government to be acting contrary to the national security and/or foreign policy interests of the United States. This rule also revises one existing entry on the Entity List under the destination of India."
+    },
+    {
+      "fragment_id": "frag_federal_register_2024_19422",
+      "source_id": "src_federal_register_2024_19422",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Federal Register",
+      "excerpt": "operation of the <span class=\"match\">Strategic</span> Petroleum Reserve for use in the event the international oil market is severely disrupted. \n \n The Department of Defense (DOD) maintains a stockpile of <span class=\"match\">critical</span> and <span class=\"match\">strategic</span> <span class=\"match\">materials</span> known as the National Defense Stockpile (NDS). During a war or national emergency, this stockpile is meant to provide <span class=\"match\">strategic</span> and <span class=\"match\">critical</span> <span class=\"match\">materials</span> to support national defense and essential civilian requirements. The stockpile currently contains 61 <span class=\"match\">materials</span> (primarily <span class=\"match\">minerals</span>) that are deemed <span class=\"match\">strategic</span> and <span class=\"match\">critical</span> to national security",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Critical Materials",
+          "Supply Chain Risk"
+        ],
+        "process_layers": [
+          "Rare Earth Mining",
+          "Rare Earth Separation",
+          "Neodymium Processing",
+          "Cobalt Refining",
+          "Lithium Processing"
+        ],
+        "geographies": [
+          "China",
+          "DRC",
+          "Australia",
+          "Canada"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Request for Public Comments on the Potential Market Impact of the Proposed Fiscal Year 2026 Annual Materials Plan From the National Defense Stockpile Market Impact Committee",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2024-19422",
+            "document_type": "Notice",
+            "agencies": [
+              "Commerce Department",
+              "Industry and Security Bureau"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Mining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Separation",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Cobalt Refining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Lithium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "DRC",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Australia",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Canada",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Supply Chain Risk",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2024-19422_affected_Rare Earth Mining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Event",
+          "target_name": "Request for Public Comments on the Potential Market Impact of the Proposed Fiscal Year 2026 Annual Materials Plan From the National Defense Stockpile Market Impact Committee",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Rare Earth Mining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Rare Earth Mining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Rare Earth Mining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Rare Earth Mining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_affected_Rare Earth Separation",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Event",
+          "target_name": "Request for Public Comments on the Potential Market Impact of the Proposed Fiscal Year 2026 Annual Materials Plan From the National Defense Stockpile Market Impact Committee",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Rare Earth Separation_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Rare Earth Separation_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Rare Earth Separation_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Rare Earth Separation_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "Request for Public Comments on the Potential Market Impact of the Proposed Fiscal Year 2026 Annual Materials Plan From the National Defense Stockpile Market Impact Committee",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Neodymium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Neodymium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Neodymium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_affected_Cobalt Refining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Event",
+          "target_name": "Request for Public Comments on the Potential Market Impact of the Proposed Fiscal Year 2026 Annual Materials Plan From the National Defense Stockpile Market Impact Committee",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Cobalt Refining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Cobalt Refining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Cobalt Refining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Cobalt Refining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_affected_Lithium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Event",
+          "target_name": "Request for Public Comments on the Potential Market Impact of the Proposed Fiscal Year 2026 Annual Materials Plan From the National Defense Stockpile Market Impact Committee",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Lithium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Lithium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Lithium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2024-19422_constrained_Lithium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2024-19422_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "Request for Public Comments on the Potential Market Impact of the Proposed Fiscal Year 2026 Annual Materials Plan From the National Defense Stockpile Market Impact Committee may affect Rare Earth Mining, Rare Earth Separation, Neodymium Processing, Cobalt Refining, Lithium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "Request for Public Comments on the Potential Market Impact of the Proposed Fiscal Year 2026 Annual Materials Plan From the National Defense Stockpile Market Impact Committee",
+            "Rare Earth Mining",
+            "Rare Earth Separation",
+            "Neodymium Processing",
+            "Cobalt Refining",
+            "Lithium Processing",
+            "China",
+            "DRC",
+            "Australia",
+            "Canada"
+          ],
+          "relationship_keys": [
+            "2024-19422_affected_Rare Earth Mining",
+            "2024-19422_constrained_Rare Earth Mining_China",
+            "2024-19422_constrained_Rare Earth Mining_DRC",
+            "2024-19422_constrained_Rare Earth Mining_Australia",
+            "2024-19422_constrained_Rare Earth Mining_Canada",
+            "2024-19422_affected_Rare Earth Separation",
+            "2024-19422_constrained_Rare Earth Separation_China",
+            "2024-19422_constrained_Rare Earth Separation_DRC",
+            "2024-19422_constrained_Rare Earth Separation_Australia",
+            "2024-19422_constrained_Rare Earth Separation_Canada",
+            "2024-19422_affected_Neodymium Processing",
+            "2024-19422_constrained_Neodymium Processing_China",
+            "2024-19422_constrained_Neodymium Processing_DRC",
+            "2024-19422_constrained_Neodymium Processing_Australia",
+            "2024-19422_constrained_Neodymium Processing_Canada",
+            "2024-19422_affected_Cobalt Refining",
+            "2024-19422_constrained_Cobalt Refining_China",
+            "2024-19422_constrained_Cobalt Refining_DRC",
+            "2024-19422_constrained_Cobalt Refining_Australia",
+            "2024-19422_constrained_Cobalt Refining_Canada",
+            "2024-19422_affected_Lithium Processing",
+            "2024-19422_constrained_Lithium Processing_China",
+            "2024-19422_constrained_Lithium Processing_DRC",
+            "2024-19422_constrained_Lithium Processing_Australia",
+            "2024-19422_constrained_Lithium Processing_Canada"
+          ]
+        }
+      ],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "The National Defense Stockpile Market Impact Committee, co- chaired by the Departments of Commerce and State, is seeking public comments on the potential market impact of proposed changes to the Fiscal Year (FY) 2026 Annual Materials Plan (AMP). Potential changes to the AMP are decided by the National Defense Stockpile Market Impact Committee, which advises the Defense Logistics Agency in its role as the National Defense Stockpile Manager on the projected domestic and foreign economic effects of all acquisitions, conversions, and disposals involving the National Defense Stockpile."
+    },
+    {
+      "fragment_id": "frag_federal_register_2023_28456",
+      "source_id": "src_federal_register_2023_28456",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Federal Register",
+      "excerpt": "determined that the designation of <span class=\"match\">critical</span> habitat for the black-capped petrel is prudent. \n <span class=\"match\">Critical</span> Habitat Determinability \n Our regulations at 50 CFR 424.12(a)(2) state that the designation of <span class=\"match\">critical</span> habitat is not determinable when one or both of the following situations exist: \n (i) Data sufficient to perform required analyses are lacking, or \n (ii) The biological needs of the species are not sufficiently well known to identify any area that meets the definition of “<span class=\"match\">critical</span> habitat.” \n When <span class=\"match\">critical</span> habitat is not determinable, the Act",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Critical Materials",
+          "Supply Chain Risk"
+        ],
+        "process_layers": [
+          "Rare Earth Mining",
+          "Rare Earth Separation",
+          "Neodymium Processing",
+          "Cobalt Refining",
+          "Lithium Processing"
+        ],
+        "geographies": [
+          "China",
+          "DRC",
+          "Australia",
+          "Canada"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Endangered and Threatened Wildlife and Plants; Endangered Species Status for Black-Capped Petrel",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2023-28456",
+            "document_type": "Rule",
+            "agencies": [
+              "Interior Department",
+              "Fish and Wildlife Service"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Mining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Separation",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Cobalt Refining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Lithium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "DRC",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Australia",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Canada",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Supply Chain Risk",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2023-28456_affected_Rare Earth Mining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Event",
+          "target_name": "Endangered and Threatened Wildlife and Plants; Endangered Species Status for Black-Capped Petrel",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Rare Earth Mining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Rare Earth Mining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Rare Earth Mining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Rare Earth Mining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_affected_Rare Earth Separation",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Event",
+          "target_name": "Endangered and Threatened Wildlife and Plants; Endangered Species Status for Black-Capped Petrel",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Rare Earth Separation_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Rare Earth Separation_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Rare Earth Separation_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Rare Earth Separation_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "Endangered and Threatened Wildlife and Plants; Endangered Species Status for Black-Capped Petrel",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Neodymium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Neodymium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Neodymium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_affected_Cobalt Refining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Event",
+          "target_name": "Endangered and Threatened Wildlife and Plants; Endangered Species Status for Black-Capped Petrel",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Cobalt Refining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Cobalt Refining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Cobalt Refining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Cobalt Refining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_affected_Lithium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Event",
+          "target_name": "Endangered and Threatened Wildlife and Plants; Endangered Species Status for Black-Capped Petrel",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Lithium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Lithium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Lithium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-28456_constrained_Lithium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2023-28456_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "Endangered and Threatened Wildlife and Plants; Endangered Species Status for Black-Capped Petrel may affect Rare Earth Mining, Rare Earth Separation, Neodymium Processing, Cobalt Refining, Lithium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "Endangered and Threatened Wildlife and Plants; Endangered Species Status for Black-Capped Petrel",
+            "Rare Earth Mining",
+            "Rare Earth Separation",
+            "Neodymium Processing",
+            "Cobalt Refining",
+            "Lithium Processing",
+            "China",
+            "DRC",
+            "Australia",
+            "Canada"
+          ],
+          "relationship_keys": [
+            "2023-28456_affected_Rare Earth Mining",
+            "2023-28456_constrained_Rare Earth Mining_China",
+            "2023-28456_constrained_Rare Earth Mining_DRC",
+            "2023-28456_constrained_Rare Earth Mining_Australia",
+            "2023-28456_constrained_Rare Earth Mining_Canada",
+            "2023-28456_affected_Rare Earth Separation",
+            "2023-28456_constrained_Rare Earth Separation_China",
+            "2023-28456_constrained_Rare Earth Separation_DRC",
+            "2023-28456_constrained_Rare Earth Separation_Australia",
+            "2023-28456_constrained_Rare Earth Separation_Canada",
+            "2023-28456_affected_Neodymium Processing",
+            "2023-28456_constrained_Neodymium Processing_China",
+            "2023-28456_constrained_Neodymium Processing_DRC",
+            "2023-28456_constrained_Neodymium Processing_Australia",
+            "2023-28456_constrained_Neodymium Processing_Canada",
+            "2023-28456_affected_Cobalt Refining",
+            "2023-28456_constrained_Cobalt Refining_China",
+            "2023-28456_constrained_Cobalt Refining_DRC",
+            "2023-28456_constrained_Cobalt Refining_Australia",
+            "2023-28456_constrained_Cobalt Refining_Canada",
+            "2023-28456_affected_Lithium Processing",
+            "2023-28456_constrained_Lithium Processing_China",
+            "2023-28456_constrained_Lithium Processing_DRC",
+            "2023-28456_constrained_Lithium Processing_Australia",
+            "2023-28456_constrained_Lithium Processing_Canada"
+          ]
+        }
+      ],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "We, the U.S. Fish and Wildlife Service (Service), determine endangered species status under the Endangered Species Act of 1973 (Act), as amended, for the black-capped petrel (Pterodroma hasitata), a pelagic seabird species that nests on the island of Hispaniola and spends the rest of its life at sea. The species forages in high concentration off the coast of North Carolina; however, the marine range extends across much of the western Atlantic (Nova Scotia to Venezuela) and into the Caribbean Sea and northern Gulf of Mexico. This rule extends the protections of the Act to the black-capped petrel."
+    },
+    {
+      "fragment_id": "frag_federal_register_2023_25514",
+      "source_id": "src_federal_register_2023_25514",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Federal Register",
+      "excerpt": "along with the efficiency levels associated with each technology or combination of technologies. The end result of each teardown is a structured BOM that incorporates all <span class=\"match\">materials</span>, components, and fasteners (classified as either raw <span class=\"match\">materials</span> or purchased parts and assemblies), and characterizes the <span class=\"match\">materials</span> and components by weight, manufacturing processes used, dimensions, <span class=\"match\">material</span>, and quantity. The BOMs from the teardown analysis were then used as inputs to calculate the MPC for each product that was torn down. The MPCs resulting from the teardowns",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Critical Materials",
+          "Supply Chain Risk"
+        ],
+        "process_layers": [
+          "Rare Earth Mining",
+          "Rare Earth Separation",
+          "Neodymium Processing",
+          "Cobalt Refining",
+          "Lithium Processing"
+        ],
+        "geographies": [
+          "China",
+          "DRC",
+          "Australia",
+          "Canada"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Energy Conservation Program: Energy Conservation Standards for Consumer Furnaces",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2023-25514",
+            "document_type": "Rule",
+            "agencies": [
+              "Energy Department"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Mining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Separation",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Cobalt Refining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Lithium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "DRC",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Australia",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Canada",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Supply Chain Risk",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2023-25514_affected_Rare Earth Mining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Event",
+          "target_name": "Energy Conservation Program: Energy Conservation Standards for Consumer Furnaces",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Rare Earth Mining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Rare Earth Mining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Rare Earth Mining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Rare Earth Mining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_affected_Rare Earth Separation",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Event",
+          "target_name": "Energy Conservation Program: Energy Conservation Standards for Consumer Furnaces",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Rare Earth Separation_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Rare Earth Separation_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Rare Earth Separation_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Rare Earth Separation_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "Energy Conservation Program: Energy Conservation Standards for Consumer Furnaces",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Neodymium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Neodymium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Neodymium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_affected_Cobalt Refining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Event",
+          "target_name": "Energy Conservation Program: Energy Conservation Standards for Consumer Furnaces",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Cobalt Refining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Cobalt Refining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Cobalt Refining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Cobalt Refining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_affected_Lithium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Event",
+          "target_name": "Energy Conservation Program: Energy Conservation Standards for Consumer Furnaces",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Lithium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Lithium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Lithium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-25514_constrained_Lithium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2023-25514_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "Energy Conservation Program: Energy Conservation Standards for Consumer Furnaces may affect Rare Earth Mining, Rare Earth Separation, Neodymium Processing, Cobalt Refining, Lithium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "Energy Conservation Program: Energy Conservation Standards for Consumer Furnaces",
+            "Rare Earth Mining",
+            "Rare Earth Separation",
+            "Neodymium Processing",
+            "Cobalt Refining",
+            "Lithium Processing",
+            "China",
+            "DRC",
+            "Australia",
+            "Canada"
+          ],
+          "relationship_keys": [
+            "2023-25514_affected_Rare Earth Mining",
+            "2023-25514_constrained_Rare Earth Mining_China",
+            "2023-25514_constrained_Rare Earth Mining_DRC",
+            "2023-25514_constrained_Rare Earth Mining_Australia",
+            "2023-25514_constrained_Rare Earth Mining_Canada",
+            "2023-25514_affected_Rare Earth Separation",
+            "2023-25514_constrained_Rare Earth Separation_China",
+            "2023-25514_constrained_Rare Earth Separation_DRC",
+            "2023-25514_constrained_Rare Earth Separation_Australia",
+            "2023-25514_constrained_Rare Earth Separation_Canada",
+            "2023-25514_affected_Neodymium Processing",
+            "2023-25514_constrained_Neodymium Processing_China",
+            "2023-25514_constrained_Neodymium Processing_DRC",
+            "2023-25514_constrained_Neodymium Processing_Australia",
+            "2023-25514_constrained_Neodymium Processing_Canada",
+            "2023-25514_affected_Cobalt Refining",
+            "2023-25514_constrained_Cobalt Refining_China",
+            "2023-25514_constrained_Cobalt Refining_DRC",
+            "2023-25514_constrained_Cobalt Refining_Australia",
+            "2023-25514_constrained_Cobalt Refining_Canada",
+            "2023-25514_affected_Lithium Processing",
+            "2023-25514_constrained_Lithium Processing_China",
+            "2023-25514_constrained_Lithium Processing_DRC",
+            "2023-25514_constrained_Lithium Processing_Australia",
+            "2023-25514_constrained_Lithium Processing_Canada"
+          ]
+        }
+      ],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "The Energy Policy and Conservation Act, as amended (\"EPCA\"), prescribes energy conservation standards for various consumer products and certain commercial and industrial equipment, including consumer furnaces. EPCA also requires the U.S. Department of Energy (\"DOE\" or \"the Department\") to determine periodically whether more stringent standards would be technologically feasible and economically justified, and would result in significant energy savings. In this final rule, DOE is adopting amended energy conservation standards for consumer furnaces, specifically non-weatherized gas furnaces and mobile home gas furnaces. The Department has determined that the amended energy conservation standards for the subject products would result in significant conservation of energy, and are technologically feasible and economically justified."
+    },
+    {
+      "fragment_id": "frag_federal_register_2023_24238",
+      "source_id": "src_federal_register_2023_24238",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Federal Register",
+      "excerpt": "the containment. \n Demolition of the failed sheet pile structure would be accomplished through excavation and dredging of impounded soils (fill <span class=\"match\">material</span>), and cutting and removal of the existing sheet piles. Approximately 1,465,000 CY of <span class=\"match\">material</span> would be removed. The <span class=\"match\">material</span> removed from excavation (115,000 CY) would be stockpiled in the North Extension area for future use, while the dredged <span class=\"match\">material</span> (1,350,000 CY) would be disposed of offshore into the Anchorage Harbor Open Water Disposal Site, which is the authorized USACE offshore disposal",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [
+          "Critical Materials",
+          "Supply Chain Risk"
+        ],
+        "process_layers": [
+          "Rare Earth Mining",
+          "Rare Earth Separation",
+          "Neodymium Processing",
+          "Cobalt Refining",
+          "Lithium Processing"
+        ],
+        "geographies": [
+          "China",
+          "DRC",
+          "Australia",
+          "Canada"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to the Port of Alaska's North Extension Stabilization Step 1 (NES1) Project in Anchorage, Alaska",
+          "attributes": {
+            "event_type": "policy_notice",
+            "document_number": "2023-24238",
+            "document_type": "Notice",
+            "agencies": [
+              "Commerce Department",
+              "National Oceanic and Atmospheric Administration"
+            ]
+          },
+          "confidence": "high"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Mining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Rare Earth Separation",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Neodymium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Cobalt Refining",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "ProcessLayer",
+          "canonical_name": "Lithium Processing",
+          "attributes": {
+            "process_stage": "policy_affected"
+          },
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "China",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "DRC",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Australia",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Geography",
+          "canonical_name": "Canada",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Critical Materials",
+          "confidence": "medium"
+        },
+        {
+          "entity_type": "Theme",
+          "canonical_name": "Supply Chain Risk",
+          "confidence": "medium"
+        }
+      ],
+      "relationship_hints": [
+        {
+          "key": "2023-24238_affected_Rare Earth Mining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Event",
+          "target_name": "Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to the Port of Alaska's North Extension Stabilization Step 1 (NES1) Project in Anchorage, Alaska",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Rare Earth Mining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Rare Earth Mining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Rare Earth Mining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Rare Earth Mining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Mining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_affected_Rare Earth Separation",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Event",
+          "target_name": "Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to the Port of Alaska's North Extension Stabilization Step 1 (NES1) Project in Anchorage, Alaska",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Rare Earth Separation_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Rare Earth Separation_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Rare Earth Separation_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Rare Earth Separation_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Rare Earth Separation",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_affected_Neodymium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Event",
+          "target_name": "Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to the Port of Alaska's North Extension Stabilization Step 1 (NES1) Project in Anchorage, Alaska",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Neodymium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Neodymium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Neodymium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Neodymium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Neodymium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_affected_Cobalt Refining",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Event",
+          "target_name": "Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to the Port of Alaska's North Extension Stabilization Step 1 (NES1) Project in Anchorage, Alaska",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Cobalt Refining_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Cobalt Refining_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Cobalt Refining_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Cobalt Refining_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Cobalt Refining",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_affected_Lithium Processing",
+          "relationship_type": "AFFECTED_BY_EVENT",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Event",
+          "target_name": "Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to the Port of Alaska's North Extension Stabilization Step 1 (NES1) Project in Anchorage, Alaska",
+          "relationship_strength": "high",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Lithium Processing_China",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "China",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Lithium Processing_DRC",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "DRC",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Lithium Processing_Australia",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Australia",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        },
+        {
+          "key": "2023-24238_constrained_Lithium Processing_Canada",
+          "relationship_type": "CONSTRAINED_BY",
+          "source_type": "ProcessLayer",
+          "source_name": "Lithium Processing",
+          "target_type": "Geography",
+          "target_name": "Canada",
+          "relationship_strength": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "claim_candidates": [
+        {
+          "claim_key": "claim_2023-24238_policy_notice_affects_process_layers",
+          "claim_type": "policy_transmission_assertion",
+          "claim_text": "Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to the Port of Alaska's North Extension Stabilization Step 1 (NES1) Project in Anchorage, Alaska may affect Rare Earth Mining, Rare Earth Separation, Neodymium Processing, Cobalt Refining, Lithium Processing before downstream market narratives update.",
+          "claim_status": "supported",
+          "claim_kind": "inferential",
+          "confidence": "medium",
+          "entity_names": [
+            "Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to the Port of Alaska's North Extension Stabilization Step 1 (NES1) Project in Anchorage, Alaska",
+            "Rare Earth Mining",
+            "Rare Earth Separation",
+            "Neodymium Processing",
+            "Cobalt Refining",
+            "Lithium Processing",
+            "China",
+            "DRC",
+            "Australia",
+            "Canada"
+          ],
+          "relationship_keys": [
+            "2023-24238_affected_Rare Earth Mining",
+            "2023-24238_constrained_Rare Earth Mining_China",
+            "2023-24238_constrained_Rare Earth Mining_DRC",
+            "2023-24238_constrained_Rare Earth Mining_Australia",
+            "2023-24238_constrained_Rare Earth Mining_Canada",
+            "2023-24238_affected_Rare Earth Separation",
+            "2023-24238_constrained_Rare Earth Separation_China",
+            "2023-24238_constrained_Rare Earth Separation_DRC",
+            "2023-24238_constrained_Rare Earth Separation_Australia",
+            "2023-24238_constrained_Rare Earth Separation_Canada",
+            "2023-24238_affected_Neodymium Processing",
+            "2023-24238_constrained_Neodymium Processing_China",
+            "2023-24238_constrained_Neodymium Processing_DRC",
+            "2023-24238_constrained_Neodymium Processing_Australia",
+            "2023-24238_constrained_Neodymium Processing_Canada",
+            "2023-24238_affected_Cobalt Refining",
+            "2023-24238_constrained_Cobalt Refining_China",
+            "2023-24238_constrained_Cobalt Refining_DRC",
+            "2023-24238_constrained_Cobalt Refining_Australia",
+            "2023-24238_constrained_Cobalt Refining_Canada",
+            "2023-24238_affected_Lithium Processing",
+            "2023-24238_constrained_Lithium Processing_China",
+            "2023-24238_constrained_Lithium Processing_DRC",
+            "2023-24238_constrained_Lithium Processing_Australia",
+            "2023-24238_constrained_Lithium Processing_Canada"
+          ]
+        }
+      ],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "NMFS has received a request from the Port of Alaska (POA) for authorization to take marine mammals incidental to the NES1 project at the existing port facility in Anchorage, Alaska. Pursuant to the Marine Mammal Protection Act (MMPA), NMFS is requesting comments on its proposal to issue an incidental harassment authorization (IHA) to incidentally take marine mammals during the specified activities. NMFS is also requesting comments on a possible one-time, 1-year renewal that could be issued under certain circumstances and if all requirements are met, as described in the Request for Public Comments section at the end of this notice. NMFS will consider public comments prior to making any final decision on the issuance of the requested MMPA authorization and agency responses will be summarized in the final notice of our decision."
+    }
+  ],
+  "connector_metadata": {
+    "connector_family": "policy_feed",
+    "connector_versions": [
+      "federal_register_bis_v1"
+    ],
+    "source_targets": [
+      "Federal Register Notices"
+    ],
+    "document_count": 10,
+    "generated_at": "2026-03-16T21:42:52.626039+00:00",
+    "synthetic_sample": false
+  }
+}

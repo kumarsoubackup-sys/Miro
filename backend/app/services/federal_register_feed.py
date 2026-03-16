@@ -10,9 +10,18 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 import json
-from typing import Any, Dict, Iterable, List
+import logging
+from typing import Any, Dict, Iterable, List, Optional
+from urllib.error import HTTPError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+
+from .federal_register_query_profiles import (
+    resolve_query_profile,
+    validate_agency_slugs,
+)
+
+logger = logging.getLogger(__name__)
 
 
 FEDERAL_REGISTER_API_URL = "https://www.federalregister.gov/api/v1/documents.json"
@@ -59,8 +68,13 @@ def build_federal_register_documents_url(
         params.append(("fields[]", field))
     if query:
         params.append(("conditions[term]", query))
-    for agency in _normalize_list(agencies):
-        params.append(("conditions[agencies][]", str(agency)))
+    # Validate agency slugs: the Federal Register API returns HTTP 400
+    # for unrecognised values in conditions[agencies][].
+    valid_agencies = validate_agency_slugs(
+        [str(a) for a in _normalize_list(agencies)]
+    )
+    for agency in valid_agencies:
+        params.append(("conditions[agencies][]", agency))
     for doc_type in _normalize_list(document_types):
         params.append(("conditions[type][]", str(doc_type)))
     if published_gte:
@@ -248,6 +262,7 @@ def _normalize_document_to_policy_feed(
 
 def fetch_federal_register_policy_feed(
     *,
+    query_profile: Optional[str] = None,
     query: str = "",
     agencies: Iterable[str] | None = None,
     document_types: Iterable[str] | None = None,
@@ -261,44 +276,93 @@ def fetch_federal_register_policy_feed(
     ticker_refs: Iterable[str] | None = None,
     policy_scope: Iterable[str] | None = None,
 ) -> Dict[str, Any]:
+    # Resolve profile defaults, letting explicit args override.
+    resolved = resolve_query_profile(
+        query_profile,
+        overrides={
+            "query": query or None,
+            "agencies": list(agencies) if agencies else None,
+            "document_types": list(document_types) if document_types else None,
+            "target_themes": list(target_themes) if target_themes else None,
+            "focus_process_layers": list(focus_process_layers) if focus_process_layers else None,
+            "focus_geographies": list(focus_geographies) if focus_geographies else None,
+            "ticker_refs": list(ticker_refs) if ticker_refs else None,
+            "policy_scope": list(policy_scope) if policy_scope else None,
+        },
+    )
+    effective_query = resolved.get("query", query) or ""
+    effective_agencies = resolved.get("agencies") or []
+    effective_document_types = resolved.get("document_types") or []
+    effective_target_themes = resolved.get("target_themes") or []
+    effective_process_layers = resolved.get("focus_process_layers") or []
+    effective_geographies = resolved.get("focus_geographies") or []
+    effective_tickers = resolved.get("ticker_refs") or []
+    effective_policy_scope = resolved.get("policy_scope") or []
+
     url = build_federal_register_documents_url(
-        query=query,
-        agencies=agencies,
-        document_types=document_types,
+        query=effective_query,
+        agencies=effective_agencies,
+        document_types=effective_document_types,
         published_gte=published_gte,
         published_lte=published_lte,
         per_page=per_page,
         page=page,
     )
-    payload = _fetch_json(url)
+
+    try:
+        payload = _fetch_json(url)
+    except HTTPError as exc:
+        # If agency filtering caused a 400, retry without agencies.
+        if exc.code == 400 and effective_agencies:
+            logger.warning(
+                "Federal Register API returned 400 with agencies=%s; "
+                "retrying without agency filter.",
+                effective_agencies,
+            )
+            url = build_federal_register_documents_url(
+                query=effective_query,
+                agencies=None,
+                document_types=effective_document_types,
+                published_gte=published_gte,
+                published_lte=published_lte,
+                per_page=per_page,
+                page=page,
+            )
+            payload = _fetch_json(url)
+        else:
+            raise
+
     results = _extract_results(payload)
     documents = [
         _normalize_document_to_policy_feed(
             result,
             source_target_id="src_target_federal_register_notices",
-            target_themes=target_themes or [],
-            focus_process_layers=focus_process_layers or [],
-            focus_geographies=focus_geographies or [],
-            ticker_refs=ticker_refs or [],
-            policy_scope=policy_scope or [],
+            target_themes=effective_target_themes,
+            focus_process_layers=effective_process_layers,
+            focus_geographies=effective_geographies,
+            ticker_refs=effective_tickers,
+            policy_scope=effective_policy_scope,
         )
         for result in results
     ]
+    notes = ["Fetched from Federal Register API."]
+    if query_profile:
+        notes.append(f"Query profile: {query_profile}")
+    if effective_query:
+        notes.append(f"Query: {effective_query}")
     return {
         "name": "federal_register_policy_feed_live_v1",
-        "theme": next(iter(target_themes or []), ""),
+        "theme": next(iter(effective_target_themes), ""),
         "synthetic_sample": False,
-        "notes": [
-            "Fetched from Federal Register API.",
-            *( [f"Query: {query}"] if query else [] ),
-        ],
+        "notes": notes,
         "feed_documents": documents,
         "fetch_metadata": {
             "api_url": url,
             "result_count": len(results),
             "retrieved_at": _iso_now(),
-            "agencies": list(_normalize_list(agencies)),
-            "document_types": list(_normalize_list(document_types)),
+            "query_profile": query_profile or None,
+            "agencies": effective_agencies,
+            "document_types": effective_document_types,
         },
     }
 
