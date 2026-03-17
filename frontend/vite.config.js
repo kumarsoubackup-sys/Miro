@@ -11,6 +11,7 @@ export default defineConfig({
       '/api': {
         target: 'http://localhost:5001',
         changeOrigin: true,
+        allowedHosts: ['miro-4u7q.onrender.com'],
         secure: false
       }
     }
