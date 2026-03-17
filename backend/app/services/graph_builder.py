@@ -3,7 +3,6 @@
 接口2：使用Zep API构建Standalone Graph
 """
 
-import os
 import uuid
 import time
 import threading
@@ -16,6 +15,7 @@ from zep_cloud import EpisodeData, EntityEdgeSourceTarget
 from ..config import Config
 from ..models.task import TaskManager, TaskStatus
 from ..utils.zep_paging import fetch_all_nodes, fetch_all_edges
+from ..utils.error_messages import get_error_message
 from .text_processor import TextProcessor
 
 
@@ -101,42 +101,47 @@ class GraphBuilderService:
         graph_name: str,
         chunk_size: int,
         chunk_overlap: int,
-        batch_size: int
+        batch_size: int,
+        locale: str = 'zh'
     ):
         """图谱构建工作线程"""
+        def _msg(key, **kwargs):
+            msg = get_error_message(key, locale)
+            return msg.format(**kwargs) if kwargs else msg
+
         try:
             self.task_manager.update_task(
                 task_id,
                 status=TaskStatus.PROCESSING,
                 progress=5,
-                message="开始构建图谱..."
+                message=_msg('building_graph')
             )
-            
+
             # 1. 创建图谱
             graph_id = self.create_graph(graph_name)
             self.task_manager.update_task(
                 task_id,
                 progress=10,
-                message=f"图谱已创建: {graph_id}"
+                message=_msg('graph_created', graph_id=graph_id)
             )
-            
+
             # 2. 设置本体
             self.set_ontology(graph_id, ontology)
             self.task_manager.update_task(
                 task_id,
                 progress=15,
-                message="本体已设置"
+                message=_msg('ontology_set')
             )
-            
+
             # 3. 文本分块
             chunks = TextProcessor.split_text(text, chunk_size, chunk_overlap)
             total_chunks = len(chunks)
             self.task_manager.update_task(
                 task_id,
                 progress=20,
-                message=f"文本已分割为 {total_chunks} 个块"
+                message=_msg('text_split', count=total_chunks)
             )
-            
+
             # 4. 分批发送数据
             episode_uuids = self.add_text_batches(
                 graph_id, chunks, batch_size,
@@ -144,41 +149,43 @@ class GraphBuilderService:
                     task_id,
                     progress=20 + int(prog * 0.4),  # 20-60%
                     message=msg
-                )
+                ),
+                locale=locale
             )
-            
+
             # 5. 等待Zep处理完成
             self.task_manager.update_task(
                 task_id,
                 progress=60,
-                message="等待Zep处理数据..."
+                message=_msg('waiting_zep')
             )
-            
+
             self._wait_for_episodes(
                 episode_uuids,
                 lambda msg, prog: self.task_manager.update_task(
                     task_id,
                     progress=60 + int(prog * 0.3),  # 60-90%
                     message=msg
-                )
+                ),
+                locale=locale
             )
-            
+
             # 6. 获取图谱信息
             self.task_manager.update_task(
                 task_id,
                 progress=90,
-                message="获取图谱信息..."
+                message=_msg('fetching_graph_info')
             )
-            
+
             graph_info = self._get_graph_info(graph_id)
-            
+
             # 完成
             self.task_manager.complete_task(task_id, {
                 "graph_id": graph_id,
                 "graph_info": graph_info.to_dict(),
                 "chunks_processed": total_chunks,
             })
-            
+
         except Exception as e:
             import traceback
             error_msg = f"{str(e)}\n{traceback.format_exc()}"
@@ -290,109 +297,119 @@ class GraphBuilderService:
         graph_id: str,
         chunks: List[str],
         batch_size: int = 3,
-        progress_callback: Optional[Callable] = None
+        progress_callback: Optional[Callable] = None,
+        locale: str = 'zh'
     ) -> List[str]:
         """分批添加文本到图谱，返回所有 episode 的 uuid 列表"""
+        def _msg(key, **kwargs):
+            msg = get_error_message(key, locale)
+            return msg.format(**kwargs) if kwargs else msg
+
         episode_uuids = []
         total_chunks = len(chunks)
-        
+
         for i in range(0, total_chunks, batch_size):
             batch_chunks = chunks[i:i + batch_size]
             batch_num = i // batch_size + 1
             total_batches = (total_chunks + batch_size - 1) // batch_size
-            
+
             if progress_callback:
                 progress = (i + len(batch_chunks)) / total_chunks
                 progress_callback(
-                    f"发送第 {batch_num}/{total_batches} 批数据 ({len(batch_chunks)} 块)...",
+                    _msg('sending_batch', current=batch_num, total=total_batches, chunks=len(batch_chunks)),
                     progress
                 )
-            
+
             # 构建episode数据
             episodes = [
                 EpisodeData(data=chunk, type="text")
                 for chunk in batch_chunks
             ]
-            
+
             # 发送到Zep
             try:
                 batch_result = self.client.graph.add_batch(
                     graph_id=graph_id,
                     episodes=episodes
                 )
-                
+
                 # 收集返回的 episode uuid
                 if batch_result and isinstance(batch_result, list):
                     for ep in batch_result:
                         ep_uuid = getattr(ep, 'uuid_', None) or getattr(ep, 'uuid', None)
                         if ep_uuid:
                             episode_uuids.append(ep_uuid)
-                
+
                 # 避免请求过快
                 time.sleep(1)
-                
+
             except Exception as e:
                 if progress_callback:
-                    progress_callback(f"批次 {batch_num} 发送失败: {str(e)}", 0)
+                    progress_callback(_msg('batch_failed', batch=batch_num, error=str(e)), 0)
                 raise
-        
+
         return episode_uuids
     
     def _wait_for_episodes(
         self,
         episode_uuids: List[str],
         progress_callback: Optional[Callable] = None,
-        timeout: int = 600
+        timeout: int = 600,
+        locale: str = 'zh'
     ):
         """等待所有 episode 处理完成（通过查询每个 episode 的 processed 状态）"""
+        def _msg(key, **kwargs):
+            msg = get_error_message(key, locale)
+            return msg.format(**kwargs) if kwargs else msg
+
         if not episode_uuids:
             if progress_callback:
-                progress_callback("无需等待（没有 episode）", 1.0)
+                progress_callback(_msg('no_episodes'), 1.0)
             return
-        
+
         start_time = time.time()
         pending_episodes = set(episode_uuids)
         completed_count = 0
         total_episodes = len(episode_uuids)
-        
+
         if progress_callback:
-            progress_callback(f"开始等待 {total_episodes} 个文本块处理...", 0)
-        
+            progress_callback(_msg('waiting_episodes', count=total_episodes), 0)
+
         while pending_episodes:
             if time.time() - start_time > timeout:
                 if progress_callback:
                     progress_callback(
-                        f"部分文本块超时，已完成 {completed_count}/{total_episodes}",
+                        _msg('episodes_timeout', done=completed_count, total=total_episodes),
                         completed_count / total_episodes
                     )
                 break
-            
+
             # 检查每个 episode 的处理状态
             for ep_uuid in list(pending_episodes):
                 try:
                     episode = self.client.graph.episode.get(uuid_=ep_uuid)
                     is_processed = getattr(episode, 'processed', False)
-                    
+
                     if is_processed:
                         pending_episodes.remove(ep_uuid)
                         completed_count += 1
-                        
-                except Exception as e:
+
+                except Exception:
                     # 忽略单个查询错误，继续
                     pass
-            
+
             elapsed = int(time.time() - start_time)
             if progress_callback:
                 progress_callback(
-                    f"Zep处理中... {completed_count}/{total_episodes} 完成, {len(pending_episodes)} 待处理 ({elapsed}秒)",
+                    _msg('zep_processing', done=completed_count, total=total_episodes, pending=len(pending_episodes), elapsed=elapsed),
                     completed_count / total_episodes if total_episodes > 0 else 0
                 )
-            
+
             if pending_episodes:
                 time.sleep(3)  # 每3秒检查一次
-        
+
         if progress_callback:
-            progress_callback(f"处理完成: {completed_count}/{total_episodes}", 1.0)
+            progress_callback(_msg('processing_done', done=completed_count, total=total_episodes), 1.0)
     
     def _get_graph_info(self, graph_id: str) -> GraphInfo:
         """获取图谱信息"""

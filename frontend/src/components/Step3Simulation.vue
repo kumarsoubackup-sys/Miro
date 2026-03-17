@@ -97,7 +97,7 @@
           @click="handleNextStep"
         >
           <span v-if="isGeneratingReport" class="loading-spinner-small"></span>
-          {{ isGeneratingReport ? '启动中...' : '开始生成结果报告' }} 
+          {{ isGeneratingReport ? $t('step3.starting') : $t('step3.startReport') }} 
           <span v-if="!isGeneratingReport" class="arrow-icon">→</span>
         </button>
       </div>
@@ -288,6 +288,7 @@
 <script setup>
 import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { 
   startSimulation, 
   stopSimulation,
@@ -311,6 +312,7 @@ const props = defineProps({
 const emit = defineEmits(['go-back', 'next-step', 'add-log', 'update-status'])
 
 const router = useRouter()
+const { t } = useI18n()
 
 // State
 const isGeneratingReport = ref(false)
@@ -379,7 +381,7 @@ const resetAllState = () => {
 // 启动模拟
 const doStartSimulation = async () => {
   if (!props.simulationId) {
-    addLog('错误：缺少 simulationId')
+    addLog(t('errors.missingSimulationId'))
     return
   }
   
@@ -388,7 +390,7 @@ const doStartSimulation = async () => {
   
   isStarting.value = true
   startError.value = null
-  addLog('正在启动双平台并行模拟...')
+  addLog(t('logs.s3_startingParallelSim'))
   emit('update-status', 'processing')
   
   try {
@@ -401,18 +403,18 @@ const doStartSimulation = async () => {
     
     if (props.maxRounds) {
       params.max_rounds = props.maxRounds
-      addLog(`设置最大模拟轮数: ${props.maxRounds}`)
+      addLog(t('logs.s3_setMaxRounds', { rounds: props.maxRounds }))
     }
     
-    addLog('已开启动态图谱更新模式')
+    addLog(t('logs.s3_graphUpdateEnabled'))
     
     const res = await startSimulation(params)
     
     if (res.success && res.data) {
       if (res.data.force_restarted) {
-        addLog('✓ 已清理旧的模拟日志，重新开始模拟')
+        addLog(t('logs.s3_oldLogsCleared'))
       }
-      addLog('✓ 模拟引擎启动成功')
+      addLog(t('logs.s3_engineStarted'))
       addLog(`  ├─ PID: ${res.data.process_pid || '-'}`)
       
       phase.value = 1
@@ -421,13 +423,13 @@ const doStartSimulation = async () => {
       startStatusPolling()
       startDetailPolling()
     } else {
-      startError.value = res.error || '启动失败'
-      addLog(`✗ 启动失败: ${res.error || '未知错误'}`)
+      startError.value = res.error || t('errors.startFailed')
+      addLog(`✗ ${t('errors.startFailed')}: ${res.error || t('errors.unknown')}`)
       emit('update-status', 'error')
     }
   } catch (err) {
     startError.value = err.message
-    addLog(`✗ 启动异常: ${err.message}`)
+    addLog(t('logs.s3_startException', { error: err.message }))
     emit('update-status', 'error')
   } finally {
     isStarting.value = false
@@ -439,21 +441,21 @@ const handleStopSimulation = async () => {
   if (!props.simulationId) return
   
   isStopping.value = true
-  addLog('正在停止模拟...')
+  addLog(t('logs.s3_stoppingSim'))
   
   try {
     const res = await stopSimulation({ simulation_id: props.simulationId })
     
     if (res.success) {
-      addLog('✓ 模拟已停止')
+      addLog(t('logs.s3_simStopped'))
       phase.value = 2
       stopPolling()
       emit('update-status', 'completed')
     } else {
-      addLog(`停止失败: ${res.error || '未知错误'}`)
+      addLog(`${t('errors.stopFailed')}: ${res.error || t('errors.unknown')}`)
     }
   } catch (err) {
-    addLog(`停止异常: ${err.message}`)
+    addLog(t('logs.s3_stopException', { error: err.message }))
   } finally {
     isStopping.value = false
   }
@@ -517,9 +519,9 @@ const fetchRunStatus = async () => {
       
       if (isCompleted || platformsCompleted) {
         if (platformsCompleted && !isCompleted) {
-          addLog('✓ 检测到所有平台模拟已结束')
+          addLog(t('logs.s3_allPlatformsCompleted'))
         }
-        addLog('✓ 模拟已完成')
+        addLog(t('logs.s3_simCompleted'))
         phase.value = 2
         stopPolling()
         emit('update-status', 'completed')
@@ -640,17 +642,17 @@ const formatActionTime = (timestamp) => {
 
 const handleNextStep = async () => {
   if (!props.simulationId) {
-    addLog('错误：缺少 simulationId')
+    addLog(t('errors.missingSimulationId'))
     return
   }
   
   if (isGeneratingReport.value) {
-    addLog('报告生成请求已发送，请稍候...')
+    addLog(t('logs.s3_reportRequestSent'))
     return
   }
   
   isGeneratingReport.value = true
-  addLog('正在启动报告生成...')
+  addLog(t('logs.s3_startingReportGen'))
   
   try {
     const res = await generateReport({
@@ -660,16 +662,16 @@ const handleNextStep = async () => {
     
     if (res.success && res.data) {
       const reportId = res.data.report_id
-      addLog(`✓ 报告生成任务已启动: ${reportId}`)
+      addLog(t('logs.s3_reportTaskStarted', { id: reportId }))
       
       // 跳转到报告页面
       router.push({ name: 'Report', params: { reportId } })
     } else {
-      addLog(`✗ 启动报告生成失败: ${res.error || '未知错误'}`)
+      addLog(`✗ ${t('errors.reportGenFailed')}: ${res.error || t('errors.unknown')}`)
       isGeneratingReport.value = false
     }
   } catch (err) {
-    addLog(`✗ 启动报告生成异常: ${err.message}`)
+    addLog(t('logs.s3_reportGenException', { error: err.message }))
     isGeneratingReport.value = false
   }
 }
@@ -685,7 +687,7 @@ watch(() => props.systemLogs?.length, () => {
 })
 
 onMounted(() => {
-  addLog('Step3 模拟运行初始化')
+  addLog(t('logs.s3_init'))
   if (props.simulationId) {
     doStartSimulation()
   }

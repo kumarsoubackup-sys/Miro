@@ -3,11 +3,9 @@ Zep图谱记忆更新服务
 将模拟中的Agent活动动态更新到Zep图谱中
 """
 
-import os
 import time
 import threading
-import json
-from typing import Dict, Any, List, Optional, Callable
+from typing import Dict, Any, List, Optional
 from dataclasses import dataclass
 from datetime import datetime
 from queue import Queue, Empty
@@ -16,8 +14,12 @@ from zep_cloud.client import Zep
 
 from ..config import Config
 from ..utils.logger import get_logger
+from ..utils.error_messages import get_error_message
 
 logger = get_logger('mirofish.zep_graph_memory_updater')
+
+# Activity descriptions default locale (no Flask request context in background threads)
+_ACTIVITY_LOCALE = 'zh'
 
 
 @dataclass
@@ -63,139 +65,142 @@ class AgentActivity:
     def _describe_create_post(self) -> str:
         content = self.action_args.get("content", "")
         if content:
-            return f"发布了一条帖子：「{content}」"
-        return "发布了一条帖子"
-    
+            return get_error_message('activity_create_post', _ACTIVITY_LOCALE).format(content=content)
+        return get_error_message('activity_create_post_no_content', _ACTIVITY_LOCALE)
+
     def _describe_like_post(self) -> str:
         """点赞帖子 - 包含帖子原文和作者信息"""
         post_content = self.action_args.get("post_content", "")
         post_author = self.action_args.get("post_author_name", "")
-        
+
         if post_content and post_author:
-            return f"点赞了{post_author}的帖子：「{post_content}」"
+            return get_error_message('activity_like_post_full', _ACTIVITY_LOCALE).format(author=post_author, content=post_content)
         elif post_content:
-            return f"点赞了一条帖子：「{post_content}」"
+            return get_error_message('activity_like_post_content', _ACTIVITY_LOCALE).format(content=post_content)
         elif post_author:
-            return f"点赞了{post_author}的一条帖子"
-        return "点赞了一条帖子"
-    
+            return get_error_message('activity_like_post_author', _ACTIVITY_LOCALE).format(author=post_author)
+        return get_error_message('activity_like_post', _ACTIVITY_LOCALE)
+
     def _describe_dislike_post(self) -> str:
         """踩帖子 - 包含帖子原文和作者信息"""
         post_content = self.action_args.get("post_content", "")
         post_author = self.action_args.get("post_author_name", "")
-        
+
         if post_content and post_author:
-            return f"踩了{post_author}的帖子：「{post_content}」"
+            return get_error_message('activity_dislike_post_full', _ACTIVITY_LOCALE).format(author=post_author, content=post_content)
         elif post_content:
-            return f"踩了一条帖子：「{post_content}」"
+            return get_error_message('activity_dislike_post_content', _ACTIVITY_LOCALE).format(content=post_content)
         elif post_author:
-            return f"踩了{post_author}的一条帖子"
-        return "踩了一条帖子"
-    
+            return get_error_message('activity_dislike_post_author', _ACTIVITY_LOCALE).format(author=post_author)
+        return get_error_message('activity_dislike_post', _ACTIVITY_LOCALE)
+
     def _describe_repost(self) -> str:
         """转发帖子 - 包含原帖内容和作者信息"""
         original_content = self.action_args.get("original_content", "")
         original_author = self.action_args.get("original_author_name", "")
-        
+
         if original_content and original_author:
-            return f"转发了{original_author}的帖子：「{original_content}」"
+            return get_error_message('activity_repost_full', _ACTIVITY_LOCALE).format(author=original_author, content=original_content)
         elif original_content:
-            return f"转发了一条帖子：「{original_content}」"
+            return get_error_message('activity_repost_content', _ACTIVITY_LOCALE).format(content=original_content)
         elif original_author:
-            return f"转发了{original_author}的一条帖子"
-        return "转发了一条帖子"
-    
+            return get_error_message('activity_repost_author', _ACTIVITY_LOCALE).format(author=original_author)
+        return get_error_message('activity_repost', _ACTIVITY_LOCALE)
+
     def _describe_quote_post(self) -> str:
         """引用帖子 - 包含原帖内容、作者信息和引用评论"""
         original_content = self.action_args.get("original_content", "")
         original_author = self.action_args.get("original_author_name", "")
         quote_content = self.action_args.get("quote_content", "") or self.action_args.get("content", "")
-        
-        base = ""
+
         if original_content and original_author:
-            base = f"引用了{original_author}的帖子「{original_content}」"
+            base = get_error_message('activity_quote_full', _ACTIVITY_LOCALE).format(author=original_author, content=original_content)
         elif original_content:
-            base = f"引用了一条帖子「{original_content}」"
+            base = get_error_message('activity_quote_content', _ACTIVITY_LOCALE).format(content=original_content)
         elif original_author:
-            base = f"引用了{original_author}的一条帖子"
+            base = get_error_message('activity_quote_author', _ACTIVITY_LOCALE).format(author=original_author)
         else:
-            base = "引用了一条帖子"
-        
+            base = get_error_message('activity_quote', _ACTIVITY_LOCALE)
+
         if quote_content:
-            base += f"，并评论道：「{quote_content}」"
+            base += get_error_message('activity_quote_comment', _ACTIVITY_LOCALE).format(comment=quote_content)
         return base
-    
+
     def _describe_follow(self) -> str:
         """关注用户 - 包含被关注用户的名称"""
         target_user_name = self.action_args.get("target_user_name", "")
-        
+
         if target_user_name:
-            return f"关注了用户「{target_user_name}」"
-        return "关注了一个用户"
-    
+            return get_error_message('activity_follow_user', _ACTIVITY_LOCALE).format(user=target_user_name)
+        return get_error_message('activity_follow', _ACTIVITY_LOCALE)
+
     def _describe_create_comment(self) -> str:
         """发表评论 - 包含评论内容和所评论的帖子信息"""
         content = self.action_args.get("content", "")
         post_content = self.action_args.get("post_content", "")
         post_author = self.action_args.get("post_author_name", "")
-        
+
         if content:
             if post_content and post_author:
-                return f"在{post_author}的帖子「{post_content}」下评论道：「{content}」"
+                return get_error_message('activity_comment_full', _ACTIVITY_LOCALE).format(author=post_author, post=post_content, content=content)
             elif post_content:
-                return f"在帖子「{post_content}」下评论道：「{content}」"
+                return get_error_message('activity_comment_post', _ACTIVITY_LOCALE).format(post=post_content, content=content)
             elif post_author:
-                return f"在{post_author}的帖子下评论道：「{content}」"
-            return f"评论道：「{content}」"
-        return "发表了评论"
-    
+                return get_error_message('activity_comment_author', _ACTIVITY_LOCALE).format(author=post_author, content=content)
+            return get_error_message('activity_comment_only', _ACTIVITY_LOCALE).format(content=content)
+        return get_error_message('activity_comment', _ACTIVITY_LOCALE)
+
     def _describe_like_comment(self) -> str:
         """点赞评论 - 包含评论内容和作者信息"""
         comment_content = self.action_args.get("comment_content", "")
         comment_author = self.action_args.get("comment_author_name", "")
-        
+
         if comment_content and comment_author:
-            return f"点赞了{comment_author}的评论：「{comment_content}」"
+            return get_error_message('activity_like_comment_full', _ACTIVITY_LOCALE).format(author=comment_author, content=comment_content)
         elif comment_content:
-            return f"点赞了一条评论：「{comment_content}」"
+            return get_error_message('activity_like_comment_content', _ACTIVITY_LOCALE).format(content=comment_content)
         elif comment_author:
-            return f"点赞了{comment_author}的一条评论"
-        return "点赞了一条评论"
-    
+            return get_error_message('activity_like_comment_author', _ACTIVITY_LOCALE).format(author=comment_author)
+        return get_error_message('activity_like_comment', _ACTIVITY_LOCALE)
+
     def _describe_dislike_comment(self) -> str:
         """踩评论 - 包含评论内容和作者信息"""
         comment_content = self.action_args.get("comment_content", "")
         comment_author = self.action_args.get("comment_author_name", "")
-        
+
         if comment_content and comment_author:
-            return f"踩了{comment_author}的评论：「{comment_content}」"
+            return get_error_message('activity_dislike_comment_full', _ACTIVITY_LOCALE).format(author=comment_author, content=comment_content)
         elif comment_content:
-            return f"踩了一条评论：「{comment_content}」"
+            return get_error_message('activity_dislike_comment_content', _ACTIVITY_LOCALE).format(content=comment_content)
         elif comment_author:
-            return f"踩了{comment_author}的一条评论"
-        return "踩了一条评论"
-    
+            return get_error_message('activity_dislike_comment_author', _ACTIVITY_LOCALE).format(author=comment_author)
+        return get_error_message('activity_dislike_comment', _ACTIVITY_LOCALE)
+
     def _describe_search(self) -> str:
         """搜索帖子 - 包含搜索关键词"""
         query = self.action_args.get("query", "") or self.action_args.get("keyword", "")
-        return f"搜索了「{query}」" if query else "进行了搜索"
-    
+        if query:
+            return get_error_message('activity_search', _ACTIVITY_LOCALE).format(query=query)
+        return get_error_message('activity_search_generic', _ACTIVITY_LOCALE)
+
     def _describe_search_user(self) -> str:
         """搜索用户 - 包含搜索关键词"""
         query = self.action_args.get("query", "") or self.action_args.get("username", "")
-        return f"搜索了用户「{query}」" if query else "搜索了用户"
-    
+        if query:
+            return get_error_message('activity_search_user', _ACTIVITY_LOCALE).format(query=query)
+        return get_error_message('activity_search_user_generic', _ACTIVITY_LOCALE)
+
     def _describe_mute(self) -> str:
         """屏蔽用户 - 包含被屏蔽用户的名称"""
         target_user_name = self.action_args.get("target_user_name", "")
-        
+
         if target_user_name:
-            return f"屏蔽了用户「{target_user_name}」"
-        return "屏蔽了一个用户"
-    
+            return get_error_message('activity_mute_user', _ACTIVITY_LOCALE).format(user=target_user_name)
+        return get_error_message('activity_mute', _ACTIVITY_LOCALE)
+
     def _describe_generic(self) -> str:
         # 对于未知的动作类型，生成通用描述
-        return f"执行了{self.action_type}操作"
+        return get_error_message('activity_generic', _ACTIVITY_LOCALE).format(action=self.action_type)
 
 
 class ZepGraphMemoryUpdater:
@@ -265,7 +270,7 @@ class ZepGraphMemoryUpdater:
         self._failed_count = 0      # 发送失败的批次数
         self._skipped_count = 0     # 被过滤跳过的活动数（DO_NOTHING）
         
-        logger.info(f"ZepGraphMemoryUpdater 初始化完成: graph_id={graph_id}, batch_size={self.BATCH_SIZE}")
+        logger.info(f"ZepGraphMemoryUpdater initialized: graph_id={graph_id}, batch_size={self.BATCH_SIZE}")
     
     def _get_platform_display_name(self, platform: str) -> str:
         """获取平台的显示名称"""
@@ -283,7 +288,7 @@ class ZepGraphMemoryUpdater:
             name=f"ZepMemoryUpdater-{self.graph_id[:8]}"
         )
         self._worker_thread.start()
-        logger.info(f"ZepGraphMemoryUpdater 已启动: graph_id={self.graph_id}")
+        logger.info(f"ZepGraphMemoryUpdater started: graph_id={self.graph_id}")
     
     def stop(self):
         """停止后台工作线程"""
@@ -295,7 +300,7 @@ class ZepGraphMemoryUpdater:
         if self._worker_thread and self._worker_thread.is_alive():
             self._worker_thread.join(timeout=10)
         
-        logger.info(f"ZepGraphMemoryUpdater 已停止: graph_id={self.graph_id}, "
+        logger.info(f"ZepGraphMemoryUpdater stopped: graph_id={self.graph_id}, "
                    f"total_activities={self._total_activities}, "
                    f"batches_sent={self._total_sent}, "
                    f"items_sent={self._total_items_sent}, "
@@ -414,7 +419,7 @@ class ZepGraphMemoryUpdater:
                 self._total_sent += 1
                 self._total_items_sent += len(activities)
                 display_name = self._get_platform_display_name(platform)
-                logger.info(f"成功批量发送 {len(activities)} 条{display_name}活动到图谱 {self.graph_id}")
+                logger.info(get_error_message('zep_batch_sent', _ACTIVITY_LOCALE).format(count=len(activities), platform=display_name, graph_id=self.graph_id))
                 logger.debug(f"批量内容预览: {combined_text[:200]}...")
                 return
                 
@@ -445,7 +450,7 @@ class ZepGraphMemoryUpdater:
             for platform, buffer in self._platform_buffers.items():
                 if buffer:
                     display_name = self._get_platform_display_name(platform)
-                    logger.info(f"发送{display_name}平台剩余的 {len(buffer)} 条活动")
+                    logger.info(get_error_message('zep_flush_remaining', _ACTIVITY_LOCALE).format(platform=display_name, count=len(buffer)))
                     self._send_batch_activities(buffer, platform)
             # 清空所有缓冲区
             for platform in self._platform_buffers:
@@ -501,7 +506,7 @@ class ZepGraphMemoryManager:
             updater.start()
             cls._updaters[simulation_id] = updater
             
-            logger.info(f"创建图谱记忆更新器: simulation_id={simulation_id}, graph_id={graph_id}")
+            logger.info(f"Graph memory updater created: simulation_id={simulation_id}, graph_id={graph_id}")
             return updater
     
     @classmethod
@@ -516,7 +521,7 @@ class ZepGraphMemoryManager:
             if simulation_id in cls._updaters:
                 cls._updaters[simulation_id].stop()
                 del cls._updaters[simulation_id]
-                logger.info(f"已停止图谱记忆更新器: simulation_id={simulation_id}")
+                logger.info(f"Graph memory updater stopped: simulation_id={simulation_id}")
     
     # 防止 stop_all 重复调用的标志
     _stop_all_done = False
@@ -537,7 +542,7 @@ class ZepGraphMemoryManager:
                     except Exception as e:
                         logger.error(f"停止更新器失败: simulation_id={simulation_id}, error={e}")
                 cls._updaters.clear()
-            logger.info("已停止所有图谱记忆更新器")
+            logger.info("All graph memory updaters stopped")
     
     @classmethod
     def get_all_stats(cls) -> Dict[str, Dict[str, Any]]:
